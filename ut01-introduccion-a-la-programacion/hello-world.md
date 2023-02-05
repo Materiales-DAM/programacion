@@ -37,3 +37,9 @@ public class HelloWorld {
 ### Ejecutar el programa
 
 `java HellowWorld`
+
+### Partes del programa
+
+Este programa está compuesto por una única **clase** llamada `HelloWorld`. Dentro de la misma se ha definido un **método** `main` que contiene las sentencias que se van a ejecutar en este programa.
+
+En este caso el programa tiene una única **sentencia** `System.out.println("Hola mundo");`
