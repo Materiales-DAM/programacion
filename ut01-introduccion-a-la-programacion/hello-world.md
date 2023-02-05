@@ -42,4 +42,4 @@ public class HelloWorld {
 
 Este programa está compuesto por una única **clase** llamada `HelloWorld`. Dentro de la misma se ha definido un **método** `main` que contiene las sentencias que se van a ejecutar en este programa.
 
-En este caso el programa tiene una única **sentencia** `System.out.println("Hola mundo");`
+En este caso el programa tiene una única **sentencia** `System.out.println("Hola mundo");` que sirve para mostrar el texto `Hola mundo`.
