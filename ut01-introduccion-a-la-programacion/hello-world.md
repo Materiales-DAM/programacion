@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Hello World
 
 Vamos a comenzar compilando y ejecutando nuestro primer programa. Este programa, que llamaremos HelloWorld tiene como único cometido mostrar el mensaje `Hola mundo` cuando se ejecuta.
