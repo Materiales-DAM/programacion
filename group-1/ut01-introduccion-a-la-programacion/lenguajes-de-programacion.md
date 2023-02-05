@@ -23,3 +23,19 @@ Compilados son aquellos lenguajes que, para ser ejecutados, requieren la convers
 La ventaja de los lenguajes interpretados es que son más portables, es decir, se pueden ejecutar en diferentes arquitecturas sin modificarlos.​
 
 La ventaja de los lenguajes compilados es que en el proceso de compilación se puede comprobar la corrección del programa y aplicar optimizaciones sobre el código, son por lo general más eficientes que los compilados.​
+
+#### Paradigmas de programación
+
+Según Wikipedia "Un paradigma de programación consiste en un método para llevar a cabo cómputos y la forma en la que deben estructurarse y organizarse las tareas que debe realizar un programa"​
+
+Cada lenguaje de programación está vinculado a uno o varios paradigmas de programación​
+
+Algunos de los paradigmas más utilizados en la actualidad son:&#x20;
+
+* Orientado a objetos: Java, C#, C++, Kotlin
+* Imperativo: C, C++, Java
+* Funcional: Scala, Kotlin, Haskell, JavaScript
+* Programación lógica: PROLOG
+* Declarativo: SQL
+* Dirigido por eventos: NodeJS
+
