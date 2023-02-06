@@ -15,7 +15,7 @@ La siguiente tabla contiene los conocidos como tipos primitivos de Java
 | `boolean` | 1 bit   | Almacena valores booleanos (true o false)                                                            |
 | `char`    | 2 bytes | Almacena un caracter ASCII                                                                           |
 
-Otro tipo básico que es `String`, este tipo nos permite almacenar cadenas de caracteres. Para definir un valor de tipo String usaremos las comillas dobles (`"texto"`) alrededor del texto que se quiera crear.
+Otro tipo básico en Java es `String`, este tipo nos permite almacenar cadenas de caracteres. Para definir un valor de tipo String usaremos las comillas dobles (`"texto"`) alrededor del texto que se quiera crear.
 
 ```java
 String sentence = "Este texto se almacena en la variable sentence";
