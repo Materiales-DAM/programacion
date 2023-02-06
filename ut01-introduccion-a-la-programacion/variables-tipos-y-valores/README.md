@@ -16,4 +16,4 @@ int myNumber = 3;
 System.out.println(myNumber);
 ```
 
-Crea una clase llamada `MyNumberProgram` que defina un método main con las dos sentencias anteriores.
+Crea una clase llamada `MyNumberProgram` que defina un método `main` con las dos sentencias anteriores.
