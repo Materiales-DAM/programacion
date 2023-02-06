@@ -22,3 +22,5 @@ String sentence = "Este texto se almacena en la variable sentence";
 // ¿Qué aparecerá en pantalla?
 System.out.println(sentence);
 ```
+
+Haz click [aquí](https://www.w3schools.com/java/exercise.asp?filename=exercise\_data\_types1) para hacer unos ejercicios de tipos.
