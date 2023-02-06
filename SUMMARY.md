@@ -15,3 +15,8 @@
 ***
 
 * [Expresiones y operadores](expresiones-y-operadores.md)
+* [Entrada y salida del programa](entrada-y-salida-del-programa.md)
+
+## UT02 - Estructuras de control y arrays
+
+* [Estructuras de control](ut02-estructuras-de-control-y-arrays/estructuras-de-control.md)
