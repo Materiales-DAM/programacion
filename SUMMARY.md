@@ -10,3 +10,4 @@
 * [Variables, tipos y valores](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/README.md)
   * [Nombres de variables](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/nombres-de-variables.md)
   * [Tipos básicos](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/tipos-basicos.md)
+  * [Asignación de literales](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/asignacion-de-literales.md)
