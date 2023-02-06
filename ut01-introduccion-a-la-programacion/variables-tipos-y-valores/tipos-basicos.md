@@ -19,4 +19,6 @@ Otro tipo básico que es `String`, este tipo nos permite almacenar cadenas de ca
 
 ```java
 String sentence = "Este texto se almacena en la variable sentence";
+// ¿Qué aparecerá en pantalla?
+System.out.println(sentence);
 ```
