@@ -6,7 +6,7 @@ Los programas informáticos se dedican en gran medida a la manipulación de dato
 
 El **tipo** de una variable depende de las **características de los datos** que va a albergar la variable. Por ejemplo, si queremos que la variable almacene un número entero podemos usar el tipo `int`, si por el contrario queremos que almacene texto podemos usar el tipo `String`.&#x20;
 
-El **valor** de una variable es el dato concreto que le ha sido asignado, por ejemplo el número 3.
+El **valor** de una variable es el dato concreto que le ha sido asignado, por ejemplo el número `3`.
 
 ```java
 // La siguiente sentencia declara una variable cuyo nombre es myNumber, su tipo
