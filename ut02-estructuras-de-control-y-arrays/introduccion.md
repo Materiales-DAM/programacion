@@ -7,9 +7,7 @@ coverY: 0
 
 En lenguajes de programación, las estructuras de control permiten modificar el flujo de ejecución de las instrucciones de un programa.
 
-<figure><img src="../.gitbook/assets/control-flow.png" alt=""><figcaption><p>Los tres principales flujos de ejecución</p></figcaption></figure>
-
-Cuando el las sentencias se ejecutan una tras otra, siempre en el mismo orden tenemos un **flujo secuencial**. Cuando las sentencias que se ejecutan cambian dependiendo de alguna condición que se puede cumplir o no tenemos un **flujo condicional**. Cuando se repite la ejecución de una o varias sentencias tenemos un **flujo iterativo**.
+Cuando las sentencias se ejecutan una tras otra tenemos un **flujo secuencial**. Cuando las sentencias que se ejecutan cambian dependiendo de alguna condición que se puede cumplir o no tenemos un **flujo condicional**. Cuando se repite la ejecución de una o varias sentencias tenemos un **flujo iterativo**.
 
 Cada estructura de control está diseñada para facilitar un tipo de flujo de ejecución:&#x20;
 
@@ -17,7 +15,7 @@ Cada estructura de control está diseñada para facilitar un tipo de flujo de ej
 * ****[**Iterativas**](estructuras-de-control-iterativas/): Sirven para expresar flujos iterativos ****&#x20;
 * ****[**De salto**](estructuras-de-control-de-salto/)**:** Se usan dentro de un flujo iterativo para modificar las iteraciones.
 
-<figure><img src="../.gitbook/assets/control-structures.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/control-flow.png" alt=""><figcaption><p>Los tres principales flujos de ejecución</p></figcaption></figure>
 
 Los lenguajes de programación modernos tienen estructuras de control similares. Básicamente lo que varía entre las estructuras de control de los diferentes lenguajes es su sintaxis; cada lenguaje tiene una sintaxis propia para expresar la estructura.
 
