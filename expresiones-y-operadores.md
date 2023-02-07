@@ -57,3 +57,6 @@ boolean result = number1 == number2;
 
 System.out.println(result);
 ```
+
+## [Mas información sobre operadores](https://www.w3schools.com/java/java\_operators.asp)
+
