@@ -33,11 +33,11 @@ public class StandardInputOutputProgram {
         Scanner scanner = new Scanner(System.in);
         // Mostramos por pantalla un mensaje para que el usuario sepa que debe
         // introducir un texto
-        System.out.println("Introduce un texto...");
-        // Leemos un String que nos pasa el usuario y lo guardamos en sentence
-        String sentence = scanner.nextLine();
-        // Mostramos el texto que ha metido el usuario con una frase delante
-        System.out.println("Ha introducido el texto: " + sentence);
+        System.out.println("Introduce tu nombre de usuario...");
+        // Leemos un String que nos pasa el usuario y lo guardamos en username
+        String username = scanner.nextLine();
+        // Mostramos un texto de bienvenida al usuario
+        System.out.println("Bienvenido " + username);
     }
 }
 
