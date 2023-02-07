@@ -5,9 +5,9 @@ coverY: 0
 
 # Asignación de literales
 
-Como su nombre indica, el valor de una variable puede cambiar a lo largo del programa. Cuando se quiere cambiar el valor de una variable se debe ejecutar una sentencia de asignación.
+Como su nombre indica, el valor de una variable puede cambiar a lo largo del programa. Para cambiarlo se necesita usar una sentencia de asignación.
 
-Es posible asignarle un **valor literal** a la variable en la misma sentencia en la que se declara. Esto se denomina inline initialization. Los valores literales aparecen explicitamente en el código.
+Es posible asignarle un **valor literal** a la variable en la misma sentencia en la que se declara. Esto se denomina **inline initialization**. Los valores literales aparecen explicitamente en el código.
 
 ```java
 // En esta sentencia se declara la variable myNumber y se le asigna el 
@@ -15,7 +15,7 @@ Es posible asignarle un **valor literal** a la variable en la misma sentencia en
 int myNumber = 3;
 ```
 
-También es posible separar lo anterior en dos sentencias:
+También es posible separar la declaración de en dos sentencias:
 
 ```java
 // Se declara la variable myNumber
