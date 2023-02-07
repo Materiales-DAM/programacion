@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Hello World
 
 Vamos a comenzar compilando y ejecutando nuestro primer programa. Este programa, que llamaremos HelloWorld tiene como único cometido mostrar el mensaje `Hola mundo` cuando se ejecuta.
@@ -31,4 +36,10 @@ public class HelloWorld {
 
 ### Ejecutar el programa
 
-`java HellowWorld`
+`java HelloWorld`
+
+### Partes del programa
+
+Este programa está compuesto por una única **clase** llamada `HelloWorld`. Dentro de la misma se ha definido un **método** `main` que contiene las sentencias que se van a ejecutar en este programa.
+
+En este caso el programa tiene una única **sentencia** `System.out.println("Hola mundo");` que sirve para mostrar el texto `Hola mundo`.
