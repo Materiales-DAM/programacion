@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Nombres de variables
 
 Aunque los nombres de las variables se pueden establecer de manera más o menos libre, es conveniente seguir las convenciones de nombrado establecidas en cada lenguajes. De esta forma conseguiremos que el código sea más legible.

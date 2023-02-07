@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Variables, tipos y valores
 
 Los programas informáticos se dedican en gran medida a la manipulación de datos. Para poder manejar los datos necesitamos poder almacenarlos en algún sitio. Las **variables** son elementos de un programa que permiten almacenar un dato y darle un nombre. Cada variable tiene un **nombre**, un **tipo** y un **valor**.

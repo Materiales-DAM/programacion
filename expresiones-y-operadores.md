@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Expresiones y operadores
 
 Los valores almacenados en las variables pueden ser combiando a través del uso de diferentes tipos de operadores.

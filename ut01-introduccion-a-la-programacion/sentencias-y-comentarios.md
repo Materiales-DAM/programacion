@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Sentencias y comentarios
 
 Simplificando, podríamos definir un programa con una **secuencia de sentencias** (órdenes) que se ejecutan una tras otra. Cuando ya no quedan sentencias por ejecutar el programa se acaba.

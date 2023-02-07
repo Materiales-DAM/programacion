@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Tipos básicos
 
 Según Wikipedia "En [ciencias de la computación](https://es.wikipedia.org/wiki/Ciencias\_de\_la\_computaci%C3%B3n), un tipo de dato informático o simplemente tipo, es un atributo de los datos que indica al ordenador (y/o al [programador/programadora](https://es.wikipedia.org/wiki/Programador)) sobre la clase de datos que se va a manejar. Esto incluye imponer restricciones en los datos, como qué valores pueden tomar y qué operaciones se pueden realizar."​

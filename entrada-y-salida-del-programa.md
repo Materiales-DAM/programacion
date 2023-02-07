@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Entrada y salida del programa
 
 En la mayor parte de las ocasiones vamos a querer que nuestros programas interactuen con el usuario durante su ejecución.​

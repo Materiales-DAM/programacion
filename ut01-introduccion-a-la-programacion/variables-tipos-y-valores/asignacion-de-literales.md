@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/java.jpeg
+coverY: 0
+---
+
 # Asignación de literales
 
 Como su nombre indica, el valor de una variable puede cambiar a lo largo del programa. Cuando se quiere cambiar el valor de una variable se debe ejecutar una sentencia de asignación.
