@@ -36,3 +36,39 @@ System.out.println(myNumber);
 
 // ¿Qué saldrá impreso en pantalla al ejecutar estas sentencias?
 ```
+
+#### Literales numéricos enteros
+
+```java
+// Un literal de tipo int se expresa simplemente escribiendo el número
+int myInt = 4;
+// Para escribir un literal de tipo long podemos añadir una L al final
+long myLong = -6444L;
+```
+
+#### Literales de números reales en coma flotante
+
+```java
+// Un literal de tipo float. Se puede añadir una f al final para aclarar el tipo.
+float myFloat = 4.34f;
+// Un literal de tipo double. Se puede añadir una d al final para aclarar el tipo.
+double myDouble = 432.34d;
+```
+
+#### Literales de caracteres
+
+<pre class="language-java"><code class="lang-java"><strong>// Los literales de tipo char se ponen entre comillas simples
+</strong>char myChar = 'a';
+</code></pre>
+
+#### Literales de cadenas de caracteres
+
+<pre class="language-java"><code class="lang-java"><strong>// Los literales de tipo String se ponen entre comillas dobles
+</strong>char myString =  "Esto es un literal de String";
+</code></pre>
+
+#### Literales de boolean
+
+<pre class="language-java"><code class="lang-java"><strong>// Los literales de tipo boolean pueden ser true o false
+</strong>boolean myBoolean1 = true;
+</code></pre>

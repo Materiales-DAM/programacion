@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/java.jpeg
+cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
@@ -22,3 +22,10 @@ Los programas escritos en Java deben ser compilados para, posteriormente, poder 
 
 Una vez compilado un fichero .java obtenemos un programa compilado almacenado en un fichero .class que ya podemos ejecutar. Para ejecutar un programa Java compilado se usa el comando  `java` Ejecución con el comando java​
 
+## IntelliJ Idea
+
+IntelliJ IDEA es un [entorno de desarrollo integrado](https://es.wikipedia.org/wiki/Entorno\_de\_desarrollo\_integrado) (IDE) para el desarrollo de programas informáticos. Es desarrollado por JetBrains (anteriormente conocido como IntelliJ), y está disponible en dos ediciones: edición para la comunidad​ y edición comercial.
+
+En este curso utilizaremos la versión Community que se puede descargar [aquí](https://www.jetbrains.com/idea/download/).
+
+\

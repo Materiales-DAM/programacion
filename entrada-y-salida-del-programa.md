@@ -29,7 +29,7 @@ public class StandardInputOutputProgram {
         // Mostramos por pantalla un mensaje para que el usuario sepa que debe
         // introducir un texto
         System.out.println("Introduce un texto...");
-        // Esto es un comentario
+        // Leemos un String que nos pasa el usuario y lo guardamos en sentence
         String sentence = scanner.nextLine();
         // Mostramos el texto que ha metido el usuario con una frase delante
         System.out.println("Ha introducido el texto: " + sentence);
@@ -37,4 +37,17 @@ public class StandardInputOutputProgram {
 }
 
 ```
+
+### Métodos de Scanner
+
+| Método          | Descripción                               |
+| --------------- | ----------------------------------------- |
+| `nextBoolean()` | Lee un `boolean` que introduce el usuario |
+| `nextByte()`    | Lee un `byte` que introduce el usuario    |
+| `nextDouble()`  | Lee un `double` que introduce el usuario  |
+| `nextFloat()`   | Lee un `float` que introduce el usuario   |
+| `nextInt()`     | Lee un `int` que introduce el usuario     |
+| `nextLine()`    | Lee un `String` que introduce el usuario  |
+| `nextLong()`    | Lee un `long` que introduce el usuario    |
+| `nextShort()`   | Lee un `short` que introduce el usuario   |
 
