@@ -17,7 +17,7 @@ Algunos nombres de ejemplo
 
 <pre class="language-java"><code class="lang-java"><strong>// El nombre de esta varialbe es "my number" que en lower camel case es
 </strong>int myNumber = 3;
-// Cuando el nombre de una variable es una soloa palabra se escribe todo en minúsculas
+// Cuando el nombre de una variable es una sola palabra se escribe todo en minúsculas
 int number = 2;
 // Cuantas más palabras, más mayúsculas
 int myOtherNumber = 5;
