@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/languajes.webp
+coverY: 0
+---
+
 # Introducción
 
 ## ¿Qué es un programa?
