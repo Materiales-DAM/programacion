@@ -11,6 +11,8 @@ Las restricciones principales a la hora de darle nombre a una variable son:
 
 La convención de nombres de variable en Java se llama [lower camel case](https://es.wikipedia.org/wiki/Camel\_case). Según esta convención los nombres de las variables deben empezar por minúscula y sólo se utilizará la mayúscula para marcar el inicio de una palabra. Además, los nombres deben estar en inglés. Los programas no dejarán de funcionar por no seguir estas normas pero su legibilidad empeorará.​
 
+<figure><img src="../../.gitbook/assets/java.png" alt=""><figcaption></figcaption></figure>
+
 Algunos nombres de ejemplo
 
 <pre class="language-java"><code class="lang-java"><strong>// El nombre de esta varialbe es "my number" que en lower camel case es

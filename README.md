@@ -4,15 +4,9 @@
 
 Según Wikipedia "Un programa informático o programa de computadora es una [secuencia de instrucciones](https://es.wikipedia.org/wiki/Conjunto\_de\_instrucciones), escritas para realizar una tarea específica en una [computadora](https://es.wikipedia.org/wiki/Computadora)"​
 
-Alguas de las principales carácterísticas de los programas son:
+La mayor parte de programas tiene una o varias entradas de datos: datos introducidos por el usuarios, datos leídos de un fichero...
 
-* Suelen tener entradas de datos​
-  * Introducidos por un usuario
-  * Leídos de un fichero
-* Suelen producir algún efecto de salida​
-  * Mostrar una información en pantalla​
-  * Escribir en un fichero o base de datos​
-  * Realizar cualquier otro tipo de interacción​
-* Son ejecutables​
-* Están escritos en uno o varios lenguajes de programación​
+También suelen producir algún tipo de efecto de salida: mostrar una información en pantalla, escribir un fichero, escribir en una base de datos, etc..
+
+Los programas son ejecutables y pueden estar escritos en uno o varios lenguajes de programación.
 
