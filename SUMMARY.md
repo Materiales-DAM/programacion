@@ -11,11 +11,8 @@
   * [Nombres de variables](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/nombres-de-variables.md)
   * [Tipos básicos](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/tipos-basicos.md)
   * [Asignación de literales](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/asignacion-de-literales.md)
-
-***
-
-* [Expresiones y operadores](expresiones-y-operadores.md)
-* [Entrada y salida del programa](entrada-y-salida-del-programa.md)
+* [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
+* [Entrada y salida del programa](ut01-introduccion-a-la-programacion/entrada-y-salida-del-programa.md)
 
 ## UT02 - Estructuras de control y arrays
 

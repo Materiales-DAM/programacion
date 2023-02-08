@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/java.jpeg
+cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
