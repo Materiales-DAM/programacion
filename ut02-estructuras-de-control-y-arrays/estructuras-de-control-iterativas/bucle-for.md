@@ -26,9 +26,9 @@ Por ejemplo, si queremos un bucle que se repita 10 veces:
 ```java
 int n = 10;
 // Creamos un bucle for:
-//     - Se inicializa una variable entera i con valor inicial 0
-//     - Se define la condición de finalización del bucle (i < n)
-//     - Se define que al final de cada iteración se aumentará en 1 el valor de i
+//     - sentencia1: se inicializa una variable entera i con valor inicial 0
+//     - sentencia2: se define que el bucle continuará mientras i < n
+//     - sentencia3: al final de cada iteración se aumentará en 1 el valor de i
 for (int i = 0; i < n ; i++) {
     // Aquí va el código que se va a repetir
     System.out.println("Iteración " + i);
