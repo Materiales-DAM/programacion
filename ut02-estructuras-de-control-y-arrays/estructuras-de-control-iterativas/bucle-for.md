@@ -12,7 +12,7 @@ Su funcionamiento se basa en el uso de una variable de tipo **contador**, normal
 ```java
 for (sentencia1; sentencia2 ; sentencia3) {
     // El código que se va a ejecutar varias veces
-
+}
 ```
 
 * La **sentencia1** se ejecuta sólo una vez, sirve para **inicializar el contador** (normalmente a 0)
