@@ -15,4 +15,3 @@
    * Pida al usuario otro int (number2)
    * Calcule la multiplicación de ambos números
    * Muestre en pantalla el resultado "El resultado de la multiplicación es \<resultado>"
-
