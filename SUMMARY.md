@@ -13,6 +13,7 @@
   * [Asignación de literales](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/asignacion-de-literales.md)
 * [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
 * [Entrada y salida del programa](ut01-introduccion-a-la-programacion/entrada-y-salida-del-programa.md)
+* [Ejercicios](ut01-introduccion-a-la-programacion/ejercicios.md)
 
 ## UT02 - Estructuras de control y arrays
 
