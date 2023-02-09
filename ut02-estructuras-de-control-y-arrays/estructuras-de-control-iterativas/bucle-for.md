@@ -19,6 +19,8 @@ for (sentencia1; sentencia2 ; sentencia3) {
 * La **sentencia2** debe ser una **** [**expresión condicional**](../../ut01-introduccion-a-la-programacion/expresiones-y-operadores.md#operadores-condicionales)**,** el bucle se repetirá hasta que esta condición deje de cumplirse.
 * La **sentencia3** se invoca al finalizar cada iteración, sirve para **modificar el valor del contador**, normalente incrementandolo en 1 (`i++`)
 
+<figure><img src="../../.gitbook/assets/for_loop.jpg" alt=""><figcaption></figcaption></figure>
+
 Por ejemplo, si queremos un bucle que se repita 10 veces:
 
 ```java
@@ -52,7 +54,5 @@ Process finished with exit code 0
 ```
 
 Una vez el contador i llegue al valor 10, la condición `i < n` deja de cumplirse y termina la ejecución del bucle.
-
-<figure><img src="../../.gitbook/assets/for_loop.jpg" alt=""><figcaption><p>Diagrama de ejecución de un bucle for</p></figcaption></figure>
 
 Para más información sobre el bucle for pincha [aquí](https://www.w3schools.com/java/java\_for\_loop.asp)
