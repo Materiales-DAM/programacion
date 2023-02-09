@@ -105,6 +105,7 @@ if (x > y) {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si:
     //        - x NO es mayor que y
     //        - x es igual que y
+    System.out.println("x e y son iguales");
 } else {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si:
     //        - x NO es mayor que y
