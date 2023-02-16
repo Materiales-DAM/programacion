@@ -56,3 +56,26 @@ public class StandardInputOutputProgram {
 | `nextLong()`    | Lee un `long` que introduce el usuario    |
 | `nextShort()`   | Lee un `short` que introduce el usuario   |
 
+**IMPORTANTE**: Después de utilizar cualquier método del Scanner que no sea `scanner.nextLine()`, se debe añadir una sentencia `scanner.nextLine()` para pasar a la siguiente línea de entrada.
+
+<pre class="language-java"><code class="lang-java">import java.util.Scanner;
+
+public class StandardInputOutputProgram {
+    public static void main(String[] args) {
+        // Creamos la utilidad scanner con la que después solicitamos datos al usuario
+        Scanner scanner = new Scanner(System.in);
+        // Mostramos por pantalla un mensaje para que el usuario sepa que debe
+        // introducir la edad
+        System.out.println(<a data-footnote-ref href="#user-content-fn-1">"</a>Introduce tu edad...");
+        // Leemos un número entero y lo guardamos en age
+        int age = scanner.nextInt();
+        // Esta sentencia debe ir siempre después de un nextInt() para pasar a la
+        // siguiente línea de la entrada estándar
+        scanner.nextLine();
+        // Mostramos la edad introducida por el usuario
+        System.out.println("Tienes " + age + " años");
+    }
+}
+</code></pre>
+
+[^1]: 
