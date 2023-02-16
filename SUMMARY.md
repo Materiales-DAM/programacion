@@ -17,7 +17,7 @@
 
 ## UT02 - Estructuras de control
 
-* [Introducción](ut02-estructuras-de-control/introduccion.md)
+* [Estructuras de control](ut02-estructuras-de-control/estructuras-de-control.md)
 * [Estructuras de control condicional](ut02-estructuras-de-control/estructuras-de-control-condicional/README.md)
   * [If ... else if ... else](ut02-estructuras-de-control/estructuras-de-control-condicional/if-...-else-if-...-else.md)
   * [Ejercicios If](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-if.md)
@@ -35,8 +35,8 @@
 
 ## UT03 - Métodos
 
-* [Introducción](ut03-metodos/introduccion.md)
+* [Métodos](ut03-metodos/metodos.md)
 
 ## UT04 - Arrays
 
-* [Introducción](ut04-arrays/introduccion.md)
+* [Arrays](ut04-arrays/arrays.md)
