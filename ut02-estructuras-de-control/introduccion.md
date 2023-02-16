@@ -3,7 +3,7 @@ cover: ../.gitbook/assets/control-structures.gif
 coverY: 0
 ---
 
-# Introducción
+# Estructuras de control
 
 En lenguajes de programación, las estructuras de control permiten modificar el flujo de ejecución de las instrucciones de un programa.
 

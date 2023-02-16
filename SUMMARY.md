@@ -17,7 +17,7 @@
 
 ## UT02 - Estructuras de control
 
-* [Estructuras de control](ut02-estructuras-de-control/estructuras-de-control.md)
+* [Estructuras de control](ut02-estructuras-de-control/introduccion.md)
 * [Estructuras de control condicional](ut02-estructuras-de-control/estructuras-de-control-condicional/README.md)
   * [If ... else if ... else](ut02-estructuras-de-control/estructuras-de-control-condicional/if-...-else-if-...-else.md)
   * [Ejercicios If](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-if.md)

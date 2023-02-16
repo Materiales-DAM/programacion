@@ -10,17 +10,17 @@ Como su nombre indica, el valor de una variable puede cambiar a lo largo del pro
 Es posible asignarle un **valor literal** a la variable en la misma sentencia en la que se declara. Esto se denomina **inline initialization**. Los valores literales aparecen explicitamente en el código.
 
 ```java
-// En esta sentencia se declara la variable myNumber y se le asigna el 
-// valor literal 3
+// En esta sentencia se declara la variable myNumber y se inicializa asignándole 
+// el valor literal 3
 int myNumber = 3;
 ```
 
-También es posible separar la declaración de en dos sentencias:
+También es posible separar la declaración y la inicialización en dos sentencias:
 
 ```java
 // Se declara la variable myNumber
 int myNumber;
-// Se le asigna el valor literal 3 a la variable myNumber
+// Se inicializa la variable myNumber asignándole el valor literal 3
 myNumber = 3;
 ```
 
@@ -29,14 +29,14 @@ El valor de una variable se puede modificar tantas veces como se desee a lo larg
 ```java
 // Se declara la variable myNumber
 int myNumber;
-// Se le asigna el valor literal 3 a la variable myNumber
+// Se inicializa con el valor literal 3
 myNumber = 3;
 
 System.out.println(myNumber);
 
-// Se le asigna el valor literal 5 a la variable myNumber
+// Se le asigna el valor literal 5 a la variable myNumber, a partir de aquí deja
+// de tener el valor 3
 myNumber = 5;
-
 System.out.println(myNumber);
 
 // ¿Qué saldrá impreso en pantalla al ejecutar estas sentencias?
