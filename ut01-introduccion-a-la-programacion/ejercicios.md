@@ -15,3 +15,11 @@
    * Pida al usuario otro int (number2)
    * Calcule la multiplicación de ambos números
    * Muestre en pantalla el resultado "El resultado de la multiplicación es \<resultado>"
+4. Escribe un programa AreEqual que:
+   * Pida al usuario un int (number1)
+   * Pida al usuario otro int (number2)
+   * Muestre en pantalla true cuando  son iguales o false cuando no son iguales
+5. Escribe un programa AreNotEqual que:
+   * Pida al usuario un int (number1)
+   * Pida al usuario otro int (number2)
+   * Muestre en pantalla true cuando no son iguales o false cuando sí son iguales
