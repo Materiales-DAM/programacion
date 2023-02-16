@@ -32,3 +32,11 @@
 * [Estructuras de control de salto](ut02-estructuras-de-control/estructuras-de-control-de-salto/README.md)
   * [Break](ut02-estructuras-de-control/estructuras-de-control-de-salto/break.md)
   * [Continue](ut02-estructuras-de-control/estructuras-de-control-de-salto/continue.md)
+
+## UT03 - Métodos
+
+* [Introducción](ut03-metodos/introduccion.md)
+
+## UT04 - Arrays
+
+* [Introducción](ut04-arrays/introduccion.md)
