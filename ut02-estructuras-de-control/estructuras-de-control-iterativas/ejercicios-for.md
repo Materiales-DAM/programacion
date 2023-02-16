@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/control-structures.gif
+coverY: 0
+---
+
 # Ejercicios for
 
 1\. Crea un programa que en el main:&#x20;

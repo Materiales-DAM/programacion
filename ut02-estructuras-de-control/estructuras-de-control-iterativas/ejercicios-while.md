@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/control-structures.gif
+coverY: 0
+---
+
 # Ejercicios while
 
 1. Escriba un programa que pida dos números enteros. El programa pedirá de nuevo el segundo número hasta que sea mayor que el primero. El programa terminará escribiendo los dos números.&#x20;

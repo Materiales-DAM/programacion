@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/control-structures.gif
+coverY: 0
+---
+
 # Ejercicios Switch
 
 1\. Escribe un programa que:&#x20;
