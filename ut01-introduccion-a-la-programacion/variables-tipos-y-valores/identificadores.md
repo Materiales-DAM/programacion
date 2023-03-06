@@ -3,9 +3,9 @@ cover: ../../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
-# Nombres de variables
+# Identificadores
 
-Aunque los nombres de las variables se pueden establecer de manera más o menos libre, es conveniente seguir las convenciones de nombrado establecidas en cada lenguajes. De esta forma conseguiremos que el código sea más legible.
+Aunque los nombres de las variables (o identificadores) se pueden establecer de manera bastante flexible, es conveniente seguir las convenciones de nombrado establecidas en cada lenguajes. De esta forma conseguiremos que el código sea más legible.
 
 Las restricciones principales a la hora de darle nombre a una variable son:
 

@@ -8,7 +8,7 @@
 * [Hello World](ut01-introduccion-a-la-programacion/hello-world.md)
 * [Sentencias y comentarios](ut01-introduccion-a-la-programacion/sentencias-y-comentarios.md)
 * [Variables, tipos y valores](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/README.md)
-  * [Nombres de variables](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/nombres-de-variables.md)
+  * [Identificadores](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/identificadores.md)
   * [Tipos básicos](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/tipos-basicos.md)
   * [Asignación de literales](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/asignacion-de-literales.md)
 * [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
