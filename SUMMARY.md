@@ -29,6 +29,7 @@
   * [Bucle while](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucle-while.md)
   * [Ejercicios while](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-while.md)
   * [Bucle do-while](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucle-do-while.md)
+  * [Menús en por línea de comando](ut02-estructuras-de-control/estructuras-de-control-iterativas/menus-en-por-linea-de-comando.md)
 * [Estructuras de control de salto](ut02-estructuras-de-control/estructuras-de-control-de-salto/README.md)
   * [Break](ut02-estructuras-de-control/estructuras-de-control-de-salto/break.md)
   * [Continue](ut02-estructuras-de-control/estructuras-de-control-de-salto/continue.md)
