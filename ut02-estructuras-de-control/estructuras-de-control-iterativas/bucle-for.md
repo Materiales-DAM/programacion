@@ -38,8 +38,7 @@ for (int i = 0; i < n ; i++) {
 
 En este ejemplo, la sentencia `System.out.println("Iteración " + i);` se va a ejecutar 10 veces, tantas como iteraciones se van a producir al ejecutar el código. La salida del programa será:
 
-```
-Iteración 0
+<pre><code>Iteración 0
 Iteración 1
 Iteración 2
 Iteración 3
@@ -50,8 +49,8 @@ Iteración 7
 Iteración 8
 Iteración 9
 
-Process finished with exit code 0
-```
+<strong>Process finished with exit code 0
+</strong></code></pre>
 
 Una vez el contador i llegue al valor 10, la condición `i < n` deja de cumplirse y termina la ejecución del bucle.
 
