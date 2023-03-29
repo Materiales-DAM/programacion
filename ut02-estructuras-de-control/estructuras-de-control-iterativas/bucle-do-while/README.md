@@ -23,6 +23,8 @@ Por tanto, este tipo de bucle será útil cuando queramos asegurar que al menos 
 
 Este tipo de bucle es muy útil para implementar [menús interactivos](menus-interactivos.md).
 
+### IncrementUntil1000DoWhile
+
 Veamos el ejemplo anterior implementado con do-while:
 
 ```java
@@ -55,7 +57,9 @@ El valor final de i es 1280
 Process finished with exit code 0
 ```
 
-Entonces, si el resultado es el mismo ¿para qué sirve este otro tipo de bucle? Su utilizada viene exclusivamente cuando queremos que la primera iteración se ejecute siempre, aunque no se cumpla la condición desde el principio. Por ejemplo
+Entonces, si el resultado es el mismo ¿para qué sirve este otro tipo de bucle? Su utilizada viene exclusivamente cuando queremos que la primera iteración se ejecute siempre, aunque no se cumpla la condición desde el principio.
+
+### IncrementUntil0DoWhile
 
 ```java
 // Inicializamos la variable i con el valor 5
@@ -79,6 +83,8 @@ El valor final de i es 10
 
 Process finished with exit code 0
 ```
+
+### IncrementUntil0While
 
 Mientras que en la versión con el bucle while sería
 
