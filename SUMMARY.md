@@ -14,6 +14,7 @@
 * [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
 * [Entrada y salida del programa](ut01-introduccion-a-la-programacion/entrada-y-salida-del-programa.md)
 * [Ejercicios](ut01-introduccion-a-la-programacion/ejercicios.md)
+* [Casting de valores numéricos](ut01-introduccion-a-la-programacion/casting-de-valores-numericos.md)
 
 ## UT02 - Estructuras de control
 
