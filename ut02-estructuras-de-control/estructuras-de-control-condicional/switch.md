@@ -33,8 +33,12 @@ switch (expression) {
 
 Por ejemplo, si queremos decir el día de la semana a partir de un número
 
-<pre class="language-java"><code class="lang-java"><strong>int day = 4;
-</strong><strong>switch (day) {
+<pre class="language-java"><code class="lang-java">Scanner scanner = new Scanner(System.in);
+
+int day = scanner.nextInt();
+scanner.nextLine();
+
+<strong>switch (day) {
 </strong>    case 1:
         System.out.println("Lunes");
         break;
