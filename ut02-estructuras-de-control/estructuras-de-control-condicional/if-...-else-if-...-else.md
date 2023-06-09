@@ -95,22 +95,20 @@ A la hora de crear cláusulas `else if` se debe tener en cuenta que:
 * **No se pueden añadir cláusulas `else if` después de una claúsula `else`**.
 
 ```java
-int x = 10;
-int y = 4;
+int a = 10;
+int b = 4;
 // La siguiente línea crea una claúsula if
-if (x > y) {
-    // Todas las sentencias que pongamos aquí se ejecutarán sólo si x es mayor que y
-    System.out.println("x es mayor que y");
-} else if (x == y) {
+if (a > b) {
+    // Todas las sentencias que pongamos aquí se ejecutarán sólo si a es mayor que b
+    System.out.println("a es mayor que b");
+} else if (a == b) {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si:
-    //        - x NO es mayor que y
-    //        - x es igual que y
-    System.out.println("x e y son iguales");
+    //         a NO es mayor que b y a es igual que b
+    System.out.println("a y b son iguales");
 } else {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si:
-    //        - x NO es mayor que y
-    //        - x NO es igual que y
-    System.out.println("x es menor que y");
+    //        a NO es mayor que b y a NO es igual que b
+    System.out.println("a es menor que b");
 }
 
 System.out.println("Esto se ejecuta siempre");
