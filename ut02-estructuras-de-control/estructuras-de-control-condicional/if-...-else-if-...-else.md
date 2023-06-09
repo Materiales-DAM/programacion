@@ -25,8 +25,12 @@ Las condiciones van a ser expresiones que usan [operadores condicionales](../../
 Por ejemplo si tenemos dos números `x` e `y`, podemos mostrar en pantalla un mensaje cuando x es mayor que y.
 
 ```java
-int x = 10;
-int y = 4;
+Scanner scanner = new Scanner(System.in);
+
+int x = scanner.nextInt();
+scanner.nextLine();
+int y = scanner.nextInt();
+scanner.nextLine();
 // La siguiente línea crea una claúsula if
 if (x > y) {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si x es mayor que y
@@ -53,8 +57,11 @@ if (condicion) {
 La claúsla **else no define ninguna condición**.
 
 ```java
-int x = 10;
-int y = 4;
+Scanner scanner = new Scanner(System.in);
+
+int x = scanner.nextInt();
+scanner.nextLine();
+int y = scanner.nextInt();
 // La siguiente línea crea una claúsula if
 if (x > y) {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si x es mayor que y
@@ -95,8 +102,11 @@ A la hora de crear cláusulas `else if` se debe tener en cuenta que:
 * **No se pueden añadir cláusulas `else if` después de una claúsula `else`**.
 
 ```java
-int a = 10;
-int b = 4;
+Scanner scanner = new Scanner(System.in);
+
+int a = scanner.nextInt();
+scanner.nextLine();
+int b = scanner.nextInt();
 // La siguiente línea crea una claúsula if
 if (a > b) {
     // Todas las sentencias que pongamos aquí se ejecutarán sólo si a es mayor que b
