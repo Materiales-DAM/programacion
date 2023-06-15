@@ -10,13 +10,13 @@ Una sentencia `break;` sirve para teminar la ejecución de un bucle de forma inm
 ```java
 for(int i=0; i<10;i++){
     if(i == 5){
-        // Cuando el break se ejecuta se sale del bucle
+        // Cuando el break se ejecuta, se salta fuera del bucle
         break;
     }
     System.out.println(i);
 }
 
-// Esta sentencia se ejecuta cuando ha finalizado el bucle
+// Esta sentencia se ejecuta cuando ha finalizado el bucle (después del break)
 System.out.println("Bucle finalizado");
 ```
 
