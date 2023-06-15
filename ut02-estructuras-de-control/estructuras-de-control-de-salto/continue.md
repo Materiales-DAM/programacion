@@ -10,7 +10,7 @@ Una sentencia `continue;` sirve para teminar la ejecución de una iteración de 
 ```java
 for(int i=0; i<10;i++){
     if(i == 5){
-        // Cuando el continua se pasa a la siguiente iteración
+        // Cuando el continue se ejecuta, se salta a la siguiente iteración
         continue;
     }
     System.out.println(i);
