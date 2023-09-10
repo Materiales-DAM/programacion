@@ -13,9 +13,9 @@ Cuando las sentencias se ejecutan una tras otra tenemos un **flujo secuencial**.
 
 Cada estructura de control está diseñada para facilitar un tipo de flujo de ejecución:&#x20;
 
-* ****[**Condicionales o de selección**](estructuras-de-control-condicional/): Sirven para expresar flujos condicionales
-* ****[**Iterativas**](estructuras-de-control-iterativas/): Sirven para expresar flujos iterativos ****&#x20;
-* ****[**De salto**](estructuras-de-control-de-salto/)**:** Se usan dentro de un flujo iterativo para modificar las iteraciones.
+* [**Condicionales o de selección**](estructuras-de-control-condicional/): Sirven para expresar flujos condicionales
+* [**Iterativas**](estructuras-de-control-iterativas/): Sirven para expresar flujos iterativos&#x20;
+* [**De salto**](estructuras-de-control-de-salto/)**:** Se usan dentro de un flujo iterativo para modificar las iteraciones.
 
 <figure><img src="../.gitbook/assets/control-structures.png" alt=""><figcaption><p>Clasificación de las principales estructuras de control</p></figcaption></figure>
 

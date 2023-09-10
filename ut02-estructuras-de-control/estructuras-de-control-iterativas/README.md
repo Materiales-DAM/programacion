@@ -12,4 +12,4 @@ Las principales estructuras de control iterativas son:
 * [Bucle for](bucle-for.md)
 * [Bucle while](bucle-while.md)
 * [Bucle do-while](bucle-do-while/)
-* Bucle for-each: se estudiará en la [UT04 - Arrays](broken-reference)
+* Bucle for-each: se estudiará en la [UT03 - Métodos y Arrays](../../ut03-metodos-y-arrays/arrays.md)

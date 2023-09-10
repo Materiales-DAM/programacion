@@ -37,10 +37,7 @@
   * [Break](ut02-estructuras-de-control/estructuras-de-control-de-salto/break.md)
   * [Continue](ut02-estructuras-de-control/estructuras-de-control-de-salto/continue.md)
 
-## UT03 - Métodos
+## UT03 - Métodos y arrays
 
-* [Métodos](ut03-metodos/metodos.md)
-
-## UT04 - Arrays
-
-* [Arrays](ut04-arrays/arrays.md)
+* [Métodos](ut03-metodos-y-arrays/metodos.md)
+* [Arrays](ut03-metodos-y-arrays/arrays.md)

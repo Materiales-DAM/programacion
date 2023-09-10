@@ -16,7 +16,7 @@ for (sentencia1; sentencia2 ; sentencia3) {
 ```
 
 * La **sentencia1** se ejecuta sólo una vez, sirve para **inicializar el contador** (normalmente a 0)
-* La **sentencia2** debe ser una **** [**expresión condicional**](../../ut01-introduccion-a-la-programacion/expresiones-y-operadores.md#operadores-condicionales)**,** el bucle se repetirá hasta que esta condición deje de cumplirse.
+* La **sentencia2** debe ser una [**expresión condicional**](../../ut01-introduccion-a-la-programacion/expresiones-y-operadores.md#operadores-condicionales)**,** el bucle se repetirá hasta que esta condición deje de cumplirse.
 * La **sentencia3** se invoca al finalizar cada iteración, sirve para **modificar el valor del contador**, normalente incrementandolo en 1 (`i++`)
 
 <figure><img src="../../.gitbook/assets/for_loop.jpg" alt=""><figcaption></figcaption></figure>

@@ -45,16 +45,7 @@ public class StandardInputOutputProgram {
 
 ### Métodos de Scanner
 
-| Método          | Descripción                               |
-| --------------- | ----------------------------------------- |
-| `nextBoolean()` | Lee un `boolean` que introduce el usuario |
-| `nextByte()`    | Lee un `byte` que introduce el usuario    |
-| `nextDouble()`  | Lee un `double` que introduce el usuario  |
-| `nextFloat()`   | Lee un `float` que introduce el usuario   |
-| `nextInt()`     | Lee un `int` que introduce el usuario     |
-| `nextLine()`    | Lee un `String` que introduce el usuario  |
-| `nextLong()`    | Lee un `long` que introduce el usuario    |
-| `nextShort()`   | Lee un `short` que introduce el usuario   |
+<table><thead><tr><th width="188">Método</th><th>Descripción</th></tr></thead><tbody><tr><td><code>nextBoolean()</code></td><td>Lee un <code>boolean</code> que introduce el usuario</td></tr><tr><td><code>nextByte()</code></td><td>Lee un <code>byte</code> que introduce el usuario</td></tr><tr><td><code>nextDouble()</code></td><td>Lee un <code>double</code> que introduce el usuario</td></tr><tr><td><code>nextFloat()</code></td><td>Lee un <code>float</code> que introduce el usuario</td></tr><tr><td><code>nextInt()</code></td><td>Lee un <code>int</code> que introduce el usuario</td></tr><tr><td><code>nextLine()</code></td><td>Lee un <code>String</code> que introduce el usuario</td></tr><tr><td><code>nextLong()</code></td><td>Lee un <code>long</code> que introduce el usuario</td></tr><tr><td><code>nextShort()</code></td><td>Lee un <code>short</code> que introduce el usuario</td></tr></tbody></table>
 
 **IMPORTANTE**: Después de utilizar cualquier método del Scanner que no sea `scanner.nextLine()`, se debe añadir una sentencia `scanner.nextLine()` para pasar a la siguiente línea de entrada.
 
