@@ -49,7 +49,8 @@ coverY: 0
 6\. Escribe un programa que:&#x20;
 
 * Pide un String y lo guarda en una variable llamada operación&#x20;
-* Si el valor de operación es “+” (operacion.equals(“+”)) -> operacion == “+”&#x20;
+* Si el valor de operación es “+” (`operacion.equals(`
+* `"+")`) -> operacion == “+”&#x20;
 * Pide un valor double (a)&#x20;
 * Pide otro valor double (b)&#x20;
 * Muestra el resultado de sumarlos&#x20;
