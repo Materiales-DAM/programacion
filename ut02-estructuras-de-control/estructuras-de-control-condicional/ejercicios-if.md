@@ -41,10 +41,10 @@ coverY: 0
 * Si a es mayor que b. Calcula la suma de a y b y muestra en pantalla el resultado&#x20;
 * Si a es igual a b. Calcula la resta de a  - b y muestra el resultado en pantalla&#x20;
 * Si a es menor que b:&#x20;
-* Pide al usuario otro numero c&#x20;
-* Si c es mayor que la suma de a y b: imprime el mensaje “c es mayor que a + b”&#x20;
-* Si c es menor que la suma de a y b: imprime el mensaje “c es menor que a + b”&#x20;
-* c es igual que la suma de a y b: imprime el mensaje “c es igual que a + b”&#x20;
+  * Pide al usuario otro numero c&#x20;
+  * Si c es mayor que la suma de a y b: imprime el mensaje “c es mayor que a + b”&#x20;
+  * Si c es menor que la suma de a y b: imprime el mensaje “c es menor que a + b”&#x20;
+  * c es igual que la suma de a y b: imprime el mensaje “c es igual que a + b”&#x20;
 
 6\. Escribe un programa que:&#x20;
 
