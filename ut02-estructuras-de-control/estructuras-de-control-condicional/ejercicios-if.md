@@ -29,9 +29,9 @@ coverY: 0
 4\. Escribe un programa que:&#x20;
 
 * Pide un String de 8 caracteres&#x20;
-* Imprime en pantalla “Demasiado pequeño” si el String no tiene menos de 8 caracteres&#x20;
-* Imprime en pantalla “Demasiado grande” si el String no tiene mas de 8 caracteres&#x20;
-* Sino “Es valido”&#x20;
+* Imprime en pantalla “Demasiado pequeño” si el String tiene menos de 8 caracteres&#x20;
+* Imprime en pantalla “Demasiado grande” si el String tiene mas de 8 caracteres&#x20;
+* Si tiene 8 caracteres imprime “Es valido”&#x20;
 
 5\. Escribe un programa que:&#x20;
 
