@@ -21,6 +21,7 @@
 * [Estructuras de control](ut02-estructuras-de-control/introduccion.md)
 * [Estructuras de control condicional](ut02-estructuras-de-control/estructuras-de-control-condicional/README.md)
   * [If ... else if ... else](ut02-estructuras-de-control/estructuras-de-control-condicional/if-...-else-if-...-else.md)
+  * [Operadores condicionales](ut02-estructuras-de-control/estructuras-de-control-condicional/operadores-condicionales.md)
   * [Ejercicios If](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-if/README.md)
     * [Soluciones](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-if/soluciones.md)
   * [Switch](ut02-estructuras-de-control/estructuras-de-control-condicional/switch.md)
