@@ -62,3 +62,70 @@ public class StringExamples {
 }
 
 ```
+
+2\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class CalculatorSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qué operación desea realizar: + o -");
+        String operation = scanner.nextLine();
+        System.out.println("Introduce un número");
+        
+        switch (operation) {
+            case "+":
+                int num1 = scanner.nextInt();
+                scanner.nextLine();
+                System.out.println("Introduce otro número");
+                int num2 = scanner.nextInt();
+                scanner.nextLine();
+
+                int sum = num1 + num2;
+                System.out.println("La suma es " + sum);
+                break;
+            case "-":
+                num1 = scanner.nextInt();
+                scanner.nextLine();
+                System.out.println("Introduce otro número");
+                num2 = scanner.nextInt();
+                scanner.nextLine();
+
+                int subs = num1 - num2;
+                System.out.println("La resta es " + subs);
+                break;
+            default:
+                System.out.println("Operación inválida, debe ser + o -");
+
+        }
+    }
+}
+
+```
+
+3\.
+
+```java
+import java.util.Scanner;
+
+public class String8CharactersSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un String de 8 caracteres");
+        String word = scanner.nextLine();
+
+        switch (word.length()) {
+            case 8:
+                System.out.println("Es válido");
+                break;
+            default:
+                System.out.println("No es válido");
+        }
+    }
+}
+
+```
