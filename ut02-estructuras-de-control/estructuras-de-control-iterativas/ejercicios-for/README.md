@@ -20,6 +20,10 @@ coverY: 0
 
 * Si el argumento es 4 el resultado será `0 + 1 + 2 + 3 + 4 = 10`&#x20;
 
+3.1. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número&#x20;
+
+* Si el argumento es 4 el resultado será 1 \* 2 \* 3  \* 4 `= 24`&#x20;
+
 4\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos. &#x20;
 
 * Nota: para que un año sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100&#x20;
