@@ -94,3 +94,33 @@ public class Ej3 {
 }
 
 ```
+
+4\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ejer4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce el año de inicio");
+        int year1 = scanner.nextInt();
+        scanner.nextLine();
+
+        int year2 = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = year1; i <= year2; i++) {
+            // Aquí va a haber tantas iteraciones como year2 - year1
+            // year1 toma el mismo valor en todas las iteraciones
+            // year2 toma siempre el mismo valor en todas las iteraciones
+            if (i % 4 == 0 && i % 100 != 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+```
