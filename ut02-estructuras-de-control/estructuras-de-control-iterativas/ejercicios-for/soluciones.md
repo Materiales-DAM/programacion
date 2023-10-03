@@ -124,3 +124,44 @@ public class Ejer4 {
 }
 
 ```
+
+5\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej5 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("¿Cuántos números desea introducir?");
+        int numbers = scanner.nextInt();
+        scanner.nextLine();
+
+        int negatives = 0;
+
+        // numbers= 5
+        for (int i = 0; i < numbers; i++) {
+            // i=0, negatives =0, number=4 -> negatives=0
+            // i=1, negatives=0, number=-3 -> negatives=1
+            // i=2, negatives=1, number=2 -> negatives=1
+            // i=3, negatives=1, number=-2 -> negatives=2
+            // i=4, negatives=2, number=-5 -> negatives=3
+            System.out.println("Introduzca un número:");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            if (number < 0) {
+                // negatives = negatives + 1;
+                negatives++;
+            }
+        }
+        // negatives=3
+        System.out.println("La cantidad de negativos es " + negatives);
+    }
+}
+
+```
