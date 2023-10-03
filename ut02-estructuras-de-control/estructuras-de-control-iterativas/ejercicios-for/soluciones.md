@@ -165,3 +165,41 @@ public class Ej5 {
 }
 
 ```
+
+6\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej6 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Cuántos números va a introducir");
+
+        int numbers = scanner.nextInt();
+        scanner.nextLine();
+
+        int max = Integer.MIN_VALUE;
+        // numbers= 3
+        for (int i = 0; i < numbers; i++) {
+            // i=0, number=3, max=0 --> max=3
+            // i=1, number=2, max=3 --> max=3
+            // i=2, number=5, max=3 --> max=5
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            if(number > max) {
+                max = number;
+            }
+
+        }
+
+        System.out.println("El máximo es " + max);
+    }
+}
+
+```
