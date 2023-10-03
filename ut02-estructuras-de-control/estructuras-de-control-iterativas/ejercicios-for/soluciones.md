@@ -203,3 +203,40 @@ public class Ej6 {
 }
 
 ```
+
+7\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Cuántos números desea introducir");
+        int numbers = scanner.nextInt();
+        scanner.nextLine();
+
+        int sum = 0;
+        // numbers = 3
+        for (int i = 0; i < numbers; i++) {
+            // i=0, sum=0, number=3 ---> sum =3
+            // i=1, sum=3, number=2 ---> sum = 5
+            // i=2, sum=5, number=4 ---> sum = 9
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            sum = sum + number;
+        }
+
+        double average = (double) sum / numbers;
+
+        System.out.println("La media es " + average);
+
+    }
+}
+
+```
