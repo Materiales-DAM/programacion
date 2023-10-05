@@ -240,3 +240,47 @@ public class Ej7 {
 }
 
 ```
+
+8\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej8 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un entero mayor que 1");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+
+        if(number <= 1) {
+            System.out.println("Introduzca un número mayor que uno...");
+        } else {
+            // number = 7
+            //  number % 2 != 0
+            //  number % 3 != 0
+            //  number % 4 != 0
+            //  number % 5 != 0
+            //  number % 6 != 0
+
+            boolean isPrime = true;
+
+            for (int i = 2; i < number; i++) {
+                if(number % i == 0) {
+                    isPrime = false;
+                }
+            }
+
+            if(isPrime) {
+                System.out.println("Es primo");
+            } else {
+                System.out.println("No es primo");
+            }
+        }
+    }
+}
+
+```
