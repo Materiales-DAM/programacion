@@ -63,3 +63,33 @@ public class Ej2 {
 }
 
 ```
+
+3\.
+
+```java
+import java.util.Scanner;
+
+public class Ej3 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce un número");
+        double number = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("¿Desea continuar? (S/N)");
+        String res = scanner.nextLine();
+
+        while(res.equals("S") || res.equals("s")) {
+            System.out.println("Introduce un número");
+            number = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("¿Desea continuar? (S/N)");
+            res = scanner.nextLine();
+        }
+    }
+}
+
+```
