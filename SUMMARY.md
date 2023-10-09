@@ -33,6 +33,7 @@
   * [Ejercicios for](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-for/README.md)
     * [Soluciones](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-for/soluciones.md)
   * [Bucle while](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucle-while.md)
+  * [Ejercicios expresiones booleanas](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-expresiones-booleanas.md)
   * [Ejercicios while](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-while/README.md)
     * [Soluciones](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-while/soluciones.md)
   * [Bucle do-while](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucle-do-while/README.md)
