@@ -1,4 +1,4 @@
-# Resultado
+# Soluciones
 
 1\.
 
@@ -27,6 +27,38 @@ public class Ej1 {
         }
         // number1=5, number2=7
         System.out.println("Correcto: " + number1 +" > " + +number2);
+    }
+}
+
+```
+
+2\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduzca un número con decimales");
+
+        double num1 = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Introduzca otro número con decimales");
+
+        double num2 = scanner.nextDouble();
+        scanner.nextLine();
+
+        while (num2 > num1) {
+            System.out.println("El segundo número debe ser menor que " + num1);
+            num2 = scanner.nextDouble();
+            scanner.nextLine();
+        }
+
+        System.out.println("Los números son: " + num1 + " y " + num2);
     }
 }
 
