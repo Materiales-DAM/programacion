@@ -224,5 +224,44 @@ public class Ej7 {
 8\.
 
 ```java
-// Some code
+import java.util.Scanner;
+
+public class Ej8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int sumPositives = 0;
+        int sumNegatives = 0;
+        int zeros = 0;
+        int positives = 0;
+        int negatives = 0;
+
+        int i = 0;
+        while (i < 10) {
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            if (number > 0) {
+                positives++;
+                sumPositives = sumPositives + number;
+            } else if (number < 0) {
+                negatives++;
+                sumNegatives = sumNegatives + number;
+            } else {
+                zeros++;
+            }
+
+            i++;
+        }
+
+        double averagePositives = (double) sumPositives / positives;
+        double averageNegatives = (double) sumNegatives / negatives;
+
+        System.out.println("La media de positivos es " + averagePositives);
+        System.out.println("La media de negativos es " + averageNegatives);
+        System.out.println("El número de ceros es " + zeros);
+    }
+}
+
 ```
