@@ -197,7 +197,28 @@ public class Ej6 {
 7\.
 
 ```java
-// Some code
+import java.util.Scanner;
+
+public class Ej7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+
+        int sum = number;
+        while(number != 0) {
+            System.out.println("Introduce un número");
+            number = scanner.nextInt();
+            scanner.nextLine();
+
+            sum = sum + number;
+        }
+
+        System.out.println("La suma es " + sum);
+    }
+}
+
 ```
 
 8\.
