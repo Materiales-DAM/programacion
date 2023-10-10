@@ -93,3 +93,84 @@ public class Ej3 {
 }
 
 ```
+
+4\.
+
+```java
+import java.util.Scanner;
+
+public class Ej4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        
+        int counter = 1;
+        while (number >= 0) {
+            System.out.println("Introduce otro número");
+            number = scanner.nextInt();
+            scanner.nextLine();
+            counter++;
+        }
+
+        System.out.println("Ha introducido " + counter);
+
+    }
+}
+
+```
+
+5\.
+
+```java
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ej5 {
+    public static void main(String[] args) {
+        Random r = new Random();
+        int n = r.nextInt(100); // G
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Trata de adivinar un  número del 0 al 99");
+
+        int guess = scanner.nextInt();
+        scanner.nextLine();
+
+        while(guess != n) {
+            if(guess > n) {
+                System.out.println("Es menor");
+            } else {
+                System.out.println("Es mayor");
+            }
+            System.out.println("Trata de adivinar un  número del 0 al 99");
+
+            guess = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        System.out.println("Correcto, el número era " + guess);
+    }
+}
+
+```
+
+6\.
+
+```java
+// Some code
+```
+
+7\.
+
+```java
+// Some code
+```
+
+8\.
+
+```java
+// Some code
+```
