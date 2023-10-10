@@ -160,7 +160,38 @@ public class Ej5 {
 6\.
 
 ```java
-// Some code
+import java.util.Scanner;
+
+public class Ej6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Cuántos números deseas introducir");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        while(n <= 0 ) {
+            System.out.println("Por favor, introduca un valor mayor que cero");
+            n = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        int sum = 0;
+        // for(int i=0;i<n;i++)
+        int i = 0;
+        while(i < n) {
+            System.out.println("Introduce un número ");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            sum = sum + number;
+            i++;
+        }
+
+        double average = (double) sum / n;
+        System.out.println("La media es " + average);
+    }
+}
+
 ```
 
 7\.
