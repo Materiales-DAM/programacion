@@ -47,5 +47,6 @@
 ## UT03 - Métodos y arrays
 
 * [Métodos](ut03-metodos-y-arrays/metodos.md)
-  * [Cabecera del método](ut03-metodos-y-arrays/metodos/cabecera-del-metodo.md)
+  * [Declaración de métodos](ut03-metodos-y-arrays/metodos/declaracion-de-metodos.md)
+  * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)
 * [Arrays](ut03-metodos-y-arrays/arrays.md)

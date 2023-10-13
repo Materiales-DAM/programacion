@@ -26,14 +26,14 @@ Por ejemplo, un método que, dado un nombre, devuelve un saludo:
 
 {% code fullWidth="true" %}
 ```java
-public class MyClass{
+public class HelloMessageClass {
     // Esta es la cabecera del método
-    // El  nombre de este método es helloMessage
+    // El  nombre de este método es buildHelloMessage
     // Tiene un parámetro de tipo String llamado name
     // Su modificador de acceso es public
     // Su tipo de retorno es String
     // Es un método estático
-    public static String helloMessage(String name){
+    public static String buildHelloMessage(String name){
         // Este es el cuerpo del método.
         // Contiene la secuencia de instrucciones que
         // se van a ejecutar cada vez que se invoca
@@ -47,14 +47,25 @@ public class MyClass{
 
 ## Invocación de métodos estáticos
 
-Declarar un método en un programa no tiene ningún efecto sobre el mismo si dicho método no es invocado nunca. Un mismo método puede ser invocado varias veces en la ejecución de un programa.
-
 Para invocar un método debemos poner su nombre, abrir y cerrar paréntesis y, dentro de los mismos, pasar los valores que queramos en esa invocación.
 
 ```java
-public class MyClass{
+String name1 = "Bob";
+// Se invoca el método pasando por parámetro el valor "Bob"
+String response1 = buildHelloMessage(name1);
+```
 
-    // Si el método myMethod no se invoca desde el main
+Cuando se invoca un método el programa salta desde la sentencia de invocación a la primera sentencia que hay dentro del cuerpo del método invocado. Si el método tiene parámetros, los valores que toman durante la ejecución son los que se han pasado en la invocación.
+
+En el ejemplo anterior, el parámetro `name` del método `buildHelloMessage` tomará el valor `"Bob"` durante su ejecución.
+
+### Ejemplo completo HelloMessageClass
+
+{% code lineNumbers="true" %}
+```java
+public class HelloMessageClass {
+
+    // Si el método buildHelloMessage no se invoca desde el main
     // es como si no existiera
     public static void main(String[] args) {
         String name1 = "Bob";
@@ -62,10 +73,10 @@ public class MyClass{
         
         // Se invoca el método por primera vez pasando
         // por parámetro el valor "Bob"
-        String response1 = helloMessage(name1);
+        String response1 = buildHelloMessage(name1);
         // Se invoca el método por segunda vez pasando
         // por parámetro el valor "Peppa"
-        String response2 = helloMessage(name2);
+        String response2 = buildHelloMessage(name2);
         
         // Aparecerá en pantalla "Hola Bob"
         System.out.println(response1);
@@ -73,11 +84,13 @@ public class MyClass{
         System.out.println(response2);
     }
     
-    // Declaración del método helloMessage
-    public static String helloMessage(String name){
+    // Declaración del método buildHelloMessage
+    public static String buildHelloMessage(String name){
         String responseMessage = "Hola " + name;
         return responseMessage;
     }
-}
+} 
 ```
+{% endcode %}
 
+Por tanto, declarar un método en un programa no tiene ningún efecto si no es invocado nunca. Como hemos visto, un mismo método puede ser invocado varias veces en la ejecución de un programa y los parámetros tomarán los valores que se hayan pasado en cada invocación.&#x20;
