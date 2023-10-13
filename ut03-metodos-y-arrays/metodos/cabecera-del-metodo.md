@@ -27,6 +27,6 @@ En la cabecera del método vamos a definir las características generales del mi
 //       numerator de tipo int
 //       denominator de tipo int
 public static double div(int numerator, int denominator){
-    return (double) numerator / denominator;
+    ... // Aquí va el cuerpo del método
 }
 ```
