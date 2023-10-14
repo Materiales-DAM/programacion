@@ -49,4 +49,5 @@
 * [Métodos](ut03-metodos-y-arrays/metodos.md)
   * [Declaración de métodos](ut03-metodos-y-arrays/metodos/declaracion-de-metodos.md)
   * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)
+  * [Ejercicios de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos.md)
 * [Arrays](ut03-metodos-y-arrays/arrays.md)
