@@ -9,13 +9,13 @@ coverY: 0
    1. Un método que calcule la suma de sus dos parámetros enteros y devuelva el resultado
    2. Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada
 
-En el main se invocará el primer método pasando los valores 2 y 3, después se invocará el segundo método con el resultado de la invocación del primero
+En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
 
 2. Crea un programa que defina los siguientes métodos:
    1. Un método que calcule la multiplicación de sus dos parámetros enteros y devuelva el resultado
    2. Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada
 
-En el main se invocara el primer método pasando los valores 2 y 3, después se invocará el segundo método con el resultado de la invocación del primero
+En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
 
 3. Crea un programa que muestre un menú con las siguientes opciones:&#x20;
 
