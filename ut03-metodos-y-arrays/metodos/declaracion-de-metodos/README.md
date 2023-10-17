@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/method.jpg
+cover: ../../../.gitbook/assets/method.jpg
 coverY: 0
 ---
 
