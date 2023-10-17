@@ -52,4 +52,5 @@
     * [Ejemplos](ut03-metodos-y-arrays/metodos/declaracion-de-metodos/ejemplos.md)
   * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)
   * [Ejercicios de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos.md)
+  * [Ejercicios métodos](ut03-metodos-y-arrays/metodos/ejercicios-metodos.md)
 * [Arrays](ut03-metodos-y-arrays/arrays.md)
