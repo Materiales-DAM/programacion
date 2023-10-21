@@ -26,7 +26,7 @@ Cada tipo de datos define un conjunto de valores que se pueden tomar.&#x20;
 
 Algunos de estos tipos son subconjuntos de otros, es decir que todos los valores de un tipo existen en otro tipo.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Conjuntos de tipos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Conjuntos de tipos</p></figcaption></figure>
 
 Cuando hacemos un casting de tipos es posible que vayamos de un tipo más grande a uno más pequeño o viceversa:
 

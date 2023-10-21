@@ -19,7 +19,7 @@ do {
 
 Por tanto, este tipo de bucle será útil cuando queramos asegurar que al menos se va a ejecutar una iteración.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Bucle do-while</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Bucle do-while</p></figcaption></figure>
 
 Este tipo de bucle es muy útil para implementar [menús interactivos](menus-interactivos.md).
 
