@@ -60,3 +60,4 @@
 ***
 
 * [Ejercicios de métodos y arrays](ejercicios-de-metodos-y-arrays.md)
+* [Ejercicios de menús con métodos y arrays](ejercicios-de-menus-con-metodos-y-arrays.md)
