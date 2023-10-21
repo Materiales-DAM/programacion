@@ -34,10 +34,4 @@ coverY: 0
    3. Por cada número que hay entre v1 y v2, calcula el sumatorio de 0 al número&#x20;
       * Sumatorio de 1: 1 + 0&#x20;
       * Sumatorio de 2: 2 + 1 + 0&#x20;
-      * Sumatorio de 3: 3 + 2 + 1 + 0 &#x20;
-
-Consejos:&#x20;
-
-* Descompón el problema en subproblemas&#x20;
-* Si hay dos subproblemas muy parecidos tal vez se puedan resolver con un único método&#x20;
-* Una vez resueltos los subproblemas, utiliza los métodos que has creado para resolver el problema completo&#x20;
+      * Sumatorio de 3: 3 + 2 + 1 + 0  &#x20;

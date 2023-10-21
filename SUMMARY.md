@@ -53,4 +53,10 @@
   * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)
   * [Ejercicios de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos.md)
   * [Ejercicios métodos](ut03-metodos-y-arrays/metodos/ejercicios-metodos.md)
-* [Arrays](ut03-metodos-y-arrays/arrays.md)
+* [Arrays](ut03-metodos-y-arrays/arrays/README.md)
+  * [Recorrer un array](ut03-metodos-y-arrays/arrays/recorrer-un-array.md)
+  * [Ejercicios](ut03-metodos-y-arrays/arrays/ejercicios.md)
+
+***
+
+* [Ejercicios de métodos y arrays](ejercicios-de-metodos-y-arrays.md)
