@@ -84,7 +84,7 @@ number[2] = 10;
 
 Ahora el array numbers almacena
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 ### Creación inline de un array
 
