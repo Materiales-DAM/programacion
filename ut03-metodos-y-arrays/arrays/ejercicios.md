@@ -30,7 +30,7 @@ layout:
    2. Recorre el array calculando la suma de todos los números
    3. Al final imprime la suma
 4. Haz un programa que:
-   1. Pregunte al usuario cuántos números quiere meter
+   1. Pregunte al usuario cuántos nombres quiere meter
    2. Cree un array de Strings del tamaño que ha dicho el usuario
    3. Recorre el array, en cada iteración
       1. Pide un nombre al usuario con el scanner
