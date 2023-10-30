@@ -81,3 +81,67 @@ public class Ej2 {
 
 ```
 
+3\.
+
+
+
+```java
+import java.util.Scanner;
+
+public class Ej3 {
+
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static String askName() {
+        System.out.println("Introduce tu nombre");
+        return scanner.nextLine();
+    }
+
+    public static void sayHello() {
+        String name = askName();
+
+        System.out.println("Hola, " + name);
+    }
+
+    public static void shout() {
+        String name = askName();
+
+        System.out.println("Cuidado " + name);
+    }
+
+    public static int chooseOption() {
+        System.out.println("Elige una opción:");
+        System.out.println("1. Saluda");
+        System.out.println("2. Grita");
+        System.out.println("3 Salir");
+        int option = scanner.nextInt();
+        scanner.nextLine();
+        return option;
+    }
+
+    public static void runMenuLoop() {
+        int option;
+        do {
+            option = chooseOption();
+            switch (option) {
+                case 1:
+                    sayHello();
+                    break;
+                case 2:
+                    shout();
+                    break;
+                case 3:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción inválida");
+            }
+        } while(option != 3);
+    }
+
+    public static void main(String[] args) {
+        runMenuLoop();
+    }
+}
+
+```
