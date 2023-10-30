@@ -145,3 +145,102 @@ public class Ej3 {
 }
 
 ```
+
+3\.
+
+```java
+import java.util.Scanner;
+
+public class Ej4 {
+    // chooseOption
+    // askNumber
+    // printResult
+    // runSum
+    // runSubstract
+    // runMult
+    // runMenuLoop
+
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static int chooseOption() {
+        printMenu();
+
+        int opt = scanner.nextInt();
+        scanner.nextLine();
+        while(opt > 4 || opt < 1) {
+            System.out.println("Opción inválida...");
+            printMenu();
+            opt = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        return opt;
+    }
+
+    private static void printMenu() {
+        System.out.println("Elige una opción");
+        System.out.println("1. Sumar");
+        System.out.println("2. Restar");
+        System.out.println("3. Multiplicar");
+        System.out.println("4. Salir");
+    }
+
+    public static int askNumber() {
+        System.out.println("Introduzca un número");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+        return num;
+    }
+
+    public static void printResult(int res) {
+        System.out.println("El resultado es " + res);
+    }
+
+    public static void runSum() {
+        int number1 = askNumber();
+        int number2 = askNumber();
+
+        int res = number1 + number2;
+
+        printResult(res);
+    }
+
+    public static void runSubs() {
+        int number1 = askNumber();
+        int number2 = askNumber();
+
+        int res = number1 - number2;
+
+        printResult(res);
+    }
+
+    public static void runMult() {
+        int number1 = askNumber();
+        int number2 = askNumber();
+
+        int res = number1 * number2;
+
+        printResult(res);
+    }
+    
+    public static void runMenuLoop() {
+        int opt;
+        do {
+            opt = chooseOption();
+            if(opt == 1) {
+                runSum();
+            } else if(opt == 2) {
+                runSubs();
+            } else if (opt == 3) {
+                runMult();
+            } else if (opt == 4) {
+                System.out.println("Saliendo...");
+            } 
+        } while (opt != 4);
+    }
+
+    public static void main(String[] args) {
+        runMenuLoop();
+    }
+}
+```
