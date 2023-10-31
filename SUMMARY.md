@@ -60,7 +60,8 @@
   * [Ejercicios de métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/README.md)
     * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/soluciones.md)
   * [Ejercicios de menús con métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays.md)
-  * [Matrices](ut03-metodos-y-arrays/arrays/matrices.md)
+  * [Matrices](ut03-metodos-y-arrays/arrays/matrices/README.md)
+    * [Ejercicios](ut03-metodos-y-arrays/arrays/matrices/ejercicios.md)
 
 ## UT04 - Introducción a la programación orientada a objetos
 
