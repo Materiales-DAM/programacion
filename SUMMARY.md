@@ -55,7 +55,8 @@
     * [Soluciones](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos/soluciones.md)
 * [Arrays](ut03-metodos-y-arrays/arrays/README.md)
   * [Recorrer un array](ut03-metodos-y-arrays/arrays/recorrer-un-array.md)
-  * [Ejercicios](ut03-metodos-y-arrays/arrays/ejercicios.md)
+  * [Ejercicios](ut03-metodos-y-arrays/arrays/ejercicios/README.md)
+    * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios/soluciones.md)
 
 ***
 
