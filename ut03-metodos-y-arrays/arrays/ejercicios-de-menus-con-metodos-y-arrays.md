@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/arrays.png
+cover: ../../.gitbook/assets/arrays.png
 coverY: 0
 layout:
   cover:
