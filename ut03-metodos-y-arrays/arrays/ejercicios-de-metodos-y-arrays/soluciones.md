@@ -1,4 +1,4 @@
-# Solucinoes
+# Soluciones
 
 1\.
 
@@ -26,6 +26,36 @@ public class Ej1 {
         int[] numbers = {1, 3, 5, 0};
         int max = max(numbers);
         printMax(max);
+    }
+}
+
+```
+
+2\.
+
+
+
+```java
+public class Ej2 {
+
+    public static int sum(int[] numbers) {
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+        }
+        return sum;
+    }
+    
+    public static void printResult(int res) {
+        System.out.println("La suma es " + res);
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 5, 0};
+        
+        int res = sum(numbers);
+        
+        printResult(res);
     }
 }
 
