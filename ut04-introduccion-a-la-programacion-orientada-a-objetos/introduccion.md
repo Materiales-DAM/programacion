@@ -44,13 +44,36 @@ Sin embargo, en el paradigmo POO, los datos y los procedimientos se encuentran e
 
 ### Clases
 
-Las clases son el elemento básico de este paradigma. Una clase describe un conjunto de variables relacionadas y un conjunto de operaciones que se pueden realizar sobre ellos. Podemos ver una clase como una plantilla que nos permite representar objetos que conceptualmente representan algo parecido. Las clases se componen de:
+Las clases son el elemento básico de este paradigma. Una clase describe un conjunto de variables relacionadas y un conjunto de operaciones que se pueden realizar sobre ellos. Podemos ver una clase como una plantilla que nos permite representar objetos que representan instancias de entidades de un mismo tipo. Las clases se componen de:
 
-* Campos: son cada uno de los atributos que componen los objetos de esta clase&#x20;
-* Constructores: Son métodos que sirven para crear objetos de esta clase
-* Métodos: Además de los constructores, se pueden definir métodos vinculados a los objetos que realicen algún tipo de cálculo, operación o modificación sobre los datos del objeto.
+* **Campos**: son cada uno de los atributos que componen los objetos de esta clase&#x20;
+* **Constructores**: Son métodos que sirven para crear objetos de esta clase
+* **Métodos**: Además de los constructores, se pueden definir métodos vinculados a los objetos que realicen algún tipo de cálculo, operación o modificación sobre los datos del objeto.
 
 ### Objetos
 
-Una vez definida una clase, podemos crear instancias de la misma llamados objetos. Un objeto almacena una serie de valores concretos que se le han asignado al crearlo (más tarde se le han podido modificar).
+Una vez definida una clase, podemos crear instancias de la misma llamados objetos. Cada objeto almacena un conjunto los valores concretos que tiene asignados a través de sus campos.
 
+Por ejemplo, si definimos la clase Persona:
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+En la clase Persona definimos que toda perona tiene los siguientes campos:
+
+* nombrePersona
+* primerApellido
+* segundoApellido
+* fechaNacimiento
+
+SI se deasea crear un objeto de tipo Persona, se deben proveer valores conretos para esos campos.
+
+
+
+```java
+// La variable person1 almacena un objeto de tipo Persona
+Persona person1 = new Persona("Bob", "Esponja", "De Mar", "23-11-2000");
+
+
+// La variable person2 almacena otro objeto de tipo Persona
+Persona person2 = new Persona("Peppa", "Pig", "UK", "2-12-2001");
+```

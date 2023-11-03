@@ -56,7 +56,7 @@ int[] numbers = new int[4];
 
 El array `numbers` se ha creado, ahora llega el momento de guardar valores dentro del mismo.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Array vacío de 4 posiciones</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Array vacío de 4 posiciones</p></figcaption></figure>
 
 Cada valor que queramos almacenar debe ocupar una posición distinta dentro del array.
 
@@ -73,7 +73,7 @@ numbers[3] = 9;
 
 Ahora tenemos un array que almacena los siguientes valores:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Array de enteros con 4 valores</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Array de enteros con 4 valores</p></figcaption></figure>
 
 En cualquier momento, podemos modificar el valor almacenado en una posición asignando un nuevo valor en el índice correspondiente
 
@@ -113,7 +113,7 @@ names[3] = "George";
 
 El array resultante en ambos casos sería
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Array de nombres</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Array de nombres</p></figcaption></figure>
 
 ## Acceder los valores del array
 
@@ -137,7 +137,7 @@ Por ejemplo, si tenemos el siguiente array
 int[] numbers = {4, 2, 7, 9};
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Array de números</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Array de números</p></figcaption></figure>
 
 Tiene 4 valores, por lo que las únicas posiciones válidas son: 0, 1, 2 y 3. Si tratamos de acceder a una posición que no existe el programa terminará mostrando la excepción `ArrayIndexOutOfBoundsException`
 

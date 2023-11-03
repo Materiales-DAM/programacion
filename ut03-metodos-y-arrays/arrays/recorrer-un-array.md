@@ -27,7 +27,7 @@ Por ejemplo si tenemos el siguiente array
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Vamos a querer recorrerlo en un bucle for, dicho bucle for deberá hacer tantas iteraciones como el tamaño del array. Para obtener el tamaño del array haremos `array.length`
 
