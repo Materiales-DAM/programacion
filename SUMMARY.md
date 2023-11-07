@@ -67,4 +67,5 @@
 ## UT04 - Introducción a la programación orientada a objetos
 
 * [Introducción](ut04-introduccion-a-la-programacion-orientada-a-objetos/introduccion.md)
-* [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases.md)
+* [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/README.md)
+  * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios.md)
