@@ -151,6 +151,26 @@ Algunas características de los métodos de objeto son:
 * Implementan funcionalidades vinculadas con el tipo en el que están definidos.
 * Por lo demás, la definición de métodos de objeto sigue las mismas reglas que los métodos de clase.
 
+## Constructores
 
+* Son métodos que sirven para instanciar objetos de la clase en la que están definidos.
+* Tienen el mismo nombre que la clase
+* Normalmente reciben como parámetros valores que se van a asignar en los campos del objeto
+* Se pueden definir varios constructores en una misma clase, siempre y cuando difieran en los parámetros que definen.
+* Si no se define ningún constructor el compilador crea un método constructor por defecto que inicializará los campos a los valores por defecto que les corresponda
 
-\
+```java
+public class Student {
+    // Estos son los campos de la clase Student
+    private String name;
+    private String surname;
+    private int course;
+    
+    public Student(String name, String surname, int course){
+        this.name = name;
+        this.surname = surname;
+        this.course = course;
+    
+    }    
+}
+```
