@@ -59,7 +59,9 @@ Process finished with exit code 0
 
 ## For each
 
-En ocasiones no nos interesa el valor de la i más que para sacar valores del array.
+* Se utiliza cuando queremos recorrer todas las posiciones de un array sin importarnos en qué posición está cada una de ellas
+* A la derecha de los : tenemos la declaración de la variable en la que se va a almacenar cada uno de los valores del array
+* A la derecha tenemos el array sobre el que vamos a iterar
 
 ```java
 int sum=0;
