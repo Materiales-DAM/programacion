@@ -69,3 +69,7 @@
 * [Introducción](ut04-introduccion-a-la-programacion-orientada-a-objetos/introduccion.md)
 * [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/README.md)
   * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios.md)
+  * [Principios de la Programación Orientada a Objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/principios-de-la-programacion-orientada-a-objetos.md)
+  * [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/paquetes.md)
+  * [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/modificadores-de-acceso.md)
+  * [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/comparar-objetos.md)
