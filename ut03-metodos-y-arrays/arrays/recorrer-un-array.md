@@ -29,6 +29,10 @@ Por ejemplo si tenemos el siguiente array
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
+
+
+## Fori
+
 Vamos a querer recorrerlo en un bucle for, dicho bucle for deberá hacer tantas iteraciones como el tamaño del array. Para obtener el tamaño del array haremos `array.length`
 
 ```java
@@ -53,3 +57,13 @@ El valor en la posición 3 es 9
 Process finished with exit code 0
 ```
 
+## For each
+
+En ocasiones no nos interesa el valor de la i más que para sacar valores del array.
+
+```java
+int sum=0;
+for(int number: numbers){
+    sum= sum + number;
+}
+```
