@@ -29,3 +29,17 @@ layout:
      * Saludo: imprimirá en pantalla el mensaje "Hola soy  \<nombre>  \<apellidos> y mi DNI/NIF es \<DNI>"
      * Despedida:  imprimirá en pantalla el mensaje "Hasta la próxima! Firmado \<nombre>"
    * Instancia un objeto Persona que almacene tus datos personales, una vez creado invoca el método de saludo y después el de despedida
+2.  Crea una clase para guardar los datos de diferentes vehículos:&#x20;
+
+    1. Tipo de vehiculo (coche, moto, camión): Usar tipo enum
+    2. Velocidad máxima&#x20;
+    3. Color&#x20;
+    4. Matrícula&#x20;
+
+    La clase debe incluir un constructor con todos los campos, métodos getter y setter para acceder a los campos y un método info que imprima en pantalla todos los datos del vehiculo.
+
+    Además habrá una clase Main que realice lo siguiente:
+
+    * Inicializa un Scanner&#x20;
+    * Crea un método estático que pida al usuario los datos de un vehiculo y devuelva un objeto de ese tipo&#x20;
+    * Pide un vehiculo desde el método main y si es una moto imprime su información
