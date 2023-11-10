@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Principios de la Programación Orientada a Objetos
+# Copy of Principios de la Programación Orientada a Objetos
 
 ## Encapsulamiento
 
