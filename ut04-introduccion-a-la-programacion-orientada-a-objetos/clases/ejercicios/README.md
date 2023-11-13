@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/oop.png
+cover: ../../../.gitbook/assets/oop.png
 coverY: 0
 layout:
   cover:
@@ -23,6 +23,7 @@ layout:
    * De cada persona queremos guardar:
      * Nombre
      * Apellidos
+     * Estado civil (soltero, casado, divorciado o viudo)
      * DNI / NIF
      * Edad
    * Define los siguientes métodos vinculados a cada persona:
