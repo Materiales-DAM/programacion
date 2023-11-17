@@ -63,6 +63,7 @@
     * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays/soluciones.md)
   * [Matrices](ut03-metodos-y-arrays/arrays/matrices/README.md)
     * [Ejercicios](ut03-metodos-y-arrays/arrays/matrices/ejercicios.md)
+* [Tarea Potencias](ut03-metodos-y-arrays/tarea-potencias.md)
 
 ## UT04 - Introducción a la programación orientada a objetos
 
