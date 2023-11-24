@@ -37,10 +37,13 @@ layout:
     3. Color&#x20;
     4. Matrícula&#x20;
 
-    La clase debe incluir un constructor con todos los campos, métodos getter y setter para acceder a los campos y un método info que imprima en pantalla todos los datos del vehiculo.
+    La clase debe incluir un constructor con todos los campos, métodos getter y setter para acceder a los campos y un método info que imprima en pantalla todos los datos del vehiculo..
 
-    Además habrá una clase Main que realice lo siguiente:
+Crea otra clase llamada VehicleReader que permita leer vehículos. Esta clase tendrá como campo un Scanner y tendrá un método que pide al usuario los datos de un vehículo y lo devuelve.
 
-    * Inicializa un Scanner&#x20;
-    * Crea un método estático que pida al usuario los datos de un vehiculo y devuelva un objeto de ese tipo&#x20;
-    * Pide un vehiculo desde el método main y si es una moto imprime su información
+Además habrá una clase Main que realice lo siguiente:
+
+* Inicializa un Scanner&#x20;
+* Crea un VehicleReader
+* Pide un vehiculo
+* Invoca el método info del vehículo
