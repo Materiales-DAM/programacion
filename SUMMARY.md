@@ -80,6 +80,7 @@
   * [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/paquetes.md)
   * [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/modificadores-de-acceso.md)
   * [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/comparar-objetos.md)
+  * [Tipos de clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-de-clases.md)
   * [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/el-no-valor-null.md)
   * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-primitivos-y-null.md)
   * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios-1.md)
