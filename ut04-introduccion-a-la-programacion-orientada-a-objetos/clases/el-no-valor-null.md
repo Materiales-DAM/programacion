@@ -28,3 +28,31 @@ Podemos usar el valor null para:
 
 ## NullPointerException
 
+Esta excepción ocurre cuando se intenta invocar un método de objeto de una variable que tiene valor null.
+
+{% code lineNumbers="true" %}
+```java
+Student student = null;
+
+if(student.getNif().equals("000000X")) {
+    System.out.println(student.getName());
+}
+```
+{% endcode %}
+
+Este código produce un `NullPointerException` en la línea 3, cuando se trata de ejecutar el método getNif() de la variable `student`, ya que dicha variable es `null`.
+
+Esta excepción es la más común en Java y otros lenguajes que no implementan ningún mecanismo de null safety. Para evitar esta excepción debemos comprobar si la variable es null antes de ejecutar el código.
+
+{% code lineNumbers="true" %}
+```java
+Student student = null;
+
+if(student != null) {
+    if(student.getNif().equals("000000X")) {
+        System.out.println(student.getName());
+    }
+}
+```
+{% endcode %}
+
