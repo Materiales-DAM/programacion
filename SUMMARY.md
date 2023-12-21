@@ -74,15 +74,15 @@
 * [Introducción](ut04-introduccion-a-la-programacion-orientada-a-objetos/introduccion.md)
 * [Principios de la Programación Orientada a Objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/principios-de-la-programacion-orientada-a-objetos.md)
 * [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/README.md)
-  * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios/README.md)
-    * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios/soluciones.md)
   * [Tipos de clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-de-clases.md)
 * [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/paquetes.md)
 * [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/comparar-objetos.md)
 * [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/modificadores-de-acceso.md)
 * [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null.md)
 * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
-* [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones.md)
+* [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/README.md)
+  * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios/README.md)
+    * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios/soluciones.md)
 * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios.md)
 
 ## UT05 - Herencia y polimorfismo
