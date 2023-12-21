@@ -72,18 +72,18 @@
 ## UT04 - Introducción a la programación orientada a objetos
 
 * [Introducción](ut04-introduccion-a-la-programacion-orientada-a-objetos/introduccion.md)
+* [Principios de la Programación Orientada a Objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/principios-de-la-programacion-orientada-a-objetos.md)
 * [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/README.md)
-  * [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/enumeraciones.md)
   * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios/README.md)
     * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios/soluciones.md)
-  * [Principios de la Programación Orientada a Objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/principios-de-la-programacion-orientada-a-objetos.md)
-  * [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/paquetes.md)
-  * [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/modificadores-de-acceso.md)
-  * [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/comparar-objetos.md)
   * [Tipos de clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-de-clases.md)
-  * [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/el-no-valor-null.md)
-  * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-primitivos-y-null.md)
-  * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/ejercicios-1.md)
+* [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/paquetes.md)
+* [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/comparar-objetos.md)
+* [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/modificadores-de-acceso.md)
+* [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null.md)
+* [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
+* [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones.md)
+* [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios.md)
 
 ## UT05 - Herencia y polimorfismo
 
