@@ -87,7 +87,7 @@
 
 ## UT05 - Herencia y polimorfismo
 
-* [Introducción](ut05-herencia-y-polimorfismo/introduccion.md)
+* [Herencia](ut05-herencia-y-polimorfismo/herencia.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
 
