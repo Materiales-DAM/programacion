@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/image (8).png
+cover: ../../.gitbook/assets/image (8).png
 coverY: 0
 layout:
   cover:
@@ -25,7 +25,7 @@ La herencia es un concepto fundamental en la programación orientada a objetos (
 
 Las clases se organizan en una estructura jerárquica. La superclase ocupa un nivel superior, y las subclases se sitúan debajo. Cada nivel de la jerarquía hereda las características de la clase superior y puede agregar nuevas funcionalidades.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Jerarquía de clases de animales</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Jerarquía de clases de animales</p></figcaption></figure>
 
 ### **Superclase (Clase Base o Padre)**&#x20;
 

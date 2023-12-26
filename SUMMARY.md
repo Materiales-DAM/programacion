@@ -85,9 +85,17 @@
     * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios/soluciones.md)
 * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios.md)
 
-## UT05 - Herencia y polimorfismo
+## UT05 - Herencia, interfaces, genéricos y polimorfismo
 
-* [Herencia](ut05-herencia-y-polimorfismo/herencia.md)
+* [Herencia](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/README.md)
+  * [Clases abstractas](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/clases-abstractas.md)
+  * [Sobreescritura de métodos](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/sobreescritura-de-metodos.md)
+  * [Modificador de acceso protected](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/modificador-de-acceso-protected.md)
+  * [Jerarquías de varios niveles](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/jerarquias-de-varios-niveles.md)
+  * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/ejercicios.md)
+* [Interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces.md)
+* [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos.md)
+* [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
 
