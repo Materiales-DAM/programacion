@@ -138,7 +138,7 @@ Un método abstracto es un método que se declara en una clase abstracta pero no
         }
     }
     ```
-2.  **Obligación de implementación:** Las clases que heredan de una clase abstracta que tiene métodos abstractos están obligadas a proporcionar implementaciones concretas para esos métodos. Si una clase no proporciona una implementación para un método abstracto, también debe declararse como abstracta.
+2.  **Obligación de implementación:** Las clases que heredan de una clase abstracta que tiene métodos abstractos están obligadas a proporcionar implementaciones concretas para esos métodos. Si una clase no proporciona una implementación para un método abstracto, también debe declararse como abstracta. Es muy recomendable añadir la anotación @Override antes de la definición del método en las clases hijas.
 
     ```java
     class Lion extends Animal {
@@ -159,6 +159,7 @@ Un método abstracto es un método que se declara en una clase abstracta pero no
         }
 
         // Implementación del método abstracto saySomething
+        @Override
         public void saySomething() {
             System.out.println("Roar, roar!!");
         }
@@ -171,7 +172,7 @@ Un método abstracto es un método que se declara en una clase abstracta pero no
 5. **No puede ser estático:** Los métodos abstractos no pueden ser declarados como `static`. Son métodos que deben ser implementados por las clases hijas y pueden ser sobrescritos en esas clases.
 6. **No puede tener un cuerpo:** Los métodos abstractos no pueden tener un cuerpo en la clase abstracta. La implementación real se proporciona en las clases derivadas.
 
-Veamos cómo quedaría la jerarquía de clases anterior añadiendo el método abstracto saySomething:
+Veamos cómo quedaría la jerarquía de clases anterior añadiendo el método abstracto `saySomething`:
 
 ```java
 // Clase abstracta Animal
@@ -210,6 +211,7 @@ class Lion extends Animal {
         this.jungleName = jungleName;
     }
 
+    @Override
     public void saySomething() {
         System.out.println("Roar, roar!!");
     }
@@ -233,6 +235,7 @@ class Dog extends Animal {
         this.owner = owner;
     }
     
+    @Override
     public void saySomething() {
         System.out.println("Guau, guau");
     }
