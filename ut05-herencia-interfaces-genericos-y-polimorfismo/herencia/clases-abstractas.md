@@ -30,10 +30,6 @@ Aquí hay algunos puntos clave sobre las clases abstractas:
 
 Si volvemos al ejemplo anterior, veremos que la clase Animal puede ser definida como abstracta. Esto es posible porque todo animal es de una especie en concreto, por lo que no tiene sentido crear un animal genérico sin especie
 
-
-
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
-
 La jerarquía de clases quedaría de la siguiente manera haciendo Animal abstracta
 
 ```java
@@ -46,9 +42,6 @@ abstract class Animal {
         this.name = name;
     }
 
-    // Método abstracto que debe ser implementado por las clases derivadas
-    abstract void saySomething();
-
     // Método concreto compartido por todas las clases derivadas
     public void sleep() {
         System.out.println(nombre + " está durmiendo.");
@@ -57,27 +50,47 @@ abstract class Animal {
 
 // Clase concreta Lion que extiende Animal
 class Lion extends Animal {
-    // Constructor
-    public Lion(String name) {
+    
+     private String jungleName;
+
+    public Lion(String name, String jungleName) {
         super(name);
+        this.jungleName = jungleName;
     }
 
-    // Implementación del método abstracto saySomething
-    void saySomething() {
-        System.out.println("Rugido del león.");
+    public String getJungleName() {
+        return jungleName;
     }
+
+    public void setJungleName(String jungleName) {
+        this.jungleName = jungleName;
+    }
+
+    public void roar() {
+        System.out.println("Roar, roar!!");
+    }
+
 }
 
 // Clase concreta Dog que extiende Animal
 class Dog extends Animal {
-    // Constructor
-    public Dog(String name) {
+     private String owner;
+
+    public Dog(String name, String owner) {
         super(name);
+        this.owner = owner;
     }
 
-    // Implementación del método abstracto saySomething
-    void saySomething() {
-        System.out.println("Ladrido del perro.");
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+    
+    public void bark() {
+        System.out.println("Guau, guau");
     }
 }
 
@@ -85,14 +98,11 @@ class Dog extends Animal {
 public class Main {
     public static void main(String[] args) {
         // Crear instancias de Lion y Dog
-        Lion leon = new Lion("Simba");
-        Dog perro = new Dog("Buddy");
+        Lion leon = new Lion("Simba", "Sabana");
+        Dog perro = new Dog("Buddy", "Bob Esponja");
 
-        // Llamar a métodos compartidos y específicos de cada clase
-        leon.saySomething();
         leon.sleep();
 
-        perro.saySomething();
         perro.sleep();
     }
 }
@@ -103,3 +113,145 @@ En este ejemplo:
 * `Animal` es una clase abstracta que tiene un método abstracto `saySomething()` y un método concreto `sleep()`.
 * `Lion` y `Dog` son clases concretas que extienden `Animal` y proporcionan implementaciones específicas para el método `saySomething()`.
 * En la clase principal (`Main`), se crean instancias de `Lion` y `Dog` y se llaman a sus métodos para mostrar cómo heredan y pueden utilizar tanto los métodos compartidos como los específicos de su propia clase.
+
+## Métodos abstractos
+
+Un método abstracto es un método que se declara en una clase abstracta pero no tiene una implementación en esa clase. La implementación real del método se deja a las subclases que heredan de la clase abstracta. Aquí hay algunos puntos clave sobre los métodos abstractos:
+
+1.  **Declaración sin implementación:** Un método abstracto se declara en una clase abstracta utilizando la palabra clave `abstract`, pero no contiene un bloque de código que defina cómo se debe realizar la operación.
+
+    ```java
+    abstract class Animal {
+        private String name;
+
+        // Constructor
+        public Animal(String name) {
+            this.name = name;
+        }
+
+        // Método abstracto que debe ser implementado por las clases derivadas
+        public abstract void saySomething();
+
+        // Método concreto compartido por todas las clases derivadas
+        public void sleep() {
+            System.out.println(nombre + " está durmiendo.");
+        }
+    }
+    ```
+2.  **Obligación de implementación:** Las clases que heredan de una clase abstracta que tiene métodos abstractos están obligadas a proporcionar implementaciones concretas para esos métodos. Si una clase no proporciona una implementación para un método abstracto, también debe declararse como abstracta.
+
+    ```java
+    class Lion extends Animal {
+        
+         private String jungleName;
+
+        public Lion(String name, String jungleName) {
+            super(name);
+            this.jungleName = jungleName;
+        }
+
+        public String getJungleName() {
+            return jungleName;
+        }
+
+        public void setJungleName(String jungleName) {
+            this.jungleName = jungleName;
+        }
+
+        // Implementación del método abstracto saySomething
+        public void saySomething() {
+            System.out.println("Roar, roar!!");
+        }
+
+    }
+
+    ```
+3. **Palabra clave `abstract`:** Tanto la clase que contiene el método abstracto como el propio método se deben marcar con la palabra clave `abstract`.
+4. **Facilita la herencia y la especialización:** Los métodos abstractos permiten definir una interfaz común en una clase base y luego permiten a las clases derivadas proporcionar implementaciones específicas según sus necesidades. Esto facilita la herencia y la especialización de clases.
+5. **No puede ser estático:** Los métodos abstractos no pueden ser declarados como `static`. Son métodos que deben ser implementados por las clases hijas y pueden ser sobrescritos en esas clases.
+6. **No puede tener un cuerpo:** Los métodos abstractos no pueden tener un cuerpo en la clase abstracta. La implementación real se proporciona en las clases derivadas.
+
+Veamos cómo quedaría la jerarquía de clases anterior añadiendo el método abstracto saySomething:
+
+```java
+// Clase abstracta Animal
+abstract class Animal {
+    private String name;
+
+    // Constructor
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    // Método abstracto que debe ser implementado por las clases derivadas
+    public abstract void saySomething();
+
+    // Método concreto compartido por todas las clases derivadas
+    public void sleep() {
+        System.out.println(nombre + " está durmiendo.");
+    }
+}
+
+// Clase concreta Lion que extiende Animal
+class Lion extends Animal {
+    
+     private String jungleName;
+
+    public Lion(String name, String jungleName) {
+        super(name);
+        this.jungleName = jungleName;
+    }
+
+    public String getJungleName() {
+        return jungleName;
+    }
+
+    public void setJungleName(String jungleName) {
+        this.jungleName = jungleName;
+    }
+
+    public void saySomething() {
+        System.out.println("Roar, roar!!");
+    }
+
+}
+
+// Clase concreta Dog que extiende Animal
+class Dog extends Animal {
+     private String owner;
+
+    public Dog(String name, String owner) {
+        super(name);
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+    
+    public void saySomething() {
+        System.out.println("Guau, guau");
+    }
+}
+
+// Clase principal para probar el código
+public class Main {
+    public static void main(String[] args) {
+        // Crear instancias de Lion y Dog
+        Lion leon = new Lion("Simba", "Sabana");
+        Dog perro = new Dog("Buddy", "Bob Esponja");
+
+        leon.sleep();
+        leon.saySomething();
+
+        perro.sleep();
+        perro.saySomething();
+    }
+}
+```
+
+En este ejemplo, la clase `Animal` tiene un método abstracto llamado `saySomething`. Las clases concretas `Lion` y `Dog` proporcionan implementaciones específicas para ese método. Cuando se crean instancias de estas clases y se llama al método `saySomething`, se ejecuta la implementación correspondiente de cada clase.
