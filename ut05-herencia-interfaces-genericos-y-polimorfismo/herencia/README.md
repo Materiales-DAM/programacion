@@ -143,6 +143,6 @@ En este ejemplo Animal sería la clase base, padre o superclase, mientras que Do
 
 1. **Acoplamiento:** La herencia puede llevar a un alto grado de acoplamiento entre clases, lo que dificulta los cambios en la superclase sin afectar a las subclases.
 2. **Jerarquías Complejas:** A medida que la jerarquía de clases crece, puede volverse compleja y difícil de gestionar, especialmente si no se planifica cuidadosamente.
-3. **Herencia Múltiple Limitada:** Java no admite herencia múltiple de clases, lo que puede limitar la capacidad de reutilización en ciertos casos.
+3. **Herencia Múltiple Limitada:** Java no admite herencia múltiple de clases, lo que puede limitar la capacidad de reutilización en muchos casos.
 
 En resumen, la herencia en Java es una herramienta poderosa para la creación de software modular y flexible, pero debe utilizarse con precaución para evitar problemas de diseño y mantenimiento a largo plazo. Un buen diseño de clases y el uso adecuado de la herencia contribuyen a la creación de sistemas más sólidos y fáciles de mantener
