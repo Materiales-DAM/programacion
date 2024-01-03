@@ -56,7 +56,7 @@ int[] numbers = new int[4];
 
 El array `numbers` se ha creado, ahora llega el momento de guardar valores dentro del mismo.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Array vacío de 4 posiciones</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Array vacío de 4 posiciones</p></figcaption></figure>
 
 Cada valor que queramos almacenar debe ocupar una posición distinta dentro del array.
 

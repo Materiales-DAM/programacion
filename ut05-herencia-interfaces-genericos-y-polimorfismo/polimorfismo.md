@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/image (8).png
+cover: ../.gitbook/assets/polymorphism.png
 coverY: 0
 layout:
   cover:

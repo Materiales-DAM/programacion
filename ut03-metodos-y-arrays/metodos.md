@@ -20,7 +20,7 @@ Los métodos se declaran dentro de clases y constan de dos partes:
   * **Tipo de retorno**: Algunos métodos devuelven valores al finalizar su ejecución, el tipo de retorno definde que tipo de valor va a devolver.
 * **Cuerpo del método**: El cuerpo del método empieza después de los paréntesis
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Ejemplo de método que calcula la raíz cuadrada de c</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Ejemplo de método que calcula la raíz cuadrada de c</p></figcaption></figure>
 
 Por ejemplo, un método que, dado un nombre, devuelve un saludo:
 
