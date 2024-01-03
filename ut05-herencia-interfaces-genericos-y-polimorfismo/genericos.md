@@ -1,6 +1,6 @@
 ---
-cover: ../.gitbook/assets/generics (1).webp
-coverY: 123.56266666666664
+cover: ../.gitbook/assets/generics.jpg
+coverY: 0
 layout:
   cover:
     visible: true
