@@ -92,10 +92,11 @@
   * [Sobreescritura de métodos](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/sobreescritura-de-metodos.md)
   * [Modificador de acceso protected](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/modificador-de-acceso-protected.md)
   * [Jerarquías de varios niveles](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/jerarquias-de-varios-niveles.md)
+  * [La clase java.lang.Object](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/la-clase-java.lang.object.md)
   * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/ejercicios.md)
+* [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo.md)
 * [Interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces.md)
 * [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos.md)
-* [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
 

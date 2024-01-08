@@ -258,3 +258,71 @@ public class Main {
 ```
 
 En este ejemplo, la clase `Animal` tiene un método abstracto llamado `saySomething`. Las clases concretas `Lion` y `Dog` proporcionan implementaciones específicas para ese método. Cuando se crean instancias de estas clases y se llama al método `saySomething`, se ejecuta la implementación correspondiente de cada clase.
+
+## Constructores
+
+Cuando una clase hija hereda de una clase padre en Java, la clase hija puede proporcionar su propio constructor. La implementación de constructores en clases hijas implica dos aspectos principales: la invocación del constructor de la clase padre y la definición de cualquier inicialización específica de la clase hija.
+
+Aquí hay algunas pautas generales sobre la implementación de constructores en clases hijas:
+
+1.  **Invocar al constructor de la clase padre:**
+
+    * Utiliza la palabra clave `super` para llamar al constructor de la clase padre.
+    * Esto se hace en el bloque de inicialización del constructor de la clase hija, y generalmente es la primera instrucción dentro del constructor de la clase hija.
+
+    ```java
+    class Dog extends Animal {
+         private String owner;
+
+        public Dog(String name, String owner) {
+            // Invocación del constructor de la clase padre
+            super(name);
+            this.owner = owner;
+        }
+
+        public String getOwner() {
+            return owner;
+        }
+
+        public void setOwner(String owner) {
+            this.owner = owner;
+        }
+        
+        @Override
+        public void saySomething() {
+            System.out.println("Guau, guau");
+        }
+    }
+    ```
+2.  **Definir la inicialización específica de la clase hija:**
+
+    * Después de la llamada al constructor de la clase padre, puedes incluir código adicional para inicializar miembros específicos de la clase hija.
+
+    ```java
+    class Dog extends Animal {
+         private String owner;
+
+        public Dog(String name, String owner) {
+            super(name);
+            // Se inicializan los campos específicos de la subclase
+            this.owner = owner;
+        }
+
+        public String getOwner() {
+            return owner;
+        }
+
+        public void setOwner(String owner) {
+            this.owner = owner;
+        }
+        
+        @Override
+        public void saySomething() {
+            System.out.println("Guau, guau");
+        }
+    }
+    ```
+3. **Constructores sin parámetros:**
+   * Si la clase padre tiene un constructor sin parámetros y la clase hija no llama explícitamente a `super(...)`, Java automáticamente insertará una llamada implícita al constructor sin parámetros de la clase padre.
+
+Recuerda que si no se proporciona un constructor en una clase, Java insertará un constructor predeterminado sin parámetros de manera implícita. Cuando implementas constructores en clases hijas, es importante entender cómo se maneja la cadena de construcción desde la clase más derivada hasta la clase base.
