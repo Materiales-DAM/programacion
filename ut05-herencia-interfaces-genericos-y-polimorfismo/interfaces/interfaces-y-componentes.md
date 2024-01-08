@@ -40,8 +40,11 @@ Al definir interfaces comunes, los componentes pueden interactuar entre sí de m
 
 ```java
 public class AppManager {
-    public void runApp(App app) {
-        app.run();
+    // Este método recibe una lista de apps y las ejecuta
+    public void runAll(App[] apps) {
+        for(App app: apps){
+            app.run();
+        }
     }
 }
 ```
@@ -51,8 +54,48 @@ public class AppManager {
 Un interface puede ser implementado de múltiples maneras, dependiendo de las necesidades del programa
 
 ```java
-public class MiComponente implements Componente, OtraInterfaz {
-    // Implementación de métodos de ambas interfaces
+public interface AccountReader {
+    Account read();
+}
+
+// Esta implementación de AccountReader usa el Scanner para leer los datos de una cuenta
+public class ScannerAccountReader implements AccountReader {
+    private Scanner scanner;
+
+    public ScannerAccountReader(Scanner scanner) {
+        this.scanner = scanner;
+    }
+    
+    @Override
+    public Account read() {
+        System.out.println("Introduce los datos de la cuenta:");
+        System.out.println("IBAN:");
+        String iban = scanner.nextLine();
+        System.out.println("Saldo:");
+        double balance = scanner.nextDouble();
+        scanner.nextLine();
+
+        return new Account(iban, balance);
+
+    }
+}
+
+// Esta implementación de AccountReader genera cuentas aleatorias
+public class RandomAccountReader implements AccountReader {
+    private Random random;
+
+    public RandomAccountReader(Random random) {
+        this.random = random;
+    }
+
+    @Override
+    public Account read() {
+        // Genera un IBAN aleatorio
+        String iban = "ES" + random.nextInt();
+        // Genera un saldo aleatorio
+        double balance = random.nextDouble(10000);
+        return new Account(iban, balance);
+    }
 }
 ```
 
@@ -61,37 +104,44 @@ public class MiComponente implements Componente, OtraInterfaz {
 Las interfaces son fundamentales en patrones de diseño como la inyección de dependencias. Permite la creación de componentes que dependen de interfaces en lugar de implementaciones concretas, facilitando la sustitución de componentes y la mejora de la flexibilidad del sistema.
 
 ```java
-public class MiAplicacion {
-    private Componente miComponente;
+public class AccountApp implements App {
+    // El tipo de las dependencias es el interface, no las implementaciones
+    private AccountReader accountReader;
 
-    public MiAplicacion(Componente componente) {
-        this.miComponente = componente;
+    public AccountApp(AccountReader accountReader) {
+        this.accountReader = accountReader;
     }
 
-    public void iniciar() {
-        miComponente.iniciar();
+    @Override
+    public void run() {
+        Account account = accountReader.read();
+        int opt;
+        do {
+            ...
+            // Implementamos el menú de opciones
+        } while(opt !=5 );
     }
 
     // ...
 }
-```
 
-##
-
-## **Contratos Estándar en APIs**
-
-Al desarrollar APIs o bibliotecas, las interfaces se utilizan para definir contratos estándar que los desarrolladores deben seguir al implementar sus propias clases. Esto promueve la coherencia y la interoperabilidad en el uso de la API.
-
-```java
-javaCopy code// En una API
-public interface Servicio {
-    void realizarAccion();
+public class RandomMain {
+    public static void main(String[] args){
+        Random random = new Random();
+        RandomAccountReader accountReader = new RandomAccountReader(random);
+        AccountApp accountApp = new AccountApp(accountReader);
+        
+        accountApp.run();
+    }
 }
 
-// Implementación proporcionada por el desarrollador que utiliza la API
-public class MiServicio implements Servicio {
-    public void realizarAccion() {
-        // Implementación específica
+public class ScannerMain {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        ScannerAccountReader accountReader = new ScannerAccountReader(scanner);
+        AccountApp accountApp = new AccountApp(accountReader);
+        
+        accountApp.run();
     }
 }
 ```
