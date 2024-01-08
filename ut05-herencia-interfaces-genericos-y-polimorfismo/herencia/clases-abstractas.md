@@ -322,7 +322,7 @@ Aquí hay algunas pautas generales sobre la implementación de constructores en 
         }
     }
     ```
-3. **Constructores sin parámetros:**
-   * Si la clase padre tiene un constructor sin parámetros y la clase hija no llama explícitamente a `super(...)`, Java automáticamente insertará una llamada implícita al constructor sin parámetros de la clase padre.
 
-Recuerda que si no se proporciona un constructor en una clase, Java insertará un constructor predeterminado sin parámetros de manera implícita. Cuando implementas constructores en clases hijas, es importante entender cómo se maneja la cadena de construcción desde la clase más derivada hasta la clase base.
+### **Constructores sin parámetros**
+
+Si la clase padre tiene un constructor sin parámetros y la clase hija no llama explícitamente a `super(...)`, Java automáticamente insertará una llamada implícita al constructor sin parámetros de la clase padre.
