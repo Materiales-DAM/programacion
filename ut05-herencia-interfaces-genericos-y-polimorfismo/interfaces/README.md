@@ -19,7 +19,9 @@ layout:
 
 # Interfaces
 
-En Java, una interfaz es una colección de métodos abstractos (sin implementación) y constantes que pueden ser implementados por cualquier clase. Las interfaces permiten la definición de un conjunto de métodos que deben ser implementados por cualquier clase que implemente esa interfaz. Además, las interfaces permiten la creación de código que puede interactuar con objetos de diversas clases a través de la interfaz común.
+En Java, una interface es una colección de métodos abstractos (sin implementación) y constantes que pueden ser implementados por cualquier clase. Las interfaces permiten la definición de un conjunto de métodos que deberán ser definidos por aquellas clases que implementen dicho interface. Además, las interfaces permiten la creación de código que puede interactuar con objetos de diversas clases a través de la interfaz común.
+
+En este sentido, los interfaces nos permiten separar el "qué" del "cómo", lo cual permite que unos componentes se puedan abstraer de lo que hacen sus dependencias (principio de **abstracción**).
 
 ## **Declaración de un interface**
 
@@ -64,18 +66,42 @@ class MiClase implements MiInterfaz {
 A diferencia de con la herencia, una clase puede implementar varias interfaces, permitiendo así la implementación de múltiples comportamientos:
 
 ```java
+public interface OtraInterfaz {
+    String metodoDeOtraInterfaz(String parametro);
+}
+
 class MiClase implements MiInterfaz, OtraInterfaz {
     // Implementación de métodos y constantes de ambas interfaces
+    @Override
+    public void metodoUno() {
+        // Código de implementación
+    }
+    
+    @Override
+    public int metodoDos(String parametro) {
+        // Código de implementación
+        return parametro.length();
+    }
+    
+    @Override
+    public String metodoDeOtraInterfaz(String parametro) {
+        // Código de implementación
+        return parametro;
+    }
 }
 ```
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## **Herencia entre interfaces**
 
 Las interfaces pueden extender otras interfaces mediante la palabra clave `extends`:
 
 ```java
+// Esta interfaz incluye metodoUno, metodoDos, CONSTANTE y metodoDeOtraInterfaz
 interface OtraInterfaz extends MiInterfaz {
-    // Métodos y constantes adicionales
+
+    String metodoDeOtraInterfaz(String parametro);
 }
 ```
 
