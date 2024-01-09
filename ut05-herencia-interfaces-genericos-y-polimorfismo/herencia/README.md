@@ -57,24 +57,26 @@ Por ejemplo, para implementar la jerarquía de clases de animales empezaríamos 
 package org.example;
 
 public class Animal {
-    private String color;
+    private String name;
 
-    public Animal(String color) {
-        this.color = color;
+    public Animal(String name) {
+        this.name = name;
     }
 
-    public String getColor() {
-        return color;
+    public String getName() {
+        return name;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setName(String name) {
+        this.name = name;
     }
-    
+
     public void eat() {
         System.out.println("Estoy comiendo");
     }
+
 }
+
 ```
 
 Después pasamos a implementar las subclases Dog y Lion
@@ -85,8 +87,8 @@ package org.example;
 public class Dog extends Animal {
     private String owner;
 
-    public Dog(String color, String owner) {
-        super(color);
+    public Dog(String name, String owner) {
+        super(name);
         this.owner = owner;
     }
 
@@ -110,8 +112,8 @@ package org.example;
 public class Lion extends Animal {
     private String jungleName;
 
-    public Lion(String color, String jungleName) {
-        super(color);
+    public Lion(String name, String jungleName) {
+        super(name);
         this.jungleName = jungleName;
     }
 
