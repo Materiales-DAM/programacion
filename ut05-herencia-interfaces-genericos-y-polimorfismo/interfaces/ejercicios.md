@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/image (1).png
+cover: ../../.gitbook/assets/image (1).png
 coverY: 0
 layout:
   cover:
@@ -17,5 +17,6 @@ layout:
     visible: true
 ---
 
-# Clases anónimas
+# Ejercicios
 
+1.

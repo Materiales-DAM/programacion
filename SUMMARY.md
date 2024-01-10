@@ -94,11 +94,12 @@
   * [Jerarquías de varios niveles](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/jerarquias-de-varios-niveles.md)
   * [La clase java.lang.Object](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/la-clase-java.lang.object.md)
   * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/ejercicios.md)
+* [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo.md)
 * [Interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/README.md)
   * [Interfaces y componentes](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-y-componentes.md)
-  * [Interfaces en clases de datos](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-en-clases-de-datos.md)
-* [Clases anónimas](ut05-herencia-interfaces-genericos-y-polimorfismo/clases-anonimas.md)
-* [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo.md)
+  * [Interfaces de comportamiento](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-de-comportamiento.md)
+  * [Interfaces y herencia múltiple](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-y-herencia-multiple.md)
+  * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/ejercicios.md)
 * [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
