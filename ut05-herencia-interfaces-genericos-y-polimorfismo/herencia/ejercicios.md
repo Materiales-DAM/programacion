@@ -159,10 +159,3 @@ Métodos
   * De familia: “\<Nombre> \<Apellidos> (\<nº colegiado>), médico de familia en el centro de salud de \<Centro de salud>”
   * Podólogo: “\<Nombre> \<Apellidos> (\<nº colegiado>), podólogo en el centro de salud de \<Centro de salud>”
 * Un método que devuelva si el médico trabaja en un hospital o no (boolean)
-
-\
-\
-
-
-\
-\
