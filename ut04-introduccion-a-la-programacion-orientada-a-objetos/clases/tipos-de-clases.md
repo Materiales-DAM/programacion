@@ -152,7 +152,7 @@ Además de clases para representar las entidades, nuestro programa va a necesita
 Los componentes se caracterizan por:
 
 * Sirven para codificar una determinada rutina.
-* Sus campos son dependencias, es decir, otros componentes que necesita para realizar su trabajo
+* Sus campos son dependencias, es decir, otros componentes que necesita para realizar su trabajo. Se considera una buena práctica que los campos de los componentes sean inmutables, esto se consigue añadiendo la palabra final
 * Tiene un constructor en el que recibe instancias de sus dependencias
 * No define getters ni setters
 * No define hashCode, equals ni toString
@@ -170,7 +170,7 @@ import java.util.Scanner;
  * Esta clase NO ES un Java Bean porque ni es una clase de datos, ni tiene getters y setters
  */
 public class VehicleReader {
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public VehicleReader(Scanner scanner) {
         this.scanner = scanner;
