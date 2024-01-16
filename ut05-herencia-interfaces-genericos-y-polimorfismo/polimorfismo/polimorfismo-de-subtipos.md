@@ -27,8 +27,8 @@ Veamos cómo funciona el polimorfismo con el ejemplo de los animales
 public class SubtypePolymorphism {
     public static void main(String[] args) {
         // Los objetos que estamos creando pueden ser vistos como el supertipo
-        Animal tobi = new Dog(5, "Tobi", "Bob Esponja");
-        Animal simba = new Lion(10, "Simba", "Serengeti");
+        Animal tobi = new Dog("Tobi", "Bob Esponja");
+        Animal simba = new Lion("Simba", "Serengeti");
 
         tobi.talk(); // Muestra "Guau, guau"
         simba.talk(); // Muestra "Roar, roar"
@@ -53,13 +53,13 @@ Permite asignar automáticamente una instancia de una subclase a una referencia 
 
 <pre class="language-java"><code class="lang-java"><strong>// El objeto es de tipo Dog y la variable es de tipo Animal, se produce un casting 
 </strong><strong>// implícito de Dog a Animal
-</strong>Animal tobi = new Dog(5, "Tobi", "Bob Esponja");
+</strong>Animal tobi = new Dog("Tobi", "Bob Esponja");
 </code></pre>
 
 La variable tobi es de tipo Animal, por lo que puedo sólo se pueden usar los métodos definidos en dicha clase, pero no los métodos específicos de Dog (a pesar de que el objeto es de ese tipo).&#x20;
 
 <pre class="language-java"><code class="lang-java"><strong>tobi.talk();
-</strong><strong>System.out.println(tobi.getAge());
+</strong><strong>System.out.println(tobi.getName());
 </strong><strong>
 </strong><strong>// Este código no compila porque la variable tobi es de tipo Animal
 </strong><strong>System.out.println(tobi.getOwner());
@@ -75,7 +75,7 @@ Como sabemos que tobi es un perro, podemos crear una nueva variable de tipo Dog 
 </strong><strong>Dog tobiDog = (Dog) tobi;
 </strong><strong>
 </strong><strong>tobiDog.talk();
-</strong><strong>System.out.println(tobiDog.getAge());
+</strong><strong>System.out.println(tobiDog.getName());
 </strong><strong>
 </strong><strong>// Este código compila porque la variable tobiDog es de tipo Dog
 </strong><strong>System.out.println(tobiDog.getOwner());
@@ -89,9 +89,9 @@ Veamos un ejemplo en el que creamos un array de animales y luego tratamos de con
 
 <pre class="language-java"><code class="lang-java"><strong>// Creamos un array con tres animales, dos son perros y uno un león
 </strong><strong>Animal[] animals = {
-</strong><strong>    new Dog(5, "Tobi", "Bob Esponja"),
-</strong><strong>    new Dog(10, "Beethoven", "Peppa Pig"),
-</strong><strong>    new Lion(5, "Simba", "Serengeti"),
+</strong><strong>    new Dog("Tobi", "Bob Esponja"),
+</strong><strong>    new Dog("Beethoven", "Peppa Pig"),
+</strong><strong>    new Lion("Simba", "Serengeti"),
 </strong><strong>};
 </strong><strong>
 </strong><strong>for(Animal animal: animals) {
