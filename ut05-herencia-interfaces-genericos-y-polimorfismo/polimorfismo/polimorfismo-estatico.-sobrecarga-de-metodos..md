@@ -45,7 +45,9 @@ public class Calculadora {
     public String sumar(String a, String b) {
         return a + b;
     }
+}
 
+public class Main {
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
 

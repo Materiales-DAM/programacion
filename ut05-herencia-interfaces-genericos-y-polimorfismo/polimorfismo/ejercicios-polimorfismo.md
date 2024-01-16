@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (1).png
+cover: ../../.gitbook/assets/polymorphism.png
 coverY: 0
 layout:
   cover:
@@ -17,6 +17,8 @@ layout:
     visible: true
 ---
 
-# Ejercicios
+# Ejercicios polimorfismo
 
-1.
+1. Seres vivos
+   *
+

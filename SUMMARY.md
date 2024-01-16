@@ -14,7 +14,7 @@
   * [Asignación de literales](ut01-introduccion-a-la-programacion/variables-tipos-y-valores/asignacion-de-literales.md)
 * [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
 * [Entrada y salida del programa](ut01-introduccion-a-la-programacion/entrada-y-salida-del-programa.md)
-* [Ejercicios](ut01-introduccion-a-la-programacion/ejercicios.md)
+* [Ejercicios variables y tipos](ut01-introduccion-a-la-programacion/ejercicios-variables-y-tipos.md)
 * [Casting de valores numéricos](ut01-introduccion-a-la-programacion/casting-de-valores-numericos.md)
 
 ## UT02 - Estructuras de control
@@ -55,8 +55,8 @@
     * [Soluciones](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos/soluciones.md)
 * [Arrays](ut03-metodos-y-arrays/arrays/README.md)
   * [Recorrer un array](ut03-metodos-y-arrays/arrays/recorrer-un-array.md)
-  * [Ejercicios](ut03-metodos-y-arrays/arrays/ejercicios.md)
-    * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios/soluciones.md)
+  * [Ejercicios arrays](ut03-metodos-y-arrays/arrays/ejercicios-arrays/README.md)
+    * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios-arrays/soluciones.md)
   * [Ejercicios de métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/README.md)
     * [Soluciones](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/soluciones.md)
   * [Ejercicios de menús con métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays/README.md)
@@ -81,9 +81,9 @@
 * [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null.md)
 * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
 * [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/README.md)
-  * [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios/README.md)
-    * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios/soluciones.md)
-* [Ejercicios](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios.md)
+  * [Ejercicios enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones/README.md)
+    * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones/soluciones.md)
+* [Ejercicios POO](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo.md)
 
 ## UT05 - Herencia, interfaces, genéricos y polimorfismo
 
@@ -93,15 +93,16 @@
   * [Modificador de acceso protected](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/modificador-de-acceso-protected.md)
   * [Jerarquías de varios niveles](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/jerarquias-de-varios-niveles.md)
   * [La clase java.lang.Object](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/la-clase-java.lang.object.md)
-  * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/ejercicios.md)
+  * [Ejercicios herencia](ut05-herencia-interfaces-genericos-y-polimorfismo/herencia/ejercicios-herencia.md)
 * [Polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo/README.md)
   * [Polimorfismo estático. Sobrecarga de métodos.](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo/polimorfismo-estatico.-sobrecarga-de-metodos..md)
   * [Polimorfismo de subtipos](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo/polimorfismo-de-subtipos.md)
+  * [Ejercicios polimorfismo](ut05-herencia-interfaces-genericos-y-polimorfismo/polimorfismo/ejercicios-polimorfismo.md)
 * [Interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/README.md)
   * [Interfaces y componentes](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-y-componentes.md)
   * [Interfaces de comportamiento](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-de-comportamiento.md)
   * [Interfaces y herencia múltiple](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-y-herencia-multiple.md)
-  * [Ejercicios](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/ejercicios.md)
+  * [Ejercicios interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/ejercicios-interfaces.md)
 * [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.

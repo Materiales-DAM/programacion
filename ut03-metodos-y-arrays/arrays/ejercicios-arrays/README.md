@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/arrays.png
+cover: ../../../.gitbook/assets/arrays.png
 coverY: 0
 layout:
   cover:
@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Ejercicios
+# Ejercicios arrays
 
 1. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.

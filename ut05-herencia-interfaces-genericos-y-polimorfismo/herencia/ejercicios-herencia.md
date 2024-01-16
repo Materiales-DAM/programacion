@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Ejercicios
+# Ejercicios herencia
 
 ## 1. Animales
 
@@ -80,7 +80,7 @@ Los tipos de formas son:
   * Lado: de tipo double
 * Círculo
   * Radio: de tipo double&#x20;
-* Triángulo (rectángulo==
+* Triángulo (rectángulo)
   * Base: de tipo double
   * Altura: de tipo double
 
