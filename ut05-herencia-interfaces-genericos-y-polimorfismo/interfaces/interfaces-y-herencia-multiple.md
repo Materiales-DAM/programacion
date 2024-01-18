@@ -34,6 +34,10 @@ interface Herbivore {
     void eatPlants();
 }
 
+interface Omnivore extends Carnivore, Herbivore{
+    void eatMeatWithPlants();
+}
+
 // Interface for oviparous animals
 interface Oviparous {
     void layEggs();
@@ -83,10 +87,20 @@ class Snake implements Carnivore, Oviparous {
     }
 }
 
-class Platipus implements Carnivore, Oviparous, Mammal {
+class Platipus implements Omnivore, Oviparous, Mammal {
     @Override
     public void eatMeat() {
         System.out.println("El ornitorrinco come serpientes.");
+    }
+    
+    @Override
+    public void eatPlants() {
+        System.out.println("El ornitorrinco come hierba.");
+    }
+    
+    @Override
+    public void eatMeatWithPlants() {
+        System.out.println("El ornitorrinco come de todo.");
     }
 
     @Override
@@ -122,10 +136,8 @@ public class Main {
 }
 ```
 
-#### Explicación en español:
-
-1. **Interfaces:** Las interfaces (`Carnivore`, `Herbivore`, `Oviparous`, `Mammal`) definen los métodos relacionados con las características de cada categoría de animal.
-2. **Clases concretas:** Las clases `Lion`, `Cow,` `Snake` y `Platipus` implementan las interfaces según sus características específicas. Por ejemplo, el león implementa las interfaces `Carnivore` y `Mammal`.
-3. **Método principal (`main`):** En el método principal, se crean instancias de las clases y se llaman a los métodos específicos de cada interfaz para demostrar las características de cada animal.
+1. **Interfaces:** Las interfaces (`Carnivore`, `Herbivore`, `Oviparous`, `Mammal`) definen los métodos relacionados con los comportamientos de cada tipo de animal.
+2. **Clases concretas:** Las clases `Lion`, `Cow,` `Snake` y `Platipus` implementan las interfaces según sus comportamientos específicas. Por ejemplo, el león implementa las interfaces `Carnivore` y `Mammal`.
+3. **Método principal (`main`):** En el método principal, se crean instancias de las clases y se llaman a los métodos específicos de cada interfaz para demostrar los comportamientos de cada animal.
 
 Este enfoque muestra cómo las interfaces pueden ser utilizadas para simular herencia múltiple, permitiendo que las clases implementen múltiples interfaces según las características que necesiten representar. Cada clase puede elegir las interfaces que mejor se adapten a sus atributos y comportamientos específicos.
