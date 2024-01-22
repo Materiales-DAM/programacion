@@ -104,7 +104,7 @@
   * [Interfaces y herencia múltiple](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/interfaces-y-herencia-multiple.md)
   * [Ejercicios interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/ejercicios-interfaces.md)
 * [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/README.md)
-  * [Bounded types y wildcards](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/bounded-types-y-wildcards.md)
+  * [Bounded types](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/bounded-types.md)
   * [Ejercicios genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/ejercicios-genericos.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.

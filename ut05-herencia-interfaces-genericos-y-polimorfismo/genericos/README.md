@@ -136,6 +136,3 @@ public class Main{
 
 Una vez creada una instancia de Box, no podemos cambiar el tipo de valores que almacena
 
-## Métodos genéricos
-
-Además de las clases e interfaces, también es posible añadir parámetros de tipos a un método.&#x20;
