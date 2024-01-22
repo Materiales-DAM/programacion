@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/generics.jpg
+cover: ../../.gitbook/assets/generics.jpg
 coverY: 0
 layout:
   cover:
@@ -72,6 +72,8 @@ public class DogReader implements Reader<Dog> {
 }
 ```
 
+Las interfaces genéricas son muy útiles para crear contratos genéricos que pueden reutilizarse en varios componentes, como es el caso de los readers.
+
 ### Polimorfismo genérico
 
 Ahora podemos ver las instancias de `CircleReader` como `Reader<Circle>`, a esto se le denomina polimorfismo genérico
@@ -82,3 +84,58 @@ Reader<Circle> circleReader = new CircleReader();
 // dogReader tiene las formas: Reader<Dog> y DogReader
 Reader<Dog> dogReader = new DogReader();
 ```
+
+## Clases genéricas
+
+Al igual que con los interfaces, podemos crear clases genéricas añadiendo parámetros de tipos a la clase. En este tipo de programación genérica cada instancia de la clase genérica puede especificar una T distinta.
+
+```java
+// Esta clase Box me permite crear cajas que guardan un valor, el tipo del valor es 
+// el genérico T, lo cual me permite crear cajas que almacenan todo tipo de valores
+public class Box<T> {
+    private T value;
+    
+    public Box(T value) {
+        this.value = value;
+    }
+    
+    public T unbox(){
+        return value;
+    }
+    
+    public void box(T value) {
+        this.value = value;
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        // Creamos una caja con un entero dentro: T = Integer
+        Box<Integer> intBox = new Box<>(45);
+        // Creamos una caja con un String dentro: T = String
+        Box<String> strBox = new Box<>("Hola mundo");
+        
+        // Cuando hago el unbox de la caja de entero me devuelve un int
+        int number = intbox.unbox();
+        System.out.println(number);
+        
+        // Cuando hago el unbox de la caja de String me devuelve un String
+        String string = strBox.unbox();
+        System.out.println(string);
+        
+        // En esta caja solo puedo meter valores enteros
+        intbox.box(7);
+        System.out.println(intbox.unbox());
+        
+        // En esta caja solo puedo meter valores String
+        strBox.box("Adiós");
+        System.out.println(strBox.unbox());
+    }
+}
+```
+
+Una vez creada una instancia de Box, no podemos cambiar el tipo de valores que almacena
+
+## Métodos genéricos
+
+Además de las clases e interfaces, también es posible añadir parámetros de tipos a un método.&#x20;
