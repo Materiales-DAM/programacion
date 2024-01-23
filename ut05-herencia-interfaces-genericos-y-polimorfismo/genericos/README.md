@@ -114,19 +114,19 @@ public class Main{
         Box<Integer> intBox = new Box<>(45);
         // Creamos una caja con un String dentro: T = String
         Box<String> strBox = new Box<>("Hola mundo");
-        
+
         // Cuando hago el unbox de la caja de entero me devuelve un int
-        int number = intbox.unbox();
+        int number = intBox.unbox();
         System.out.println(number);
-        
+
         // Cuando hago el unbox de la caja de String me devuelve un String
         String string = strBox.unbox();
         System.out.println(string);
-        
+
         // En esta caja solo puedo meter valores enteros
-        intbox.box(7);
-        System.out.println(intbox.unbox());
-        
+        intBox.box(1);
+        System.out.println(intBox.unbox());
+
         // En esta caja solo puedo meter valores String
         strBox.box("Adiós");
         System.out.println(strBox.unbox());
