@@ -46,8 +46,13 @@ A partir de este interface, podemos crear clases que lo implementen especificand
 
 ```java
 // En esta cabecera especificamos que la T de Reader es Circle (para esta clase)
-public class CircleReader implements Reader<Circle> {
+public class ScannerCircleReader implements Reader<Circle> {
     
+    private final Scanner scanner;
+    
+    public ScannerCircleReader(Scanner scanner){
+        this.scanner = scanner;
+    }
     // Este método devuelve Circle porque la T que se ha especificado en la cabecera es CIrcle
     @Override
     public Circle read() {
@@ -55,6 +60,22 @@ public class CircleReader implements Reader<Circle> {
         return null;
     }
 }
+
+public class RandomCircleReader implements Reader<Circle> {
+    
+    private final Random random;
+    
+    public ScannerCircleReader(Random random){
+        this.random = random;
+    }
+    // Este método devuelve Circle porque la T que se ha especificado en la cabecera es CIrcle
+    @Override
+    public Circle read() {
+        // Aquí va la implementación del reader
+        return null;
+    }
+}
+
 ```
 
 Además, puede haber otras implementaciones de `Reader` que especifiquen otra `T`
