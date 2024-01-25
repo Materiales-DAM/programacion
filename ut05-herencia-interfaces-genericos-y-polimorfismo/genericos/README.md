@@ -86,7 +86,7 @@ public class DogReader implements Reader<Dog> {
     
     // Este método devuelve Dog porque la T que se ha especificado en la cabecera es CIrcle
     @Override
-    public Dogrcle read() {
+    public Dog read() {
         // Aquí va la implementación del reader
         return null;
     }
