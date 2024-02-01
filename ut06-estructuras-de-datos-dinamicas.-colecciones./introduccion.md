@@ -33,7 +33,7 @@ La primera gran clasificación de las estructuras de datos hace referencia a la 
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Las listas enlazadas pueden cambiar de tamaño</p></figcaption></figure>
 
-## Estructuras estáticas (arrays)
+### Estructuras estáticas (arrays)
 
 Los arrays son estructuras estáticas, es decir, una vez creadas no pueden cambiar de tamaño. Están optimizados para acceder a cualquier posición en tiempo constante.&#x20;
 
@@ -41,7 +41,7 @@ Los arrays son estructuras estáticas, es decir, una vez creadas no pueden cambi
 
 No resultan muy convenientes cuando la cantidad de datos no se conoce a priori o cuando se quieren realizar búsquedas, ordenaciones, etc... sobre los mismos. Es una de las estructuras más simples y es ampliamente utilizada en diversos problemas.
 
-## Estructuras dinámicas
+### Estructuras dinámicas
 
 Existen una gran variedad de estructuras dinámicas, cada estructura está optimizada para realizar un conjunto de operaciones y resulta ineficiente para realizar otras.
 
@@ -51,14 +51,16 @@ No existe una estructura de datos "maestra" que sea la mejor para realizar cualq
 
 Para poder elegir la estructura de datos adecuada a cada problema debemos ser capaces de describir cómo de eficiente es una determinada estructura para un problema. La mejor manera de describir la eficiencia es a través de una función matemática que relaciona el tamaño de una estructura de datos con el tiempo que tarda en realizar una determinada operación sobre los mismos.
 
-Existe una notación matemática llamada Big-O que nos facilita la clasificación de la eficiencia de una determinada operación de forma matemática.
+Existe una notación matemática llamada Big-O que nos facilita la clasificación de la eficiencia de una determinada operación de forma matemática. En esta notación n es el tamaño de los datos alojados en la estructura de datos, y el resultado de la función representa el tiempo que tardará en realizar la operación.
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-* **O(1):** también conocida como constante, significa que la operación se ejecuta en un tiempo fijo, independiente de la cantidad de datos que almacene la estructura de datos. Por ejemplo, el acceso a una posición de un array.&#x20;
-* **O(log n):** también conocida como logarítmica, el tiempo de ejecución crece conforme aumentan los datos en la estructura, pero la curva se va aplanando conforme aumenta la cantidad de datos.&#x20;
-* **O(n)**: también conocida como lineal, el tiempo de ejecución crece de manera proporcional al tamaño de la estructura de datos.&#x20;
-* **O(n log n)**: el tiempo de ejecución crece algo más a lo proporcional en este caso.
-* **O(n`<sup>2</sup>`)**: también conocida como complejidad cuadrática. El tiempo de ejecución aumenta mucho más rápido que el tamaño de la estructura y esto hace que no sea factible realizar la operación cuando la estructura tiene muchos datos.&#x20;
-* **`O(2<sup>n</sup>)`**: también conocida como exponencial. El tiempo de ejecución aumenta a una velocidad aún mayor que la cuadrática, haciendo inviable la operación con tamaños incluso menores.&#x20;
-* **O(n!)**: también conocida como factorial. El tiempo de ejecución aumenta a una velocidad aún mayor que la exponencial, haciendo inviable la operación con tamaños incluso menores.
+* **O(1):** también conocida como constante, significa que la operación se ejecuta en un tiempo fijo, independiente de la cantidad de datos que almacene la estructura de datos. Por ejemplo, el acceso a una posición de un array. Las operaciones de complejidad constante son las más eficientes que hay.
+* **O(log n):** también conocida como **logarítmica**, el tiempo de ejecución crece conforme aumentan los datos en la estructura, pero la curva se va aplanando conforme aumenta la cantidad de datos. Las operaciones de complejidad logarítmica son muy eficientes.
+* **O(n)**: también conocida como **lineal**, el tiempo de ejecución crece de manera proporcional al tamaño de la estructura de datos.  Estas operaciones necesitan un escalado de recursos proporcional a la cantidad de datos que se estén procesando. La eficiencia de estas operaciones es aceptable en muchos casos, pero puede llegar a ser problemática si la cantidad de datos crece mucho.
+* **O(n log n)**: el tiempo de ejecución crece **algo más a lo proporcional** en este caso. Estas operaciones necesitan un escalado de recursos proporcional a la cantidad de datos que se estén procesando. La eficiencia de estas operaciones es aceptable en muchos casos, pero puede llegar a ser problemática si la cantidad de datos crece mucho.
+* **O(**n²**)**: también conocida como complejidad **cuadrática**. El tiempo de ejecución aumenta mucho más rápido que el tamaño de la estructura y lo hace cada vez más rápido. Las operaciones que tienen esta eficiencia no se adaptan bien cuando los datos son de un cierto tamaño.
+* **O(**$$2^n$$**)**: también conocida como **exponencial**. El tiempo de ejecución aumenta a una velocidad aún mayor que la cuadrática, haciendo inviable la operación con tamaños incluso menores. Esta eficiencia es por lo general inaceptable para la resolución de cualquier problema.
+* **O(n!)**: también conocida como factorial. El tiempo de ejecución aumenta a una velocidad aún mayor que la exponencial, haciendo inviable la operación con tamaños incluso menores.Esta eficiencia es por lo general inaceptable para la resolución de cualquier problema.
+
+&#x20;

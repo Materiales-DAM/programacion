@@ -110,6 +110,12 @@
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
 
 * [Introducción](ut06-estructuras-de-datos-dinamicas.-colecciones./introduccion.md)
+* [Colecciones en Java](ut06-estructuras-de-datos-dinamicas.-colecciones./colecciones-en-java.md)
+* [Listas](ut06-estructuras-de-datos-dinamicas.-colecciones./listas.md)
+* [Set](ut06-estructuras-de-datos-dinamicas.-colecciones./set.md)
+* [Mapas](ut06-estructuras-de-datos-dinamicas.-colecciones./mapas.md)
+* [Colas y pilas](ut06-estructuras-de-datos-dinamicas.-colecciones./colas-y-pilas.md)
+* [Streams](ut06-estructuras-de-datos-dinamicas.-colecciones./streams.md)
 
 ## UT07 - Gestión de errores.
 
