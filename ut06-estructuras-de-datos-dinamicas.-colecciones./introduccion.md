@@ -61,6 +61,6 @@ Existe una notación matemática llamada Big-O que nos facilita la clasificació
 * **O(n log n)**: el tiempo de ejecución crece **algo más a lo proporcional** en este caso. Estas operaciones necesitan un escalado de recursos proporcional a la cantidad de datos que se estén procesando. La eficiencia de estas operaciones es aceptable en muchos casos, pero puede llegar a ser problemática si la cantidad de datos crece mucho.
 * **O(**n²**)**: también conocida como complejidad **cuadrática**. El tiempo de ejecución aumenta mucho más rápido que el tamaño de la estructura y lo hace cada vez más rápido. Las operaciones que tienen esta eficiencia no se adaptan bien cuando los datos son de un cierto tamaño.
 * **O(**$$2^n$$**)**: también conocida como **exponencial**. El tiempo de ejecución aumenta a una velocidad aún mayor que la cuadrática, haciendo inviable la operación con tamaños incluso menores. Esta eficiencia es por lo general inaceptable para la resolución de cualquier problema.
-* **O(n!)**: también conocida como factorial. El tiempo de ejecución aumenta a una velocidad aún mayor que la exponencial, haciendo inviable la operación con tamaños incluso menores.Esta eficiencia es por lo general inaceptable para la resolución de cualquier problema.
+* **O(n!)**: también conocida como **factorial**. El tiempo de ejecución aumenta a una velocidad aún mayor que la exponencial, haciendo inviable la operación con tamaños incluso menores.Esta eficiencia es por lo general inaceptable para la resolución de cualquier problema.
 
 &#x20;
