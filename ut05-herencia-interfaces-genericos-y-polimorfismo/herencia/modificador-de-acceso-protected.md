@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (8).png
+cover: ../../.gitbook/assets/image (8) (1).png
 coverY: 0
 layout:
   cover:
@@ -67,5 +67,5 @@ public class OtraClase {
 
 
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 

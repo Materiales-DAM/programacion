@@ -63,6 +63,8 @@ Algunas de las características de los Set son:
 
 Los mapas son colecciones asociativas, que permiten almacenar clave-valor. Al igual que los Set, representan conjuntos de valores no secuenciales, es decir no se puede establecer una ordenación.
 
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Mapa que relaciona códigos de estado con su nombre</p></figcaption></figure>
+
 Algunas características de los mapas son:
 
 * Son colecciones que permiten asociar pares de valores (clave y valor)
@@ -70,11 +72,29 @@ Algunas características de los mapas son:
 * Cada instancia de Map define el tipo de las claves (K) y el tipo de los valores (V).
 * Estas colecciones están optimizadas para la realización de búsquedas por la clave.
 
+### Queue\<E> (colas)
 
+Una cola, también conocida como "queue" en inglés, es una colección ordenada de elementos que sigue el principio FIFO (First In, First Out), es decir, el primer elemento que se inserta en la cola es el primero en ser eliminado. Esto se asemeja a una fila en la vida real, donde la primera persona en llegar a la fila es la primera en ser atendida y salir.
 
-### Queue\<E>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+Las colas son útiles en una variedad de situaciones, incluyendo la gestión de tareas en sistemas de procesamiento, la implementación de algoritmos de búsqueda y la gestión de recursos compartidos. Aquí hay algunos usos comunes de las colas:
 
+1. **Procesamiento de tareas en lotes (batch processing)**: Las colas son útiles para manejar tareas en lotes, donde las tareas se agregan a la cola en el orden en que llegan y luego se procesan en ese mismo orden.
+2. **Gestión de solicitudes en servidores**: Los servidores web y otros sistemas de red a menudo utilizan colas para gestionar las solicitudes de los clientes. Las solicitudes se colocan en la cola en el orden en que se reciben y luego se procesan por el servidor de acuerdo con su disponibilidad.
+3. **Planificación de procesos en sistemas operativos**: En los sistemas operativos, las colas de procesos se utilizan para planificar la ejecución de programas y tareas. Los procesos se agregan a la cola de acuerdo con su prioridad y se ejecutan en el orden correspondiente.
 
+### Stack\<E>
 
+Una pila es una estructura de datos lineal que sigue el principio de "último en entrar, primero en salir" (LIFO, por sus siglas en inglés: Last In, First Out). Esto significa que el último elemento que se inserta en la pila es el primero en ser eliminado. En una pila, los elementos se agregan y eliminan solo desde un extremo, comúnmente conocido como la cima (top) de la pila.
 
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+La estructura de pila se puede visualizar como una pila de platos, donde solo puedes agregar o quitar platos desde la parte superior de la pila. Los elementos que se colocan en la pila se mantienen en su lugar hasta que se elimina el elemento superior.
+
+Las pilas se utilizan en una variedad de aplicaciones y escenarios, incluyendo:
+
+1. **Gestión de llamadas a funciones (call stack)**: En la programación, las pilas se utilizan para administrar las llamadas a funciones y la ejecución de instrucciones. Cada vez que se llama a una función, se agrega un marco de pila que contiene información sobre la función actual y sus variables locales. Cuando la función termina, su marco de pila se elimina y se regresa al contexto anterior.
+2. **Implementación de algoritmos recursivos**: Los algoritmos recursivos a menudo se implementan utilizando pilas. Cada vez que se realiza una llamada recursiva, se agrega un marco de pila que contiene información sobre la llamada actual. Esto permite que las llamadas recursivas se resuelvan en el orden correcto y evita el desbordamiento del programa.
+3. **Inversión de elementos (reverse)**: Las pilas se pueden utilizar para invertir el orden de los elementos. Al agregar elementos a una pila y luego eliminarlos, los elementos se recuperan en orden inverso al que se agregaron originalmente.
+4. **Historial de navegación en navegadores web**: Los navegadores web utilizan pilas para realizar un seguimiento del historial de navegación del usuario. Cada vez que se visita una página web, se agrega a la pila de historial. Cuando se hace clic en el botón "atrás", se elimina la página superior de la pila, lo que permite al usuario retroceder a la página anterior.

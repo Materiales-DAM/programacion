@@ -111,7 +111,9 @@
 
 * [Introducción](ut06-estructuras-de-datos-dinamicas.-colecciones./introduccion.md)
 * [Colecciones en Java](ut06-estructuras-de-datos-dinamicas.-colecciones./colecciones-en-java.md)
-* [Listas](ut06-estructuras-de-datos-dinamicas.-colecciones./listas.md)
+* [Listas](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/README.md)
+  * [Operaciones](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/operaciones.md)
+  * [Ejercicios List](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/ejercicios-list.md)
 * [Set](ut06-estructuras-de-datos-dinamicas.-colecciones./set.md)
 * [Mapas](ut06-estructuras-de-datos-dinamicas.-colecciones./mapas.md)
 * [Colas y pilas](ut06-estructuras-de-datos-dinamicas.-colecciones./colas-y-pilas.md)

@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/image (1).png
+cover: ../../.gitbook/assets/image (1) (1).png
 coverY: 0
 layout:
   cover:
@@ -91,7 +91,7 @@ class MiClase implements MiInterfaz, OtraInterfaz {
 }
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## **Herencia entre interfaces**
 

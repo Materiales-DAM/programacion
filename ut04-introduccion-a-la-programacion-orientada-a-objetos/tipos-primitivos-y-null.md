@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/oop.png
+cover: ../.gitbook/assets/oop.png
 coverY: 0
 layout:
   cover:
@@ -106,7 +106,7 @@ Student student2 = new Student("Peppa", "Pig", "Calle Falsa", null);
 
 Para solucionar este problema, existen en Java un conjunto de clases denominadas Java Wrapper Classes que permiten almacenar los tipos primitivos en objetos Java.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el ejemplo anterior, podríamos cambiar el tipo de age de int a Integer
 

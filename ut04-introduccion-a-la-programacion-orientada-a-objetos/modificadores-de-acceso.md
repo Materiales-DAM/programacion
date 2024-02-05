@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/oop.png
+cover: ../.gitbook/assets/oop.png
 coverY: 0
 layout:
   cover:
@@ -21,7 +21,7 @@ layout:
 
 Los modificadores de acceso definen desde dónde es accesible un campo, método o clase.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```java
 public class Student {
