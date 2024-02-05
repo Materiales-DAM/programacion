@@ -17,9 +17,9 @@ layout:
     visible: true
 ---
 
-# Colecciones en Java
+# Java Collections
 
-El lenguaje de programación Java incluye una extensa librería de estructuras de datos llamada Java Collections (colecciones Java).&#x20;
+El lenguaje de programación Java incluye una extensa librería de estructuras de datos llamada Java Collections (colecciones de Java).&#x20;
 
 Cada tipo concreto de colección implementa una determinada estructura de datos que está optimizada para un conjunto determinado de operaciones.
 

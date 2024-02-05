@@ -17,9 +17,11 @@ layout:
     visible: true
 ---
 
-# Listas
+# List\<E>
 
-El ADT List, en el contexto de Java, se refiere a una abstracción que representa una colección ordenada de elementos donde cada elemento tiene un índice asociado que indica su posición en la lista. En otras palabras, una lista es una estructura de datos que permite almacenar una **secuencia de elementos** y acceder a ellos mediante su posición relativa dentro de la lista.
+El ADT List define los métodos que deben implementar las colecciones que sirvan para representar una **secuencia de elementos**. En este tipo de colecciones **cada elemento tiene un índice** asociado que indica su posición en la lista.&#x20;
+
+Por tanto, las listas son estructuras de datos que permite almacenar una **secuencia de elementos** y acceder a ellos mediante su posición relativa dentro de la lista (índice).
 
 El interfaz List define un tipo genérico E que hace referencia al tipo de los elementos que almacena la lista.
 
@@ -30,20 +32,20 @@ List<String> listOfStrings = new LinkedList<>();
 List<Integer> listOfInts = new LinkedList<>();
 ```
 
-Los métodos más importantes con los que interactuar con una lista son:
+## Métodos
 
-1. `add(E element)`: Agrega un elemento al final de la lista.
-2. `add(int index, E element)`: Agrega un elemento en una posición específica de la lista.
-3. `get(int index)`: Devuelve el elemento en la posición especificada de la lista.
-4. `remove(int index)`: Elimina el elemento en la posición especificada de la lista.
-5. `size()`: Devuelve el número de elementos en la lista.
-6. `isEmpty()`: Devuelve `true` si la lista está vacía, `false` de lo contrario.
-7. `contains(Object o)`: Devuelve `true` si la lista contiene el elemento especificado, `false` de lo contrario.
-8. `indexOf(Object o)`: Devuelve el índice de la primera ocurrencia del elemento especificado en la lista.
+* `add(E element)`: Agrega un elemento al final de la lista.
+* `add(int index, E element)`: Agrega un elemento en una posición específica de la lista.
+* `get(int index)`: Devuelve el elemento en la posición especificada de la lista.
+* `remove(int index)`: Elimina el elemento en la posición especificada de la lista.
+* `size()`: Devuelve el número de elementos en la lista.
+* `isEmpty()`: Devuelve `true` si la lista está vacía, `false` de lo contrario.
+* `contains(Object o)`: Devuelve `true` si la lista contiene el elemento especificado, `false` de lo contrario.
+* `indexOf(Object o)`: Devuelve el índice de la primera ocurrencia del elemento especificado en la lista.
 
-### Recorrer una lista
+## Recorrer una lista
 
-Como cada elemento de una lista ocupa una posición (índice) podemos recorrer las listas con un bucle for
+De forma similiar a como se hacía con los arrays, podemos recorrer una lista usando un bucle for que va iterando sobre la misma usando el índice (i).
 
 ```java
 List<Integer> numbers = new LinkedList<>();
@@ -52,9 +54,9 @@ numbers.add(3);
 numbers.add(7);
 numbers.add(9);
 
-// El tamaño de la lista se obtiene invocando el método size()
+// El tamaño de la lista se obtiene invocando el método size(), en vez de lenght
 for(int i = 0; i < numbers.size(); i++) {
-    // Sacamos el valor en la posición i y lo asignamos a la variable number
+    // Para sacar el valor en la posición i usamos el método get(i)
     int number = numbers.get(i);
     System.out.println(number);
 } 
@@ -76,13 +78,13 @@ for(int number: numbers) {
 
 ## Implementaciones
 
-Los ADT son interfaces para los que la libería de colecciones de Java tiene varias implementaciones. Cada implementación presenta una serie de ventajas y desventajas con respecto a las demás. La elección de la implementación más adecuada puede ser determinante en la eficiencia del programa resultante.
+Los ADT son interfaces para los que la libería de colecciones de Java tiene varias implementaciones. Cada implementación presenta una serie de ventajas y desventajas con respecto a las demás. La elección de la colección más adecuada puede ser determinante en la eficiencia del programa resultante.
 
 Las dos implementaciones más importantes de List son **ArrayList** y **LinkedList**.
 
 ### LinkedList\<E>
 
-Es una implementación del ADT List basada en la estructura de datos "**Lista enlazada**". Se trata  de una estructura de datos dinámica, es decir, adapta su tamaño a la cantidad de datos que se van añadiendo o quitando.&#x20;
+Es una implementación basada en la estructura de datos "**Lista enlazada**". Se trata  de una estructura de datos dinámica, es decir, adapta su tamaño a la cantidad de datos que se van añadiendo o quitando.&#x20;
 
 ```java
 List<Integer> numbers = new LinkedList<>();
@@ -136,4 +138,4 @@ En resumen, aquí hay algunas pautas generales:
 * Usa `ArrayList` cuando necesites un acceso rápido a elementos por índice y cuando la mayoría de las operaciones involucren acceso y modificación al final de la lista.
 * Usa `LinkedList` cuando necesites realizar inserciones y eliminaciones frecuentes en posiciones intermedias de la lista y cuando no necesites acceder a elementos por índice con tanta frecuencia.
 
-En muchos casos, `ArrayList` es la opción que se elige de manera predeterminada debido a su rendimiento general y su eficiencia en el uso de memoria. Sin embargo, siempre es importante evaluar los requisitos específicos de tu aplicación para determinar la mejor opción.
+En muchos casos, `ArrayList` es la opción que se elige de manera predeterminada debido a su rendimiento general y su eficiencia en el uso de memoria. Sin embargo, siempre es importante evaluar los requisitos específicos de la aplicación para determinar la mejor opción.

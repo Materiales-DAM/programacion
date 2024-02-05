@@ -110,15 +110,16 @@
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
 
 * [Introducción](ut06-estructuras-de-datos-dinamicas.-colecciones./introduccion.md)
-* [Colecciones en Java](ut06-estructuras-de-datos-dinamicas.-colecciones./colecciones-en-java.md)
-* [Listas](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/README.md)
-  * [Operaciones](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/operaciones.md)
-  * [Ejercicios List](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/ejercicios-list.md)
-* [Set](ut06-estructuras-de-datos-dinamicas.-colecciones./set.md)
-* [Mapas](ut06-estructuras-de-datos-dinamicas.-colecciones./mapas.md)
+* [Java Collections](ut06-estructuras-de-datos-dinamicas.-colecciones./java-collections.md)
+* [List\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./list-less-than-e-greater-than/README.md)
+  * [Operaciones](ut06-estructuras-de-datos-dinamicas.-colecciones./list-less-than-e-greater-than/operaciones.md)
+  * [Ejercicios List](ut06-estructuras-de-datos-dinamicas.-colecciones./list-less-than-e-greater-than/ejercicios-list.md)
+* [Set\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than.md)
+* [Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than.md)
+* [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
 * [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
-* [Colas y pilas](ut06-estructuras-de-datos-dinamicas.-colecciones./colas-y-pilas.md)
-* [Streams](ut06-estructuras-de-datos-dinamicas.-colecciones./streams.md)
+* [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./queue-less-than-e-greater-than.md)
+* [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stack-less-than-e-greater-than.md)
 
 ## UT07 - Gestión de errores.
 
