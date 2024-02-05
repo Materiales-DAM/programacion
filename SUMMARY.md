@@ -116,6 +116,7 @@
   * [Ejercicios List](ut06-estructuras-de-datos-dinamicas.-colecciones./listas/ejercicios-list.md)
 * [Set](ut06-estructuras-de-datos-dinamicas.-colecciones./set.md)
 * [Mapas](ut06-estructuras-de-datos-dinamicas.-colecciones./mapas.md)
+* [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
 * [Colas y pilas](ut06-estructuras-de-datos-dinamicas.-colecciones./colas-y-pilas.md)
 * [Streams](ut06-estructuras-de-datos-dinamicas.-colecciones./streams.md)
 

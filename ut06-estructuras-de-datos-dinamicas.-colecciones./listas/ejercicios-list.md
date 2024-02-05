@@ -5,6 +5,8 @@ coverY: 0
 
 # Ejercicios List
 
+Los siguientes ejercicios se pueden crear como métodos una sola clase llamada ListExercises
+
 1. Escribe un programa que cree un Array List y lo rellene con varios String. Luego recórrelo mostrando en pantalla cada elemento.
 2. Escribe un método que dada una lista de String y un String y lo inserte en la primera posición.
    * {“Hola”, “Mundo”} + “Adiós” = {“Adiós” , “Hola”, “Mundo”}
@@ -19,3 +21,14 @@ coverY: 0
 11. Un método union(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade los elementos de numbers1 y después los de numbers 2.
 12. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade aquellos números que estén tanto en numbers1 como en numbers2
 13. Un método removeAll(List\<Double> numbers , List\<Double> numbersToRemove) que dadas dos listas de números, elimina de numbers todos los números que estén en numbersToRemove
+
+Crea tu propia implementación de una lista enlazada:
+
+* Crea una clase Node que tenga como campos un valor de tipo Double y un enlace al siguiente nodo
+* Crea una clase MyList con un campo llamado head que apunte al primer nodo
+* Añade métodos para:
+  * get(int index): Devuelve el valor en la posición del índice
+  * add(Double value): añade el valor al final de la lista
+  * addFirst(Double value): añade el valor al principio de la lista
+  * remove(int index): elmina el valor en la posición index
+* Convierte MyList en genérica (también debe serlo Node)
