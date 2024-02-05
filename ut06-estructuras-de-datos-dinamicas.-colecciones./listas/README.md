@@ -43,7 +43,7 @@ Los métodos más importantes con los que interactuar con una lista son:
 
 ### Recorrer una lista
 
-Como cada elemento de una lista ocupa una posición (índice) podemos recorrer las listas con un bucle fori
+Como cada elemento de una lista ocupa una posición (índice) podemos recorrer las listas con un bucle for
 
 ```java
 List<Integer> numbers = new LinkedList<>();
@@ -52,7 +52,9 @@ numbers.add(3);
 numbers.add(7);
 numbers.add(9);
 
+// El tamaño de la lista se obtiene invocando el método size()
 for(int i = 0; i < numbers.size(); i++) {
+    // Sacamos el valor en la posición i y lo asignamos a la variable number
     int number = numbers.get(i);
     System.out.println(number);
 } 
@@ -61,7 +63,7 @@ for(int i = 0; i < numbers.size(); i++) {
 También es posible recorrer las listas con un for-each
 
 ```java
-List<Integer> numbers = new LinkedList<>();
+List<Integer> numbers = new ArrayList<>();
 numbers.add(4);
 numbers.add(3);
 numbers.add(7);
@@ -82,6 +84,15 @@ Las dos implementaciones más importantes de List son **ArrayList** y **LinkedLi
 
 Es una implementación del ADT List basada en la estructura de datos "**Lista enlazada**". Se trata  de una estructura de datos dinámica, es decir, adapta su tamaño a la cantidad de datos que se van añadiendo o quitando.&#x20;
 
+```java
+List<Integer> numbers = new LinkedList<>();
+numbers.add(4);
+numbers.add(3);
+numbers.add(7);
+numbers.add(9);
+
+```
+
 Las listas enlazadas almacenan los datos en **nodos**, cada nodo tiene un enlace al siguiente nodo de la lista.  La lista enlazada mantiene un enlace al primer nodo (head) y otro enlace al último (tail) para poder acceder a estas posiciones directamente.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>LIsta enlazada con los números 10, 20 y 30</p></figcaption></figure>
@@ -92,7 +103,13 @@ Estas estructuras están optimizadas para insertar y quitar elementos de forma d
 
 Son estructuras de datos dinámicas, es decir, adaptan su tamaño a la cantidad de datos que se van añadiendo o quitando. Internamente utilizan arrays para almacenar los datos.&#x20;
 
-
+```java
+List<Integer> numbers = new ArrayList<>();
+numbers.add(4);
+numbers.add(3);
+numbers.add(7);
+numbers.add(9);
+```
 
 Su principal ventaja es que es posible leer cualquier posición muy rápidamente al tener acceso directo gracias al array. La desventaja es que resultan lentos a la hora de insertar y eliminar elementos ya que se hace necesario mover los datos por el array. Incluso en el peor de los casos si el tamaño del array es sobrepasado se necesita crear un nuevo array de mayor tamaño y copiar los datos al nuevo array.
 

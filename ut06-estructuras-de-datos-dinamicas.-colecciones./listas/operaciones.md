@@ -5,19 +5,12 @@ coverY: 0
 
 # Operaciones
 
-Acceder por índice
+Vamos a estudiar las siguientes operaciones utilizando este [simulador](https://csvistool.com/):
 
-
-
-Añadir elemento
-
-
-
-Eliminar elemento
-
-
-
-Recorrer la lista
-
-
-
+* Añadir elemento al principio
+* Añadir elemento al final
+* Añadir elemento en el medio
+* Eliminar elemento (principio, final, medio)
+* Recorrer&#x20;
+  * For
+  * For-each

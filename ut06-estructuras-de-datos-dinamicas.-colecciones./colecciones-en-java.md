@@ -74,7 +74,7 @@ Algunas características de los mapas son:
 
 ### Queue\<E> (colas)
 
-Una cola, también conocida como "queue" en inglés, es una colección ordenada de elementos que sigue el principio FIFO (First In, First Out), es decir, el primer elemento que se inserta en la cola es el primero en ser eliminado. Esto se asemeja a una fila en la vida real, donde la primera persona en llegar a la fila es la primera en ser atendida y salir.
+Una cola, también conocida como "queue" en inglés, es una colección ordenada de elementos que sigue el principio **FIFO** (First In, First Out), es decir, el primer elemento que se inserta en la cola es el primero en ser eliminado. Esto se asemeja a una fila en la vida real, donde la primera persona en llegar a la fila es la primera en ser atendida y salir.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -86,7 +86,7 @@ Las colas son útiles en una variedad de situaciones, incluyendo la gestión de 
 
 ### Stack\<E>
 
-Una pila es una estructura de datos lineal que sigue el principio de "último en entrar, primero en salir" (LIFO, por sus siglas en inglés: Last In, First Out). Esto significa que el último elemento que se inserta en la pila es el primero en ser eliminado. En una pila, los elementos se agregan y eliminan solo desde un extremo, comúnmente conocido como la cima (top) de la pila.
+Una pila es una estructura de datos lineal que sigue el principio de "último en entrar, primero en salir" (**LIFO**, por sus siglas en inglés: Last In, First Out). Esto significa que el último elemento que se inserta en la pila es el primero en ser eliminado. En una pila, los elementos se agregan y eliminan solo desde un extremo, comúnmente conocido como la cima (top) de la pila.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
