@@ -8,7 +8,7 @@ coverY: 0
 Los siguientes ejercicios se pueden crear como métodos una sola clase llamada ListExercises
 
 1. Escribe un programa que cree un Array List y lo rellene con varios String. Luego recórrelo mostrando en pantalla cada elemento.
-2. Escribe un método que dada una lista de String y un String y lo inserte en la primera posición.
+2. Escribe un método addAtBeggining(List\<String> list, String value) que dada una lista de String (list) y un String (value) y lo inserte en la primera posición.
    * {“Hola”, “Mundo”} + “Adiós” = {“Adiós” , “Hola”, “Mundo”}
 3. Escribe un método first(List\<Integer> list) que dada una lista de String y devuelva el que está en la primera posición. Si la lista está vacía devuelve null. Prueba el método con una lista vacía y con otra con tres valores dentro.
 4. Escribe un método last(List\<Integer> list)  que dada una lista de String y devuelva el que está en la última posición. Si la lista está vacía devuelve null. Prueba el método con una lista vacía y con otra con tres valores dentro.
