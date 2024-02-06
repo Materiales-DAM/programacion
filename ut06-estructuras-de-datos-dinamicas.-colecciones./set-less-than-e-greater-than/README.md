@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/tree.png
+cover: ../../.gitbook/assets/tree.png
 coverY: 94.60266666666666
 layout:
   cover:
@@ -21,7 +21,7 @@ layout:
 
 Las colecciones de tipo Set representan conjuntos de datos. No es posible definir el orden (o secuencia) en el que se encuentran dichos datos dentro de la colección sino que viene predefinida dependiendo de la misma)
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Un set es un conjunto de valores no secuenciales</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Un set es un conjunto de valores no secuenciales</p></figcaption></figure>
 
 Algunas de las características de los Set son:
 
@@ -89,9 +89,8 @@ Si ejecutamos el código anterior veremos que el orden en el que aparecen los n�
 
 ### HashSet\<E>
 
-lista
+La estructura de datos que implementa es un Hash Table. Es una estructura de datos no lineal, optimizada para almacenar **datos no ordenados**. Es más rápida que el TreeSet pero la ordenación interna no responde a una lógica comprensible para los humanos.&#x20;
 
 ### TreeSet\<E>
 
-
-
+La estructura de datos que implementa es un Self Balanced Binary Search Tree (árbol binario de búsqueda autobalanceado). Es una estructura de datos no lineal, optimizada para almacenar **datos ordenados** según un determinado **criterio de ordenación**.&#x20;
