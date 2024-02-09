@@ -41,11 +41,21 @@ En caso de que los elementos del TreeSet sean de algún tipo básico existe una 
 
 En caso de que el tipo no sea básico o se desee una ordenación distinta de la que viene por defecto se debe utilizar la técnica explicada en la sección Comparator\<E>
 
-### Ordenación con Comparable\<E>
+### Ordenación con Comparable\<T>
 
-Esta opción solo es posible con POJOs que se definen en el propio proyecto ya que es necesario modificar la propia clase de los objetos que se desean ordenar.&#x20;
+Una forma de proveer el criterio de ordenación para elementos de un tipo, es hacer que la clase implemente la interface Comparable\<T>, donde T es la propia clase.
 
-Por ejemplo, si queremos crear un TreeSet\<Student> debemos hacer que implemente Comparable\<Student>
+Esta interface obliga a implementar el método **int compareTo(T o):**
+
+* La implementación de este método debe comparar dos objetos: this y el parámetro o.
+* El método debe devolver un número entero de entre los siguientes valores:
+  * 1: cuando el objeto o es mayor que this se devuelve 1.
+  * 0: si los dos objetos se consideran iguales en términos de ordenación, se devuelve 0
+  * \-1: cuando el objeto o es menor que this se devuelve -1.
+
+Esta forma de establecer la ordenación de un tipo permite especificar un único criterio de ordenación para elementos de tipo T, ya que solo es posible implementar el método compareTo una sola vez.
+
+Por ejemplo, si queremos crear un TreeSet\<Student> debemos hacer que la clase Student implemente Comparable\<Student>
 
 ```java
 package org.ies.highschool.model;
@@ -151,6 +161,34 @@ George Pig. Dirección: Calle Falsa
 Peppa Pig. Dirección: Calle Falsa
 ```
 
-### Ordenación con Comparator\<E>
+### Ordenación con Comparator\<T>
 
-Creando una clase que implemente Comparator\<E> y pasándola en el momento de la creación del TreeSet\<E>
+La otra forma de proveer un criterio de ordenación para elementos de un tipo T, es crear una nueva clase que implemente la interface Comparator\<T>.
+
+Esta interface obliga a implementar el método **int compare(T o1, T o2):**
+
+* La implementación de este método debe comparar dos objetos: o1 y el parámetro o2.
+* Esta implementación de la ordenación está desacoplada de la clase de objetos que ordena.
+* El método debe devolver un número entero de entre los siguientes valores:
+  * 1: cuando el objeto o1 es mayor que o2 se devuelve 1.
+  * 0: si los dos objetos se consideran iguales en términos de ordenación, se devuelve 0
+  * \-1: cuando el objeto o1 es menor que o2 se devuelve -1.
+
+El uso de esta interface permite especificar múltiples criterios de ordenación para elementos de tipo T, al estar desacoplado la definición de T de sus criterios de ordenación
+
+```java
+public class StudentComparator implements Comparator<Student> {
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        int compare = o1.getSurname().compareTo(o2.getSurname());
+        // Si los apellidos de ambos son iguales compareTo devuelve 0
+        if (compare == 0) {
+            // Si el apellido era igual ordenamos por nombre
+            compare = o1.getName().compareTo(o2.getName());
+        }
+        // Devolvemos el valor de compare
+        return compare;
+    }
+}
+```
