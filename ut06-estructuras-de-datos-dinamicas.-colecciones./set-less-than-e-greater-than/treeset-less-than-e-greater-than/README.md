@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/tree.png
+cover: ../../../.gitbook/assets/tree.png
 coverY: 94.60266666666666
 layout:
   cover:
@@ -21,12 +21,26 @@ layout:
 
 La estructura de datos que implementa es un Self Balanced Binary Search Tree (árbol binario de búsqueda autobalanceado). Es una estructura de datos no lineal, optimizada para almacenar **datos ordenados** según un determinado **criterio de ordenación**.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Árbol binario de búsqueda balanceado</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Árbol binario de búsqueda balanceado</p></figcaption></figure>
 
-Las principales características de los TreeSet son:
+Algunos conceptos que debemos manejar en cuanta a árboles:
+
+* Cada valor se guarda en una estructura llamada nodo
+* Cada nodo puede tener un valor a su izquierda y otro a su derecha.
+* Se denominan hojas a los nodos a los que les falta alguno de sus nodos izquierdo o derecho.
+* Los valores de los nodos a la izquierda con más pequeños que el valor del nodo y los de la derecha son mayores.
+* La altura de un nodo es la distancia entre el nodo raíz y el propio nodo
+* La profundidad de un árbol es la distancia entre la raíz y el nodo más alto
+* Un árbol está balanceado cuando la distancia entre sus dos hojas más distantes no es superior a 1
+* La profundidad de un árbol balanceado se calcula aplicando la fórmula **log n**
+
+Las principales características de los árboles binarios de búsqueda son:
 
 * Cada elemento se inserta dentro de la estructura en la posición que le corresponde según el criterio de ordenación definido, a diferencia de en las listas dicha posición no se puede modificar a voluntad.
-* Tiene muy buen comportamiento en operaciones de búsqueda, inserción y eliminicación con una complejidad de O(log(n))
+* Tiene muy buen comportamiento en operaciones de búsqueda, inserción y eliminación con una complejidad de O(log(n))
+* Para comprobar si un elemento existe en el árbol habrá que realizar, como máximo, tantos pasos como la profundidad del árbol.&#x20;
+
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ## Ordenación de los elementos
 
