@@ -21,6 +21,7 @@ Los siguientes ejercicios se pueden crear como métodos una sola clase llamada L
 11. Un método union(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade los elementos de numbers1 y después los de numbers 2.
 12. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade aquellos números que estén tanto en numbers1 como en numbers2
 13. Un método removeAll(List\<Double> numbers , List\<Double> numbersToRemove) que dadas dos listas de números, elimina de numbers todos los números que estén en numbersToRemove
+14. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
 
 Crea tu propia implementación de una lista enlazada:
 
