@@ -117,7 +117,9 @@ Su principal ventaja es que es posible leer cualquier posición muy rápidamente
 
 ## Eficiencia
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Eficiencia de LinkedLIst vs ArrayList</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Notación Big-O</p></figcaption></figure>
 
 ## LinkedList vs ArrayList
 

@@ -87,10 +87,20 @@ Si ejecutamos el código anterior veremos que el orden en el que aparecen los n�
 
 ## Implementaciones
 
-### HashSet\<E>
+### [HashSet\<E>](./#hashset-less-than-e-greater-than)
 
 La estructura de datos que implementa es un Hash Table. Es una estructura de datos no lineal, optimizada para almacenar **datos no ordenados**. Es más rápida que el TreeSet pero la ordenación interna no responde a una lógica comprensible para los humanos.&#x20;
 
-### TreeSet\<E>
+### [TreeSet\<E>](./#treeset-less-than-e-greater-than)
 
 La estructura de datos que implementa es un Self Balanced Binary Search Tree (árbol binario de búsqueda autobalanceado). Es una estructura de datos no lineal, optimizada para almacenar **datos ordenados** según un determinado **criterio de ordenación**.&#x20;
+
+## HashSet vs TreeSet
+
+La diferencia fundamental entre estas dos implementaciones es que la ordenación de los elementos de un TreeSet responde a un criterio comprensible y predecible, mientras que en el caso del HashSet no la ordenación interna no responde a ningún criterio comprensible y no es predecible.
+
+Los **HashSet son más eficientes** que los TreeSet en todas las operaciones. Sólo tendrá sentido elegir la implementación **TreeSet cuando deseemos que los elementos estén ordenados** siguiendo un criterio de ordenación determinado. A pesar de que los TreeSet tienen menor eficiencia que los HashSet, siguen siendo estructuras de datos muy eficientes si las comparamos con las listas en las siguientes operaciones:
+
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>HashSet es significativamente más eficiente que TreeSet</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Notación Big-O</p></figcaption></figure>

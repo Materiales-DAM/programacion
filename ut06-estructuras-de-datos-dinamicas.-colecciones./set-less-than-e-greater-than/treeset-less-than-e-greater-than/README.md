@@ -40,7 +40,17 @@ Las principales características de los árboles binarios de búsqueda son:
 * Tiene muy buen comportamiento en operaciones de búsqueda, inserción y eliminación con una complejidad de O(log(n))
 * Para comprobar si un elemento existe en el árbol habrá que realizar, como máximo, tantos pasos como la profundidad del árbol.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+## Árboles desbalanceados
+
+Un árbol puede llegar a estar desbalanceado dependiendo del orden en el que se hayan insertado / eliminado los elementos que contiene. Por ejemplo, cuando insertamos los elementos de mayor a menor (o viceversa) el árbol queda completamente desbalanceado. Un arbol que no está balanceado resulta ser una estructura de datos ineficiente.&#x20;
+
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Eficiencia de árbol binario (no autobalanceado)</p></figcaption></figure>
+
+Para evitar este problema los árboles suelen incorporar algún algoritmo de balanceo automático como parte de su funcionalidad de inserción y eliminación. Los árboles auto balanceados más conocidos son AVL (Adelson-Velskii), Red-Black Tree y B-Tree.
+
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Eficiencia de operaciones en árbol binario (no balanceado) vs AVL </p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Notación BIg-O</p></figcaption></figure>
 
 ## Ordenación de los elementos
 
