@@ -26,7 +26,7 @@ Los tipos primitivos no pueden tomar el valor null, la causa de este problema es
 int number = null;
 ```
 
-Sin embargo, puede haber ocasiones en las que queramos que un determinado campo de tipo numérico pueda ser null. Por ejemplo, si hacemos un Java Bean para representar estudiantes y la edad es un campo opcional
+Sin embargo, puede haber ocasiones en las que queramos que un determinado campo de tipo numérico pueda ser null. Por ejemplo, si hacemos un POJO para representar estudiantes y la edad es un campo opcional
 
 ```java
 import java.util.Objects;
@@ -123,7 +123,7 @@ public class Student {
 
     private Integer age;
 
-    public Student(String name, String surname, String address, int age) {
+    public Student(String name, String surname, String address, Integer age) {
         this.name = name;
         this.surname = surname;
         this.address = address;
