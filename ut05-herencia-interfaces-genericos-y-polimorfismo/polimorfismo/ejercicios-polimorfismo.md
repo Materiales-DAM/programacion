@@ -27,10 +27,10 @@ layout:
    * En el main utiliza VehicleReader para leer un vehículo.
    * Muestra los datos del vehículo en pantalla
 3. Formas
-   * Añade un nuevo bean para representar un dibujo (Draw). Cada dibujo tendrá
+   * Añade un nuevo POJO para representar un dibujo (Draw). Cada dibujo tendrá
      * Unas coordenadas (x, y)
      * Una forma
-   * Crea readers para todos los beans
+   * Crea readers para todos los POJO
      * CircleReader
      * TriangleReader
      * SquareReader
