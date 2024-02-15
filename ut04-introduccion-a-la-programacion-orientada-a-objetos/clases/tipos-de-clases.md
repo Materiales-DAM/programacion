@@ -24,11 +24,11 @@ Cuando escribimos un programa en el paradigma POO (Programación Orientada a Obj
 * Clases que sirven para representar datos
 * Clases que sirven para codificar procesos
 
-## Clases de datos (Java Beans)
+## Clases de datos (POJO)
 
-En los sistemas informáticos vamos a querer representar entidades del mundo real como objetos para poder manipularlos. Para poder representar estas entidades vamos a usar los Java Beans.
+En los sistemas informáticos vamos a querer representar entidades del mundo real como objetos para poder manipularlos. Para poder representar estas entidades vamos a usar los POJOs (Plain Old Java Object).
 
-Un Java Bean cumple las siguientes características:
+Un POJO cumple las siguientes características:
 
 * Es una clase que sirve para representar los datos de una entidad del mundo real
 * Todos los campos son privados
@@ -36,7 +36,7 @@ Un Java Bean cumple las siguientes características:
 * Hay un constructor con todos los campos
 * Implementa los métodos hashCode y equals
 
-Por ejemplo, si quisieramos almacenar los datos de un taller mecánico, podríamos crear un Java Bean para representar cada uno de los vehículos que están en el taller
+Por ejemplo, si quisiéramos almacenar los datos de un taller mecánico, podríamos crear un POJO para representar cada uno de los vehículos que están en el taller
 
 ```java
 package org.ies.vehicles.model;
@@ -44,8 +44,8 @@ package org.ies.vehicles.model;
 import java.util.Objects;
 
 /**
- * Esto es un Java bean o POJO (Plain Old Java Object), porque sirve para guardar los datos de un vehiculo.
- * Para que sea una clase sea Java Bean:
+ * Esto es un POJO (Plain Old Java Object), porque sirve para guardar los datos de un vehiculo.
+ * Para que sea una clase sea POJO:
  * - Todos los campos son privados
  * - Cada campo tiene un getter y un setter
  * - Hay un constructor con todos los campos
@@ -167,7 +167,7 @@ import org.ies.vehicles.model.Vehicle;
 import java.util.Scanner;
 
 /**
- * Esta clase NO ES un Java Bean porque ni es una clase de datos, ni tiene getters y setters
+ * Esta clase NO ES un POJO porque ni es una clase de datos, ni tiene getters y setters
  */
 public class VehicleReader {
     private final Scanner scanner;
