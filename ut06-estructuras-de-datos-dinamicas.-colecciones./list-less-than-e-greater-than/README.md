@@ -97,7 +97,7 @@ numbers.add(9);
 
 Las listas enlazadas almacenan los datos en **nodos**, cada nodo tiene un enlace al siguiente nodo de la lista.  La lista enlazada mantiene un enlace al primer nodo (head) y otro enlace al último (tail) para poder acceder a estas posiciones directamente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>LIsta enlazada con los números 10, 20 y 30</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>LIsta enlazada con los números 10, 20 y 30</p></figcaption></figure>
 
 Estas estructuras están optimizadas para insertar y quitar elementos de forma dinámica. No resultan tan convenientes para acceder a elementos por su índice, buscar un elemento u ordenarlos.
 

@@ -63,7 +63,7 @@ Algunas de las características de los Set son:
 
 Los mapas son colecciones asociativas, que permiten almacenar clave-valor. Al igual que los Set, representan conjuntos de valores no secuenciales, es decir no se puede establecer una ordenación.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Mapa que relaciona códigos de estado con su nombre</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Mapa que relaciona códigos de estado con su nombre</p></figcaption></figure>
 
 Algunas características de los mapas son:
 
@@ -76,7 +76,7 @@ Algunas características de los mapas son:
 
 Una cola, también conocida como "queue" en inglés, es una colección ordenada de elementos que sigue el principio **FIFO** (First In, First Out), es decir, el primer elemento que se inserta en la cola es el primero en ser eliminado. Esto se asemeja a una fila en la vida real, donde la primera persona en llegar a la fila es la primera en ser atendida y salir.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 Las colas son útiles en una variedad de situaciones, incluyendo la gestión de tareas en sistemas de procesamiento, la implementación de algoritmos de búsqueda y la gestión de recursos compartidos. Aquí hay algunos usos comunes de las colas:
 
@@ -88,7 +88,7 @@ Las colas son útiles en una variedad de situaciones, incluyendo la gestión de 
 
 Una pila es una estructura de datos lineal que sigue el principio de "último en entrar, primero en salir" (**LIFO**, por sus siglas en inglés: Last In, First Out). Esto significa que el último elemento que se inserta en la pila es el primero en ser eliminado. En una pila, los elementos se agregan y eliminan solo desde un extremo, comúnmente conocido como la cima (top) de la pila.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 La estructura de pila se puede visualizar como una pila de platos, donde solo puedes agregar o quitar platos desde la parte superior de la pila. Los elementos que se colocan en la pila se mantienen en su lugar hasta que se elimina el elemento superior.
 

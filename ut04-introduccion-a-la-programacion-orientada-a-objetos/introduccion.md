@@ -56,7 +56,7 @@ Una vez definida una clase, podemos crear instancias de la misma llamados objeto
 
 Por ejemplo, si definimos la clase Persona:
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En la clase Persona definimos que toda perona tiene los siguientes campos:
 

@@ -17,7 +17,7 @@ while (condition) {
 
 El bucle se repetirá hasta qe la condición deje de cumplirse. El bloque de código de los bucles while se ejecutará de **0 a varias veces**, dependiendo de cuando deje de cumplirse la condición.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Bucle while</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Bucle while</p></figcaption></figure>
 
 A diferencia del bucle for, en esta estructura no resulta obvio cuántas iteraciones va a haber. Veamos un ejemplo concreto.
 

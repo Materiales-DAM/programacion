@@ -119,11 +119,13 @@
   * [TreeSet\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than/treeset-less-than-e-greater-than/README.md)
     * [Ejercicios de ordenaciones](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than/treeset-less-than-e-greater-than/ejercicios-de-ordenaciones.md)
   * [Ejercicios Set\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than/ejercicios-set-less-than-e-greater-than.md)
-* [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
 * [Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than.md)
+* [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
+* [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
 * [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
-* [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./queue-less-than-e-greater-than.md)
-* [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stack-less-than-e-greater-than.md)
+* [Otras colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/README.md)
+  * [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/queue-less-than-e-greater-than.md)
+  * [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/stack-less-than-e-greater-than.md)
 
 ## UT07 - Gestión de errores.
 

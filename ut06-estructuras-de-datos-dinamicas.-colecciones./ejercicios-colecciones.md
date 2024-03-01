@@ -17,5 +17,5 @@ layout:
     visible: true
 ---
 
-# Colas y pilas
+# Ejercicios colecciones
 
