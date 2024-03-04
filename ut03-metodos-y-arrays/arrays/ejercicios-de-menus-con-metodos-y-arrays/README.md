@@ -34,7 +34,3 @@ Métodos necesarios:
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
 * Un método con el bucle del menú
-
-
-
-\

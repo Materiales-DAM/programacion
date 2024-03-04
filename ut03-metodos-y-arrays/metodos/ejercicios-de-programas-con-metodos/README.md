@@ -59,5 +59,3 @@ Implementa el programa creando métodos para:.
   * Salir
 * Un método que imprima el menú y pida una opción al usuario, luego la devuelve
 * En el main se creará el menú interactivo usando lo anterior
-
-\

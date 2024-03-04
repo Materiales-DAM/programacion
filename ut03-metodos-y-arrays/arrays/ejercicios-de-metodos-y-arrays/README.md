@@ -56,5 +56,3 @@ En el main se pide un array, se calcula la media y se imprime el resultado
       6. Imprime el otro array invertido
       7. Une los dos arrays invertidos
       8. Imprime el resultado de la unión
-
-\

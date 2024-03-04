@@ -97,5 +97,3 @@ Implementa los siguientes métodos en la clase Shop:
 * Dado un nif y un id de pedido, devuelve una lista con los productos que se han pedido.
 * Dado una etiqueta (String), devuelve una lista de productos que tienen esa etiqueta.
 * Dado un nif, devuelve cuánto se ha gastado el cliente en la tienda.
-
-\

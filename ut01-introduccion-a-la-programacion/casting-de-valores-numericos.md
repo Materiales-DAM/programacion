@@ -37,9 +37,3 @@ Cuando hacemos un casting de tipos es posible que vayamos de un tipo más grande
 * Narrow casting: son los casting en los que vamos de un conjunto más grande a uno más pequeño. Estos casting son potencialmente problemáticos ya que no todos los valores del tipo de origen son representables en el tipo de destino
 
 `double -> float -> long -> int -> char -> short -> byte`
-
-\
-
-
-
-

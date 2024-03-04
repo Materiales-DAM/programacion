@@ -82,17 +82,12 @@ Los campos nos permiten definir cada una de las partes de las que se que compone
 * Se suelen inicializar desde el constructor
 * Para acceder a ellos desde fuera de la clase se utilizan los métodos getter y setter.
 
-
-
 ```java
 public class Student {
     // Estos son los campos de la clase Student
     private String name;
     private String surname;
     private int course;
-    
-    
-   
     
     public String getName() {
         return name;
