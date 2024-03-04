@@ -139,5 +139,5 @@ public class Passenger {
 }
 ```
 
-* Ordena los pasajeros por nombre y apellidos. COmparator y comparable
-* Ordena los pasajeros por número de asiento.
+* Ordena los pasajeros por nombre y apellidos. Comparator y Comparable
+* Ordena los pasajeros por número de asiento.  Comparator y Comparable.
