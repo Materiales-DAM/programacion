@@ -82,41 +82,34 @@ Esta forma de establecer la ordenación de un tipo permite especificar un único
 Por ejemplo, si queremos crear un TreeSet\<Student> debemos hacer que la clase Student implemente Comparable\<Student>
 
 ```java
-package org.ies.highschool.model;
-
 import java.util.Objects;
 
-// Student implementa Comparable<Student> para poder crear TreeSet<Student
 public class Student implements Comparable<Student> {
     private String name;
-    private String surname;
-    private String address;
 
-    public Student(String name, String surname, String address) {
+    private String surname;
+
+    private String email;
+
+    private int zipCode;
+
+    public Student(String name, String surname, String email, int zipCode) {
         this.name = name;
         this.surname = surname;
-        this.address = address;
-    }
-    
-    public void info() {
-        System.out.println(name + " " + surname + ". Dirección: " + address);
+        this.email = email;
+        this.zipCode = zipCode;
     }
 
-    /**
-     * Este compareTo ordena alfabéticamente por apellidos y nombre
-     */
-     @Override
+    @Override
     public int compareTo(Student other) {
-        int compare = this.surname.compareTo(other.getSurname());
-        // Si los apellidos de ambos son iguales compareTo devuelve 0
-        if (compare == 0) {
-            // Si el apellido era igual ordenamos por nombre
-            compare = this.name.compareTo(other.getName());
+        if(this.zipCode > other.getZipCode()) {
+            return -1;
+        } else if ( this.zipCode == other.getZipCode()) {
+            return this.email.compareTo(other.getEmail());
+        } else {
+            return 1;
         }
-        // Devolvemos el valor de compare
-        return compare;
     }
-
 
     public String getName() {
         return name;
@@ -134,47 +127,55 @@ public class Student implements Comparable<Student> {
         this.surname = surname;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Student student = (Student) o;
-        return Objects.equals(name, student.name) && Objects.equals(surname, student.surname) && Objects.equals(address, student.address);
+
+        if (zipCode != student.zipCode) return false;
+        if (!Objects.equals(name, student.name)) return false;
+        if (!Objects.equals(surname, student.surname)) return false;
+        return Objects.equals(email, student.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, address);
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + zipCode;
+        return result;
     }
-    
-}
 
-public class Main {
-    public static void main(String[] args) {
-        Set<Student> students = new TreeSet<>();
-        students.add(
-                new Student("Peppa", "Pig", "Calle Falsa")
-        );
-        students.add(
-                new Student("Bob", "Esponja", "Calle Falsa")
-        );
-        students.add(
-                new Student("George", "Pig", "Calle Falsa")
-        );
-
-        for (Student student: students) {
-            student.info();
-        }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", zipCode=" + zipCode +
+                '}';
     }
 }
+
 ```
 
 Si ejecutamos este programa veremos que a la salida los estudiantes están ordenados por apellidos y nombre:
@@ -210,6 +211,13 @@ public class StudentComparator implements Comparator<Student> {
         if (compare == 0) {
             // Si el apellido era igual ordenamos por nombre
             compare = o1.getName().compareTo(o2.getName());
+            
+            // Añadimos un compareTo usando un campo que sea único para que no se
+            // descarte ningún estudiante, aunque ya haya uno con el mismo nombre 
+            // y apellidos
+            if(compare == 0) {
+                compare = o1.getEmail().compareTo(o2.getEmail());
+            }
         }
         // Devolvemos el valor de compare
         return compare;
