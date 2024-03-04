@@ -118,9 +118,9 @@ Sirve para quitar elementos de un stream que no cumplan una condición determina
 
 ```java
 Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
-// La lambda de filter tiene un parámetro s de tipo String y devuelve un boolean
-// En este caso el stream solo mantendrá aquellos elementos que empiezan por J
+
 stream
+    // Esta lambda devuelve un boolean a partir de un String, comprueba que empiece por J
     .filter(nombre -> nombre.startsWith("J"))
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .foreach(nombre -> System.out.println(nombre));
@@ -128,8 +128,18 @@ stream
 
 ### map
 
+Se utiliza para **transformar** los elementos de un flujo (stream) aplicando una función a cada elemento y devolviendo un nuevo flujo con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
+
+Toma como parámetro una función lambda que realiza una transformación de un tipo A a otro tipo B.&#x20;
+
 ```java
-stream.map(String::toUpperCase);
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+stream
+    // Transformamos cada nombre en el número de caracteres que lo componen
+    // En este mapeo el tipo A es String y el tipo B es Integer
+    .map(nombre -> nombre.length())
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .foreach(nombre -> System.out.println(nombre));
 ```
 
 ### flatMap
@@ -140,20 +150,55 @@ stream.flatMap(String::toUpperCase);
 
 ### **sorted**
 
+Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
+
 ```java
-stream.sorted();
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    .sorted();
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .foreach(nombre -> System.out.println(nombre));
+```
+
+También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
+
+```java
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    // Pasamos un comparador que ordena de alguna otra forma
+    .sorted(new ReverseStringComparator());
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .foreach(nombre -> System.out.println(nombre));
 ```
 
 ### **limit**
 
+Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
+
 ```java
-stream.limit(5);
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    // Nos quedamos con los dos primeros elementos
+    .limit(2)
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .foreach(nombre -> System.out.println(nombre));
 ```
 
 ### **skip**
 
+Este método hace que el `Stream` resultante se salte un número determinado de elementos
+
 ```java
-stream.skip(2);
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    // Nos saltamos los dos primeros elementos
+    .skip(2)
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .foreach(nombre -> System.out.println(nombre));
 ```
 
 ## Operaciones Terminales
