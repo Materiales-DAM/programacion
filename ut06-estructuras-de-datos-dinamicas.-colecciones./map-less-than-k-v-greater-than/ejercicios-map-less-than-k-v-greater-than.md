@@ -131,7 +131,7 @@ public class User {
 
 ```
 
-1. Escribe un programa que almacene los datos de los estudiantes. Indexa los usuarios por el nif del usuario. Inserta varios usuarios con sus teléfonos.
+1. Escribe un programa que almacene los datos de los usuarios. Indexa los usuarios por el nif del usuario.
    1. put
 2. Crea un método que dado un mapa de usuarios indexados por nif y un nif, devuelva el teléfono. (public static String getPhoneByNif(Map\<String, User> usersByNif, String nif))
    1. containsKey
