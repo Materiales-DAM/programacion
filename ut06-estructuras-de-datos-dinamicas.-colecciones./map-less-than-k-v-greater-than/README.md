@@ -40,7 +40,7 @@ La interface para trabajar con mapas en Java es `Map`, que define un conjunto de
 Almacena un nuevo par clave-valor. El primer parámetro es la clave a almacenar y el segundo parámetro es el valor que se desea asociar a la clave. Si la clave ya existía en el mapa, el nuevo valor sustituye al anterior.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 34);
+<strong>prefixes.put("ES", 340);
 </strong><strong>prefixes.put("US", 1);
 </strong>prefixes.put("UK", 44);
 // Este par sustituye al par creado en el primer put
