@@ -67,7 +67,7 @@ La sintaxis básica de una expresión lambda es la siguiente
 * `->`: Operador de flecha que separa los parámetros de la expresión.
 * `expresion`: Código que se ejecutará cuando la lambda sea invocada.
 
-#### Ejemplos:
+#### Ejemplos
 
 1.  Lambda sin parámetros
 
@@ -85,6 +85,21 @@ La sintaxis básica de una expresión lambda es la siguiente
     (x, y) -> x + y
     ```
 
+#### Notación del tipo de lambda
+
+Para expresar el tipo de lambda que necesitamos en cada lugar vamos a usar la siguiente notación:
+
+* Primero ponemos entre paréntesis y separados por comas los tipos de los parámetros de la lambda
+* Después de los paréntesis ponemos el símbolo ->
+* Por último, ponemos el tipo de retorno&#x20;
+
+Ejemplos:
+
+* () -> String: no tiene parámetros y devuelve un String
+* (Integer) -> String: tiene un parámetro de tipo Integer y devuelve un String
+* (String) -> Void: tiene un parámetro de tipo String y no devuelve nada ( es void)
+* (Integer, String) -> Integer: tiene dos parámetros: el primero es de tipo Integer y el segundo de tipo String. Además, devuelve un Integer.
+
 #### Uso de Lambdas con Streams
 
 Las expresiones lambda se utilizan comúnmente con streams para realizar operaciones sobre colecciones de manera más concisa. Por ejemplo, para imprimir todos los elementos de una lista:
@@ -92,6 +107,7 @@ Las expresiones lambda se utilizan comúnmente con streams para realizar operaci
 ```java
 List<String> nombres = Arrays.asList("Juan", "María", "Carlos");
 
+// Esta lambda es de tipo (String) -> Void
 nombres.forEach(nombre -> System.out.println(nombre));
 ```
 
@@ -100,12 +116,14 @@ nombres.forEach(nombre -> System.out.println(nombre));
 Si el cuerpo de una función lambda tiene más de una línea se deben abrir llaves
 
 ```java
-nombres.forEach(
-       nombre -> {
-             String upper = nombre.toUpperCase();
-             System.out.println(upper);
-       }
-);
+var nombresMayusculas = nombres
+       // Lambda de tipo (String) -> String
+       .map(
+              nombre -> {
+                     String upper = nombre.toUpperCase();
+                     return upper;
+              }
+       );
 ```
 
 ## Operaciones intermedias de Stream&#x20;
@@ -114,33 +132,35 @@ Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, 
 
 ### **filter**
 
-Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda con un parámetro de tipo E y devuelve un boolean.
+Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
 ```java
 Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
 
 stream
-    // Esta lambda devuelve un boolean a partir de un String, comprueba que empiece por J
+    // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
     .filter(nombre -> nombre.startsWith("J"))
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
     .foreach(nombre -> System.out.println(nombre));
 ```
 
 ### map
 
-Se utiliza para **transformar** los elementos de un flujo (stream) aplicando una función a cada elemento y devolviendo un nuevo flujo con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
+Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
 
-Toma como parámetro una función lambda que realiza una transformación de un tipo A a otro tipo B.&#x20;
+Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.&#x20;
 
-```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
-stream
-    // Transformamos cada nombre en el número de caracteres que lo componen
-    // En este mapeo el tipo A es String y el tipo B es Integer
+<pre class="language-java"><code class="lang-java">// En este caso tenemos un  Stream para el que la A es String
+Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+<strong>// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
+</strong><strong>List&#x3C;Integer> nameLengths = stream
+</strong>    // Transformamos cada nombre en el número de caracteres que lo componen
+    // La lambda que se aplica es String -> Integer
+    // Este map devuelve un Stream&#x3C;Integer>
     .map(nombre -> nombre.length())
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .foreach(nombre -> System.out.println(nombre));
-```
+    .collect(Collerctors.toList());
+</code></pre>
 
 ### flatMap
 
@@ -207,11 +227,36 @@ Las operaciones terminales producen un resultado final o llevan a cabo una acci�
 
 ### **collect**
 
+Se utiliza para recopilar los elementos de un stream en una estructura de datos específica, como una lista (`List`), un conjunto (`Set`), un mapa (`Map`), etc.
+
+La clase Collectors incluye métodos que permiten recopilar los elementos de un Stream en los diferentes ADT.
+
 ```java
-List<String> resultList = stream.collect(Collectors.toList());
+Stream<String> names = Arrays.asList("Juan", "María", "Carlos").stream();
+
+List<String> namesList = 
+    names
+        .stream()
+        // Nos saltamos los dos primeros elementos
+        .skip(2)
+        // Los elementos del stream resultante se cargan en una lista
+        .collect(Collectors.toList());
+        
+
+Set<String> namesSet = 
+    names
+        .stream()
+        // Nos saltamos los dos primeros elementos
+        .skip(2)
+        // Los elementos del stream resultante se cargan en un Set
+        .collect(Collectors.toSet());
 ```
 
 ### reduce
+
+Permite combinar los elementos del `Stream<T>` en un solo valor de tipo `Optional<T>`. Para ello, es necesario pasar una función de. La función de reducción toma dos parámetros del tipo que contiene la colección y devuelve un único resultado del mismo tipo.
+
+Después de hacer un reduce, obtenemos un objeto de tipo Optiona\<T>l
 
 ```java
 Optional<String> reduced = stream.reduce((s1, s2) -> s1 + s2);
