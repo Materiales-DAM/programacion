@@ -34,7 +34,7 @@ Veamos un ejemplo simple para ilustrar cómo funcionan los streams en Java:
 Supongamos que tenemos una lista de números y queremos filtrar los números pares, duplicar cada número y luego imprimir los resultados:
 
 ```java
-javaCopy codeimport java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -275,4 +275,3 @@ stream.forEach(v -> System.out.println(v));
 ```java
 Optional<String> firstElement = stream.findFirst();
 ```
-
