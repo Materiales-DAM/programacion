@@ -24,7 +24,7 @@ layout:
 Crea un programa que maneje los datos de una biblioteca:
 
 1. Nombre de la biblioteca
-2. Libros del catálogo (lista de libros) inexados por ISBN. Por cada libro se guardará: ISBN, título, autor, genéros (Set)
+2. Libros inexados por ISBN. Por cada libro se guardará: ISBN, título, autor, genéros (Set)
 3. Socios de la biblioteca (lista). Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
 4. Se almacenará un historial de préstamos: ISBN, fecha préstamos, nif (del socio que lo ha tomado prestado)
 
