@@ -1,6 +1,6 @@
 ---
-cover: ../.gitbook/assets/tree.png
-coverY: 94.60266666666666
+cover: ../.gitbook/assets/lambda.jpeg
+coverY: 0
 layout:
   cover:
     visible: true
@@ -51,7 +51,7 @@ public class Main {
 
 En este ejemplo, `numeros.stream()` se crea un stream a partir de la lista de números. Luego, llamamos a `filter()` para mantener solo los números pares, después usamos `map()` para duplicar cada número y finalmente usamos `forEach()` para imprimir los resultados. Todas las operaciones intermedias se están expresando a través de una construcción denominada Lambda
 
-## Lambdas
+## Lambdas (λ)
 
 Las expresiones lambda son una característica que proporciona una forma más concisa y funcional de expresar funciones anónimas.
 
