@@ -147,4 +147,3 @@ public class User {
 6. Crea un método que dado un mapa de usuarios indexados por nif, un nif y un teléfono, modifica el teléfono de un usuario.
    1. containsKey
    2. get
-   3. Put
