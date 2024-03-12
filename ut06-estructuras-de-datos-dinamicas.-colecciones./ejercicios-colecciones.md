@@ -23,10 +23,22 @@ layout:
 
 Crea un programa que maneje los datos de una biblioteca:
 
-1. Nombre de la biblioteca
-2. Libros inexados por ISBN. Por cada libro se guardará: ISBN, título, autor, genéros (Set)
-3. Socios de la biblioteca (lista). Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
-4. Se almacenará un historial de préstamos (BookLend) ordenados por fecha: ISBN, fecha préstamos, nif (del socio que lo ha tomado prestado)
+1. name: Nombre de la biblioteca
+2. booksByIsbn: libros inexados por ISBN. Por cada libro se guardará:&#x20;
+   1. isbn
+   2. title
+   3. author
+   4. genres (Set\<String>)
+3. customers: socios de la biblioteca (lista). Por cada socio se guardará:
+   1. nif
+   2. name
+   3. surname
+   4. customerNumber: entero
+   5. zipCode: entero
+4. booklends: se almacenará un historial de préstamos (BookLend) ordenados por fecha:&#x20;
+   1. isbn,
+   2. date,
+   3. nif
 
 Implementar los métodos en Biblioteca :
 
@@ -49,15 +61,16 @@ Implementar los métodos en Biblioteca :
 
 Crea una aplicación que sirva para gestionar las cuentas de los clientes de un banco. Crea una estructura de clases que permita almacenar estos datos:
 
-1. Nombre del banco
-2. Listado de clientes. Por cada cliente:
-   1. Nombre y apellidos
-   2. NIF
-   3. Código postal
-3. Cuentas indexadas por iban. Por cada cuenta
-   1. Iban (String)
-   2. Nif del cliente
-   3. Saldo
+1. name: Nombre del banco
+2. customers: Listado de clientes. Por cada cliente:
+   1. nif
+   2. name
+   3. surname
+   4. zipCode
+3. accountsByIban: cuentas indexadas por iban. Por cada cuenta
+   1. iban (String)
+   2. nif
+   3. balance: saldo
 
 El banco debe permitir realizar las siguientes operaciones:
 
@@ -71,23 +84,23 @@ El banco debe permitir realizar las siguientes operaciones:
 
 Implementa una estructura de clases que permita gestionar una tienda. De la tienda se debe almacenar:
 
-* Nombre
-* Productos: los productos deben estar indexados por id de producto. Por cada producto:
-  * Id de producto (entero)
-  * Nombre del producto
-  * Precio (entero)
-  * Etiquetas: conjunto no ordenado de etiquetas (cada etiqueta es un String)
-* Clientes: Conjunto de clientes ordenados por apellidos, nombre y nif. Por cada cliente
-  * Nif (String)
-  * Nombre
-  * Apellidos
-  * Lista de pedidos, por cada pedido:
-    * Id del pedido
-    * Fecha del pedido
-    * Precio total
-    * Lista de items del pedido, por cada item:
-      * Id de producto (entero)
-      * Cantidad
+* name
+* productsById: los productos deben estar indexados por id de producto. Por cada producto:
+  * id: de producto (entero)
+  * name
+  * price: double
+  * tags: conjunto no ordenado de etiquetas (cada etiqueta es un String)
+* customers: Conjunto de clientes ordenados por apellidos, nombre y nif. Por cada cliente
+  * nif (String)
+  * name
+  * surnmae
+  * orders: lista de pedidos, por cada pedido:
+    * id: int
+    * date
+    * price: double
+    * items: lista de items del pedido, por cada item:
+      * productId: entero
+      * amount
 
 Implementa los siguientes métodos en la clase Shop:
 
