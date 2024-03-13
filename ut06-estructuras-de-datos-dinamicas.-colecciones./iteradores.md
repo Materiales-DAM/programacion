@@ -19,4 +19,3 @@ layout:
 
 # Iteradores
 
-Iter
