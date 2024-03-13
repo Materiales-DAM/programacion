@@ -5,7 +5,7 @@ coverY: 0
 
 # Introducción
 
-## ¿Qué es un PROGRAMA?
+## ¿Qué es un programa?
 
 Según Wikipedia "Un programa informático o programa de computadora es una [secuencia de instrucciones](https://es.wikipedia.org/wiki/Conjunto\_de\_instrucciones), escritas para realizar una tarea específica en una [computadora](https://es.wikipedia.org/wiki/Computadora)"​
 
