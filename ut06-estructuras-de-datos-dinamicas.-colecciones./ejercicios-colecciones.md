@@ -24,7 +24,7 @@ layout:
 Crea un programa que maneje los datos de una biblioteca:
 
 1. name: Nombre de la biblioteca
-2. booksByIsbn: libros inexados por ISBN. Por cada libro se guardará:&#x20;
+2. booksByIsbn: libros inexados por ISBN. Por cada libro se guardará:
    1. isbn
    2. title
    3. author
@@ -35,7 +35,7 @@ Crea un programa que maneje los datos de una biblioteca:
    3. surname
    4. customerNumber: entero
    5. zipCode: entero
-4. booklends: se almacenará un historial de préstamos (BookLend) ordenados por fecha:&#x20;
+4. booklends: se almacenará un historial de préstamos (BookLend) ordenados por fecha:
    1. isbn,
    2. date,
    3. nif
@@ -46,7 +46,7 @@ Implementar los métodos en Biblioteca :
   * Add
   * foreach
   * Contains
-* Dado un código postal, devuelve los socios que viven ahí (List\<Member>)
+* Dado un código postal, devuelve los socios que viven ahí (List\<Customer>)
   * Add
   * foreach
 * Dado un nif y un ISBN, crea un préstamo para un socio. Crea un BookLend con la fecha actual.
