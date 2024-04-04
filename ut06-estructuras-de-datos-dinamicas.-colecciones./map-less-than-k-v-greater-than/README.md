@@ -19,19 +19,19 @@ layout:
 
 # Map\<K, V>
 
-Los mapas son estructuras de datos que almacenan elementos en **pares clave-valor**, donde **cada clave es única.** Se utilizan para acceder a un valor a partir de la clave de forma sencilla y eficiente.&#x20;
+Los mapas son estructuras de datos que almacenan elementos en **pares clave-valor**, donde **cada clave es única.** Se utilizan para acceder a un valor a partir de la clave de forma sencilla y eficiente.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Mapa que relaciona códigos de país con el nombre del país</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Mapa que relaciona códigos de país con el nombre del país</p></figcaption></figure>
 
 La interface para trabajar con mapas en Java es `Map`, que define un conjunto de métodos para manipular los datos almacenados. Algunas de las principales características de los mapas son:
 
 * Almacenan **pares clave-valor**
 * En cada mapa se debe definir el tipo de las claves y el tipo del valor:
   * **K**: es el tipo de las claves.
-  * **V**:  es el tipo de los valores.
-* En un mismo mapa, **no puede haber dos pares clave-valor con la misma clave**.&#x20;
+  * **V**: es el tipo de los valores.
+* En un mismo mapa, **no puede haber dos pares clave-valor con la misma clave**.
 * Los mapas están **optimizados para la realización de búsquedas por la clave**.
-* &#x20;Las dos implementaciones más utilizadas son **HashMap** (hashtable asociativa) y TreeMap (SBT asociativo). Internamente, funcionan de manera parecida al HashSet y TreeSet de las claves, la diferencia es que además añaden a cada clave un valor asociado.
+* Las dos implementaciones más utilizadas son **HashMap** (hashtable asociativa) y TreeMap (SBT asociativo). Internamente, funcionan de manera parecida al HashSet y TreeSet de las claves, la diferencia es que además añaden a cada clave un valor asociado.
 
 ## Operaciones
 

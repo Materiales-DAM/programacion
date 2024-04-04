@@ -125,9 +125,8 @@
 * [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
 * [Ejercicios Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than-1.md)
 * [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
-* [Otras colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/README.md)
-  * [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/queue-less-than-e-greater-than.md)
-  * [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/stack-less-than-e-greater-than.md)
+* [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./queue-less-than-e-greater-than.md)
+* [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stack-less-than-e-greater-than.md)
 
 ## UT07 - Gestión de errores.
 
