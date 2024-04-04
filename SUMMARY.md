@@ -123,6 +123,7 @@
   * [Ejercicios Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than/ejercicios-map-less-than-k-v-greater-than.md)
 * [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
 * [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
+* [Ejercicios Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than-1.md)
 * [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
 * [Otras colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/README.md)
   * [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./otras-colecciones/queue-less-than-e-greater-than.md)
