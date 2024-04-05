@@ -47,7 +47,7 @@
 
 ## UT03 - Métodos y arrays
 
-* [Métodos](ut03-metodos-y-arrays/metodos.md)
+* [Métodos](ut03-metodos-y-arrays/metodos/README.md)
   * [Declaración de métodos](ut03-metodos-y-arrays/metodos/declaracion-de-metodos/README.md)
     * [Ejemplos](ut03-metodos-y-arrays/metodos/declaracion-de-metodos/ejemplos.md)
   * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)

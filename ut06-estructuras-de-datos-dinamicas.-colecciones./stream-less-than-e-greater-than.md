@@ -159,7 +159,7 @@ Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
     // Este map devuelve un Stream&#x3C;Integer>
     .map(nombre -> nombre.length())
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .collect(Collerctors.toList());
+    .collect(Collectors.toList());
 </code></pre>
 
 ### flatMap
