@@ -91,7 +91,7 @@ Para expresar el tipo de lambda que necesitamos en cada lugar vamos a usar la si
 
 * Primero ponemos entre paréntesis y separados por comas los tipos de los parámetros de la lambda
 * Después de los paréntesis ponemos el símbolo ->
-* Por último, ponemos el tipo de retorno&#x20;
+* Por último, ponemos el tipo de retorno
 
 Ejemplos:
 
@@ -126,7 +126,7 @@ var nombresMayusculas = nombres
        );
 ```
 
-## Operaciones intermedias de Stream&#x20;
+## Operaciones intermedias de Stream
 
 Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, lo que permite encadenar múltiples operaciones.
 
@@ -141,14 +141,14 @@ stream
     // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
     .filter(nombre -> nombre.startsWith("J"))
     // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
-    .foreach(nombre -> System.out.println(nombre));
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
 ### map
 
 Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
 
-Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.&#x20;
+Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.
 
 <pre class="language-java"><code class="lang-java">// En este caso tenemos un  Stream para el que la A es String
 Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
@@ -178,7 +178,7 @@ Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
 stream
     .sorted();
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .foreach(nombre -> System.out.println(nombre));
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
 También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
@@ -190,7 +190,7 @@ stream
     // Pasamos un comparador que ordena de alguna otra forma
     .sorted(new ReverseStringComparator());
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .foreach(nombre -> System.out.println(nombre));
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
 ### **limit**
@@ -204,7 +204,7 @@ stream
     // Nos quedamos con los dos primeros elementos
     .limit(2)
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .foreach(nombre -> System.out.println(nombre));
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
 ### **skip**
@@ -218,7 +218,7 @@ stream
     // Nos saltamos los dos primeros elementos
     .skip(2)
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
-    .foreach(nombre -> System.out.println(nombre));
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
 ## Operaciones Terminales
