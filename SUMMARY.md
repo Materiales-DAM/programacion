@@ -130,4 +130,6 @@
 
 ## UT07 - Gestión de errores.
 
-* [Introducción](ut07-gestion-de-errores./introduccion.md)
+* [Errores en Java](ut07-gestion-de-errores./introduccion/README.md)
+  * [Errores de compilación](ut07-gestion-de-errores./introduccion/introduccion.md)
+  * [Excepciones comunes](ut07-gestion-de-errores./introduccion/introduccion-1.md)
