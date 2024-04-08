@@ -22,7 +22,7 @@ layout:
 Resuelve estos ejercicios usando Stream
 
 1. Escribe un programa que cree un ArrayList y lo rellene con varios String. Luego conviértelo en un Stream y recórrelo mostrando en pantalla cada elemento.
-2. Escribe un método first(List\<Integer> list) que dada una lista de String y devuelva el que está en la primera posición. Si la lista está vacía devuelve null.
+2. Escribe un método first(List\<String> list) que dada una lista de String y devuelva el que está en la primera posición. Si la lista está vacía devuelve null.
 3. Escribe un método last(List\<Integer> list) que dada una lista de Integer y devuelva el que está en la última posición. Si la lista está vacía devuelve null. Prueba el método con una lista vacía y con otra con tres valores dentro.
 4. Un método sum10(List\<Integer> numbers) que dado una lista de enteros, devuelve otra lista de enteros del mismo tamaño en la que se le ha sumado 10 a cada número de la primera lista.
 5. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
