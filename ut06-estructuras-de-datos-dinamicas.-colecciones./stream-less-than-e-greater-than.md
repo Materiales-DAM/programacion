@@ -330,12 +330,37 @@ Integer sum = numbers.reduce(0, (s1, s2) -> s1 + s2);
 
 ### **foreach**
 
+Esta operación terminal recibe una lambda (A) -> Void, es decir no devuelve nada. Se suele utilizar para mostrar datos en pantall, modificar algún objeto definido en el scope en el que se ejecuta... &#x20;
+
 ```java
-stream.forEach(v -> System.out.println(v));
+// Ejemplo de uso de forEach para mostrar datos en pantalla
+Stream<String> names = Arrays.asList("Juan", "María", "Carlos").stream();
+names.forEach(name -> System.out.println(name));
 ```
+
+<pre class="language-java"><code class="lang-java">// Ejemplo de uso de forEach para concatenar los nombres separados por comas
+Stream&#x3C;String> names = Arrays.asList("Juan", "María", "Carlos").stream();
+<strong>// Para poder acceder a sentence desde la lambda, debe ser final
+</strong><strong>final StringBuilder sentence = new StringBuilder();
+</strong>
+// Añadimos a sentence cada nombre, separando con un espacio
+names.forEach(name -> sentence.append(" " + name));
+
+System.out.println(sentence.toString());
+</code></pre>
 
 ### **findFirst**
 
 ```java
+// Devuelve un Optional con el primer elemento del stream
+// Si el stream está vacío, devuelve Optional.empty
 Optional<String> firstElement = stream.findFirst();
+```
+
+### **findLast**
+
+```java
+// Devuelve un Optional con el último elemento del stream
+// Si el stream está vacío, devuelve Optional.empty
+Optional<String> firstElement = stream.findLast();
 ```
