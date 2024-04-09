@@ -164,9 +164,42 @@ Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
 
 ### flatMap
 
+Este método es de utilidad cuando la transformación que se va a aplicar a cada elemento del Stream produce una colección de valores.
+
+Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
+
 ```java
-stream.flatMap(String::toUpperCase);
+List<Product> products = Arrays.asList(
+    new Product(1, "tornillo", Arrays.asList("Ferretería", "Tornillo"),
+    new Product(2, "tuerca", Arrays.asList("Ferretería", "Tuerca"),
+    new Product(3, "Lápiz", Arrays.asList("Papelería")
+);
+
+Set<Set<String>> tags = products
+    .stream()
+    .map(p -> p.getTags())
+    .collect(Collectors.toSet());
+    
+System.out.println(tags);
 ```
+
+Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de Sets de tags, habrá un Set independiente por cada producto en el Stream original. Sin embargo, lo que queremos obtener es un Set\<String> con los tags de todos los productos.
+
+Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
+
+<pre class="language-java"><code class="lang-java">List&#x3C;Product> products = Arrays.asList(
+    new Product(1, "tornillo", Arrays.asList("Ferretería", "Tornillo"),
+    new Product(2, "tuerca", Arrays.asList("Ferretería", "Tuerca"),
+    new Product(3, "Lápiz", Arrays.asList("Papelería")
+);
+
+Set&#x3C;String> tags = products
+    .stream()
+    .flatMap(p -> p.getTags().stream())
+    .collect(Collectors.toSet());
+
+<strong>System.out.println(tags);
+</strong></code></pre>
 
 ### **sorted**
 
