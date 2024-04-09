@@ -170,9 +170,9 @@ Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 
 ```java
 List<Product> products = Arrays.asList(
-    new Product(1, "tornillo", Arrays.asList("Ferretería", "Tornillo"),
-    new Product(2, "tuerca", Arrays.asList("Ferretería", "Tuerca"),
-    new Product(3, "Lápiz", Arrays.asList("Papelería")
+    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
+    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
+    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
 );
 
 Set<Set<String>> tags = products
