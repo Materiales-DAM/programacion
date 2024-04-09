@@ -187,19 +187,20 @@ Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de
 
 Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
 
-<pre class="language-java"><code class="lang-java">List&#x3C;Product> products = Arrays.asList(
-    new Product(1, "tornillo", Arrays.asList("Ferretería", "Tornillo"),
-    new Product(2, "tuerca", Arrays.asList("Ferretería", "Tuerca"),
-    new Product(3, "Lápiz", Arrays.asList("Papelería")
+```java
+List<Product> products = Arrays.asList(
+    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
+    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
+    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
 );
 
-Set&#x3C;String> tags = products
+Set<String> tags = products
     .stream()
     .flatMap(p -> p.getTags().stream())
     .collect(Collectors.toSet());
-
-<strong>System.out.println(tags);
-</strong></code></pre>
+    
+System.out.println(tags);
+```
 
 ### **sorted**
 
