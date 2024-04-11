@@ -357,10 +357,18 @@ System.out.println(sentence.toString());
 Optional<String> firstElement = stream.findFirst();
 ```
 
-### **findLast**
+### **max**
 
 ```java
-// Devuelve un Optional con el último elemento del stream
-// Si el stream está vacío, devuelve Optional.empty
-Optional<String> firstElement = stream.findLast();
+// Devuelve un Optional con el nif más alto, ordenado alfabéticamente
+Optional<Student> maxNifStudent = stream
+    .max((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
+```
+
+### **min**
+
+```java
+// Devuelve un Optional con el nif más bajo, ordenado alfabéticamente
+Optional<Student> minNifStudent = stream
+    .min((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
 ```
