@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/lambda.jpeg
+cover: ../.gitbook/assets/lambda.jpeg
 coverY: 0
 layout:
   cover:
@@ -27,7 +27,7 @@ Aquí hay algunos conceptos clave relacionados con los streams en Java:
 2. **Operaciones intermedias**: Son operaciones que se aplican a un stream. Las operaciones intermedias incluyen métodos como `filter()`, `map()`, `sorted()`, `distinct()`, entre otros. Estas operaciones son lazy, es decir que no se ejecutan hasta que se llama a una operación terminal.
 3. **Operaciones terminales**: Este tipo de operaciones finalizan el stream y producen un resultado. Las operaciones terminales pueden ser `forEach()`, `collect()`, `reduce()`, `count()`, `anyMatch()`, `allMatch()`, `noneMatch()`, entre otras. Una vez que se invoca una operación terminal, no se puede volver a usar el stream.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 Veamos un ejemplo simple para ilustrar cómo funcionan los streams en Java:
 
