@@ -134,3 +134,7 @@
 * [Errores en Java](ut07-gestion-de-errores./introduccion/README.md)
   * [Errores de compilación](ut07-gestion-de-errores./introduccion/introduccion.md)
   * [Excepciones comunes](ut07-gestion-de-errores./introduccion/introduccion-1.md)
+* [Gestión de excepciones](ut07-gestion-de-errores./introduccion-1.md)
+* [Logging](ut07-gestion-de-errores./introduccion-2.md)
+* [Bugs](ut07-gestion-de-errores./introduccion-3.md)
+* [Pruebas](ut07-gestion-de-errores./introduccion-4.md)
