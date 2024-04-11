@@ -104,5 +104,5 @@ Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
 
 Optional<String> optionalEmptyMessage = Optional.empty();
 // Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
-var lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
+Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
 ```
