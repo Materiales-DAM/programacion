@@ -125,7 +125,7 @@
 * [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
 * [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
   * [Optional\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than/stream-less-than-e-greater-than.md)
-* [Ejercicios Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than-1.md)
+  * [Ejercicios Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than/stream-less-than-e-greater-than-1.md)
 * [Iteradores](ut06-estructuras-de-datos-dinamicas.-colecciones./iteradores.md)
 * [Queue\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./queue-less-than-e-greater-than.md)
 * [Stack\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stack-less-than-e-greater-than.md)

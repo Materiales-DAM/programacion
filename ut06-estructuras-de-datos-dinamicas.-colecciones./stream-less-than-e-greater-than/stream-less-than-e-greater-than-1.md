@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/lambda.jpeg
+cover: ../../.gitbook/assets/lambda.jpeg
 coverY: 0
 layout:
   cover:
@@ -33,3 +33,6 @@ Resuelve estos ejercicios usando Stream
 10. Un método max(List\<Double> numbers ) que busca el máximo de los números en la lista. Si la lista está vacía devuelve null.
 11. Un método min(List\<Double> numbers ) que busca el mínimo de los números en la lista. Si la lista está vacía devuelve null.
 12. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, devuelve los números que están tanto numbers1 como en numbers2
+13. Un método que dado una lista de pedidos, devuelve una lista con los precios de cada pedido
+14. Un método que dado una lista de pedidos, devuelve el precio total de todos los pedidos
+15. Un método que dado una lista de pedidos, devuelva una lista con todos los OrderItem
