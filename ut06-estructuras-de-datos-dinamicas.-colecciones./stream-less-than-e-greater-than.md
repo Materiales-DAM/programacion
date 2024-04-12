@@ -19,7 +19,7 @@ layout:
 
 # Stream\<E>
 
-Los `Stream` en Java son una utilidad que permite realizar operaciones de procesamiento de datos de forma declarativa y **funcional** en colecciones de elementos. Los `Stream` permiten expresar operaciones como filtrado, mapeo, reducción y agrupación de manera más concisa y legible que el enfoque basado en bucles (programación estructurada).
+Los `Stream` en Java son una utilidad que permite realizar operaciones de procesamiento de datos de forma declarativa y **funcional** en colecciones de elementos. Los `Stream` permiten expresar operaciones como filtrado, mapeo, reducción... de manera más concisa y legible que el enfoque basado en bucles (programación estructurada).
 
 Aquí hay algunos conceptos clave relacionados con los streams en Java:
 
@@ -59,9 +59,8 @@ Las expresiones lambda son una característica que proporciona una forma más co
 
 La sintaxis básica de una expresión lambda es la siguiente
 
-```java
-(parametros) -> expresion
-```
+<pre class="language-java"><code class="lang-java"><strong>(parametros) -> expresion
+</strong></code></pre>
 
 * `(parámetros)`: Lista de parámetros que toma la lambda. Puede ser vacía si no hay parámetros, un parámetro sin paréntesis si hay exactamente uno, o múltiples parámetros separados por comas dentro de paréntesis si hay más de uno.
 * `->`: Operador de flecha que separa los parámetros de la expresión.
@@ -72,12 +71,12 @@ La sintaxis básica de una expresión lambda es la siguiente
 1.  Lambda sin parámetros
 
     ```java
-    () -> System.out.println("Hola, mundo");
+    () -> System.out.println("Hola, mundo")
     ```
 2.  Lambda con un parámetro:
 
     ```java
-    (nombre) -> System.out.println("Hola, " + nombre);
+    (nombre) -> System.out.println("Hola, " + nombre)
     ```
 3.  Lambda con múltiples parámetros:
 
@@ -217,15 +216,25 @@ stream
 
 También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
 
-```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
-// Ordenará los String en orden alfabético
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+</strong>// Ordenará los String en orden alfabético
 stream
     // Pasamos un comparador que ordena de alguna otra forma
     .sorted(new ReverseStringComparator());
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
-```
+</code></pre>
+
+También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
+
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+</strong>// Ordenará los String en orden alfabético
+stream
+    // Expresamos el comparador con una Lambda (String, String) -> Integer
+    .sorted((name1, name2) -> -name1.compareTo(name2));
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
+</code></pre>
 
 ### **limit**
 

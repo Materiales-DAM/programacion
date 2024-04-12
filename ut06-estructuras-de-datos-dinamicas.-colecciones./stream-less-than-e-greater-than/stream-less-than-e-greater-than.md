@@ -39,7 +39,12 @@ Optional<String> emptyOptional = Optional.empty();
 
 ## Optional en Streams
 
-Existen numerosos métodos terminales de&#x20;
+Existen numerosos métodos terminales que devuelven un Optional:
+
+* reduce
+* findFirst
+* max
+* min
 
 ## Métodos
 
@@ -60,7 +65,6 @@ optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
 Optional<String> optionalEmptyMessage = Optional.empty();
 // No hace nada porque optionalEmptyMessage es empty
 optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
-
 ```
 
 ### orElse(E default)
@@ -68,14 +72,13 @@ optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message))
 Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
 
 ```java
-Optional<String> optionalMessage = Optional.of("Hola");
-
 // message1 es Hola, porque optionalMessage no está vacío
 var message1 = optionalMessage.orElse("Hello");
-
-Optional<String> optionalEmptyMessage = Optional.empty();
+System.out.println(message1);
+        
 // message2 es Hello, porque optionalEmptyMessage está vacío
 var message2 = optionalEmptyMessage.orElse("Hello");
+System.out.println(message2);
 ```
 
 ### **get()**
@@ -83,14 +86,11 @@ var message2 = optionalEmptyMessage.orElse("Hello");
 Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
 ```java
-Optional<String> optionalMessage = Optional.of("Hola");
-
 // message1 es Hola, porque optionalMessage no está vacío
-var message1 = optionalMessage.get();
+var getMessage1 = optionalMessage.get();
 
-Optional<String> optionalEmptyMessage = Optional.empty();
 // Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
-var message2 = optionalEmptyMessage.get();
+var getMessage2 = optionalEmptyMessage.get();
 ```
 
 ### map(A -> B)
@@ -98,12 +98,11 @@ var message2 = optionalEmptyMessage.get();
 &#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
 
 ```java
-Optional<String> optionalMessage = Optional.of("Hola");
-
 // Devuelve un Optional<Integer> que contiene el valor 4
 Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
+System.out.println(lengthOpt1);
 
-Optional<String> optionalEmptyMessage = Optional.empty();
 // Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
 Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
+System.out.println(lengthOpt2);
 ```
