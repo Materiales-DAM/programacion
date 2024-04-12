@@ -28,13 +28,14 @@ Una variable de tipo Optional\<E> puede:
 
 A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
 
-<pre class="language-java"><code class="lang-java"><strong>// Este Optional nal contiene el valor "Hello"
-</strong><strong>Optional&#x3C;String> optionalWithValue = Optional.of("Hello");
-</strong><strong>// Este Optional está vacío
-</strong>Optional&#x3C;String> optionalWithNullable = Optional.ofNullable(null);
+```java
+// Este Optional nal contiene el valor "Hello"
+Optional<String> optionalWithValue = Optional.of("Hello");
 // Este Optional está vacío
-Optional&#x3C;String> emptyOptional = Optional.empty();
-</code></pre>
+Optional<String> optionalWithNullable = Optional.ofNullable(null);
+// Este Optional está vacío
+Optional<String> emptyOptional = Optional.empty();
+```
 
 ## Optional en Streams
 
