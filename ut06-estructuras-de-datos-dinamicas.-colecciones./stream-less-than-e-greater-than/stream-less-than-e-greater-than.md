@@ -114,7 +114,8 @@ Este método es de utilidad cuando la transformación que se va a aplicar al con
 Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
 
 ```java
-customerOpt.flatMap(customer ->
+// En este flatMap A es Customer y B es Order
+Optional<Order> orderOpt = customerOpt.flatMap(customer ->
                         customer.getOrders()
                                 .stream()
                                 .filter(order -> order.getId() == orderId)
