@@ -129,7 +129,7 @@ var nombresMayusculas = nombres
 
 Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, lo que permite encadenar múltiples operaciones.
 
-### **filter**
+### **filter(A-> Boolean)**
 
 Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
@@ -143,7 +143,7 @@ stream
     .forEach(nombre -> System.out.println(nombre));
 ```
 
-### map
+### map(A->B)
 
 Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
 
@@ -161,7 +161,7 @@ Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
     .collect(Collectors.toList());
 </code></pre>
 
-### flatMap
+### flatMap(A -> Stream\<B>)
 
 Este método es de utilidad cuando la transformación que se va a aplicar a cada elemento del Stream produce una colección de valores.
 
@@ -295,7 +295,7 @@ Set<String> namesSet =
         .collect(Collectors.toSet());
 ```
 
-### reduce
+### reduce(A, (A, A) -> A)
 
 Permite combinar los elementos del `Stream<T>` en un solo valor de tipo `Optional<T>`. Para ello, es necesario pasar una lambda `(T, T) -> T`, dicha función toma dos parámetros del tipo que contiene la colección y devuelve un único resultado del mismo tipo, esta función se aplica una y otra vez reduciendo el número de valores que contiene el Stream hasta obtener un único valor
 
@@ -337,7 +337,7 @@ Stream<Integer> numbers = Arrays.asList().stream();
 Integer sum = numbers.reduce(0, (s1, s2) -> s1 + s2);
 ```
 
-### **foreach**
+### **foreach(A -> Void)**
 
 Esta operación terminal recibe una lambda (A) -> Void, es decir no devuelve nada. Se suele utilizar para mostrar datos en pantall, modificar algún objeto definido en el scope en el que se ejecuta... &#x20;
 
@@ -358,7 +358,7 @@ names.forEach(name -> sentence.append(" " + name));
 System.out.println(sentence.toString());
 </code></pre>
 
-### **findFirst**
+### **findFirst()**
 
 ```java
 // Devuelve un Optional con el primer elemento del stream
@@ -366,7 +366,7 @@ System.out.println(sentence.toString());
 Optional<String> firstElement = stream.findFirst();
 ```
 
-### **max**
+### **max( (A,A) -> A )**
 
 ```java
 // Devuelve un Optional con el nif más alto, ordenado alfabéticamente
@@ -374,7 +374,7 @@ Optional<Student> maxNifStudent = stream
     .max((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
 ```
 
-### **min**
+### **min( (A,A) -> A )**
 
 ```java
 // Devuelve un Optional con el nif más bajo, ordenado alfabéticamente

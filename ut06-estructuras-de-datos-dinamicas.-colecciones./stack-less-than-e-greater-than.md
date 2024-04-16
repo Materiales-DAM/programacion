@@ -37,7 +37,7 @@ Por ejemplo, aquí tienes un ejemplo de cómo usar la clase `Stack` en Java para
 ```java
 import java.util.Stack;
 
-public class EjemploStack {
+public class StackExample {
     public static String invertirCadena(String cadena) {
         // Creamos una pila para almacenar los caracteres
         Stack<Character> pila = new Stack<>();

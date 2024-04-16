@@ -41,10 +41,10 @@ En resumen, la interfaz `Queue` en Java proporciona una estructura de datos conv
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class EjemploQueue {
+public class QueueExample {
     public static void main(String[] args) {
-        // Creamos una cola utilizando ArrayBlockingQueue
-        Queue<String> cola = new ArrayBlockingQueue<>();
+        // Creamos una cola utilizando ArrayBlockingQueue con capacidad de almacenar 10 valores
+        Queue<String> cola = new ArrayBlockingQueue<>(10);
 
         // Agregamos elementos a la cola
         cola.offer("Elemento 1");
