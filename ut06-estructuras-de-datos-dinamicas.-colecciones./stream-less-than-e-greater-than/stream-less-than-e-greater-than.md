@@ -106,3 +106,18 @@ System.out.println(lengthOpt1);
 Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
 System.out.println(lengthOpt2);
 ```
+
+### flatMap(A -> Optional\<B>)
+
+Este método es de utilidad cuando la transformación que se va a aplicar al contenido del Optional produce otro Optional.
+
+Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
+
+```java
+customerOpt.flatMap(customer ->
+                        customer.getOrders()
+                                .stream()
+                                .filter(order -> order.getId() == orderId)
+                                .findFirst()
+                );
+```
