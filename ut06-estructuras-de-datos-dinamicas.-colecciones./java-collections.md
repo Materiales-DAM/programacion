@@ -19,7 +19,7 @@ layout:
 
 # Java Collections
 
-El lenguaje de programación Java incluye una extensa librería de estructuras de datos llamada Java Collections (colecciones de Java).&#x20;
+El lenguaje de programación Java incluye una extensa librería de estructuras de datos llamada Java Collections (colecciones de Java).
 
 Cada tipo concreto de colección implementa una determinada estructura de datos que está optimizada para un conjunto determinado de operaciones.
 
@@ -31,7 +31,7 @@ Además, las colecciones se agrupan en **Tipos Abstractos de datos (ADTs por sus
 
 ### List\<E>
 
-Se caracterizan por almacenar datos de manera **secuencial**, es decir, en un orden determinado que no viene dado por el dato en sí sino por cómo han sido insertados en la colección.  En estas colecciones se **permite la repetición de elementos**. Su principal utilidad viene relacionada con datos en los que se quiere mantener un orden dado y/o puede haber repetición de datos.&#x20;
+Se caracterizan por almacenar datos de manera **secuencial**, es decir, en un orden determinado que no viene dado por el dato en sí sino por cómo han sido insertados en la colección. En estas colecciones se **permite la repetición de elementos**. Su principal utilidad viene relacionada con datos en los que se quiere mantener un orden dado y/o puede haber repetición de datos.
 
 Por ejemplo, una lista de comentarios que se ha hecho en un post de Facebook, queremos que queden en el orden en el que se hicieron.
 
@@ -42,7 +42,7 @@ Algunas de las características de los List son:
 * Sirven para almacenar datos secuenciales
 * Permiten la repetición de datos
 * Cada instancia de un List define el tipo de valores que almacena a través del parámetro de tipo E.
-* Sirven para almacenar secuencias de datos, en las que se desea poder modificar el orden de los elementos libremente.&#x20;
+* Sirven para almacenar secuencias de datos, en las que se desea poder modificar el orden de los elementos libremente.
 
 ### Set\<E>
 
@@ -52,10 +52,10 @@ Las colecciones de tipo Set representan conjuntos de datos. No es posible defini
 
 Algunas de las características de los Set son:
 
-* Sirven para almacenar **datos no secuenciales**. &#x20;
-* Cada instancia de un Set define el tipo de valores que almacena a través del parámetro de tipo E.&#x20;
-* No es posible almacenar elementos repetidos.&#x20;
-* Son colecciones optimizadas para buscar datos de forma eficiente.&#x20;
+* Sirven para almacenar **datos no secuenciales**.
+* Cada instancia de un Set define el tipo de valores que almacena a través del parámetro de tipo E.
+* No es posible almacenar elementos repetidos.
+* Son colecciones optimizadas para buscar datos de forma eficiente.
 * Al no ser una secuencia, los elementos que alberga no tienen una posición (o índice) asociada.
 * La ordenación interna de los datos depende del tipo de Set
 
@@ -88,7 +88,7 @@ Las colas son útiles en una variedad de situaciones, incluyendo la gestión de 
 
 Una pila es una estructura de datos lineal que sigue el principio de "último en entrar, primero en salir" (**LIFO**, por sus siglas en inglés: Last In, First Out). Esto significa que el último elemento que se inserta en la pila es el primero en ser eliminado. En una pila, los elementos se agregan y eliminan solo desde un extremo, comúnmente conocido como la cima (top) de la pila.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 La estructura de pila se puede visualizar como una pila de platos, donde solo puedes agregar o quitar platos desde la parte superior de la pila. Los elementos que se colocan en la pila se mantienen en su lugar hasta que se elimina el elemento superior.
 

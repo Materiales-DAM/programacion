@@ -27,7 +27,7 @@ Los principales beneficios del logging son:
 2. **Auditoría y cumplimiento:** Los logs pueden utilizarse para realizar un seguimiento de las acciones realizadas por los usuarios o por el sistema, lo que facilita el cumplimiento de regulaciones y políticas de seguridad.
 3. **Rendimiento y optimización:** El análisis de logs puede proporcionar información sobre el rendimiento de la aplicación, como tiempos de respuesta, uso de recursos y patrones de uso, lo que puede ayudar a identificar áreas de mejora y optimización.
 4. **Seguridad:** Los logs pueden registrar eventos relacionados con la seguridad, como intentos de acceso no autorizado, ataques de seguridad o comportamientos sospechosos, lo que puede ayudar a detectar y mitigar amenazas a la seguridad.
-5. **Seguimiento de eventos:** Los logs pueden utilizarse para realizar un seguimiento de eventos específicos en la aplicación, como la creación de cuentas de usuario, la realización de transacciones o la generación de informes, lo que facilita el seguimiento del flujo de trabajo y la auditoría.
+5. **Seguim**El valor introducido es inválido**iento de eventos:** Los logs pueden utilizarse para realizar un seguimiento de eventos específicos en la aplicación, como la creación de cuentas de usuario, la realización de transacciones o la generación de informes, lo que facilita el seguimiento del flujo de trabajo y la auditoría.
 
 ### Niveles de logging
 
@@ -83,6 +83,8 @@ Una vez se ha descargado la librería, debemos configurarla añadiendo el archiv
 </log4j:configuration>
 ```
 
+Esta configuración enviará todos los log a la consola `System.out` y a un fichero llamado `out.log`
+
 Ahora, ya podemos empezar a utilizar la librería en nuestras clases. Veamos un ejemplo
 
 ```java
@@ -92,7 +94,7 @@ import org.slf4j.LoggerFactory;
 public class MiClase {
     // Las clases que vayan a hacer logging tendran una sentencia como esta.
     // ATENCION: es importante cambiar el nombre de la clase
-    private static final Logger logger = LoggerFactory.getLogger(MiClase.class);
+    private static final Logger log = LoggerFactory.getLogger(MiClase.class);
 
     public void miMetodo() {
         // Crea el mensaje "Este es un mensaje de depuración" con nivel debug en los log

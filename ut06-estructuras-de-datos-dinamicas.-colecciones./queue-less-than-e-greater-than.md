@@ -27,7 +27,7 @@ Una cola (Queue) en Java es una estructura de datos que sigue el principio FIFO 
 4. **isEmpty()**: Devuelve `true` si la cola está vacía, de lo contrario, devuelve `false`.
 5. **size()**: Devuelve el número de elementos presentes en la cola.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Firt In First Out en una cola</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Firt In First Out en una cola</p></figcaption></figure>
 
 Estos son solo algunos de los métodos proporcionados por la interfaz `Queue`. La elección de qué método usar depende de tus necesidades específicas. Es importante tener en cuenta que `Queue` es una interfaz, por lo que necesitarás una clase que la implemente, como `LinkedList` o `PriorityQueue`.
 

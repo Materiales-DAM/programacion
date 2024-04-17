@@ -31,8 +31,8 @@ El stack trace de una excepción generalmente se muestra en la consola cuando oc
 
 Aquí hay un ejemplo simplificado de una traza de pila:
 
-```php
-phpCopy codeException in thread "main" java.lang.NullPointerException
+```log
+Exception in thread "main" java.lang.NullPointerException
     at com.example.Main.metodoB(Main.java:15)
     at com.example.Main.metodoA(Main.java:10)
     at com.example.Main.main(Main.java:5)
@@ -48,8 +48,8 @@ Las siguientes excepciones siempre están causadas por un error en el código, p
 
 <table data-full-width="true"><thead><tr><th width="305">Excepción</th><th>Descripción</th></tr></thead><tbody><tr><td>NullPointerException</td><td>Se produce cuando se trata de invocar a un método o campo de una variable cuyo valor es null. Este error es señal de la existencia de un bug.</td></tr><tr><td>ArrayIndexOutOfBoundsException</td><td>Ocurre cuando se trata de acceder a una posición de un array que no existe. Por ejemplo si se accede a la posición 3 de un array de tamaño 2.</td></tr><tr><td>ArithmeticException</td><td>Ocurre cuando se ejecuta una operación aritmética inválida. Por ejempló 0 / 0</td></tr><tr><td>ClassCastException</td><td>Ocurre cuando se trata de hacer casting de tipos incompatibles</td></tr><tr><td>NumberFormatException</td><td><p>Ocurre cuando se trata de convertir un String en un número y el String contiene caracteres que no permiten realizar la operación. Por ejemplo:</p><p>int num = Integer.parseInt("cien");</p></td></tr></tbody></table>
 
-## Excepciones causadas por eventos no controlados
+## Excepciones causadas por causas externas
 
-Estas excepciones están causadas por cuestiones ajenas a la codificación, por lo que no es posible evitar que ocurran modificando el código del programa. Para preparar al programa ante este tipo de excepciones realizaremos una gestión de las mismas.
+Estas excepciones están causadas por cuestiones ajenas a la codificación, por lo que no es posible evitar que ocurran modificando el código del programa.&#x20;
 
 <table data-full-width="true"><thead><tr><th width="305">Excepción</th><th>Descripción</th></tr></thead><tbody><tr><td>InputMismatchException</td><td>Esta excepción está vinculada al Scanner, ocurre cuando se trata de leer un número pero el usuario mete letras.</td></tr><tr><td>IOException</td><td>Se produce cuando hay algún fallo en una operacion del lectura / escritura (no queda espacio en disco, no se encuentra un archivo...)</td></tr></tbody></table>

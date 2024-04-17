@@ -28,7 +28,7 @@ Aquí están algunos métodos importantes de la clase `Stack` en Java:
 3. **peek()**: Este método devuelve el elemento en la parte superior de la pila sin eliminarlo.
 4. **empty()**: Este método comprueba si la pila está vacía.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Last In First Out en una pila</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Last In First Out en una pila</p></figcaption></figure>
 
 Estos son los métodos básicos proporcionados por la clase `Stack` en Java. Recuerda que aunque `Stack` es fácil de entender y usar, se recomienda utilizar la interfaz `Deque` y su implementación `ArrayDeque` para nuevas implementaciones debido a su mayor eficiencia y flexibilidad.
 
