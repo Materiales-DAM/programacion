@@ -1,10 +1,10 @@
 ---
-cover: ../.gitbook/assets/quality-assurance-code-bug.jpg
-coverY: 110.50526315789473
+cover: ../../.gitbook/assets/testing.jpg
+coverY: 0
 layout:
   cover:
     visible: true
-    size: full
+    size: hero
   title:
     visible: true
   description:
@@ -17,5 +17,5 @@ layout:
     visible: true
 ---
 
-# Bugs
+# Testing
 

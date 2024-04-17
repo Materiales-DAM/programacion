@@ -132,13 +132,13 @@
 
 ## UT07 - Gestión de errores.
 
-* [Errores en Java](ut07-gestion-de-errores./introduccion/README.md)
-  * [Errores de compilación](ut07-gestion-de-errores./introduccion/introduccion/README.md)
-    * [error: cannot find symbol](ut07-gestion-de-errores./introduccion/introduccion/introduccion.md)
-    * [method \<X> in class \<Y> cannot be applied to given types](ut07-gestion-de-errores./introduccion/introduccion/introduccion-1.md)
-    * [unreachable statement](ut07-gestion-de-errores./introduccion/introduccion/introduccion-2.md)
-  * [Excepciones comunes](ut07-gestion-de-errores./introduccion/introduccion-1.md)
-* [Gestión de excepciones](ut07-gestion-de-errores./introduccion-1.md)
+* [Introducción](ut07-gestion-de-errores./introduccion.md)
+* [Errores de compilación](ut07-gestion-de-errores./introduccion-1/README.md)
+  * [error: cannot find symbol](ut07-gestion-de-errores./introduccion-1/introduccion.md)
+  * [method \<X> in class \<Y> cannot be applied to given types](ut07-gestion-de-errores./introduccion-1/introduccion-1.md)
+  * [unreachable statement](ut07-gestion-de-errores./introduccion-1/introduccion-2.md)
 * [Logging](ut07-gestion-de-errores./introduccion-2.md)
-* [Bugs](ut07-gestion-de-errores./introduccion-3.md)
-* [Pruebas](ut07-gestion-de-errores./introduccion-4.md)
+* [Excepciones](ut07-gestion-de-errores./introduccion-3/README.md)
+  * [Gestión de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion.md)
+* [Bugs](ut07-gestion-de-errores./introduccion-4/README.md)
+  * [Testing](ut07-gestion-de-errores./introduccion-4/introduccion.md)
