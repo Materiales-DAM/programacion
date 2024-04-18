@@ -29,7 +29,7 @@ Como se puede ver,  `Exception` es la clase padre de todas las excepciones exist
 
 Son aquellas excepciones que heredan directa o indirectamente de RuntimeException. Este tipo de excepciones pueden ocurrir durante la ejecución de un programa y generalmente son causadas por errores en el código del programador o por situaciones impredecibles.&#x20;
 
-Es decisión del programador capturar (o no) este tipo de excepciones, el compilador no nos va a obligar a capturarlas.
+Es decisión del programador capturar (o no) este tipo de excepciones, el compilador no nos va a obligar a ello.
 
 Ejemplos comunes de excepciones de tiempo de ejecución son **`NullPointerException`**, **`ArrayIndexOutOfBoundsException`**, **`ArithmeticException`**, etc.
 
@@ -42,7 +42,9 @@ Este tipo de excepciones son las que no heredan de `RuntimeException`. El compil
 
 Ejemplos comunes de Checked Exceptions son **`IOException`**, **`SQLException`**, etc...&#x20;
 
-### Ejemplo con captura
+### Captura de checked exception
+
+La forma de capturar checked exceptions es exáctamente igual que con cualquier tipo de excepciones, utilizando la estructura try-catch.
 
 Por ejemplo, este programa lee la primera línea del fichero que pida el usuario
 
@@ -86,7 +88,9 @@ public class ReadFileExample {
 
 ```
 
-### Ejemplo con propagación
+### Propagación de checked exceptions
+
+Si no se quiere capturar una checked exception en un método, la única alternativa es declarar que se va a propagar esa excepción. Esto se hace añadiendo a la cabecera la palabra clave **throws** seguida de la excepción o excepciones que propaga el método. Aquellos métodos que invoquen a un método que declara un throws deberán a su vez capturar o propagar las excepciones definidas en dicha cláusula.
 
 Por ejemplo, este programa lee la primera línea del fichero que pida el usuario
 
