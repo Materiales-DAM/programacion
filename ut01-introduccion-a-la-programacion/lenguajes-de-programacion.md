@@ -17,7 +17,7 @@ La **semántica** de un lenguaje define restricciones que aseguren que las secue
 
 ### Clasificación de los lenguajes de programación
 
-Los lenguajes de programación se pueden clasificar de múltiples formas, dependiendo de qué carácterística estemos analizando.
+Los lenguajes de programación se pueden clasificar de múltiples formas, dependiendo de qué característica estemos analizando.
 
 #### Lenguajes interpretados y compilados​
 
@@ -35,7 +35,7 @@ Según Wikipedia "Un paradigma de programación consiste en un método para llev
 
 Cada lenguaje de programación está vinculado a uno o varios paradigmas de programación​
 
-Algunos de los paradigmas más utilizados en la actualidad son:&#x20;
+Algunos de los paradigmas más utilizados en la actualidad son:
 
 * Orientado a objetos: Java, C#, C++, Kotlin
 * Imperativo: C, C++, Java
@@ -43,4 +43,3 @@ Algunos de los paradigmas más utilizados en la actualidad son:&#x20;
 * Programación lógica: PROLOG
 * Declarativo: SQL
 * Dirigido por eventos: NodeJS
-
