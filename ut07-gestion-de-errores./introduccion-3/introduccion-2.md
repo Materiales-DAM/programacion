@@ -17,56 +17,57 @@ layout:
     visible: true
 ---
 
-# Jerarquía de excepciones
+# Propagación de excepciones
 
-Las distintas excepciones existentes conforman la siguiente jerarquía de clases
+Una excepción es un evento que interrumpe el flujo normal de ejecución de un programa debido a algún error o condición inesperada. La propagación de excepciones se refiere al proceso mediante el cual una excepción se transmite a través de la pila de llamadas hasta que llegue a un método que capture la excepción con un try-catch o, en caso de que nadie la capture, finalice el programa.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Jerarquía de excepciones y errores</p></figcaption></figure>
-
-Como se puede ver,  `Exception` es la clase padre de todas las excepciones existentes. Podemos clasificar las excepciones en dos tipos:
-
-## Unchecked Exceptions
-
-Son aquellas excepciones que heredan directa o indirectamente de RuntimeException. Este tipo de excepciones pueden ocurrir durante la ejecución de un programa y generalmente son causadas por errores en el código del programador o por situaciones impredecibles.&#x20;
-
-Es decisión del programador capturar (o no) este tipo de excepciones, el compilador no nos va a obligar a capturarlas.
-
-Ejemplos comunes de excepciones de tiempo de ejecución son **`NullPointerException`**, **`ArrayIndexOutOfBoundsException`**, **`ArithmeticException`**, etc.
-
-## Checked Exceptions
-
-Este tipo de excepciones son las que no heredan de `RuntimeException`. Las checked exceptions son aquellas que el compilador exige que se manejen explícitamente mediante un bloque `try-catch` o declarando que el método las propaga (`throws`). Ejemplos comunes de excepciones verificadas son **`IOException`**, **`SQLException`**, etc...&#x20;
-
-Por ejemplo, este programa lee la primera línea del fichero que pida el usuario
+Aquí tienes una explicación paso a paso de cómo se propagan las excepción:
 
 ```java
-package org.example;
+package org.ies.tierno.exceptions;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ReadFileExample {
-    private static final Logger log = LoggerFactory.getLogger(ReadFileExample.class);
+public class TryCatchExample {
+    private static final Logger log = LoggerFactory.getLogger(TryCatchExample.class);
+    private final static Scanner scanner = new Scanner(System.in);
+    
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        log.info("Introduzca el path al fichero que desea leer");
-        String file = scanner.nextLine();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            log.info(reader.readLine());
-        } catch (FileNotFoundException e) {
-            log.error("No se ha encontrado el archivo " + file);
-        } catch (IOException e) {
-            log.error("No se ha podido leer la línea", e);
+            int numerator = askNumber("Introduce el numerador");
+            
+            int denominator = askNumber("Introduce el denominador");
+            // invocamos a divide
+            // Si se produce excepción el programa salta a los catch
+            double res =  divide(numerator, denominator);
+            // Mostramos el resultado
+            log.info("El resultado es: " + res);
+        } catch (InputMismatchException e) {
+            // Si se produce InputMismatchException dentro del método askNumber lo capturamos aquí
+            log.error("El número introducido es inválido", e);
+        } catch (ArithmeticException e) {
+            // Si se produce ArithmeticException dentro del método divide lo capturamos aquí
+            log.error("No se puede dividir por cero", e);
         }
+    }
+    
+    public static int askNumber(String message) {
+        log.info(message);
+        // Si el usuario introduce un valor no numérico provoca la excepción InputMismatchException
+        // Como no hay try-catch se propaga al método que lo ha invocado
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        return number;
+    }
+    
+    public static double divide(int numerator, int denominator) {
+        // Produce una excepción cuando denominator es 0
+        // Como no hay try - catch se propaga al método que lo ha invocado
+        return (double) numerator / denominator;
     }
 }
 ```
