@@ -98,11 +98,11 @@ public class MiClase {
 
     public void miMetodo() {
         // Crea el mensaje "Este es un mensaje de depuración" con nivel debug en los log
-        logger.debug("Este es un mensaje de depuración");
+        log.debug("Este es un mensaje de depuración");
         // Crea el mensaje "Este es un mensaje informativo" con nivel warning en los log
-        logger.info("Este es un mensaje informativo");
+        log.info("Este es un mensaje informativo");
         // Crea el mensaje "Este es un mensaje de advertencia" con nivel warning en los log
-        logger.warn("Este es un mensaje de advertencia");
+        log.warn("Este es un mensaje de advertencia");
     }
 }
 ```
