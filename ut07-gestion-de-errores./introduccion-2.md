@@ -27,7 +27,7 @@ Los principales beneficios del logging son:
 2. **Auditoría y cumplimiento:** Los logs pueden utilizarse para realizar un seguimiento de las acciones realizadas por los usuarios o por el sistema, lo que facilita el cumplimiento de regulaciones y políticas de seguridad.
 3. **Rendimiento y optimización:** El análisis de logs puede proporcionar información sobre el rendimiento de la aplicación, como tiempos de respuesta, uso de recursos y patrones de uso, lo que puede ayudar a identificar áreas de mejora y optimización.
 4. **Seguridad:** Los logs pueden registrar eventos relacionados con la seguridad, como intentos de acceso no autorizado, ataques de seguridad o comportamientos sospechosos, lo que puede ayudar a detectar y mitigar amenazas a la seguridad.
-5. **Seguim**El valor introducido es inválido**iento de eventos:** Los logs pueden utilizarse para realizar un seguimiento de eventos específicos en la aplicación, como la creación de cuentas de usuario, la realización de transacciones o la generación de informes, lo que facilita el seguimiento del flujo de trabajo y la auditoría.
+5. **Seguimiento de eventos:** Los logs pueden utilizarse para realizar un seguimiento de eventos específicos en la aplicación, como la creación de cuentas de usuario, la realización de transacciones o la generación de informes, lo que facilita el seguimiento del flujo de trabajo y la auditoría.
 
 ### Niveles de logging
 
