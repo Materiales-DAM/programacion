@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/quality-assurance-code-bug.jpg
+cover: ../../.gitbook/assets/quality-assurance-code-bug.jpg
 coverY: 110.50526315789473
 layout:
   cover:
@@ -17,45 +17,104 @@ layout:
     visible: true
 ---
 
-# method \<X> in class \<Y> cannot be applied to given types
+# illlegal start of expression
 
-El mensaje de error "method \<X> in class \<Y> cannot be applied to given types" en Java indica que estás intentando llamar a un método en una clase con argumentos que no coinciden con ninguno de los métodos definidos en esa clase.
+Puede ser causado por
 
-Supongamos que tienes una clase llamada `Calculadora` con un método `sumar` que toma dos números como argumentos:
+## Un método declarado dentro de otro método
 
-```java
-package org.ies.tierno.compilation;
 
-class Calculadora {
-    public int sumar(int a, int b) {
-        return a + b;
-    }
-}
-```
-
-Ahora, en otro lugar de tu código, intentas llamar al método `sumar` con un solo argumento:
 
 {% code lineNumbers="true" %}
 ```java
-package org.ies.tierno.compilation;
+package org.ies.tierno;
 
-class CannotBeAppliedExample {
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class IllegalStartExpression {
     public static void main(String[] args) {
-        Calculadora calc = new Calculadora();
-        int resultado = calc.sumar(5); // Error: argumentos incorrectos
-        System.out.println(resultado);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("INtroduce un mensaje");
+        String hello = scanner.nextLine();
+        if (hello.length() < 6) {
+            System.out.println("Mensaje demasiado corto");
+        } else {
+            System.out.println(hello.charAt(5));
+        }
+
+        try {
+            System.out.println("Introduce tu edad");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Edad: " + age);
+        } catch (InputMismatchException e) {
+            System.out.println("Edad inválida");
+        }
+    
+    public int suma(int a, int b) {
+        return a + b;
     }
 }
-
+}
 ```
 {% endcode %}
 
-El error resultante es
+La salida del compilador es
 
 ```log
-/home/mikel/errors/src/main/java/org/ies/tierno/compilation/CannotBeAppliedExample.java:6:29
-java: method sumar in class org.ies.tierno.compilation.Calculadora cannot be applied to given types;
-  required: int,int
-  found: int
-  reason: actual and formal argument lists differ in length
+/home/mikel/errors/src/main/java/org/ies/tierno/IllegalStartExpression.java:29:5
+java: illegal start of expression
+```
+
+## Falta una llave de cierre
+
+Se está intentando usar una variable que no existe, está mal escrita o no está en el scope
+
+{% code lineNumbers="true" %}
+```java
+package org.ies.tierno;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class IllegalStartExpression {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("INtroduce un mensaje");
+        String hello = scanner.nextLine();
+        if (hello.length() < 6) {
+            System.out.println("Mensaje demasiado corto");
+        } else {
+            System.out.println(hello.charAt(5));
+        }
+
+        try {
+            System.out.println("Introduce tu edad");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Edad: " + age);
+        } catch (InputMismatchException e) {
+            System.out.println("Edad inválida");
+        }
+
+    public int suma(int a, int b) {
+        return a + b;
+    }
+
+}
+```
+{% endcode %}
+
+La salida del compilador es
+
+```log
+/home/mikel/errors/src/main/java/org/ies/tierno/IllegalStartExpression.java:29:5
+java: illegal start of expression
 ```

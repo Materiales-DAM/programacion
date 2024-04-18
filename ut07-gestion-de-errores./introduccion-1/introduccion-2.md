@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/quality-assurance-code-bug.jpg
+cover: ../../../.gitbook/assets/quality-assurance-code-bug.jpg
 coverY: 110.50526315789473
 layout:
   cover:
@@ -17,69 +17,45 @@ layout:
     visible: true
 ---
 
-# unreachable statement
+# method \<X> in class \<Y> cannot be applied to given types
 
-El error "unreachable statement" en Java indica que hay una instrucción en tu código que nunca se ejecutará, ya que está precedida por una instrucción que termina la ejecución del método o bloque de código antes de llegar a esa línea.
+El mensaje de error "method \<X> in class \<Y> cannot be applied to given types" en Java indica que estás intentando llamar a un método en una clase con argumentos que no coinciden con ninguno de los métodos definidos en esa clase.
 
-Aquí tienes algunos ejemplos para ilustrar este error:
-
-#### Instrucción después de un return
+Supongamos que tienes una clase llamada `Calculadora` con un método `sumar` que toma dos números como argumentos:
 
 ```java
-class UnreachableStatementReturn {
-    public static void main(String[] args) {
-        System.out.println("Hola");
-        return; // Esta línea termina la ejecución del método main
-        System.out.println("Mundo"); // Error: unreachable statement
+package org.ies.tierno.compilation;
+
+class Calculadora {
+    public int sumar(int a, int b) {
+        return a + b;
     }
 }
 ```
 
-En este ejemplo, la línea `System.out.println("Mundo");` nunca se ejecutará porque está después de un `return`, que termina la ejecución del método `main`.
+Ahora, en otro lugar de tu código, intentas llamar al método `sumar` con un solo argumento:
 
-#### Instrucción después de un break
-
+{% code lineNumbers="true" %}
 ```java
-public class UnreachableStatementBreak {
+package org.ies.tierno.compilation;
+
+class CannotBeAppliedExample {
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Hola");
-            break;
-            System.out.println("Mundo");
-        }
+        Calculadora calc = new Calculadora();
+        int resultado = calc.sumar(5); // Error: argumentos incorrectos
+        System.out.println(resultado);
     }
 }
+
 ```
+{% endcode %}
 
-Aquí, la línea `System.out.println("Mundo");` nunca se ejecutará porque está después de un `break`, que termina la ejecución del bucle.
+El error resultante es
 
-#### Instrucción después de un continue
-
-```java
-public class UnreachableStatementContinue {
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Hola");
-            continue;
-            System.out.println("Mundo");
-        }
-    }
-}
+```log
+/home/mikel/errors/src/main/java/org/ies/tierno/compilation/CannotBeAppliedExample.java:6:29
+java: method sumar in class org.ies.tierno.compilation.Calculadora cannot be applied to given types;
+  required: int,int
+  found: int
+  reason: actual and formal argument lists differ in length
 ```
-
-Aquí, la línea `System.out.println("Mundo");` nunca se ejecutará porque está después de un `continue`, que pasa a la siguiente iteración.
-
-#### Instrucción después de un bucle infinito
-
-```java
-public class UnreachableStatementInfiniteLoop {
-    public static void main(String[] args) {
-        while (true) {
-            System.out.println("Hola");
-        }
-        System.out.println("Mundo");
-    }
-}
-```
-
-Aquí, la línea `System.out.println("Mundo");` nunca se ejecutará porque está después de un bucle infinito.
