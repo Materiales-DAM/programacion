@@ -58,11 +58,17 @@ Crea los siguientes métodos en Company:
 2. Devuelve los datos de un departamento dado. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException
 3. Devuelve los datos de un empleado a partir de un NIF. E En caso de que el emleado no exista lanza la excepción EmployeeNoFoundException
 
-\
-\
+## Biblioteca
 
+Crea un programa que maneje los datos de una biblioteca:
 
-\
-\
+1. Nombre de la biblioteca
+2. Libros del catálogo. Por cada libro se guardará: ISBN, título, autor, genéros (listado)
+3. Socios de la biblioteca. Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
+4. Se almacenará un historial de préstamos: ISBN, fecha préstamos, nif (del socio que lo ha tomado prestado), fecha de devolución
 
+Implementar los métodos en Biblioteca (crear interface IBibiloteca):
 
+1. Un método que dado un ISBN, devuelve el libro. Si no existe el libro se lanza la excepción BookNotFoundException(isbn)
+2. Dado un nif, devuelve el socio. Si no existe MemberNotFoundException(nif)
+3. Comprueba que, dado un nif y un isbn, el socio ha tomado prestado un libro. Si no existe el socio MemberNotFoundException(nif) y si no existe el libro BookNotFoundException(isbn)
