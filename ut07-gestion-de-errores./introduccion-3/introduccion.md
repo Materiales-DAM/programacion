@@ -31,10 +31,14 @@ try {
     // Aquí definimos qué hacer en caso de que haya ocurrido la excepción Exception1
 } catch (Exception2 e) {
     // Aquí definimos qué hacer en caso de que haya ocurrido la excepción Exception2
+} finally {
+    // El bloque se ejecuta siempre, haya habido o no una excepción
 }
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Flujo try - catch</p></figcaption></figure>
+* **try**: El código que potencialmente puede lanzar una excepción se coloca dentro del bloque `try`. Si una excepción ocurre dentro del bloque `try`, el control pasa inmediatamente al bloque `catch`.
+* **catch**: El bloque `catch` es donde se manejan las excepciones que se hayan producido dentro del `try`. Este es el lugar para manejar el error de una manera apropiada, por ejemplo mostrando un mensaje de error al usuario o realizando alguna acción para recuperarse del error.
+* **finally** (opcional): Este bloque se ejecuta siempre, independientemente de si  ocurrió una excepción o no dentro del bloque `try`. Esto significa que el código dentro del bloque `finally` se ejecutará incluso si ocurre una excepción y se maneja en el bloque `catch`. Es útil para acciones que deben ocurrir sin importar el resultado del bloque `try`, como cerrar recursos abiertos (como archivos o conexiones de bases de datos) ...
 
 Por ejemplo, veamos un programa que pide dos números double y calcula su división
 

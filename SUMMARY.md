@@ -145,5 +145,6 @@
   * [Propagación de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion-2.md)
   * [Jerarquía de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion-3.md)
   * [Diseño de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion-4.md)
+  * [Ejercicios de diseño de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion-5.md)
 * [Bugs](ut07-gestion-de-errores./introduccion-4/README.md)
   * [Testing](ut07-gestion-de-errores./introduccion-4/introduccion.md)
