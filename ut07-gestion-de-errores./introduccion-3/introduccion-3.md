@@ -69,7 +69,7 @@ public class ReadFileExample {
         log.info("Introduzca el path al fichero que desea leer");
         String file = scanner.nextLine();
         String firstLine = readFirstLine(file);
-        System.out.println(firstLine);
+        log.info(firstLine);
     }
     
     public static String readFirstLine(String file) {
@@ -117,7 +117,7 @@ public class ReadFileExample {
         
         try {
             String firstLine = readFirstLine(file);
-            System.out.println(firstLine);
+            log.info(firstLine);
         } catch (FileNotFoundException e) {
             log.error("No se ha encontrado el archivo " + file);
         } catch (IOException e) {
