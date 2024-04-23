@@ -25,14 +25,20 @@ Crea un programa que almacene la información de un edificio
 
 1. Dirección
 2. Municipio
-3. Lista de apartamentos
-   1. Número de planta
+3. Código postal (entero)
+4. Lista de apartamentos
+   1. Número de planta (entero)
    2. Puerta
    3. Lista de Propietarios
       1. Nombre
       2. Apellidos
 
 Crea en el main los métodos para pedir al usuario la información del edificio. En caso de que el usuario meta alguna información mal, se debe capturar la excepción (try y catch) y volver a pedir el dato.
+
+Métodos:
+
+* getApartment(int floor, String door): devuelve el apartamento en esa planta y esa puerta. Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
+* getOwners(int floor, String door): devuelve los propietarios del apartamento en esa planta y puerta.  Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 
 ## Calculadora
 
