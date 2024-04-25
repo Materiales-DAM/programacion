@@ -35,7 +35,7 @@ Crea un programa que almacene la información de un edificio
 
 Crea en el main los métodos para pedir al usuario la información del edificio. En caso de que el usuario meta alguna información mal, se debe capturar la excepción (try y catch) y volver a pedir el dato.
 
-Métodos:
+Métodos en Building:
 
 * getApartment(int floor, String door): devuelve el apartamento en esa planta y esa puerta. Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 * getOwners(int floor, String door): devuelve los propietarios del apartamento en esa planta y puerta.  Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
@@ -47,7 +47,7 @@ Implementar un programa tipo calculadora. Imprime un menú con las siguientes op
 * Divide: recibe dos número double y devuelve su división. En caso de que el segundo número sea cero lanza la excepción DivideByZeroException (debes definir la excepción)
 * Media: recibe un array de double y devuelve la media. En caso de que el array esté vacío lanza la excepción EmptyArrayException.
 
-Estos dos métodos deben propagar la excepción que lanza cada uno de ellos, capturalos en el componente del menu interactivo.
+Estos dos métodos deben propagar la excepción que lanza cada uno de ellos, captúralos en el componente del menu interactivo.
 
 ## Empresa
 
@@ -62,18 +62,18 @@ Crea los siguientes métodos en Company:
 
 1. Devuelve los empleados de un departamento dado. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException.
 2. Devuelve los datos de un departamento dado. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException
-3. Devuelve los datos de un empleado a partir de un NIF. E En caso de que el emleado no exista lanza la excepción EmployeeNoFoundException
+3. Devuelve los datos de un empleado a partir de un NIF. E En caso de que el empleado no exista lanza la excepción EmployeeNoFoundException
 
 ## Biblioteca
 
 Crea un programa que maneje los datos de una biblioteca:
 
 1. Nombre de la biblioteca
-2. Libros del catálogo. Por cada libro se guardará: ISBN, título, autor, genéros (listado)
+2. Libros del catálogo. Por cada libro se guardará: ISBN, título, autor, géneros (listado)
 3. Socios de la biblioteca. Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
 4. Se almacenará un historial de préstamos: ISBN, fecha préstamos, nif (del socio que lo ha tomado prestado), fecha de devolución
 
-Implementar los métodos en Biblioteca (crear interface IBibiloteca):
+Implementar los métodos en Biblioteca:
 
 1. Un método que dado un ISBN, devuelve el libro. Si no existe el libro se lanza la excepción BookNotFoundException(isbn)
 2. Dado un nif, devuelve el socio. Si no existe MemberNotFoundException(nif)
