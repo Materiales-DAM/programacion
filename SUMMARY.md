@@ -149,3 +149,4 @@
 * [Bugs](ut07-gestion-de-errores./introduccion-4/README.md)
   * [Testing](ut07-gestion-de-errores./introduccion-4/introduccion.md)
   * [JUnit](ut07-gestion-de-errores./introduccion-4/introduccion-1.md)
+  * [Ejercicios JUnit](ut07-gestion-de-errores./introduccion-4/introduccion-2.md)
