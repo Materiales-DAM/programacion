@@ -63,9 +63,9 @@ Crea un programa que permita representar los datos de una empresa:
 
 Crea los siguientes métodos en Company:
 
-1. Devuelve los empleados de un departamento dado. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException.
+1. Dado un nombre de departamento, devuelve los empleados del departamento. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException.
 2. Dado un nombre de departamento, devuelve el Department con ese nombre. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException
-3. Devuelve los datos de un empleado a partir de un NIF. E En caso de que el empleado no exista lanza la excepción EmployeeNoFoundException
+3. Devuelve los datos de un empleado a partir de un NIF. En caso de que el empleado no exista lanza la excepción EmployeeNoFoundException
 
 ## Biblioteca
 
