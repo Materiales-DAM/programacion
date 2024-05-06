@@ -80,4 +80,4 @@ Implementar los métodos en Biblioteca:
 
 1. Un método que dado un ISBN, devuelve el libro. Si no existe el libro se lanza la excepción BookNotFoundException(isbn)
 2. Dado un nif, devuelve el socio. Si no existe MemberNotFoundException(nif)
-3. Comprueba que, dado un nif y un isbn, el socio ha tomado prestado un libro. Si no existe el socio MemberNotFoundException(nif) y si no existe el libro BookNotFoundException(isbn)
+3. Un método que devuelva un booleano que comprube si, dado un nif y un isbn, el socio ha tomado prestado un libro. Si no existe el socio MemberNotFoundException(nif) y si no existe el libro BookNotFoundException(isbn)
