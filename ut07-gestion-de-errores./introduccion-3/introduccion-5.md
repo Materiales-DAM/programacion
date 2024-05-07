@@ -40,6 +40,14 @@ Métodos en Building:
 * getApartment(int floor, String door): devuelve el apartamento en esa planta y esa puerta. Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 * getOwners(int floor, String door): devuelve los propietarios del apartamento en esa planta y puerta.  Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 
+Componentes:
+
+* Readers de todos los POJOs
+* BuildingApp:
+  * Bucle de menú que muestra las opciones:
+    * Ver apartamento
+    * Ver propietarios de apartamento
+
 ## Calculadora
 
 Implementar un programa tipo calculadora.
@@ -67,6 +75,15 @@ Crea los siguientes métodos en Company:
 2. Dado un nombre de departamento, devuelve el Department con ese nombre. En caso de que el departamento no exista lanza la excepción DepartmentNotFoundException
 3. Devuelve los datos de un empleado a partir de un NIF. En caso de que el empleado no exista lanza la excepción EmployeeNoFoundException
 
+Componentes:
+
+* Readers de todos los POJOs
+* CompanyApp:
+  * Bucle de menú que muestra las opciones:
+    * Ver empleados del departamento
+    * Ver departamento
+    * Ver empleado
+
 ## Biblioteca
 
 Crea un programa que maneje los datos de una biblioteca:
@@ -81,3 +98,12 @@ Implementar los métodos en Biblioteca:
 1. Un método que dado un ISBN, devuelve el libro. Si no existe el libro se lanza la excepción BookNotFoundException(isbn)
 2. Dado un nif, devuelve el socio. Si no existe MemberNotFoundException(nif)
 3. Un método que devuelva un booleano que comprube si, dado un nif y un isbn, el socio ha tomado prestado un libro. Si no existe el socio MemberNotFoundException(nif) y si no existe el libro BookNotFoundException(isbn)
+
+Componentes:
+
+* Readers de todos los POJOs
+* LibraryApp:
+  * Bucle de menú que muestra las opciones:
+    * Ver libro
+    * Ver socio
+    * Existe préstamo
