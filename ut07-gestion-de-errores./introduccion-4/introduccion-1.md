@@ -34,6 +34,18 @@ Para poder usar JUnit, debemos añadir la siguiente dependencia al `pom.xml`
 </dependency>
 ```
 
+Además, debemos configurar el siguiente plugin dentro de la sección `build` del `pom.xml`
+
+```xml
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+    </plugin>
+</plugins>
+```
+
 ## Pruebas con JUnit
 
 El código de las pruebas debe estar en la carpeta `src/test/java`
