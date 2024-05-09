@@ -84,6 +84,9 @@
 * [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/README.md)
   * [Ejercicios enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones/README.md)
     * [Soluciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones/soluciones.md)
+* [Fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/README.md)
+  * [Ejercicios fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/ejercicios-enumeraciones/README.md)
+    * [Soluciones fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/ejercicios-enumeraciones/soluciones.md)
 * [Ejercicios POO](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo.md)
 
 ## UT05 - Herencia, interfaces, genéricos y polimorfismo
