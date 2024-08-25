@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -9,7 +10,7 @@ Los programas informáticos se dedican en gran medida a la manipulación de dato
 
 **El identificador de una variable lo elige el programador** y debe ser descriptivo del dato que va a almacenar.
 
-El **tipo** de una variable depende de las **características de los datos** que va a albergar la variable. Por ejemplo, si queremos que la variable almacene un número entero podemos usar el tipo `int`, si por el contrario queremos que almacene texto podemos usar el tipo `String`.&#x20;
+El **tipo** de una variable depende de las **características de los datos** que va a albergar la variable. Por ejemplo, si queremos que la variable almacene un número entero podemos usar el tipo `int`, si por el contrario queremos que almacene texto podemos usar el tipo `String`.
 
 El **valor** de una variable es el dato concreto que le ha sido asignado, por ejemplo el número `3`.
 

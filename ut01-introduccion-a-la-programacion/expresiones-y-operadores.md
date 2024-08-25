@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -44,4 +45,3 @@ System.out.println(result);
 ```
 
 ## [Mas información sobre operadores](https://www.w3schools.com/java/java\_operators.asp)
-

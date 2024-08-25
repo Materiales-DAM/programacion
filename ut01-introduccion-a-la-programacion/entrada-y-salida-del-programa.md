@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -9,7 +10,7 @@ En la mayor parte de las ocasiones vamos a querer que nuestros programas interac
 
 Cuando un programa quiere **enviar información al usuario** utiliza algún canal de **salida**. Por ejemplo, imprimir un texto en pantalla para que el usuario lo lea.​
 
-Por otro lado, vamos a querer que el usuario tenga la capacidad de **introducir datos** para que sean procesados por el programa a través de una **entrada de datos**. Por ejemplo, el  usuario introduce dos números enteros y el programa los suma.
+Por otro lado, vamos a querer que el usuario tenga la capacidad de **introducir datos** para que sean procesados por el programa a través de una **entrada de datos**. Por ejemplo, el usuario introduce dos números enteros y el programa los suma.
 
 ## Salida estándar
 
@@ -49,7 +50,8 @@ public class StandardInputOutputProgram {
 
 **IMPORTANTE**: Después de utilizar cualquier método del Scanner que no sea `scanner.nextLine()`, se debe añadir una sentencia `scanner.nextLine()` para pasar a la siguiente línea de entrada.
 
-<pre class="language-java"><code class="lang-java">import java.util.Scanner;
+```java
+import java.util.Scanner;
 
 public class StandardInputOutputProgram {
     public static void main(String[] args) {
@@ -57,7 +59,7 @@ public class StandardInputOutputProgram {
         Scanner scanner = new Scanner(System.in);
         // Mostramos por pantalla un mensaje para que el usuario sepa que debe
         // introducir la edad
-        System.out.println(<a data-footnote-ref href="#user-content-fn-1">"</a>Introduce tu edad...");
+        System.out.println("Introduce tu edad...");
         // Leemos un número entero y lo guardamos en age
         int age = scanner.nextInt();
         // Esta sentencia debe ir siempre después de un nextInt() para pasar a la
@@ -67,6 +69,4 @@ public class StandardInputOutputProgram {
         System.out.println("Tienes " + age + " años");
     }
 }
-</code></pre>
-
-[^1]: 
+```

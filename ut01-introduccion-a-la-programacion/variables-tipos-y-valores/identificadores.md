@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -27,8 +28,3 @@ int number = 2;
 // Cuantas más palabras, más mayúsculas
 int myOtherNumber = 5;
 </code></pre>
-
-
-
-
-

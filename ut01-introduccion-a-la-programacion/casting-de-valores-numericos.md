@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -17,7 +18,7 @@ double onePointZero = (double) one;
 System.out.println(onePointZero);
 ```
 
-Cada tipo de datos define un conjunto de valores que se pueden tomar.&#x20;
+Cada tipo de datos define un conjunto de valores que se pueden tomar.
 
 * int: números enteros entre -2,147,483,648 y 2,147,483,647
 * long: números enteros entre -9,223,372,036,854,775,808 y 9,223,372,036,854,775,807

@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../../../.gitbook/assets/java.jpeg
 coverY: 0
 ---
@@ -10,8 +11,6 @@ Este tipo se utiliza para almacenar cadenas de texto. A diferencia de los tipos 
 ### Comparar String
 
 Para ver si dos String son iguales debemos usar el método equals
-
-
 
 ```java
 // Some code
@@ -46,8 +45,6 @@ boolean areSameString2 = myString == "Some other value";
 | replaceAll()                                                                 | Replaces each substring of this string that matches the given regular expression with the given replacement       | String    |
 | split()                                                                      | Splits a string into an array of substrings                                                                       | String\[] |
 | [startsWith()](https://www.w3schools.com/java/ref\_string\_startswith.asp)   | Checks whether a string starts with specified characters                                                          | boolean   |
-
-&#x20;
 
 | Method                                                                       | Description                                                                                                                   | Return Type |
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |

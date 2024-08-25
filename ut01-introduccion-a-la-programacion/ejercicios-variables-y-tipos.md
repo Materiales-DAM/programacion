@@ -1,9 +1,10 @@
 ---
+hidden: true
 cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
-# Ejercicios
+# Ejercicios variables y tipos
 
 1. Escribe un programa Increments que:
    * Pida al usuario un double (number)
@@ -23,7 +24,7 @@ coverY: 0
 4. Escribe un programa AreEqual que:
    * Pida al usuario un int (number1)
    * Pida al usuario otro int (number2)
-   * Muestre en pantalla true cuando  son iguales o false cuando no son iguales
+   * Muestre en pantalla true cuando son iguales o false cuando no son iguales
 5. Escribe un programa AreNotEqual que:
    * Pida al usuario un int (number1)
    * Pida al usuario otro int (number2)
