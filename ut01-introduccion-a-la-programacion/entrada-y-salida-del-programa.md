@@ -20,7 +20,7 @@ La forma más sencilla de enviar una información al usuario en Java es a travé
 System.out.println("Muestra este texto");
 ```
 
-## ​Entrada estánda con java.util.Scanner
+## ​Entrada estándar con java.util.Scanner
 
 Cuando lo que queremos es que sea el usuario quien introduce datos que luego va a usar el programa tenemos una entrada de datos.​ Una forma de realizar entradas de datos es utilizando la utilidad `Scanner`.​ Para poder utilizarla hay que importar el paquete `java.util.Scanner​`
 
