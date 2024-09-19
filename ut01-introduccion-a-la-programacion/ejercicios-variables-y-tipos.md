@@ -1,5 +1,4 @@
 ---
-hidden: true
 cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
