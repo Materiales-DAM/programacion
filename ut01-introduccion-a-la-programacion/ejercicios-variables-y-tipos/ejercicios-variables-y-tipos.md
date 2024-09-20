@@ -50,11 +50,29 @@ coverY: 0
         }
     }
     ```
-3. Escribe un programa Multiplication que:
-   * Pida al usuario un int (number1)
-   * Pida al usuario otro int (number2)
-   * Calcule la multiplicación de ambos números
-   * Muestre en pantalla el resultado "El resultado de la multiplicación es \<resultado>"
+3.  Escribe un programa Multiplication que:
+
+    ```java
+    import java.util.Scanner;
+
+    public class Multiplication {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número entero");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número entero");
+
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+
+            int res = n1 * n2;
+
+            System.out.println("El resultado es " + res);
+        }
+    }
+    ```
 4. Escribe un programa AreEqual que:
    * Pida al usuario un int (number1)
    * Pida al usuario otro int (number2)
