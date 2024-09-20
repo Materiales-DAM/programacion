@@ -1,15 +1,32 @@
 ---
-cover: ../.gitbook/assets/java.jpeg
+cover: ../../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
-# Ejercicios variables y tipos
+# Soluciones variables y tipos
 
-1. Escribe un programa Increments que:
-   * Pida al usuario un double (number)
-   * Modifica el valor de number incrementándolo en 1
-   * Modifica el valor de number incrementándolo en 1
-   * Muestre en pantalla el resultado "El resultado es \<number>"
+1.  Escribe un programa Increments que:
+
+
+
+    ```java
+    import java.util.Scanner;
+
+    public class Increments {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce un número con decimales");
+            double number = scanner.nextDouble();
+            scanner.nextLine();
+            
+            number++;
+            number++;
+
+            System.out.println("El resultado es " + number);
+        }
+    }
+    ```
 2. Escribe un programa Division que:
    * Pida al usuario un double (numerator)
    * Pida al usuario otro double (denominator)
