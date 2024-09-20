@@ -27,11 +27,29 @@ coverY: 0
         }
     }
     ```
-2. Escribe un programa Division que:
-   * Pida al usuario un double (numerator)
-   * Pida al usuario otro double (denominator)
-   * Calcule la división de ambos números
-   * Muestre en pantalla el resultado "El resultado de la división es \<resultado>"
+2.  Escribe un programa Division que:
+
+    ```java
+    import java.util.Scanner;
+
+    public class Division {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce el numerador");
+            double numerator = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce el denominador");
+            double denominator = scanner.nextDouble();
+            scanner.nextLine();
+            
+            double result = numerator / denominator;
+
+            System.out.println("El resultado es " + result);
+        }
+    }
+    ```
 3. Escribe un programa Multiplication que:
    * Pida al usuario un int (number1)
    * Pida al usuario otro int (number2)
