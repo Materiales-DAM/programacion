@@ -96,7 +96,26 @@ coverY: 0
         }
     }
     ```
-5. Escribe un programa AreNotEqual que:
-   * Pida al usuario un int (number1)
-   * Pida al usuario otro int (number2)
-   * Muestre en pantalla true cuando no son iguales o false cuando sí son iguales
+5.  Escribe un programa AreNotEqual que:
+
+    ```java
+    import java.util.Scanner;
+
+    public class AreNotEqual {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce un número entero");
+            int num1 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número entero");
+            int num2 = scanner.nextInt();
+            scanner.nextLine();
+
+            boolean res = num1 != num2;
+
+            System.out.println("Los números son distintos: " + res);
+        }
+    }
+    ```
