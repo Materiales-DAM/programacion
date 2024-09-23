@@ -50,10 +50,10 @@ coverY: 0
 
 * Pide un String y lo guarda en una variable llamada operación
 * Si el valor de operación es “+” (`operacion.equals("+")`) -> operacion == “+”
-* Pide un valor double (a)
-* Pide otro valor double (b)
-* Muestra el resultado de sumarlos
+  * Pide un valor double (a)
+  * Pide otro valor double (b)
+  * Muestra el resultado de sumarlos
 * Si el valor de la operación es “-”
-* Pide un valor int(a)
-* Pide otro valor int (b)
-* Muestra el resultado de restarlos
+  * Pide un valor int(a)
+  * Pide otro valor int (b)
+  * Muestra el resultado de restarlos
