@@ -58,6 +58,10 @@ Algunos de los paradigmas más utilizados en la actualidad son:
 
 ## Java
 
+
+
+<figure><img src=".gitbook/assets/java.jpeg" alt=""><figcaption></figcaption></figure>
+
 Java es el lenguaje de programación con el que aprenderemos a programar durante el curso. Algunas de sus principales características son:
 
 * Es uno de los lenguajes más usados en el mundo​
