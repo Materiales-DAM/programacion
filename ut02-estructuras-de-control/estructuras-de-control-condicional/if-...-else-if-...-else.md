@@ -27,8 +27,11 @@ Por ejemplo si tenemos dos números `x` e `y`, podemos mostrar en pantalla un me
 ```java
 Scanner scanner = new Scanner(System.in);
 
+System.out.println("Introduce un número");
 int x = scanner.nextInt();
 scanner.nextLine();
+
+System.out.println("Introduce otro número");
 int y = scanner.nextInt();
 scanner.nextLine();
 // La siguiente línea crea una claúsula if
@@ -78,8 +81,6 @@ System.out.println("Esto se ejecuta siempre");
 
 En ocasiones vamos a necesitar comprobar más de una condición para decidir si se ejecuta un bloque de código u otro. Para ello, podemos usar una claúsula `else if` por cada condición que queramos comprobar.
 
-
-
 <pre class="language-java"><code class="lang-java">if (condicion1) {
     // Aquí van las sentencias que se van a ejecutar si se cumple condicion1
 } else if (condición2) {
@@ -97,8 +98,8 @@ En ocasiones vamos a necesitar comprobar más de una condición para decidir si 
 A la hora de crear cláusulas `else if` se debe tener en cuenta que:
 
 * Puede haber tantas cláusulas `else if` seguida como se desee.
-* **Cada else `if` debe definir su propia condición**, distinta de las anteriores.&#x20;
-* Opcionalmente, se puede poner una **claúsula `else` después del último `else if`**.&#x20;
+* **Cada else `if` debe definir su propia condición**, distinta de las anteriores.
+* Opcionalmente, se puede poner una **claúsula `else` después del último `else if`**.
 * **No se pueden añadir cláusulas `else if` después de una claúsula `else`**.
 
 ```java
