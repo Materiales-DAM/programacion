@@ -124,3 +124,24 @@ if (a > b) {
 
 System.out.println("Esto se ejecuta siempre");
 ```
+
+## If anidado
+
+También es posible declarar un `if` dentro de otro, esto se denomina `if` anidado
+
+```java
+Scanner scanner = new Scanner(System.in);
+
+int a = scanner.nextInt();
+scanner.nextLine();
+int b = scanner.nextInt();
+// La siguiente línea crea una claúsula if
+if (a > b) {
+    // Esto es un if anidado
+    if(a > 100) {
+        System.out.println("a es mayor que 100");
+    }
+    // Todas las sentencias que pongamos aquí se ejecutarán sólo si a es mayor que b
+    System.out.println("a es mayor que b");
+} 
+```
