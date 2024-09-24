@@ -59,40 +59,132 @@ public class If2 {
 
 3\. Escribe un programa que:
 
-* Pide un número entero
-* Imprime en pantalla “Es negativo” cuando el número es menor que cero
-* Si es mayor de 0 “es positivo”
-* Si es 0 imprime “No es positivo ni negativo”
+```java
+import java.util.Scanner;
+
+public class If3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(
+                System.in
+        );
+
+        System.out.println("Escribe un numero");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n < 0) {
+            System.out.println("El numero es negativo");
+        } else if (n > 0) {
+            System.out.println("El numero es positivo");
+        } else {
+            System.out.println("El numero no es positivo ni negativo");
+        }
+    }
+} 
+```
 
 4\. Escribe un programa que:
 
-* Pide un String de 8 caracteres
-* Imprime en pantalla “Demasiado pequeño” si el String tiene menos de 8 caracteres
-* Imprime en pantalla “Demasiado grande” si el String tiene mas de 8 caracteres
-* Si tiene 8 caracteres imprime “Es valido”
-* HINT: para saber el número de caracteres de un String se utiliza el método `stringVariable.length()`
+```java
+import java.util.Scanner;
+
+public class If4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce una frase de 8 caracteres");
+        String sentence = scanner.nextLine();
+
+        if (sentence.length() > 8) {
+            System.out.println("Demasiado largo");
+        } else if (sentence.length() < 8) {
+            System.out.println("Demasiado corto");
+        } else {
+            System.out.println("Correcto");
+        }
+    }
+}
+```
 
 5\. Escribe un programa que:
 
-* Pide un número entero (a)
-* Pide un número entero (b)
-* Si a es mayor que b. Calcula la suma de a y b y muestra en pantalla el resultado
-* Si a es igual a b. Calcula la resta de a - b y muestra el resultado en pantalla
-* Si a es menor que b:
-  * Pide al usuario otro numero c
-  * Si c es mayor que la suma de a y b: imprime el mensaje “c es mayor que a + b”
-  * Si c es menor que la suma de a y b: imprime el mensaje “c es menor que a + b”
-  * c es igual que la suma de a y b: imprime el mensaje “c es igual que a + b”
+```java
+import java.util.Scanner;
+
+public class If5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(
+                System.in
+        );
+        System.out.println("Introduce un número entero");
+        int num1 = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Introduce un nuevo número");
+        int num2 = scanner.nextInt();
+        scanner.nextLine();
+
+
+        if (num1 > num2) {
+            int sum = num1 + num2;
+            System.out.println("El resultado es " + sum);
+        } else if (num1 == num2) {
+            int substract = num1 - num2;
+            System.out.println("El resultado es " + substract);
+        } else {
+            int sum = num1 + num2;
+
+            System.out.println("Introduce otro número");
+            int num3 = scanner.nextInt();
+            scanner.nextLine();
+            if (num3 > sum) {
+                System.out.println(num3 + " es mayor que " + num1 + " + " + num2);
+            } else if (num3 < sum) {
+                System.out.println(num3 + " es menor que " + num1 + " + " + num2);
+            } else {
+                System.out.println(num3 + " es igual que " + num1 + " + " + num2);
+            }
+        }
+    }
+}
+```
 
 6\. Escribe un programa que:
 
-* Pide un String y lo guarda en una variable llamada operación
-* Si el valor de operación es “+” (`operacion.equals(`
-* `"+")`) -> operacion == “+”
-* Pide un valor double (a)
-* Pide otro valor double (b)
-* Muestra el resultado de sumarlos
-* Si el valor de la operación es “-”
-* Pide un valor int(a)
-* Pide otro valor int (b)
-* Muestra el resultado de restarlos
+```java
+import java.util.Scanner;
+
+public class If6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(
+                System.in
+        );
+
+        System.out.println("¿Qué operación desea realizar? ");
+        String operacion = scanner.nextLine();
+
+        if (operacion.equals("+")) {
+            System.out.println("Ingrese un número con decimales: ");
+            double a = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Ingrese otro número con decimales: ");
+            double b = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("El resultado es: " + (a + b));
+        } else if (operacion.equals("-")) {
+            System.out.println("Ingrese un número decimal: ");
+            int a = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Ingrese otro número decimal: ");
+            int b = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("El resultado es: " + (a - b));
+        } else {
+            System.out.println("Operación no permitida.");
+        }
+    }
+} 
+```
