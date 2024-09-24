@@ -35,10 +35,27 @@ public class If1 {
 
 2\. Escribe un programa que:
 
-* Pide un número entero
-* Imprime en pantalla “Es par” cuando el número es par (n % 2 == 0)
-* Si n % 2 == 1 es impar
-* Si es 0 imprime “No es ni par ni impar”
+```java
+import java.util.Scanner;
+
+public class If2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce un número");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n == 0) {
+            System.out.println("No es par ni impar");
+        } else if (n % 2 == 0) {
+            System.out.println("Es par");
+        } else {
+            System.out.println("Es impar");
+        }
+    }
+}
+```
 
 3\. Escribe un programa que:
 
