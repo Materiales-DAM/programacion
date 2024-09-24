@@ -5,7 +5,7 @@ coverY: 0
 
 # Switch
 
-Es otra estructura de control condicional. Sirve para establecer condiciones basadas en el valor de una expresión fija.&#x20;
+Es otra estructura de control condicional. Sirve para establecer condiciones basadas en el valor de una expresión fija.
 
 * La expresión usada en el `switch` debe ser del tipo `int`, `byte`, `short`, `char` o `String`.​
 * Los valores de los case deben ser del mismo tipo que la expresión del `switch`.​
@@ -59,6 +59,51 @@ scanner.nextLine();
         break;
     case 7:
         System.out.println("Domingo");
+        break;
+    default:
+        System.out.println("No es un día de la semana");
+}
+</code></pre>
+
+### Case comprobando varios valores
+
+Es posible comprobar varios valores en un solo case, separando los valores por comas. Por ejemplo
+
+<pre class="language-java"><code class="lang-java">Scanner scanner = new Scanner(System.in);
+
+int day = scanner.nextInt();
+scanner.nextLine();
+
+<strong>switch (day) {
+</strong>    case 1, 2, 3, 4, 5:
+        System.out.println("Laborable");
+        break;
+    case 6, 7:
+        System.out.println("Fin de semana");
+        break;
+    default:
+        System.out.println("No es un día de la semana");
+}
+</code></pre>
+
+También es posible hacer esto mismo poniendo varios case seguidos
+
+<pre class="language-java"><code class="lang-java">Scanner scanner = new Scanner(System.in);
+
+int day = scanner.nextInt();
+scanner.nextLine();
+
+<strong>switch (day) {
+</strong>    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        System.out.println("Laborable");
+        break;
+    case 6:
+    case 7:
+        System.out.println("Fin de semana");
         break;
     default:
         System.out.println("No es un día de la semana");
