@@ -1,20 +1,63 @@
 ---
-cover: ../../.gitbook/assets/control-structures.gif
+cover: ../../../.gitbook/assets/control-structures.gif
 coverY: 0
 ---
 
-# Ejercicios for
+# Soluciones for
 
 1\. Crea un programa que en el main:
 
-* Pide al usuario un número entero (n)
-* Pide al usuario un mensaje (message)
-* Saca por pantalla el mensaje message n veces
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce un mensaje");
+        String message = scanner.nextLine();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(message);
+        }
+    }
+}
+```
 
 2\. Escribir un programa que pida dos números enteros e imprima todos los números que hay entre el más pequeño y el más grande:
 
-* Si los argumentos son 0 y 100 imprimirá del 0 al 100
-* Si Son 20 y 10 imprimirá del 10 al 20
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro número");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+        if (n2 > n1) {
+            for (int i = n1; i <= n2; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = n2; i <= n1; i++) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
 
 3\. Escribir un programa que pida un entero positivo y calcule el sumatorio de cero a ese número
 
