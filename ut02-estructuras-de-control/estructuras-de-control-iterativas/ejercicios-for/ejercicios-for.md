@@ -117,7 +117,37 @@ public class For4 {
 
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
 
-* Nota: para que un año sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un año");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro año");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+        if (n2 > n1) {
+            for (int i = n1; i <= n2; i++) {
+                if(i % 4 == 0 && i % 100 != 0) {
+                    System.out.println(i);
+                }
+            }
+        } else {
+            for (int i = n2; i <= n1; i++) {
+                if(i % 4 == 0 && i % 100 != 0) {
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}
+```
 
 6\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos negativos se han introducido.
 
