@@ -180,6 +180,33 @@ public class For6 {
 
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
 
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Cuántos números va a introducir?");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            if (number < max) {
+                max = number;
+            }
+        }
+        System.out.println("El máximo es " + max);
+    }
+}
+```
+
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
 
 9\. Escribe un programa que solicite un número entero mayor que 1 y compruebe si este es primo o no. Un número primo solo es divisible por sí mismo y por el 1
