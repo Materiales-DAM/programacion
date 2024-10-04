@@ -106,7 +106,7 @@ public class For4 {
         } else {
             int factorial = 1;
             for (int i = 1; i <= n; i++) {
-                // Esto es equivalente a factorial = factorial + i
+                // Esto es equivalente a factorial = factorial * i
                 factorial *= i;
             }
             System.out.println("El factorial es " + factorial);
