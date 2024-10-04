@@ -81,6 +81,7 @@ public class For3 {
                 // Esto es equivalente a summatory = summatory + i
                 summatory += i;
             }
+            System.out.println("El sumatorio es " + summatory);
         }
     }
 }
