@@ -61,7 +61,30 @@ public class For2 {
 
 3\. Escribir un programa que pida un entero positivo y calcule el sumatorio de cero a ese número
 
-* Si el argumento es 4 el resultado será `0 + 1 + 2 + 3 + 4 = 10`
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número positivo");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n < 0) {
+            System.out.println("Error, el número introducido es negativo");
+        } else {
+            int summatory = 0;
+            for (int i = 0; i <= n; i++) {
+                // Esto es equivalente a summatory = summatory + i
+                summatory += i;
+            }
+        }
+    }
+}
+```
 
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
 
