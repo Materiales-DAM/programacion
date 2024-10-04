@@ -89,7 +89,31 @@ public class For3 {
 
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
 
-* Si el argumento es 4 el resultado será 1 \* 2 \* 3 \* 4 `= 24`
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número positivo");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n < 0) {
+            System.out.println("Error, el número introducido es negativo");
+        } else {
+            int factorial = 1;
+            for (int i = 1; i <= n; i++) {
+                // Esto es equivalente a factorial = factorial + i
+                factorial *= i;
+            }
+            System.out.println("El factorial es " + factorial);
+        }
+    }
+}
+```
 
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
 
