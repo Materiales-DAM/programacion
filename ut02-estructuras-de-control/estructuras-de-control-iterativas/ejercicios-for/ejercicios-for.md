@@ -151,6 +151,33 @@ public class For5 {
 
 6\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos negativos se han introducido.
 
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Cuántos números va a introducir?");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int negatives = 0;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            if (number < 0) {
+                negatives++;
+            }
+        }
+        System.out.println("Ha introducido " + negatives + " negativos");
+    }
+}
+```
+
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
 
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
