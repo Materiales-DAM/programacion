@@ -14,10 +14,10 @@
 * [Expresiones y operadores](ut01-introduccion-a-la-programacion/expresiones-y-operadores.md)
 * [String](ut01-introduccion-a-la-programacion/string.md)
 * [Entrada y salida del programa](ut01-introduccion-a-la-programacion/entrada-y-salida-del-programa.md)
+* [Lenguajes de programación](ut01-introduccion-a-la-programacion/casting-de-valores-numericos.md)
 * [Ejercicios variables y tipos](ut01-introduccion-a-la-programacion/ejercicios-variables-y-tipos/README.md)
   * [Soluciones variables y tipos](ut01-introduccion-a-la-programacion/ejercicios-variables-y-tipos/ejercicios-variables-y-tipos.md)
-* [Casting de valores numéricos](ut01-introduccion-a-la-programacion/casting-de-valores-numericos.md)
-* [Lenguajes de programación](ut01-introduccion-a-la-programacion/casting-de-valores-numericos-1.md)
+* [Casting de valores numéricos](ut01-introduccion-a-la-programacion/casting-de-valores-numericos-1.md)
 
 ## UT02 - Estructuras de control
 

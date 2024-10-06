@@ -3,43 +3,37 @@ cover: ../.gitbook/assets/java.jpeg
 coverY: 0
 ---
 
-# Lenguajes de programación
+# Casting de valores numéricos
 
-Según Wikipedia "Un lenguaje de programación es un [lenguaje ](https://es.wikipedia.org/wiki/Lenguaje\_formal)[formal](https://es.wikipedia.org/wiki/Lenguaje\_formal) (o artificial, es decir, un lenguaje con reglas gramaticales bien definidas) que le proporciona a una persona, en este caso el programador, la capacidad de escribir (o programar) una serie de [instrucciones](https://es.wikipedia.org/wiki/Instrucci%C3%B3n\_\(inform%C3%A1tica\)) o secuencias de órdenes en forma de [algoritmos](https://es.wikipedia.org/wiki/Algoritmo) con el fin de controlar el comportamiento físico o lógico de una [computadora](https://es.wikipedia.org/wiki/Computadora), de manera que se puedan obtener diversas clases de datos o ejecutar determinadas tareas"​
+En ocasiones, vamos a querer convertir un valor de un tipo a otro. Para ello existe el mecanismo del casting que nos permite cambiar de un tipo a otro siguiendo unas reglas determinadas.
 
-## Sintaxis y semántica
+```java
+// Declaramos una variable one que toma el valor 1
+int one = 1;
+// Declaramos una variable onePointZero de tipo double, le asignamos el valor anterior
+// Como la variable one era un entero el casting convierte el valor 1 a 1.0
+double onePointZero = (double) one;
+// Se imprime 1.0
+System.out.println(onePointZero);
+```
 
-Las reglas que marcan como se debe expresar la lógica de un programa vienen definidas por la sintaxis y la semántica del lenguaje de programación​
+Cada tipo de datos define un conjunto de valores que se pueden tomar.
 
-La **sintaxis** define qué secuencias de texto son válidas en un lenguaje de programación​
+* int: números enteros entre -2,147,483,648 y 2,147,483,647
+* long: números enteros entre -9,223,372,036,854,775,808 y 9,223,372,036,854,775,807
+* float: números con decimales con hasta 6 o 7 dígitos
+* double: números con decimales con hasta 15 dígitos
 
-La **semántica** de un lenguaje define restricciones que aseguren que las secuencias sintácticas tienen un significado en el lenguaje​
+Algunos de estos tipos son subconjuntos de otros, es decir que todos los valores de un tipo existen en otro tipo.
 
-## Clasificación de los lenguajes de programación
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>Conjuntos de tipos</p></figcaption></figure>
 
-Los lenguajes de programación se pueden clasificar de múltiples formas, dependiendo de qué característica estemos analizando.
+Cuando hacemos un casting de tipos es posible que vayamos de un tipo más grande a uno más pequeño o viceversa:
 
-### Lenguajes interpretados y compilados​
+* Widening casting: son los casting en los que vamos de un conjunto más pequeño a uno más grande. En este tipo de casting no puede haber ningún problema ya que todos los valores del tipo de origen existen en el tipo de destino.
 
-Interpretados son aquellos lenguajes que pueden ejecutar directamente el código fuente​
+`byte -> short -> char -> int -> long -> float -> double`
 
-Compilados son aquellos lenguajes que, para ser ejecutados, requieren la conversión del código fuente a código objeto a través de un proceso denominado compilación​
+* Narrow casting: son los casting en los que vamos de un conjunto más grande a uno más pequeño. Estos casting son potencialmente problemáticos ya que no todos los valores del tipo de origen son representables en el tipo de destino
 
-La ventaja de los lenguajes interpretados es que son más portables, es decir, se pueden ejecutar en diferentes arquitecturas sin modificarlos.​
-
-La ventaja de los lenguajes compilados es que en el proceso de compilación se puede comprobar la corrección del programa y aplicar optimizaciones sobre el código, son por lo general más eficientes que los compilados.​
-
-### Paradigmas de programación
-
-Según Wikipedia "Un paradigma de programación consiste en un método para llevar a cabo cómputos y la forma en la que deben estructurarse y organizarse las tareas que debe realizar un programa"​
-
-Cada lenguaje de programación está vinculado a uno o varios paradigmas de programación​
-
-Algunos de los paradigmas más utilizados en la actualidad son:
-
-* Orientado a objetos: Java, C#, C++, Kotlin
-* Imperativo: C, C++, Java
-* Funcional: Scala, Kotlin, Haskell, JavaScript
-* Programación lógica: PROLOG
-* Declarativo: SQL
-* Dirigido por eventos: NodeJS
+`double -> float -> long -> int -> char -> short -> byte`
