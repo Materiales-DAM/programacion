@@ -34,7 +34,39 @@ coverY: 0
         }
     }
     ```
-2. Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.
+2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.\
+
+
+    ```java
+    package whileexercises;
+
+    import java.util.Scanner;
+
+    public class While2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(
+                    System.in
+            );
+
+            System.out.println("Introduce un número decimal: ");
+            double number1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce el segundo número decimal: ");
+            double number2 = scanner.nextDouble();
+            scanner.nextLine();
+
+
+            while (number1 <= number2){
+                System.out.println("Introduce un número más pequeño: ");
+                number2 = scanner.nextDouble();
+                scanner.nextLine();
+            }
+            System.out.println(number1 + " Es más grande que "+ number2);
+
+        }
+    }
+    ```
 3. Escriba un programa que pida números mientras el usuario indique que quiere seguir introduciendo números. Para indicar que quiere seguir escribiendo números, el usuario deberá contestar S o s a la pregunta.
    * `Introduce numero: 2`
    * `¿Quieres seguir? S`
