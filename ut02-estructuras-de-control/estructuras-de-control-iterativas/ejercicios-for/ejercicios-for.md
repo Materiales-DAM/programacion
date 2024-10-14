@@ -209,9 +209,74 @@ public class For7 {
 
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
 
+```java
+package forExercises;
+
+import java.util.Scanner;
+public class For8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(
+                System.in
+        );
+
+        System.out.println("Cuanto numeros quieres intruducir");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        double suma = 0;
+
+        for (int i = 0;i < n; i++) {
+            System.out.println("Introduce un numero");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            suma += number;
+
+        }
+        double division = suma / n;
+        System.out.println("La media es " + division);
+    }
+} 
+```
+
 9\. Escribe un programa que solicite un número entero mayor que 1 y compruebe si este es primo o no. Un número primo solo es divisible por sí mismo y por el 1
 
 ```
 5: 5 % 2 == 0, 5 % 3 == 0, 5 % 3 == 0, 5 % 4 == 0 TODO FALSE: es primo 
 6: 6 % 2 == 0 TRUE -> NO ES PRIMO
+```
+
+```java
+package forExercises;
+
+import java.util.Scanner;
+
+public class For9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce un número mayor que 1");
+
+        int n = scanner.nextInt();
+        scanner.nextLine();
+        while(n <= 1) {
+            System.out.println("El número introducido no es mayor que uno...");
+            n = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        boolean prime = true;
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                prime = false;
+            }
+        }
+        if (prime) {
+            System.out.println(n + " es primo");
+        } else {
+            System.out.println(n + " no es primo");
+
+        }
+    }
+}
 ```
