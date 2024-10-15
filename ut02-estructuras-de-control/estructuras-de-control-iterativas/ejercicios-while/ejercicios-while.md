@@ -94,12 +94,38 @@ coverY: 0
            }
        }
        ```
-4. Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.
+4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.\
+
+
+    ```java
+    package whileexercises;
+
+    import java.util.Scanner;
+
+    public class While4 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            int num = 0;
+            int cont = 0;
+
+            while (num >= 0) {
+                System.out.println("Introduce un número: ");
+                num = scanner.nextInt();
+                scanner.nextLine();
+                if (num >= 0) {
+                    cont++;
+                }
+            }
+            System.out.println("Ha introducido " + cont + " números positivos");
+        }
+    }
+    ```
 5. Realizar un juego para adivinar un número. Para ello se asigna a una variable n un número entero aleatorio, y luego ir pidiendo números indicando “mayor” o “menor” según sea mayor o menor con respecto a N. El proceso termina cuando el usuario acierta y se imprime el texto “exacto!”. Para generar un número aleatorio se puede usar la utilidad java.util.Random
 
 ```java
 Random r = new Random(); 
-int n = r.nextInt(100); // Genera un numero aleatorio del 0 al 10 
+int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 10 
 ```
 
 6. Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea menor que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
