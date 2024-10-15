@@ -128,6 +128,44 @@ Random r = new Random();
 int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 10 
 ```
 
+```java
+package whileexercises;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class While5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(
+                System.in
+        );
+
+        System.out.println("Vamos a jugar un juego sobre adivinar un numero aleatorio entre el 1 y el 100. Pulsa enter para empezar");
+        scanner.nextLine();
+
+        Random n = new Random();
+        int secret = n.nextInt(100);
+        System.out.println("");
+
+        int number = -1;
+
+        while (number != secret) {
+            System.out.println("Escribe un numero al azar entre el 1 y el 100");
+            number = scanner.nextInt();
+            scanner.nextLine();
+
+            if (number > secret){
+                System.out.println("Es menor");
+            } else if (number < secret){
+                System.out.println("Es mayor");
+            } else {
+                System.out.println("Exacto");
+            }
+        }
+    }
+} 
+```
+
 6. Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea menor que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
 7. Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.
 8. Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.
