@@ -25,8 +25,6 @@ Por ejemplo, si quisiéramos almacenar los campos de las personas y, de entre el
 
 En este caso podemos crear un tipo especial de tipo enum que nos permite delimitar los valores que puede tomar el campo de estado civil.
 
-
-
 ```java
 public enum CivilState{
     Single, Married, Divorced, Widower;
@@ -34,8 +32,6 @@ public enum CivilState{
 ```
 
 Una vez definido el tipo ya podemos usarlo en la clase Person
-
-
 
 ```java
 public class Person {
@@ -96,11 +92,36 @@ public class Person {
 
 Ahora podemos crear objetos de tipo Person en los que especificamos su estado civil
 
-
-
 ```java
 // Bob está soltero
 Person person1 = new Person("Bob", "Esponja", CivilState.Single, 3);
 // Peppa está divorciada
 Person person2 = new Person("Peppa", "Pig", CivilState.Divorced, 4);
+```
+
+## Menús interactivos
+
+Las enumeraciones son muy útiles para codificar las opciones de menús interactivos
+
+```java
+public enum MyMenuOptions{
+    Sum("Sumar"), Substract("Restar"), Exit("Salir");
+
+    private final String description;
+
+    MyMenuOptions(String description) {
+        this.description = description;
+    }
+
+    public static MyMenuOptions fromIndex(int opt) {
+        return MyMenuOptions.values()[opt];
+    }
+
+    public static void printMenu() {
+        System.out.println("Elige una opción:");
+        for (int i = 0; i < MyMenuOptions.values().length; i++) {
+            System.out.println(i +"." + MyMenuOptions.values()[i].description); 
+        }
+    }
+}
 ```
