@@ -19,6 +19,6 @@ Random r = new Random();
 int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 10 
 ```
 
-6. Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea menor que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
+6. Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
 7. Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.
 8. Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.

@@ -166,6 +166,102 @@ public class While5 {
 } 
 ```
 
-6. Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea menor que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
-7. Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.
-8. Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.
+6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números\
+
+
+    ```java
+    package whileexercises;
+
+    import java.util.Scanner;
+
+    public class While6 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Cuántos números deseas introducir");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+            double result = 0;
+            while (n < 1) {
+                System.out.println("El número introducido es menor que 1...");
+                n = scanner.nextInt();
+                scanner.nextLine();
+            }
+            for (int i = 0; i < n; i++) {
+                System.out.println("Introduce un número");
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                result += num;
+            }
+            double average = result / n;
+            System.out.println("La media es:" + average);
+        }
+    } 
+    ```
+7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.\
+
+
+    ```java
+    package whileexercises;
+
+    import java.util.Scanner;
+
+    public class While7 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número ");
+            int num = scanner.nextInt();
+            scanner.nextLine();
+            
+            int sum = num;
+
+            while (num != 0 ) {
+                System.out.println("Introduce otro número ");
+                num = scanner.nextInt();
+                scanner.nextLine();
+
+                sum += num ;
+            }
+            System.out.println("La suma es " + sum);
+        }
+    } 
+    ```
+8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.\
+
+
+    ```java
+    package whileexercises;
+
+    import java.util.Scanner;
+
+    public class While8 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            int cont = 10;
+            double sumPositives = 0;
+            double sumNegatives = 0;
+            int zeros = 0;
+            int positives = 0;
+            int negatives = 0;
+
+            while (cont > 0){
+                System.out.println("Introduce un número");
+                double num = scanner.nextDouble();
+                scanner.nextLine();
+                if (num >0){
+                    sumPositives = sumPositives + num;
+                    positives++;
+                }else if (num < 0){
+                    sumNegatives = sumNegatives + num;
+                    negatives++;
+                }else{
+                    zeros++;
+                }
+                cont--;
+            }
+            System.out.println("La media de positivos es " + sumPositives / positives);
+            System.out.println("La media de negativos es " + sumNegatives/ negatives);
+            System.out.println("El número de ceros es " + zeros);
+        }
+    }
+    ```
