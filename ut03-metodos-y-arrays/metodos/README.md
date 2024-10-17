@@ -24,7 +24,7 @@ Los métodos se declaran dentro de clases y constan de dos partes:
 
 Por ejemplo, un método que, dado un nombre, devuelve un saludo:
 
-{% code fullWidth="true" %}
+{% code fullWidth="false" %}
 ```java
 public class HelloMessageClass {
     // Esta es la cabecera del método
