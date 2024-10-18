@@ -1,5 +1,40 @@
 # Ejemplos
 
+MethodsExample
+
+```java
+public class MethodsExample {
+
+    public static void main(String[] args) {
+        int n1 = 1;
+        int n2 = 2;
+        double res1 = sum(n1, n2);
+        double res2 = sum(3, n2);
+        double res3 = sum(n1, 1);
+        double res4 = sum(n1, n1);
+
+        System.out.println(res1);
+        System.out.println(res2);
+        System.out.println(res3);
+        System.out.println(res4);
+
+        String message = buildHelloMessage("Bob");
+        System.out.println(message);
+
+    }
+
+    public static double sum(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public static String buildHelloMessage(String name){
+
+        String responseMessage = "Hola " + name;
+        return responseMessage;
+    }
+}
+```
+
 DoWhile -> Ej1
 
 ```java
