@@ -3,7 +3,7 @@ cover: ../../../.gitbook/assets/method.jpg
 coverY: 0
 ---
 
-# Soluiociones de programas con métodos
+# Soluciones de programas con métodos
 
 1. Crea un programa que defina los siguientes métodos:
    1. Un método que calcule la suma de sus dos parámetros enteros y devuelva el resultado
@@ -46,7 +46,40 @@ coverY: 0
    1. Un método que calcule la multiplicación de sus dos parámetros enteros y devuelva el resultado
    2. Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada
 
-En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
+En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero\
+
+
+```java
+import java.util.Scanner;
+
+public class Methods2 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro número");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+
+        int res = mult(n1, n2);
+        print(res);
+
+        // print(mult(n1, n2));
+    }
+
+    public static int mult(int n1, int n2) {
+        return n1 * n2;
+    }
+
+    public static void print(int result) {
+        System.out.println("El resutlado es " + result);
+    }
+
+}
+```
 
 3. Crea un programa que muestre un menú con las siguientes opciones:
 
