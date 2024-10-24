@@ -57,7 +57,7 @@
   * [Cómo deducir la cabecera a partir de enunciados](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras.md)
   * [Ejercicios cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras-1/README.md)
     * [Soluciones cabeceras](ut03-metodos-y-arrays/metodos/ejercicios-cabeceras-1/ejercicios-cabeceras.md)
-  * [Ejercicios de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos/README.md)
+  * [Ejercicios de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos.md)
     * [Soluiociones de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos/ejercicios-de-programas-con-metodos.md)
 * [Arrays](ut03-metodos-y-arrays/arrays/README.md)
   * [Recorrer un array](ut03-metodos-y-arrays/arrays/recorrer-un-array.md)

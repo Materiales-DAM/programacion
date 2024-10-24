@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/method.jpg
+cover: ../../.gitbook/assets/method.jpg
 coverY: 0
 ---
 
@@ -17,21 +17,21 @@ En el main pide dos números enteros, e invoca el primer método pasando esos va
 
 En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
 
-3. Crea un programa que muestre un menú con las siguientes opciones:&#x20;
+3. Crea un programa que muestre un menú con las siguientes opciones:
 
-* Saluda: Pide al usuario su nombre y muestra en pantalla  el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
-* Grita: Pide al usuario su nombre y muestra en pantalla  el texto `Cuidado  <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
+* Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
+* Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Salir
 
 Para implementar este programa crea los siguiente métodos:
 
 * Un método que sirva para imprimir en pantalla el menú y lee la opción elegida por el usuario, al final devuelve la opción elegida
-* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla  el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
-* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla  el texto `Cuidado  <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
+* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
+* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
-* En el método main se invocará al método que implementa el bucle del menú interactivo.&#x20;
+* En el método main se invocará al método que implementa el bucle del menú interactivo.
 
-4. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:&#x20;
+4. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
 
 * Sumar dos números: los pide, los suma y muestra el resultado en pantalla.
 * Restar dos números: los pide, los resta y muestra el resultado en pantalla.
@@ -50,9 +50,9 @@ Implementa el programa creando métodos para:.
 5\. Escribe un programa con estos métodos:
 
 * Un método que dado un entero, devuelva el sumatorio de cero a ese número. Por ejemplo, si se pasa el 6, el resultado será 0 +1 +2 +3 +4 +5+ 6.
-* Un método que dado un número entero, devuelve el factorial de ese número.  Por ejemplo, si se pasa el 6, el resultado será 1 \* 2 \* 3 \* 4 \* 5 \* 6
+* Un método que dado un número entero, devuelve el factorial de ese número. Por ejemplo, si se pasa el 6, el resultado será 1 \* 2 \* 3 \* 4 \* 5 \* 6
 * Un método que dados cuatro números enteros, calcula la media y la devuelve.
-* Un método que muestre las siguientes opciones,:&#x20;
+* Un método que muestre las siguientes opciones,:
   * Sumatorio
   * Factorial
   * Media
