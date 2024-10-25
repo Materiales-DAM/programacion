@@ -180,7 +180,80 @@ Implementa el programa creando métodos para:.
 * Un método que ejecute la opción restar
 * Un método que ejecute la opción multiplicar
 * Un método que implemente el bucle del menú
-* En el main invoca el método del bucle del menú.
+*   En el main invoca el método del bucle del menú.\
+
+
+    ```java
+    import java.util.Scanner;
+
+    public class Methods4 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(
+                    System.in
+            );
+            loop(scanner);
+        }
+
+        public static void loop(Scanner scanner) {
+            System.out.println("¡Bienvenido!");
+            int option;
+            do {
+                option = chooseOption(scanner);
+                if (option == 1) {
+                    sum(scanner);
+                } else if (option == 2) {
+                    subtract(scanner);
+                } else if (option == 3) {
+                    multiply(scanner);
+                } else if (option == 4) {
+                    System.out.println("¡Hasta luego!");
+                } else {
+                    System.out.println("opción no válida");
+                }
+            } while (option != 4);
+        }
+
+        public static int chooseOption(Scanner scanner) {
+            System.out.println("Elija una operación: ");
+            System.out.println("1. Sumar");
+            System.out.println("2. Restar");
+            System.out.println("3. Multiplicar");
+            System.out.println("4. Salir");
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+
+        public static void sum(Scanner scanner) {
+            Double num1 = askNumber(scanner);
+            Double num2 = askNumber(scanner);
+
+            System.out.println("El resultado de la suma es: " + (num1 + num2));
+        }
+
+        public static void subtract(Scanner scanner) {
+            double num1 = askNumber(scanner);
+            double num2 = askNumber(scanner);
+
+            System.out.println("El resultado de la resta es: " + (num1 - num2));
+        }
+
+        public static void multiply(Scanner scanner) {
+            double num1 = askNumber(scanner);
+            double num2 = askNumber(scanner);
+
+            System.out.println("El resultado de la multiplicación es: " + (num1 * num2));
+        }
+
+        public static double askNumber(Scanner scanner) {
+            System.out.println("Ingrese un número: ");
+            double num = scanner.nextDouble();
+            scanner.nextLine();
+
+            return num;
+        }
+    } 
+    ```
 
 5\. Escribe un programa con estos métodos:
 
