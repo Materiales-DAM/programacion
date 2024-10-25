@@ -85,7 +85,15 @@ public class Methods2 {
 
 * Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
 * Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
-*   Salir\
+* Salir
+
+Para implementar este programa crea los siguiente métodos:
+
+* Un método que sirva para imprimir en pantalla el menú y lee la opción elegida por el usuario, al final devuelve la opción elegida
+* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
+* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
+* Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
+*   En el método main se invocará al método que implementa el bucle del menú interactivo.\
 
 
     ```java
@@ -157,14 +165,6 @@ public class Methods2 {
 
     }
     ```
-
-Para implementar este programa crea los siguiente métodos:
-
-* Un método que sirva para imprimir en pantalla el menú y lee la opción elegida por el usuario, al final devuelve la opción elegida
-* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
-* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
-* Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
-* En el método main se invocará al método que implementa el bucle del menú interactivo.
 
 4. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
 
