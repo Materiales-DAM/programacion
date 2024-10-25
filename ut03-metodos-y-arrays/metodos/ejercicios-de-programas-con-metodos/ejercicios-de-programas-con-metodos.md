@@ -85,7 +85,78 @@ public class Methods2 {
 
 * Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
 * Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
-* Salir
+*   Salir\
+
+
+    ```java
+    import java.util.Scanner;
+
+    public class Methods3 {
+        public static void main(String[] args) {
+            menuLoop();
+        }
+
+        public static int chooseOption(Scanner scanner) {
+            System.out.println("Elige una opción");
+            System.out.println("1. Saluda");
+            System.out.println("2. Grita");
+            System.out.println("3. Salir");
+
+            int option = scanner.nextInt();
+            scanner.nextLine();
+
+            return option;
+        }
+
+        public static void greeting(Scanner scanner) {
+            System.out.println("Introduce tu nombre");
+            String name = scanner.nextLine();
+
+            System.out.println("Hola, " + name);
+        }
+
+        public static void shout(Scanner scanner) {
+            System.out.println("Introduce tu nombre");
+            String name = scanner.nextLine();
+
+            System.out.println("Cuidado, " + name + "!");
+        }
+
+        public static void menuLoop() {
+            int option;
+            Scanner scanner = new Scanner(System.in);
+            do {
+                option = chooseOption(scanner);
+
+    //            switch (option) {
+    //                case 1:
+    //                    greeting(scanner);
+    //                    break;
+    //                case 2:
+    //                    shout(scanner);
+    //                    break;
+    //                case 3:
+    //                    System.out.println("Saliendo...");
+    //                    break;
+    //                default:
+    //                    System.out.println("Opción inválida");
+    //            }
+                if(option == 1) {
+                    greeting(scanner);
+                } else if (option == 2) {
+                    shout(scanner);
+                } else if (option == 3) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+
+            } while(option != 3);
+        }
+
+
+    }
+    ```
 
 Para implementar este programa crea los siguiente métodos:
 
