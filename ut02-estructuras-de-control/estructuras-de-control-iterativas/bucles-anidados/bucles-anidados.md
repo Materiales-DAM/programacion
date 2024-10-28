@@ -40,18 +40,78 @@ coverY: 0
         }
     }
     ```
-2. Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
-   1\
-   2 2\
-   3 3 3\
-   ...\
-   n n n….. n
-3. Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
-   1\
-   12\
-   123\
-   1234\
-   12345
+2.  Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
+    1\
+    2 2\
+    3 3 3\
+    ...\
+    n n n….. n\
+
+
+    ```java
+    package nestedloops;
+
+    import java.util.Scanner;
+
+    public class Nested2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int n;
+            do {
+                System.out.println("Introduce un número mayor que cero:");
+                n = scanner.nextInt();
+                scanner.nextLine();
+                if (n < 1) {
+                    System.out.println("Error, el número no es mayor que cero");
+                }
+            } while (n < 1);
+
+            for (int i = 0; i < n; i++) {
+                int number = i + 1;
+                for (int j = 0; j < number; j++) {
+                    System.out.print(number + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    ```
+3.  Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
+    1\
+    12\
+    123\
+    1234\
+    12345\
+
+
+    ```java
+    package nestedloops;
+
+    import java.util.Scanner;
+
+    public class Nested3 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int n;
+            do {
+                System.out.println("Introduce un número mayor que cero:");
+                n = scanner.nextInt();
+                scanner.nextLine();
+                if (n < 1) {
+                    System.out.println("Error, el número no es mayor que cero");
+                }
+            } while (n < 1);
+
+            for (int i = 0; i < n; i++) {
+                int number = i + 1;
+                for (int j = 0; j < number; j++) {
+                    System.out.print(j + 1 + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    ```
 4. Escribe un programa que pida un número positivo (n) e imprima la siguiente serien\
    n n n n …. n\
    …\

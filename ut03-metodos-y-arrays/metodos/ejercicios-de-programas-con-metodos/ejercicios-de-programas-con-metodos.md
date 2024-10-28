@@ -266,4 +266,97 @@ Implementa el programa creando métodos para:.
   * Media
   * Salir
 * Un método que imprima el menú y pida una opción al usuario, luego la devuelve
-* En el main se creará el menú interactivo usando lo anterior
+*   En el main se creará el menú interactivo usando lo anterior\
+
+
+    ```java
+    package methods;
+
+    import java.util.Scanner;
+
+    public class Methods5 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int option;
+            do {
+                option = chooseOption();
+
+                switch (option) {
+                    case 1:
+                        System.out.print("Introduce un número para calcular su sumatorio: ");
+                        int n = scanner.nextInt();
+                        scanner.nextLine();
+                        int summatory = summatory(n);
+                        System.out.println("El sumatorio de 0 a " + n + " es: " + summatory);
+                        break;
+                    case 2:
+                        System.out.print("Introduce un número para calcular su factorial: ");
+                        int nFactorial = scanner.nextInt();
+                        scanner.nextLine();
+                        int factorial = factorial(nFactorial);
+                        System.out.println("El factorial de " + nFactorial + " es: " + factorial);
+                        break;
+                    case 3:
+                        System.out.print("Introduce el primer número: ");
+                        int num1 = scanner.nextInt();
+                        System.out.print("Introduce el segundo número: ");
+                        int num2 = scanner.nextInt();
+                        System.out.print("Introduce el tercer número: ");
+                        int num3 = scanner.nextInt();
+                        System.out.print("Introduce el cuarto número: ");
+                        int num4 = scanner.nextInt();
+                        double average = average(num1, num2, num3, num4);
+                        System.out.println("La media de los cuatro números es: " + average);
+                        break;
+                    case 4:
+                        System.out.println("Saliendo del programa...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida, intenta de nuevo.");
+                }
+            }
+            while (option != 4);
+        }
+
+        public static int summatory(int num) {
+            int sum = 0;
+            for (int i = 0; i <= num; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+
+        public static int factorial(int num) {
+            int factorial = 1;
+            for (int i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+
+        public static double average(int num1, int num2, int num3, int num4) {
+            return (num1 + num2 + num3 + num4) / 4.0;
+        }
+
+
+        public static void printMenu() {
+            System.out.println("Menú de opciones: ");
+            System.out.println("1. Calcular sumatorio");
+            System.out.println("2. Calcular factorial");
+            System.out.println("3. Calcular media de cuatro números");
+            System.out.println("4. Salir");
+        }
+
+
+        public static int chooseOption() {
+            printMenu();
+            Scanner scanner = new Scanner(System.in);
+            int option = scanner.nextInt();
+            return option;
+        }
+
+    }
+    ```
