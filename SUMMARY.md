@@ -61,11 +61,15 @@
     * [Soluciones de programas con métodos](ut03-metodos-y-arrays/metodos/ejercicios-de-programas-con-metodos/ejercicios-de-programas-con-metodos.md)
 * [Arrays](ut03-metodos-y-arrays/arrays/README.md)
   * [Recorrer un array](ut03-metodos-y-arrays/arrays/recorrer-un-array.md)
-  * [Ejercicios arrays](ut03-metodos-y-arrays/arrays/ejercicios-arrays.md)
-  * [Ejercicios de métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays.md)
-  * [Ejercicios de menús con métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays.md)
+  * [Ejercicios arrays](ut03-metodos-y-arrays/arrays/ejercicios-arrays/README.md)
+    * [Soluciones arrays](ut03-metodos-y-arrays/arrays/ejercicios-arrays/ejercicios-arrays.md)
+  * [Ejercicios de métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/README.md)
+    * [Soluciones de métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-metodos-y-arrays/ejercicios-de-metodos-y-arrays.md)
+  * [Ejercicios de menús con métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays/README.md)
+    * [Soluciones de menús con métodos y arrays](ut03-metodos-y-arrays/arrays/ejercicios-de-menus-con-metodos-y-arrays/ejercicios-de-menus-con-metodos-y-arrays.md)
   * [Matrices](ut03-metodos-y-arrays/arrays/matrices/README.md)
-    * [Ejercicios](ut03-metodos-y-arrays/arrays/matrices/ejercicios.md)
+    * [Ejercicios matrices](ut03-metodos-y-arrays/arrays/matrices/ejercicios/README.md)
+      * [Soluciones matrices](ut03-metodos-y-arrays/arrays/matrices/ejercicios/ejercicios.md)
 
 ## UT04 - Introducción a la programación orientada a objetos
 
