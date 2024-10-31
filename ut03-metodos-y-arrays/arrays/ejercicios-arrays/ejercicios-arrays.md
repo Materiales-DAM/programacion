@@ -40,11 +40,41 @@ layout:
        ```
 2. Haz un programa que:
    1. Cree un array con los valores 3.4, 5.2, 4.7
-   2. Después imprime en pantalla el último valor del array
+   2.  Después imprime en pantalla el último valor del array
+
+       ```java
+       package arrays;
+
+       public class Arrays2 {
+           public static void main(String[] args) {
+               double[] numbers = {3.4, 5.2, 4.7};
+               System.out.println("En la posición 2 está el número " + numbers[numbers.length - 1]);
+           }
+       }
+       ```
 3. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.
    2. Recorre el array calculando la suma de todos los números
-   3. Al final imprime la suma
+   3.  Al final imprime la suma\
+
+
+       ```java
+       package arrays;
+
+       public class Arrays3 {
+           public static void main(String [] args){
+               
+               int[] numbers = {4, 8, 9, 1};
+               int add = 0;
+
+               for (int number: numbers){
+                   add += number;
+               }
+
+               System.out.println("La suma de estos números es: " + add);
+           }
+       } 
+       ```
 4. Haz un programa que:
    1. Pregunte al usuario cuántos nombres quiere meter
    2. Cree un array de Strings del tamaño que ha dicho el usuario
