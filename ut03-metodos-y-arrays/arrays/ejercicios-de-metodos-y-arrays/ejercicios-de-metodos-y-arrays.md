@@ -25,6 +25,33 @@ layout:
 
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
+```java
+package methods_arrays;
+
+public class Arrays1 {
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 5, 0};
+        int max = max(numbers);
+        printMax(max);
+    }
+
+    public static int max(int[] numbers) {
+        int max = numbers[0];
+        for (int number : numbers) {
+            if (number > max) {
+                max = number;
+            }
+        }
+
+        return max;
+    }
+
+    public static void printMax(int number) {
+        System.out.println("El máximo es " + number);
+    }
+}
+```
+
 2. Crea un programa que defina los siguientes métodos:
    1. Un método que calcule la suma de los valores de un array de enteros (se pasa por parámetro) y devuelva la suma
    2. Un método que reciba un entero por parámetro e imprima el texto “La suma es: ” y el parámetro recibido. Este método no devolverá nada
