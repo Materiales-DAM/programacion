@@ -81,4 +81,33 @@ layout:
    3. Recorre el array, en cada iteración
       1. Pide un nombre al usuario con el scanner
       2. Guarda en la posición i del array el nombre que acaba de pasar el usuario
-   4. Vuelve a recorrer el array mostrando en pantalla todos los nombres almacenados en el mismo
+   4.  Vuelve a recorrer el array mostrando en pantalla todos los nombres almacenados en el mismo\
+
+
+       ```java
+       package arrays;
+
+       import java.util.Scanner;
+
+       public class Arrays4 {
+           public static void main(String[] args) {
+               Scanner scanner = new Scanner(System.in);
+
+               System.out.println("¿Cuantos nombres va a meter?");
+               int n = scanner.nextInt();
+               scanner.nextLine();
+
+               String[] names = new String[n];
+
+               for (int i = 0; i < names.length; i++) {
+                   System.out.println("Introduce un nombre");
+                   String name = scanner.nextLine();
+                   names[i] = name;
+               }
+
+               for (String name : names) {
+                   System.out.println(name);
+               }
+           }
+       }
+       ```
