@@ -21,7 +21,23 @@ layout:
 
 1. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.
-   2. Recorre el array y muestra cada valor en pantalla
+   2.  Recorre el array y muestra cada valor en pantalla\
+
+
+       ```java
+       package arrays;
+
+       public class Arrays1 {
+           public static void main(String[] args) {
+               int[] numbers = {4, 8, 9, 1};
+
+               for(int i = 0; i < numbers.length; i++) {
+                   int number = numbers[i];
+                   System.out.println("El valor en la posición " + i + " es " + number);
+               }
+           }
+       }
+       ```
 2. Haz un programa que:
    1. Cree un array con los valores 3.4, 5.2, 4.7
    2. Después imprime en pantalla el último valor del array
