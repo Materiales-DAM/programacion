@@ -93,6 +93,61 @@ public class Arrays2 {
 
 En el main se pide un array, se calcula la media y se imprime el resultado
 
+```java
+package methods_arrays;
+
+import java.util.Scanner;
+
+public class Arrays3 {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] numbers = createArray();
+        double average = calculateAverage(numbers);
+        printAverage(average);
+    }
+
+
+    public static int askPositve() {
+        System.out.println("Introduce un número positivo");
+        int number;
+
+        do {
+            System.out.println("Introduce un número positivo");
+            number = scanner.nextInt();
+            scanner.nextLine();
+        } while (number <= 0);
+        return number;
+    }
+
+    public static int[] createArray() {
+        int size = askPositve();
+        int[] array = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            array[i] = number;
+        }
+        return array;
+    }
+
+    public static double calculateAverage(int[] numbers) {
+        double add = 0;
+        for (int number : numbers) {
+            add += number;
+        }
+
+        return add / numbers.length;
+    }
+
+    public static void printAverage(double average) {
+        System.out.println("La media es: " + average);
+    }
+}
+```
+
 4. Crea un programa con los siguientes métodos:
    1. Un método que pida un array de números y los devuelve
    2. Un método que reciba un array de números y devuelva el array en orden inverso
