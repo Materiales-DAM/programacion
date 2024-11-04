@@ -58,6 +58,30 @@ public class Arrays1 {
 
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
+```java
+package methods_arrays;
+
+public class Arrays2 {
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 5, 0};
+        int sum = sum(numbers);
+        printSum(sum);
+    }
+
+    public static int sum(int[] numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
+
+    public static void printSum(int number) {
+        System.out.println("La suma es " + number);
+    }
+}
+```
+
 3. Crea un programa que defina los siguientes métodos:
    1. Un método que pida un al usuario un número entero positivo. Si el usuario introduce un negativo el programa volverá a pedir el número hasta que sea positivo.
    2. Un método que pida un array de números:
