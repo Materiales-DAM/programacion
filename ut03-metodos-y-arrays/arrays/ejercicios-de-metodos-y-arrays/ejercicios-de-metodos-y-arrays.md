@@ -161,4 +161,78 @@ public class Arrays3 {
       5. Invierte este nuevo array
       6. Imprime el otro array invertido
       7. Une los dos arrays invertidos
-      8. Imprime el resultado de la unión
+      8.  Imprime el resultado de la unión\
+
+
+          ```java
+          package methods_arrays;
+
+          import java.util.Scanner;
+
+          public class Arrays4 {
+              private static Scanner scanner = new Scanner(System.in);
+
+              public static void main(String[] args) {
+                  int[] numbers1 = askArray();
+                  int[] invertedNumbers1 = reverseArray(numbers1);
+                  print(invertedNumbers1);
+                  int[] numbers2 = askArray();
+                  int[] invertedNumbers2 = reverseArray(numbers2);
+                  print(invertedNumbers2);
+                  int[] union = union(invertedNumbers1, invertedNumbers2);
+                  print(union);
+
+              }
+
+              public static int numberArray() {
+                  System.out.println("Introduzca el tamaño del array que desea ");
+                  int number = scanner.nextInt();
+                  scanner.nextLine();
+
+                  while (number <= 0) {
+                      System.out.println("Introduzca un numero mayor que cero");
+                      number = scanner.nextInt();
+                      scanner.nextLine();
+                  }
+                  return number;
+              }
+
+              public static int[] askArray() {
+                  int positive = numberArray();
+                  int[] numbers = new int[positive];
+                  for (int i = 0; i < numbers.length; i++) {
+                      System.out.println("Introduzca los numeros que quiere dentro del array ");
+                      numbers[i] = scanner.nextInt();
+                      scanner.nextLine();
+                  }
+                  return numbers;
+              }
+
+              public static int[] reverseArray(int[] numbers) {
+                  int[] reverted = new int[numbers.length];
+                  for (int i = 0; i < numbers.length; i++) {
+                      int newI = numbers.length - i - 1;
+                      reverted[newI] = numbers[i];
+                  }
+                  return reverted;
+              }
+
+              public static int[] union(int[] numbers1, int[] numbers2) {
+                  int[] union = new int[numbers1.length + numbers2.length];
+                  for (int i = 0; i < numbers1.length; i++) {
+                      union[i] = numbers1[i];
+                  }
+                  for (int i = 0; i < numbers2.length; i++) {
+                      int newI = numbers1.length + i;
+                      union[newI] = numbers2[i];
+                  }
+                  return union;
+              }
+
+              public static void print(int[] numbers) {
+                  for (int number : numbers) {
+                      System.out.println(number);
+                  }
+              }
+          }
+          ```
