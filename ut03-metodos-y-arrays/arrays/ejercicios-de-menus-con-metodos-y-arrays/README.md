@@ -46,7 +46,7 @@ Métodos necesarios:
 * Un método para pedir un entero positivo
 * Un método para pedir un array de números
 * Un método que, dado un array de números, devuelve la suma
-* Un método que, dado un array de números, devuelve otro array de números con los valores multiplicados por 2
+* Un método que, dado un array de números, devuelve otro array de números con los valores multiplicados por 2. Por ejemplo, para el array \[3 , 5] devolvería \[6, 10]
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
 * Un método con el bucle del menú
