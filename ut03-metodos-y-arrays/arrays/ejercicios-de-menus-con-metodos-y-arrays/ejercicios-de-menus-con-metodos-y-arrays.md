@@ -123,7 +123,7 @@ Métodos necesarios:
                 } else if (option == 2) {
                     int[] numbers = askArray();
                     int min = minimum(numbers);
-                    System.out.println("El minimo es minimo" + min);
+                    System.out.println("El minimo es minimo " + min);
                 } else if (option == 3) {
                     int[] numbers = askArray();
                     double media = avg(numbers);
