@@ -151,4 +151,91 @@ Métodos necesarios:
 * Un método que, dado un array de números, devuelve otro array de números con los valores multiplicados por 2. Por ejemplo, para el array \[3 , 5] devolvería \[6, 10]
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
-* Un método con el bucle del menú
+*   Un método con el bucle del menú\
+
+
+    ```java
+    package menu_methods_arrays;
+
+    import java.util.Scanner;
+
+    public class Menu2 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int askPositive() {
+            int number;
+            do {
+                System.out.println("Introduce un número positivo");
+                number = scanner.nextInt();
+                scanner.nextLine();
+            } while (number <= 0);
+            return number;
+        }
+
+        public static int[] createArray() {
+            int size = askPositive();
+            int[] numbers = new int[size];
+
+            for (int i = 0; i < size; i++) {
+                System.out.println("Introduce un número");
+                int number = scanner.nextInt();
+                scanner.nextLine();
+                numbers[i] = number;
+            }
+            return numbers;
+        }
+
+        public static int sumArray(int[] numbers) {
+            int sum = 0;
+            for (int number : numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        public static int[] multArray(int[] numbers) {
+            int[] result = new int[numbers.length];
+            for (int i = 0; i < numbers.length; i++) {
+                result[i] = numbers[i] * 2;
+            }
+            return result;
+        }
+
+        public static int chooseOption() {
+            System.out.println("Elige una opcion");
+            System.out.println("1.Calcular suma");
+            System.out.println("2. Duplicar array");
+            System.out.println("3. Salir");
+
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+
+        public static void menu() {
+            int option;
+            do {
+                option = chooseOption();
+                if (option == 1) {
+                    int[] numbers = createArray();
+                    int suma = sumArray(numbers);
+                    System.out.println("La suma es " + suma);
+                } else if (option == 2) {
+                    int[] numbers = createArray();
+                    int[] multiplicacion = multArray(numbers);
+                    for (int i = 0; i < multiplicacion.length; i++) {
+                        System.out.println("Resultado[" + i + "]=" + multiplicacion[i]);
+                    }
+                } else if (option == 3) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Valor erroneo");
+                }
+            } while (option != 3);
+        }
+    } 
+    ```
