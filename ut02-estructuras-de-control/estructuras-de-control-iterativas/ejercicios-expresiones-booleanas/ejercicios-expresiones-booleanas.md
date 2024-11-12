@@ -13,6 +13,6 @@
    1. answer es "Hola" y number es mayor que cero\
       answer.equals("Hola") && number > 0
    2. number es negativo o answer es distinto de "N"\
-      `number < 0 && !answer.equals("N")`
+      `number < 0 || !answer.equals("N")`
    3. number es distinto de cero y answer es "S"\
       `number != 0 && answer.equals("S")`
