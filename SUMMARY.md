@@ -77,16 +77,18 @@
 * [Principios de la Programación Orientada a Objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/principios-de-la-programacion-orientada-a-objetos.md)
 * [Clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/README.md)
   * [Tipos de clases](ut04-introduccion-a-la-programacion-orientada-a-objetos/clases/tipos-de-clases.md)
+* [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/README.md)
+  * [Ejercicios enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones.md)
 * [Paquetes](ut04-introduccion-a-la-programacion-orientada-a-objetos/paquetes.md)
 * [Comparar objetos](ut04-introduccion-a-la-programacion-orientada-a-objetos/comparar-objetos.md)
 * [Modificadores de acceso](ut04-introduccion-a-la-programacion-orientada-a-objetos/modificadores-de-acceso.md)
-* [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null.md)
+* [Ejercicios POO](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo.md)
+* [Métodos de objeto](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null.md)
+* [El (no) valor null](ut04-introduccion-a-la-programacion-orientada-a-objetos/el-no-valor-null-1.md)
 * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
-* [Enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/README.md)
-  * [Ejercicios enumeraciones](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones/ejercicios-enumeraciones.md)
 * [Fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/README.md)
   * [Ejercicios fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/ejercicios-enumeraciones.md)
-* [Ejercicios POO](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo.md)
+* [Ejercicios POO con métodos](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-1.md)
 
 ## UT05 - Herencia, interfaces, genéricos y polimorfismo
 
