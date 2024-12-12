@@ -1,6 +1,22 @@
-# Ejercicios POO con métodos
+# Ejercicios componentes
 
-1. Biblioteca: [https://github.com/2024-1DAW/library-oop](https://github.com/2024-1DAW/library-oop)
-2. Banco: [https://github.com/2024-1DAW/bank-oop](https://github.com/2024-1DAW/bank-oop)
-3. Edificio: [https://github.com/2024-1DAW/building-oop](https://github.com/2024-1DAW/building-oop)
-4. Aerolínea: [https://github.com/2024-1DAW/airline-oop](https://github.com/2024-1DAW/airline-oop)
+
+
+1. ## Instituto OOP
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea un instituto y lo muestre en pantalla
+2. ## Taller OOP
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea un taller y lo muestre en pantalla
+3. ## Biblioteca
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea una biblioteca y la muestre en pantalla
+4. ## Banco
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea un banco y lo muestre en pantalla
+5. ## Edificio
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea un edificio y lo muestre en pantalla
+6. ## Areolínea
+   * Crea los reader de los POJO
+   * Crea un Main que instancie los reader, lea una areolínea y la muestre en pantalla
