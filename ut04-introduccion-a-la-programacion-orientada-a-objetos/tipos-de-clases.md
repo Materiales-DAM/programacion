@@ -55,7 +55,7 @@ public class VehicleReader {
         this.scanner = scanner;
     }
 
-    public Vehicle askVehicle() {
+    public Vehicle read() {
         System.out.println("Introduce los datos del vehículo");
 
         System.out.println("Tipo de vehículo:");
@@ -82,4 +82,4 @@ public class VehicleReader {
 Este componente VehicleReader tiene:
 
 * Una dependencia de tipo Scanner: necesita ese componente para realizar su trabajo
-* Un métood askVehicle que implementa la rutina de pedir al usuario un vehículo.
+* Un método read que implementa la rutina de pedir al usuario un vehículo.
