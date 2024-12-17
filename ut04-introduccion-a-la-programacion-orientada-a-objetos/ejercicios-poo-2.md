@@ -119,7 +119,7 @@ Tendrá un método run() que realice lo siguiente:
   * showFlightsFromOrigin(String origin)
   * findFlight(int flightNumber): busca el vuelo y lo devuelve, si no existe devuelve null
   * showPassengerFlights(String nif): muestra todos los vuelos donde haya un pasajero con el nif del parámetro
-  * showPassengerSeat(int flightNumber, String nif): Devuelve el asiento del pasajero en el vuelo, si no existe el vuelo o el pasajero, devuelve null
+  * getPassengerSeat(int flightNumber, String nif): Devuelve el asiento del pasajero en el vuelo, si no existe el vuelo o el pasajero, devuelve null
   * updateSeatNumber(int flightNumber, String nif, int seatNumber): busca el pasajero en el vuelo, si existe le cambia el asiento. Si no existe el vuelo o el pasajero muestra mensajes de error.
 
 #### AirlineApp1
