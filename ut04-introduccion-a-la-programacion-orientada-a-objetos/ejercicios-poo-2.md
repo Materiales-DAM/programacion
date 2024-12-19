@@ -100,8 +100,8 @@ Tendrá un método run() que realice lo siguiente:
 Tendrá un método run() que realice lo siguiente:
 
 * Lee un edificio&#x20;
-* Pide al usuario un piso y una planta
-* Busca el apartamento de en el piso y planta que ha pasado el usuario
+* Pide al usuario una planta y una puerta
+* Busca el apartamento de en el planta y puerta que ha pasado el usuario
   * Si existe, muestra su información
   * Si no existe muestra el mensaje "No se ha encontrado el apartamento"
 * Después, muestra la información de los apartamentos de la segunda planta
