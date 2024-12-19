@@ -131,7 +131,7 @@ Tendrá un método run() que realice los siguiente:
 * Busca el vuelo con ese número de vuelo
   * Si no existe muestra por pantalla un error
   * Si existe:
-    * Pide al usuario un pasajero.
+    * Pide al usuario el nif de un pasajero.
     * Busca a ese pasajero dentro del vuelo:
       * Si existe:
         * Muestra los datos del pasajero
