@@ -1,9 +1,5 @@
 # Ejercicios con menú interactivo
 
-## Biblioteca
-
-
-
 ## Banco
 
 #### BankMenuApp
