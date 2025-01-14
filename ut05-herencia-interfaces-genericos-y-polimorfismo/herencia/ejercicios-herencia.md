@@ -70,7 +70,7 @@ Añade los siguientes métodos de vehículo
 
 ## 3. Formas
 
-Crear una jerarquía de clases  para representar formas geométricas. Todas las formas tienen:
+Crear una jerarquía de clases para representar formas geométricas. Todas las formas tienen:
 
 * color: de tipo string
 
@@ -79,7 +79,7 @@ Los tipos de formas son:
 * Cuadrado
   * Lado: de tipo double
 * Círculo
-  * Radio: de tipo double&#x20;
+  * Radio: de tipo double
 * Triángulo (rectángulo)
   * Base: de tipo double
   * Altura: de tipo double
@@ -88,9 +88,9 @@ Añade los siguientes métodos a la clase Forma.
 
 * area: calcula el área de la forma( devuelve un double=
   * Cuadrado: area = lado \* lado
-  * Circulo: area = PI  \* radio \* radio
+  * Circulo: area = PI \* radio \* radio
   * Triángulo: area = base \* altura / 2
-* info:  muestra toda la información de la figura geométrica
+* info: muestra toda la información de la figura geométrica
 
 ## 4. Empleados
 
@@ -157,5 +157,5 @@ Métodos
 * Todos los médicos deben tener un método que permita mostrar su información:
   * Cirujano: “\<Nombre> \<Apellidos> (\<nº colegiado>), cirujano en el box \<Box> del hospital \<Hospital>”
   * De familia: “\<Nombre> \<Apellidos> (\<nº colegiado>), médico de familia en el centro de salud de \<Centro de salud>”
-  * Podólogo: “\<Nombre> \<Apellidos> (\<nº colegiado>), podólogo en el centro de salud de \<Centro de salud>”
+  * Podólogo: “\<Nombre> \<Apellidos> (\<nº colegiado>), podólogo en el hospital \<Hospital>”
 * Un método que devuelva si el médico trabaja en un hospital o no (boolean)
