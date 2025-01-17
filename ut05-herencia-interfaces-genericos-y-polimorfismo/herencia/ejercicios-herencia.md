@@ -86,9 +86,9 @@ Los tipos de formas son:
 
 Añade los siguientes métodos a la clase Forma.
 
-* area: calcula el área de la forma( devuelve un double=
+* area: calcula el área de la forma (devuelve un double)
   * Cuadrado: area = lado \* lado
-  * Circulo: area = PI \* radio \* radio
+  * Circulo: area = PI \* radio \* radio. El n'umero PI está almacenado en `Math.PI`
   * Triángulo: area = base \* altura / 2
 * info: muestra toda la información de la figura geométrica
 
