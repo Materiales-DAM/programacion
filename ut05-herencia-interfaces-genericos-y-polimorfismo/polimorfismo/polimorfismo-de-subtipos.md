@@ -19,7 +19,7 @@ layout:
 
 # Polimorfismo de subtipos
 
-El polimorfismo de subtipos en Java se refiere a la capacidad de un objeto de ser visto con la forma de cualquiera de sus . Esto se logra mediante la herencia y permite tratar objetos de las subclases como si fueran objetos de la clase base.
+El polimorfismo de subtipos en Java se refiere a la capacidad de un objeto de ser visto con la forma de cualquiera de sus tipos, directos o indirectos . Esto se logra mediante la herencia y permite tratar objetos de las subclases como si fueran objetos de la clase base.
 
 Veamos cómo funciona el polimorfismo con el ejemplo de los animales
 
@@ -56,12 +56,12 @@ Permite asignar automáticamente una instancia de una subclase a una referencia 
 </strong>Animal tobi = new Dog("Tobi", "Bob Esponja");
 </code></pre>
 
-La variable tobi es de tipo Animal, por lo que puedo sólo se pueden usar los métodos definidos en dicha clase, pero no los métodos específicos de Dog (a pesar de que el objeto es de ese tipo).&#x20;
+La variable tobi es de tipo Animal, por lo que puedo sólo se pueden usar los métodos definidos en dicha clase, pero no los métodos específicos de Dog (a pesar de que el objeto es de ese tipo).
 
 <pre class="language-java"><code class="lang-java"><strong>tobi.talk();
 </strong><strong>System.out.println(tobi.getName());
-</strong><strong>
-</strong><strong>// Este código no compila porque la variable tobi es de tipo Animal
+</strong>
+<strong>// Este código no compila porque la variable tobi es de tipo Animal
 </strong><strong>System.out.println(tobi.getOwner());
 </strong></code></pre>
 
@@ -73,11 +73,11 @@ Como sabemos que tobi es un perro, podemos crear una nueva variable de tipo Dog 
 
 <pre class="language-java"><code class="lang-java"><strong>// Esto es un casting explícito que va de Animal a Dog
 </strong><strong>Dog tobiDog = (Dog) tobi;
-</strong><strong>
-</strong><strong>tobiDog.talk();
+</strong>
+<strong>tobiDog.talk();
 </strong><strong>System.out.println(tobiDog.getName());
-</strong><strong>
-</strong><strong>// Este código compila porque la variable tobiDog es de tipo Dog
+</strong>
+<strong>// Este código compila porque la variable tobiDog es de tipo Dog
 </strong><strong>System.out.println(tobiDog.getOwner());
 </strong></code></pre>
 
@@ -93,8 +93,8 @@ Veamos un ejemplo en el que creamos un array de animales y luego tratamos de con
 </strong><strong>    new Dog("Beethoven", "Peppa Pig"),
 </strong><strong>    new Lion("Simba", "Serengeti"),
 </strong><strong>};
-</strong><strong>
-</strong><strong>for(Animal animal: animals) {
+</strong>
+<strong>for(Animal animal: animals) {
 </strong><strong>    // Este casting funciona en las dos primeras iteraciones, pero provoca una excepción en la tercera
 </strong><strong>    Dog dog = (Dog) animal;
 </strong><strong>    System.out.println(dog.getOwner());
