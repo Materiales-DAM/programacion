@@ -141,7 +141,7 @@ Crea una jerarquía de clases que permita representar a los diferentes tipos de 
   * Nombre
   * Apellidos
   * Número de colegiado
-  * Listado de pacientes (lista de string)
+  * Listado de pacientes (array de string)
 * Además, existen las siguientes especialidades:
   * Cirujano (Surgeon)
     * Hospital
