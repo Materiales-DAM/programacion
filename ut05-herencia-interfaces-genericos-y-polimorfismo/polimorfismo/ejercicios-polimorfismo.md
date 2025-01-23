@@ -29,14 +29,11 @@ layout:
 3. Formas
    * Añade un nuevo POJO para representar un dibujo (Draw). Cada dibujo tendrá
      * Unas coordenadas (x, y)
-     * Una forma
+     * Una forma (Shape)
    * Crea readers para todos los POJO
      * CircleReader
      * TriangleReader
      * SquareReader
-     * FigureReader
+     * ShapeReader
      * DrawReader
    * En el main, pide un dibujo y muestra sus datos en pantalla
-
-
-
