@@ -24,13 +24,13 @@ layout:
 Implementa un programa que permita gestionar un Zoo. El Zoo está compuesto por:
 
 * Nombre del zoo
-* Cercado de herbívoros
-* Cercado de carnívoros
-* Cercado de animales de todo tipo
+* Área de herbívoros
+* Área de carnívoros
+* Área de animales de todo tipo
 
-Todo cercado es génerico en el tipo de animal que puede contener. Cada cercado tiene
+Todo área es génerica en el tipo de animal que puede contener. Cada área tiene
 
-* Número de cercado
+* Número de área
 * Array de animales
 
 Los animales pueden ser carnívoros o herbívoros. Todos los animales tienen:
@@ -51,7 +51,7 @@ Los herbívoros tienen:
 
 Implementa un programa que permita gestionar unos grandes almacenes. Unos grandes almacenes están compuestos por:
 
-1. Nombre&#x20;
+1. Nombre
 2. Dirección
 3. Sección de electrónica
 4. Sección de ropa
