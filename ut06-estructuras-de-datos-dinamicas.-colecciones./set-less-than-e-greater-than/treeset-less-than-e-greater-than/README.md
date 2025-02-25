@@ -204,7 +204,7 @@ Esta interface obliga a implementar el método **int compare(T o1, T o2):**
 El uso de esta interface permite especificar múltiples criterios de ordenación para elementos de tipo T, al estar desacoplado la definición de T de sus criterios de ordenación
 
 ```java
-public class StudentComparator implements Comparator<Student> {
+public class NameSurnameStudentComparator implements Comparator<Student> {
 
     @Override
     public int compare(Student o1, Student o2) {
@@ -230,10 +230,9 @@ public class StudentComparator implements Comparator<Student> {
 Cuando quiera crear un TreeSet\<Student> deberé pasar al constructor el Comparator\<Student> que quiero aplicar ese TreeSet
 
 ```java
-TreeSet<Student> students = new TreeSet<>(new StudentComparator());
-students.add(
-    new Student("Bob", "Esponja", "bob@esponja.es", 28000),
-    new Student("Peppa", "Pig", "peppa@pig.es", 28001),
-    new Student("GEorge", "Pig", "george@pig.es", 28001),
-);
+TreeSet<Student> students = new TreeSet<>(new NameSurnameStudentComparator());
+students.add(new Student("Bob", "Esponja", "bob@esponja.es", 28000));
+students.add(new Student("Peppa", "Pig", "peppa@pig.es", 28001));
+students.add(new Student("George", "Pig", "george@pig.es", 28001));
+System.out.println(students);
 ```
