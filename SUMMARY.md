@@ -111,6 +111,7 @@
   * [Ejercicios interfaces](ut05-herencia-interfaces-genericos-y-polimorfismo/interfaces/ejercicios-interfaces.md)
 * [Genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/README.md)
   * [Bounded types](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/bounded-types.md)
+  * [Métodos genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/bounded-types-1.md)
   * [Ejercicios genéricos](ut05-herencia-interfaces-genericos-y-polimorfismo/genericos/ejercicios-genericos.md)
 
 ## UT06 - Estructuras de datos dinámicas. Colecciones.
@@ -127,7 +128,8 @@
   * [Ejercicios Set\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than/ejercicios-set-less-than-e-greater-than.md)
 * [Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than/README.md)
   * [Ejercicios Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than/ejercicios-map-less-than-k-v-greater-than.md)
-* [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
+* [Smart constructors](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
+* [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones-1.md)
 * [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
   * [Optional\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than/stream-less-than-e-greater-than.md)
   * [Ejercicios Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than/stream-less-than-e-greater-than-1.md)
