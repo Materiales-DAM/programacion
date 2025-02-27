@@ -17,108 +17,76 @@ layout:
     visible: true
 ---
 
-# Optional\<E>
+# Lambdas (λ)
 
-`Optional` es una clase que nos permite representar si un determinado valor puede ser nulo o no, sin tener que usar el valor `null`. Es un concepto de programación funcional que evita la excepción más común en programación estructurada, `NullPointerException`.
+Las expresiones lambda son una herramienta que proporciona una forma más concisa y funcional de expresar funciones anónimas.
 
-Una variable de tipo Optional\<E> puede:
+## Sintaxis
 
-* **Contener un valor de tipo E**
-* **Estar vacía**: no contiene ningún valor de tipo E, por tanto está vacía.
+La sintaxis básica de una expresión lambda es la siguiente
 
-A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
+<pre class="language-java"><code class="lang-java"><strong>(parametros) -> expresion
+</strong></code></pre>
+
+* `(parámetros)`: Lista de parámetros que toma la lambda. Puede ser vacía si no hay parámetros, un parámetro sin paréntesis si hay exactamente uno, o múltiples parámetros separados por comas dentro de paréntesis si hay más de uno.
+* `->`: Operador de flecha que separa los parámetros de la expresión.
+* `expresion`: Código que se ejecutará cuando la lambda sea invocada.
+
+#### Ejemplos
+
+1.  Lambda sin parámetros
+
+    ```java
+    () -> System.out.println("Hola, mundo")
+    ```
+2.  Lambda con un parámetro:
+
+    ```java
+    (nombre) -> System.out.println("Hola, " + nombre)
+    ```
+3.  Lambda con múltiples parámetros:
+
+    ```java
+    (x, y) -> x + y
+    ```
+
+#### Notación del tipo de lambda
+
+Para expresar el tipo de lambda que necesitamos en cada lugar vamos a usar la siguiente notación:
+
+* Primero ponemos entre paréntesis y separados por comas los tipos de los parámetros de la lambda
+* Después de los paréntesis ponemos el símbolo ->
+* Por último, ponemos el tipo de retorno
+
+Ejemplos:
+
+* () -> String: no tiene parámetros y devuelve un String
+* (Integer) -> String: tiene un parámetro de tipo Integer y devuelve un String
+* (String) -> Void: tiene un parámetro de tipo String y no devuelve nada ( es void)
+* (Integer, String) -> Integer: tiene dos parámetros: el primero es de tipo Integer y el segundo de tipo String. Además, devuelve un Integer.
+
+### Uso de Lambdas con Streams
+
+Las expresiones lambda se utilizan comúnmente con streams para realizar operaciones sobre colecciones de manera más concisa. Por ejemplo, para imprimir todos los elementos de una lista:
 
 ```java
-// Este Optional nal contiene el valor "Hello"
-Optional<String> optionalWithValue = Optional.of("Hello");
-// Este Optional está vacío
-Optional<String> optionalWithNullable = Optional.ofNullable(null);
-// Este Optional está vacío
-Optional<String> emptyOptional = Optional.empty();
+List<String> nombres = Arrays.asList("Juan", "María", "Carlos");
+
+// Esta lambda es de tipo (String) -> Void
+nombres.forEach(nombre -> System.out.println(nombre));
 ```
 
-## Optional en Streams
+### Lambdas de más de una línea
 
-Existen numerosos métodos terminales que devuelven un Optional:
-
-* reduce
-* findFirst
-* max
-* min
-
-## Métodos
-
-### **isPresent() | isEmpty()**
-
-Devuelve true si el `Optional` contiene un valor o no.
-
-### **ifPresent(v -> Void)**
-
-&#x20;Sirve para ejecutar una lambda&#x20;
+Si el cuerpo de una función lambda tiene más de una línea se deben abrir llaves
 
 ```java
-Optional<String> optionalMessage = Optional.of("Hola");
-
-// Muestra el mensaje porque optionalMessage no es empty
-optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
-
-Optional<String> optionalEmptyMessage = Optional.empty();
-// No hace nada porque optionalEmptyMessage es empty
-optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
-```
-
-### orElse(E default)
-
-Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
-
-```java
-// message1 es Hola, porque optionalMessage no está vacío
-var message1 = optionalMessage.orElse("Hello");
-System.out.println(message1);
-        
-// message2 es Hello, porque optionalEmptyMessage está vacío
-var message2 = optionalEmptyMessage.orElse("Hello");
-System.out.println(message2);
-```
-
-### **get()**
-
-Devuelve el valor si está presente, o lanza una excepción si no lo está.
-
-```java
-// message1 es Hola, porque optionalMessage no está vacío
-var getMessage1 = optionalMessage.get();
-
-// Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
-var getMessage2 = optionalEmptyMessage.get();
-```
-
-### map(A -> B)
-
-&#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
-
-```java
-// Devuelve un Optional<Integer> que contiene el valor 4
-Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
-System.out.println(lengthOpt1);
-
-// Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
-Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
-System.out.println(lengthOpt2);
-```
-
-### flatMap(A -> Optional\<B>)
-
-Este método es de utilidad cuando la transformación que se va a aplicar al contenido del Optional produce otro Optional.
-
-Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
-
-```java
-// En este flatMap A es Customer y B es Order
-Optional<Order> orderOpt = customerOpt.flatMap(customer ->
-                        customer.getOrders()
-                                .stream()
-                                .filter(order -> order.getId() == orderId)
-                                .findFirst()
-                );
+var nombresMayusculas = nombres
+       // Lambda de tipo (String) -> String
+       .map(
+              nombre -> {
+                     String upper = nombre.toUpperCase();
+                     return upper;
+              }
+       );
 ```

@@ -17,22 +17,108 @@ layout:
     visible: true
 ---
 
-# Ejercicios Stream\<E>
+# Optional\<E>
 
-Resuelve estos ejercicios usando Stream
+`Optional` es una clase que nos permite representar si un determinado valor puede ser nulo o no, sin tener que usar el valor `null`. Es un concepto de programación funcional que evita la excepción más común en programación estructurada, `NullPointerException`.
 
-1. Escribe un programa que cree un ArrayList y lo rellene con varios String. Luego conviértelo en un Stream y recórrelo mostrando en pantalla cada elemento.
-2. Escribe un método first(List\<String> list) que dada una lista de String y devuelva el que está en la primera posición. Si la lista está vacía devuelve null.
-3. Escribe un método last(List\<Integer> list) que dada una lista de Integer y devuelva el que está en la última posición. Si la lista está vacía devuelve null. Prueba el método con una lista vacía y con otra con tres valores dentro.
-4. Un método sum10(List\<Integer> numbers) que dado una lista de enteros, devuelve otra lista de enteros del mismo tamaño en la que se le ha sumado 10 a cada número de la primera lista.
-5. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
-6. Un método List\<Student> filterByZipCode(List\<Student> students, int zipCode) que dada una lista de estudiantes y un código postal, devuelva una lista con los estudiantes que vivan en ese código postal
-7. Un método que recibe una lista de números enteros (numbers) y devuelve otra lista con los números pares que había en numbers
-8. Un método sum(List\<Double> numbers ) que calcula la suma de los números en la lista, si la lista está vacía devuelve 0.
-9. Un método average(List\<Double> numbers ) que calcula la media de los números en la lista. Si la lista está vacía devuelve null.
-10. Un método max(List\<Double> numbers ) que busca el máximo de los números en la lista. Si la lista está vacía devuelve null.
-11. Un método min(List\<Double> numbers ) que busca el mínimo de los números en la lista. Si la lista está vacía devuelve null.
-12. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, devuelve los números que están tanto numbers1 como en numbers2
-13. Un método que dado una lista de pedidos, devuelve una lista con los precios de cada pedido
-14. Un método que dado una lista de pedidos, devuelve el precio total de todos los pedidos
-15. Un método que dado una lista de pedidos, devuelva una lista con todos los OrderItem
+Una variable de tipo Optional\<E> puede:
+
+* **Contener un valor de tipo E**
+* **Estar vacía**: no contiene ningún valor de tipo E, por tanto está vacía.
+
+A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
+
+```java
+// Este Optional nal contiene el valor "Hello"
+Optional<String> optionalWithValue = Optional.of("Hello");
+// Este Optional está vacío
+Optional<String> optionalWithNullable = Optional.ofNullable(null);
+// Este Optional está vacío
+Optional<String> emptyOptional = Optional.empty();
+```
+
+## Optional en Streams
+
+Existen numerosos métodos terminales que devuelven un Optional:
+
+* reduce
+* findFirst
+* max
+* min
+
+## Métodos
+
+### **isPresent() | isEmpty()**
+
+Devuelve true si el `Optional` contiene un valor o no.
+
+### **ifPresent(v -> Void)**
+
+&#x20;Sirve para ejecutar una lambda&#x20;
+
+```java
+Optional<String> optionalMessage = Optional.of("Hola");
+
+// Muestra el mensaje porque optionalMessage no es empty
+optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
+
+Optional<String> optionalEmptyMessage = Optional.empty();
+// No hace nada porque optionalEmptyMessage es empty
+optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
+```
+
+### orElse(E default)
+
+Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
+
+```java
+// message1 es Hola, porque optionalMessage no está vacío
+var message1 = optionalMessage.orElse("Hello");
+System.out.println(message1);
+        
+// message2 es Hello, porque optionalEmptyMessage está vacío
+var message2 = optionalEmptyMessage.orElse("Hello");
+System.out.println(message2);
+```
+
+### **get()**
+
+Devuelve el valor si está presente, o lanza una excepción si no lo está.
+
+```java
+// message1 es Hola, porque optionalMessage no está vacío
+var getMessage1 = optionalMessage.get();
+
+// Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
+var getMessage2 = optionalEmptyMessage.get();
+```
+
+### map(A -> B)
+
+&#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
+
+```java
+// Devuelve un Optional<Integer> que contiene el valor 4
+Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
+System.out.println(lengthOpt1);
+
+// Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
+Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
+System.out.println(lengthOpt2);
+```
+
+### flatMap(A -> Optional\<B>)
+
+Este método es de utilidad cuando la transformación que se va a aplicar al contenido del Optional produce otro Optional.
+
+Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
+
+```java
+// En este flatMap A es Customer y B es Order
+Optional<Order> orderOpt = customerOpt.flatMap(customer ->
+                        customer.getOrders()
+                                .stream()
+                                .filter(order -> order.getId() == orderId)
+                                .findFirst()
+                );
+```
