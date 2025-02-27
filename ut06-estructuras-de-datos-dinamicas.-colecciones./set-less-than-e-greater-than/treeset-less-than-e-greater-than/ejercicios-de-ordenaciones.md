@@ -78,6 +78,28 @@ public class Flight {
     public void setDestination(String destination) {
         this.destination = destination;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Flight flight = (Flight) o;
+        return number == flight.number && Objects.equals(company, flight.company) && Objects.equals(origin, flight.origin) && Objects.equals(destination, flight.destination);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number, company, origin, destination);
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "number=" + number +
+                ", company='" + company + '\'' +
+                ", origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                '}';
+    }
 }
 
 ```
@@ -140,4 +162,4 @@ public class Passenger {
 ```
 
 * Ordena los pasajeros por nombre y apellidos. Comparator y Comparable
-* Ordena los pasajeros por número de asiento.  Comparator y Comparable.
+* Ordena los pasajeros por número de asiento. Comparator y Comparable.
