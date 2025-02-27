@@ -19,7 +19,7 @@ layout:
 
 # Lambdas (λ)
 
-Las expresiones lambda son una herramienta que proporciona una forma más concisa y funcional de expresar funciones anónimas.
+Las **expresiones lambda** en Java permiten escribir código más conciso y funcional al trabajar con funciones anónimas. Son útiles para implementar interfaces funcionales de manera más sencilla y clara.
 
 ## Sintaxis
 
@@ -28,11 +28,19 @@ La sintaxis básica de una expresión lambda es la siguiente
 <pre class="language-java"><code class="lang-java"><strong>(parametros) -> expresion
 </strong></code></pre>
 
+O, si tiene múltiples líneas:
+
+```java
+(parametros) -> {
+    // Cuerpo de la función
+}
+```
+
 * `(parámetros)`: Lista de parámetros que toma la lambda. Puede ser vacía si no hay parámetros, un parámetro sin paréntesis si hay exactamente uno, o múltiples parámetros separados por comas dentro de paréntesis si hay más de uno.
 * `->`: Operador de flecha que separa los parámetros de la expresión.
 * `expresion`: Código que se ejecutará cuando la lambda sea invocada.
 
-#### Ejemplos
+Veamos algunos ejemplos básicos
 
 1.  Lambda sin parámetros
 
@@ -50,7 +58,7 @@ La sintaxis básica de una expresión lambda es la siguiente
     (x, y) -> x + y
     ```
 
-#### Notación del tipo de lambda
+## Notación del tipo de lambda
 
 Para expresar el tipo de lambda que necesitamos en cada lugar vamos a usar la siguiente notación:
 
@@ -65,7 +73,7 @@ Ejemplos:
 * (String) -> Void: tiene un parámetro de tipo String y no devuelve nada ( es void)
 * (Integer, String) -> Integer: tiene dos parámetros: el primero es de tipo Integer y el segundo de tipo String. Además, devuelve un Integer.
 
-### Uso de Lambdas con Streams
+## Uso de Lambdas con Streams
 
 Las expresiones lambda se utilizan comúnmente con streams para realizar operaciones sobre colecciones de manera más concisa. Por ejemplo, para imprimir todos los elementos de una lista:
 
@@ -76,17 +84,8 @@ List<String> nombres = Arrays.asList("Juan", "María", "Carlos");
 nombres.forEach(nombre -> System.out.println(nombre));
 ```
 
-### Lambdas de más de una línea
+## **Beneficios de las Lambdas**
 
-Si el cuerpo de una función lambda tiene más de una línea se deben abrir llaves
-
-```java
-var nombresMayusculas = nombres
-       // Lambda de tipo (String) -> String
-       .map(
-              nombre -> {
-                     String upper = nombre.toUpperCase();
-                     return upper;
-              }
-       );
-```
+* Código más compacto y legible.
+* Facilitan la programación funcional en Java.
+* Se utilizan junto con Streams y APIs funcionales.

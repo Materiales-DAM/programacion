@@ -93,7 +93,7 @@ Set<String> tags = products
 System.out.println(tags);
 ```
 
-## **sorted**
+## **sorted()**
 
 Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
 
@@ -128,7 +128,7 @@ stream
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
-## **limit**
+## **limit(int)**
 
 Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
@@ -142,7 +142,7 @@ stream
     .forEach(nombre -> System.out.println(nombre));
 ```
 
-## **skip**
+## **skip(int)**
 
 Este método hace que el `Stream` resultante se salte un número determinado de elementos
 
