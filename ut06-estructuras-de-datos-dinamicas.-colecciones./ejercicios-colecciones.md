@@ -32,7 +32,7 @@ var numbers = List.of(2, 4, 1, 2);
 
 ```java
 // Crea un set inmutable con los números 2, 4, 1, 2
-var numbers = Sett.of(2, 4, 1, 2);
+var numbers = Set.of(2, 4, 1, 2);
 ```
 
 ## Mapas
