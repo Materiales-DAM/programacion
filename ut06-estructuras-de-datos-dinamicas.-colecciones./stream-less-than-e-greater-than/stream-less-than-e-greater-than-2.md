@@ -17,108 +17,141 @@ layout:
     visible: true
 ---
 
-# Optional\<E>
+# Operaciones intermedias
 
-`Optional` es una clase que nos permite representar si un determinado valor puede ser nulo o no, sin tener que usar el valor `null`. Es un concepto de programación funcional que evita la excepción más común en programación estructurada, `NullPointerException`.
+Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, lo que permite encadenar múltiples operaciones.
 
-Una variable de tipo Optional\<E> puede:
+## **filter(A-> Boolean)**
 
-* **Contener un valor de tipo E**
-* **Estar vacía**: no contiene ningún valor de tipo E, por tanto está vacía.
-
-A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
+Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
 ```java
-// Este Optional nal contiene el valor "Hello"
-Optional<String> optionalWithValue = Optional.of("Hello");
-// Este Optional está vacío
-Optional<String> optionalWithNullable = Optional.ofNullable(null);
-// Este Optional está vacío
-Optional<String> emptyOptional = Optional.empty();
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+
+stream
+    // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
+    .filter(nombre -> nombre.startsWith("J"))
+    // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
-## Optional en Streams
+## map(A->B)
 
-Existen numerosos métodos terminales que devuelven un Optional:
+Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
 
-* reduce
-* findFirst
-* max
-* min
+Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.
 
-## Métodos
+<pre class="language-java"><code class="lang-java">// En este caso tenemos un  Stream para el que la A es String
+Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+<strong>// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
+</strong><strong>List&#x3C;Integer> nameLengths = stream
+</strong>    // Transformamos cada nombre en el número de caracteres que lo componen
+    // La lambda que se aplica es String -> Integer
+    // Este map devuelve un Stream&#x3C;Integer>
+    .map(nombre -> nombre.length())
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .collect(Collectors.toList());
+</code></pre>
 
-### **isPresent() | isEmpty()**
+## flatMap(A -> Stream\<B>)
 
-Devuelve true si el `Optional` contiene un valor o no.
+Este método es de utilidad cuando la transformación que se va a aplicar a cada elemento del Stream produce una colección de valores.
 
-### **ifPresent(v -> Void)**
-
-&#x20;Sirve para ejecutar una lambda&#x20;
+Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 
 ```java
-Optional<String> optionalMessage = Optional.of("Hola");
+List<Product> products = Arrays.asList(
+    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
+    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
+    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
+);
 
-// Muestra el mensaje porque optionalMessage no es empty
-optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
-
-Optional<String> optionalEmptyMessage = Optional.empty();
-// No hace nada porque optionalEmptyMessage es empty
-optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
+Set<Set<String>> tags = products
+    .stream()
+    .map(p -> p.getTags())
+    .collect(Collectors.toSet());
+    
+System.out.println(tags);
 ```
 
-### orElse(E default)
+Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de Sets de tags, habrá un Set independiente por cada producto en el Stream original. Sin embargo, lo que queremos obtener es un Set\<String> con los tags de todos los productos.
 
-Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
+Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
 
 ```java
-// message1 es Hola, porque optionalMessage no está vacío
-var message1 = optionalMessage.orElse("Hello");
-System.out.println(message1);
-        
-// message2 es Hello, porque optionalEmptyMessage está vacío
-var message2 = optionalEmptyMessage.orElse("Hello");
-System.out.println(message2);
+List<Product> products = Arrays.asList(
+    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
+    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
+    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
+);
+
+Set<String> tags = products
+    .stream()
+    .flatMap(p -> p.getTags().stream())
+    .collect(Collectors.toSet());
+    
+System.out.println(tags);
 ```
 
-### **get()**
+## **sorted()**
 
-Devuelve el valor si está presente, o lanza una excepción si no lo está.
+Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
 
 ```java
-// message1 es Hola, porque optionalMessage no está vacío
-var getMessage1 = optionalMessage.get();
-
-// Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
-var getMessage2 = optionalEmptyMessage.get();
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    .sorted();
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
-### map(A -> B)
+También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
 
-&#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+</strong>// Ordenará los String en orden alfabético
+stream
+    // Pasamos un comparador que ordena de alguna otra forma
+    .sorted(new ReverseStringComparator());
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
+</code></pre>
+
+También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
+
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+</strong>// Ordenará los String en orden alfabético
+stream
+    // Expresamos el comparador con una Lambda (String, String) -> Integer
+    .sorted((name1, name2) -> -name1.compareTo(name2));
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
+</code></pre>
+
+## **limit(int)**
+
+Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
 ```java
-// Devuelve un Optional<Integer> que contiene el valor 4
-Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
-System.out.println(lengthOpt1);
-
-// Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
-Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
-System.out.println(lengthOpt2);
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    // Nos quedamos con los dos primeros elementos
+    .limit(2)
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
 ```
 
-### flatMap(A -> Optional\<B>)
+## **skip(int)**
 
-Este método es de utilidad cuando la transformación que se va a aplicar al contenido del Optional produce otro Optional.
-
-Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
+Este método hace que el `Stream` resultante se salte un número determinado de elementos
 
 ```java
-// En este flatMap A es Customer y B es Order
-Optional<Order> orderOpt = customerOpt.flatMap(customer ->
-                        customer.getOrders()
-                                .stream()
-                                .filter(order -> order.getId() == orderId)
-                                .findFirst()
-                );
+Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+// Ordenará los String en orden alfabético
+stream
+    // Nos saltamos los dos primeros elementos
+    .skip(2)
+    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+    .forEach(nombre -> System.out.println(nombre));
 ```
