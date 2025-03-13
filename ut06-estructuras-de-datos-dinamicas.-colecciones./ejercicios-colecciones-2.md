@@ -33,8 +33,9 @@ Implementar los métodos en Biblioteca :
 * Dado un nif y un ISBN, crea un préstamo para un socio. Crea un BookLend con la fecha actual.
   * Add
 * Dado un ISBN y un género, elimina el género del libro
-  * Foreach
-  * Remove
+  * containsKey
+  * get
+  * remove
 * Dado un ISBN y un número de socio (no NIF), devuelve si el socio ha tomado prestado el libro o no (boolean).
   * Foreach
 * Dado un ISBN, devuelve los géneros del libro. Si no existe el libro, devuelve null.
