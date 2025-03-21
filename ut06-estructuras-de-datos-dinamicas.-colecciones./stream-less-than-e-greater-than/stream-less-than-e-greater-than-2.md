@@ -26,7 +26,7 @@ Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, 
 Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
 ```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
 
 stream
     // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
@@ -42,7 +42,7 @@ Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una fu
 Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.
 
 <pre class="language-java"><code class="lang-java">// En este caso tenemos un  Stream para el que la A es String
-Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
 <strong>// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
 </strong><strong>List&#x3C;Integer> nameLengths = stream
 </strong>    // Transformamos cada nombre en el número de caracteres que lo componen
@@ -61,9 +61,9 @@ Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 
 ```java
 List<Product> products = Arrays.asList(
-    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
-    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
-    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
+    new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
+    new Product(2, "tuerca", Set.of("Ferretería", "Tuerca")),
+    new Product(3, "lápiz", Set.of("Papelería"))
 );
 
 Set<Set<String>> tags = products
@@ -79,7 +79,7 @@ Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de
 Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
 
 ```java
-List<Product> products = Arrays.asList(
+List<Product> products = List.of(
     new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
     new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
     new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
@@ -98,7 +98,7 @@ System.out.println(tags);
 Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
 
 ```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
 // Ordenará los String en orden alfabético
 stream
     .sorted();
@@ -108,7 +108,7 @@ stream
 
 También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
 
-<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
 </strong>// Ordenará los String en orden alfabético
 stream
     // Pasamos un comparador que ordena de alguna otra forma
@@ -119,7 +119,7 @@ stream
 
 También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
 
-<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
 </strong>// Ordenará los String en orden alfabético
 stream
     // Expresamos el comparador con una Lambda (String, String) -> Integer
@@ -133,7 +133,7 @@ stream
 Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
 ```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
 // Ordenará los String en orden alfabético
 stream
     // Nos quedamos con los dos primeros elementos
@@ -147,7 +147,7 @@ stream
 Este método hace que el `Stream` resultante se salte un número determinado de elementos
 
 ```java
-Stream<String> stream = Arrays.asList("Juan", "María", "Carlos").stream();
+Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
 // Ordenará los String en orden alfabético
 stream
     // Nos saltamos los dos primeros elementos
