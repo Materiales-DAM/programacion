@@ -60,7 +60,7 @@ Este método es de utilidad cuando la transformación que se va a aplicar a cada
 Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 
 ```java
-List<Product> products = Arrays.asList(
+List<Product> products = List.of(
     new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
     new Product(2, "tuerca", Set.of("Ferretería", "Tuerca")),
     new Product(3, "lápiz", Set.of("Papelería"))
