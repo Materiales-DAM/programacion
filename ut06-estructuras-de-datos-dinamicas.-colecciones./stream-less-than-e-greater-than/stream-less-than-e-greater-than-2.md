@@ -80,9 +80,9 @@ Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A)
 
 ```java
 List<Product> products = List.of(
-    new Product(1, "tornillo", new HashSet<>(Arrays.asList("Ferretería", "Tornillo"))),
-    new Product(2, "tuerca", new HashSet<>(Arrays.asList("Ferretería", "Tuerca"))),
-    new Product(3, "lápiz", new HashSet<>(Arrays.asList("Papelería")))
+    new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
+    new Product(2, "tuerca", Set.of("Ferretería", "Tuerca")),
+    new Product(3, "lápiz", Set.of("Papelería"))
 );
 
 Set<String> tags = products
