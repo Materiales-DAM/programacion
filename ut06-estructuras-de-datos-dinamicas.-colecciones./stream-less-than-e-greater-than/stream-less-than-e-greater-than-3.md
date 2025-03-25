@@ -28,7 +28,7 @@ Se utiliza para recopilar los elementos de un stream en una estructura de datos 
 La clase Collectors incluye métodos que permiten recopilar los elementos de un Stream en los diferentes ADT.
 
 ```java
-Stream<String> names = Arrays.asList("Juan", "María", "Carlos").stream();
+List<String> names = List.of("Juan", "María", "Carlos");
 
 List<String> namesList = 
     names
@@ -54,17 +54,21 @@ Esta operación terminal recibe una lambda (A) -> Void, es decir no devuelve nad
 
 ```java
 // Ejemplo de uso de forEach para mostrar datos en pantalla
-Stream<String> names = Arrays.asList("Juan", "María", "Carlos").stream();
-names.forEach(name -> System.out.println(name));
+List<String> names = List.of("Juan", "María", "Carlos");
+names
+    .stream()
+    .forEach(name -> System.out.println(name));
 ```
 
 <pre class="language-java"><code class="lang-java">// Ejemplo de uso de forEach para concatenar los nombres separados por comas
-Stream&#x3C;String> names = Arrays.asList("Juan", "María", "Carlos").stream();
+List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 <strong>// Para poder acceder a sentence desde la lambda, debe ser final
 </strong><strong>final StringBuilder sentence = new StringBuilder();
 </strong>
 // Añadimos a sentence cada nombre, separando con un espacio
-names.forEach(name -> sentence.append(" " + name));
+names
+    .stream()
+    .forEach(name -> sentence.append(" " + name));
 
 System.out.println(sentence.toString());
 </code></pre>
@@ -100,23 +104,25 @@ Permite combinar los elementos del `Stream<T>` en un solo valor de tipo `Optiona
 Después de hacer un reduce, obtenemos un objeto de tipo Optional\<T>, este Optional indica que si el Stream estaba vacío no obtendremos ningún resultado.
 
 ```java
-Stream<Integer> numbers = Arrays.asList(3, 4, 2, 5).stream();
+List<Integer> numbers = List.of(3, 4, 2, 5);
 // Se suman todos los números en numbers hasta obtener el total
-Optional<Integer> sum = numbers.reduce((s1, s2) -> s1 + s2);
+Optional<Integer> sum = numbers
+    .stream()
+    .reduce((s1, s2) -> s1 + s2);
 ```
 
 El resultado del `reduce` devolverá un `Optional.empty` cuando no hay ningún elemento en el stream al que se le aplica el reduce.&#x20;
 
 ```java
-Stream<Integer> numbers = Arrays.asList().stream();
+List<Integer> numbers = List.of();
 // sum es Optional.empty
-Optional<Integer> sum = numbers.reduce((s1, s2) -> s1 + s2);
+Optional<Integer> sum = numbers.stream().reduce((s1, s2) -> s1 + s2);
 ```
 
 Es posible pasar un parámetro adicional al método reduce que consiste en un valor inicial que se aplicará a la primera operación de reducción que se aplique. Cuando se pasa este parámetro el resultado ya no es un Optional\<T> sino un T, ya que en caso de que el stream esté vacío se devolverá el elemento identidad.
 
 ```java
-Stream<Integer> numbers = Arrays.asList(3, 4, 2, 5).stream();
+List<Integer> numbers = List.of(3, 4, 2, 5);
 // Se suman todos los números en numbers hasta obtener el total
 //  identidad= 0, stream =(3, 4, 2, 5)
 // reduce (0,3) = 3
@@ -124,13 +130,15 @@ Stream<Integer> numbers = Arrays.asList(3, 4, 2, 5).stream();
 // reduce (7,2) = 9
 // reduce (9,5) = 14
 // sum = 14
-Integer sum = numbers.reduce(0, (s1, s2) -> s1 + s2);
+Integer sum = numbers
+    .stream()
+    .reduce(0, (s1, s2) -> s1 + s2);
 ```
 
 El resultado del `reduce` devolverá el valor identidad cuando no hay ningún elemento en el stream al que se le aplica el reduce.&#x20;
 
 ```java
-Stream<Integer> numbers = Arrays.asList().stream();
+List<Integer> numbers = List.of();
 // sum es 0
-Integer sum = numbers.reduce(0, (s1, s2) -> s1 + s2);
+Integer sum = numbers.stream().reduce(0, (s1, s2) -> s1 + s2);
 ```

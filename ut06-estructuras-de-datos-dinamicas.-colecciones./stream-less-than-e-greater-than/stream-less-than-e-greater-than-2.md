@@ -26,9 +26,10 @@ Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, 
 Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
 ```java
-Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
+List<String> names = List.of("Juan", "María", "Carlos");
 
-stream
+names
+    .stream()
     // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
     .filter(nombre -> nombre.startsWith("J"))
     // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
@@ -41,10 +42,11 @@ Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una fu
 
 Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.
 
-<pre class="language-java"><code class="lang-java">// En este caso tenemos un  Stream para el que la A es String
-Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
+<pre class="language-java"><code class="lang-java">// En este caso tenemos una List para el que la A es String
+List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 <strong>// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
 </strong><strong>List&#x3C;Integer> nameLengths = stream
+</strong><strong>    .stream()
 </strong>    // Transformamos cada nombre en el número de caracteres que lo componen
     // La lambda que se aplica es String -> Integer
     // Este map devuelve un Stream&#x3C;Integer>
@@ -98,9 +100,10 @@ System.out.println(tags);
 Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
 
 ```java
-Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
+List<String> names = List.of("Juan", "María", "Carlos");
 // Ordenará los String en orden alfabético
-stream
+names
+    .stream()
     .sorted();
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
@@ -108,9 +111,10 @@ stream
 
 También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
 
-<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
+<pre class="language-java"><code class="lang-java"><strong>List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 </strong>// Ordenará los String en orden alfabético
-stream
+names
+    .stream()
     // Pasamos un comparador que ordena de alguna otra forma
     .sorted(new ReverseStringComparator());
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
@@ -119,9 +123,10 @@ stream
 
 También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
 
-<pre class="language-java"><code class="lang-java"><strong>Stream&#x3C;String> stream = List.of("Juan", "María", "Carlos").stream();
+<pre class="language-java"><code class="lang-java"><strong>List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 </strong>// Ordenará los String en orden alfabético
-stream
+names
+    .stream()
     // Expresamos el comparador con una Lambda (String, String) -> Integer
     .sorted((name1, name2) -> -name1.compareTo(name2));
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
@@ -133,9 +138,9 @@ stream
 Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
 ```java
-Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
-// Ordenará los String en orden alfabético
-stream
+List<String> names = List.of("Juan", "María", "Carlos");
+names
+    .stream()
     // Nos quedamos con los dos primeros elementos
     .limit(2)
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
@@ -147,9 +152,9 @@ stream
 Este método hace que el `Stream` resultante se salte un número determinado de elementos
 
 ```java
-Stream<String> stream = List.of("Juan", "María", "Carlos").stream();
-// Ordenará los String en orden alfabético
-stream
+List<String> names = List.of("Juan", "María", "Carlos");
+names
+    .stream()
     // Nos saltamos los dos primeros elementos
     .skip(2)
     // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
