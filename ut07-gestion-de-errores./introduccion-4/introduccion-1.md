@@ -27,9 +27,9 @@ Para poder usar JUnit, debemos añadir la siguiente dependencia al `pom.xml`
 
 ```xml
 <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13.2</version>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.13.0-M2</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -55,8 +55,9 @@ Todas las pruebas sobre métodos de una misma clase se suelen colocar en una mis
 Por ejemplo, si vamos a probar una clase llamada `Calculator`, crearemos una clase `CalculatorTests` para realizar sus tests. Anotaremos cada método de test con la anotación `@Test`&#x20;
 
 ```java
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class CalculatorTests {
 
@@ -69,7 +70,7 @@ public class CalculatorTests {
         int res = calc.add(2, 2);
         
         // Aserciones
-        Assert.assertEquals(4, res);
+        assertEquals(4, res);
     }
 
     @Test
@@ -81,7 +82,7 @@ public class CalculatorTests {
         int res = calc.substract(4, 2);
         
         // Aserciones
-        Assert.assertEquals(2, res);
+        assertEquals(2, res);
     }
 }
 ```
@@ -117,3 +118,22 @@ Ejemplos de acciones durante la fase de aserciones:
 
 * Asserts sobre el valor devuelto
 * Comprobaciones de excepciones
+
+## Tests que producen excepciones
+
+En ocasiones, vamos a querer probar métodos cuya invocación puede resultar en que se lance una excepción. En este caso, necesitamos especificar en el test que la excepción es el comportamieno deseado.
+
+```java
+@Test
+public void testZeroDividedByZero() {
+    assertThrows(
+            ArithmeticException.class,
+            () -> {
+                int number1 = 0;
+                int number2 = 0;
+
+                int res = number1 / number2;
+            }
+    );
+}
+```
