@@ -17,13 +17,13 @@ layout:
     visible: true
 ---
 
-# JUnit
+# JUnit 5
 
 JUnit es una librería de Java que sirve para la realización de pruebas unitarias. Proporciona un entorno para escribir, organizar y ejecutar pruebas de forma automática, lo que facilita la detección de errores en el código de manera rápida y eficiente.
 
 ## Configuración
 
-Para poder usar JUnit, debemos añadir la siguiente dependencia al `pom.xml`
+Para poder usar JUnit 5, debemos añadir la siguiente dependencia al `pom.xml`
 
 ```xml
 <dependency>
@@ -32,18 +32,6 @@ Para poder usar JUnit, debemos añadir la siguiente dependencia al `pom.xml`
     <version>5.13.0-M2</version>
     <scope>test</scope>
 </dependency>
-```
-
-Además, debemos configurar el siguiente plugin dentro de la sección `build` del `pom.xml`
-
-```xml
-<plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>
-    </plugin>
-</plugins>
 ```
 
 ## Pruebas con JUnit
@@ -57,7 +45,6 @@ Por ejemplo, si vamos a probar una clase llamada `Calculator`, crearemos una cla
 ```java
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 
 public class CalculatorTests {
 

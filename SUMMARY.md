@@ -159,7 +159,7 @@
   * [Ejercicios de diseño de excepciones](ut07-gestion-de-errores./introduccion-3/introduccion-5.md)
 * [Bugs](ut07-gestion-de-errores./introduccion-4/README.md)
   * [Testing](ut07-gestion-de-errores./introduccion-4/introduccion.md)
-  * [JUnit](ut07-gestion-de-errores./introduccion-4/introduccion-1.md)
+  * [JUnit 5](ut07-gestion-de-errores./introduccion-4/introduccion-1.md)
   * [Ejercicios JUnit](ut07-gestion-de-errores./introduccion-4/introduccion-2.md)
   * [Mocking](ut07-gestion-de-errores./introduccion-4/introduccion-3.md)
   * [Ejercicios de mocking](ut07-gestion-de-errores./introduccion-4/introduccion-4.md)
