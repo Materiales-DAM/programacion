@@ -66,7 +66,7 @@ Crea un programa que permita representar los datos de una empresa:
 
 1. Nombre de la empresa
 2. CIF
-3. Departamentos. Por cada departamento: nombre y listado de empleados
+3. Departamentos indexados por nombre de departamento. Por cada departamento: nombre y listado de empleados
    1. Por cada empleado: nif, nombre, apellidos y puesto
 
 Crea los siguientes métodos en Company:
@@ -89,8 +89,8 @@ Componentes:
 Crea un programa que maneje los datos de una biblioteca:
 
 1. Nombre de la biblioteca
-2. Libros del catálogo. Por cada libro se guardará: ISBN, título, autor, géneros (listado)
-3. Socios de la biblioteca. Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
+2. Libros indexados por isbn. Por cada libro se guardará: ISBN, título, autor, géneros (listado)
+3. Socios indexados por nif. Por cada socio se guardará: nif, nombre, apellidos, número de socio, código postal.
 4. Se almacenará un historial de préstamos: ISBN, fecha préstamos, nif (del socio que lo ha tomado prestado), fecha de devolución
 
 Implementar los métodos en Biblioteca:
