@@ -44,7 +44,7 @@ Por ejemplo, si vamos a probar una clase llamada `Calculator`, crearemos una cla
 
 ```java
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
 
 public class CalculatorTests {
 
@@ -57,7 +57,7 @@ public class CalculatorTests {
         int res = calc.add(2, 2);
         
         // Aserciones
-        assertEquals(4, res);
+        Assertions.assertEquals(4, res);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class CalculatorTests {
         int res = calc.substract(4, 2);
         
         // Aserciones
-        assertEquals(2, res);
+        Assertions.assertEquals(2, res);
     }
 }
 ```
@@ -113,7 +113,7 @@ En ocasiones, vamos a querer probar métodos cuya invocación puede resultar en 
 ```java
 @Test
 public void testZeroDividedByZero() {
-    assertThrows(
+    Assertions.assertThrows(
             ArithmeticException.class,
             () -> {
                 int number1 = 0;
