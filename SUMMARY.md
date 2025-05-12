@@ -167,3 +167,4 @@
 ## UT08 - Acceso a bases de datos relacionales
 
 * [Introducción](ut08-acceso-a-bases-de-datos-relacionales/introduccion.md)
+* [Ejercicios acceso a bases de datos](ut08-acceso-a-bases-de-datos-relacionales/ejercicios-acceso-a-bases-de-datos.md)
