@@ -78,3 +78,68 @@ VALUES('1X', 1, 7);
 INSERT INTO student_grade(nif, course_id, grade)
 VALUES('2X', 2, 5);
 ```
+
+
+
+## Library-db
+
+### POJOs
+
+#### Book
+
+* ISBN: String
+* Titulo: String
+* Año: int
+* AutorNif: String
+
+#### Autor
+
+* Nif
+* Nombre
+* Apellidos
+
+#### Member
+
+* Nif
+* Nombre
+* Apellidos
+
+BookLend
+
+* MemberNif
+* isbn
+* lendDate: Date
+
+### Componentes
+
+#### BookDAO
+
+* Insertar, listar, eliminar
+
+#### AuthorDAO
+
+* Insertar, listar, eliminar
+
+#### MemberDAO
+
+* Insertar, listar, eliminar
+
+#### BookLendDAO
+
+* Insertar, listar, eliminar
+
+#### LibraryApp
+
+Debe implementar un bucle con las siguientes opciones:
+
+* Listar libros
+* Insertar libro
+* Ver autores
+* Insertar autor
+* Ver autor de libro
+* Ver libros de autor
+* Ver socios
+* Insertar socio
+* Ver préstamos socio
+* Ver prestamos libro
+* Añadir nuevo préstamo
