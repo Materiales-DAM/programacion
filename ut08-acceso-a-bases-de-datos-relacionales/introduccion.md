@@ -43,7 +43,7 @@ public class SelectExample {
     public static void main(String[] args) {
         try (Connection conn = DatabaseConnection.getConnection()) {
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id, name FROM users")
+            ResultSet rs = stmt.executeQuery("SELECT id, name FROM users");
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
@@ -67,9 +67,8 @@ public class InsertExample {
     public static void main(String[] args) {
         String sql = "INSERT INTO users (name, email) VALUES (?, ?)";
 
-        try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            PreparedStatement pstmt = conn.prepareStatement(sql));
             pstmt.setString(1, "John Doe");
             pstmt.setString(2, "john@example.com");
 
@@ -93,9 +92,8 @@ public class UpdateExample {
     public static void main(String[] args) {
         String sql = "UPDATE users SET email = ? WHERE id = ?";
 
-        try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, "newemail@example.com");
             pstmt.setInt(2, 1);
 
@@ -119,9 +117,8 @@ public class DeleteExample {
     public static void main(String[] args) {
         String sql = "DELETE FROM users WHERE id = ?";
 
-        try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, 1);
 
             int rows = pstmt.executeUpdate();
