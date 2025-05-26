@@ -1,4 +1,4 @@
-# UT08 - Acceso a bases de datos relacionales
+# Introducción
 
 Vamos a estudiar cómo acceder a una base de datos relacional (MySQL) desde Java. La librería que vamos a usar para ello se denomina JDBC (Java Database Connectivity) y está integrada en el JDK de Java.
 
@@ -41,10 +41,9 @@ import java.sql.Statement;
 
 public class SelectExample {
     public static void main(String[] args) {
-        try (Connection conn = DatabaseConnection.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT id, name FROM users")) {
-
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id, name FROM users")
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
