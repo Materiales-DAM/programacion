@@ -143,3 +143,100 @@ Debe implementar un bucle con las siguientes opciones:
 * Ver préstamos socio
 * Ver prestamos libro
 * Añadir nuevo préstamo
+
+## Airline
+
+### POJOs
+
+#### Flight
+
+* number: Integer
+* origin: String
+* destination: String
+* date: LocalDate
+* airline: String
+
+#### Passenger
+
+* ticketNumber: String
+* nif
+* flightNumber: Integer
+* name
+* surname
+* seatNumber: Integer
+
+#### Luggage (equipaje)
+
+* id
+* ticketNumber
+* description
+
+### Componentes
+
+#### FlightDAO
+
+* Insertar, listar, eliminar
+
+#### PassengerDAO
+
+* Insertar, listar, eliminar
+
+#### LuggageDAO
+
+* Insertar, listar, eliminar
+
+#### AirlineApp
+
+Debe implementar un bucle con las siguientes opciones:
+
+* Listar vuelos
+* Listar vuelos origen
+* Listar vuelos destino
+* Insertar vuelo
+* Ver pasejeros vuelo
+* Insertar pasajero
+* Eliminar pasajero
+* Ver equipaje de pasajero
+* Añadir equipaje
+* Eliminar equipaje
+
+Script SQL
+
+```sql
+-- Crear la base de datos
+CREATE DATABASE airline CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE airline;
+
+-- Crear la tabla Flight
+CREATE TABLE Flight (
+    number INT PRIMARY KEY,
+    origin VARCHAR(100) NOT NULL,
+    destination VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    airline VARCHAR(100) NOT NULL
+);
+
+-- Crear la tabla Passenger
+CREATE TABLE Passenger (
+    ticketNumber VARCHAR(20) PRIMARY KEY,
+    nif VARCHAR(20) NOT NULL,
+    flightNumber INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    seatNumber INT NOT NULL,
+    CONSTRAINT fk_flight FOREIGN KEY (flightNumber) REFERENCES Flight(number)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+-- Crear la tabla Luggage
+CREATE TABLE Luggage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ticketNumber VARCHAR(20) NOT NULL,
+    description TEXT,
+    CONSTRAINT fk_passenger FOREIGN KEY (ticketNumber) REFERENCES Passenger(ticketNumber)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+```
