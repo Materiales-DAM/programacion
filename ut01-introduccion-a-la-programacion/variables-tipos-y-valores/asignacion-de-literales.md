@@ -69,7 +69,7 @@ double myDouble = 432.34d;
 #### Literales de cadenas de caracteres
 
 <pre class="language-java"><code class="lang-java"><strong>// Los literales de tipo String se ponen entre comillas dobles
-</strong>char myString =  "Esto es un literal de String";
+</strong>String myString =  "Esto es un literal de String";
 </code></pre>
 
 #### Literales de boolean

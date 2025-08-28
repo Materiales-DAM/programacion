@@ -32,8 +32,8 @@ Cuando hacemos un casting de tipos es posible que vayamos de un tipo más grande
 
 * Widening casting: son los casting en los que vamos de un conjunto más pequeño a uno más grande. En este tipo de casting no puede haber ningún problema ya que todos los valores del tipo de origen existen en el tipo de destino.
 
-`byte -> short -> char -> int -> long -> float -> double`
+`byte -> short -> int -> long -> float -> double`
 
 * Narrow casting: son los casting en los que vamos de un conjunto más grande a uno más pequeño. Estos casting son potencialmente problemáticos ya que no todos los valores del tipo de origen son representables en el tipo de destino
 
-`double -> float -> long -> int -> char -> short -> byte`
+`double -> float -> long -> int ->  short -> byte`
