@@ -1,20 +1,6 @@
 ---
 cover: ../.gitbook/assets/oop.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Tipos primitivos y null
@@ -110,8 +96,6 @@ Para solucionar este problema, existen en Java un conjunto de clases denominadas
 
 En el ejemplo anterior, podríamos cambiar el tipo de age de int a Integer
 
-
-
 ```java
 import java.util.Objects;
 
@@ -190,7 +174,7 @@ Student student2 = new Student("Peppa", "Pig", "Calle Falsa", null);
 
 ### Boxing, unboxing y autoboxing
 
-El proceso por el cual un valor primitivo se convierte en un valor de su wrapped class se denomina boxing. Este nombre viene de meter el valor en una "caja", que es la wrapped class.&#x20;
+El proceso por el cual un valor primitivo se convierte en un valor de su wrapped class se denomina boxing. Este nombre viene de meter el valor en una "caja", que es la wrapped class.
 
 ```java
 int age = 5;

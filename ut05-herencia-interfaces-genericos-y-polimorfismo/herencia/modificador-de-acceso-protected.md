@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/image (8) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Modificador de acceso protected
@@ -25,7 +11,7 @@ En Java, el modificador de acceso `protected` desempeña un papel clave en el co
 
 Cuando un miembro (método o campo) de una clase tiene el modificador `protected`, ese miembro es accesible desde:
 
-* &#x20;Las clases derivadas (subclases) independientemente del paquete.
+* Las clases derivadas (subclases) independientemente del paquete.
 * Desde todas clases dentro del mismo paquete, independientemente de si son subclases o no.
 
 ```java
@@ -51,8 +37,6 @@ public class SubClase extends ClaseBase {
 }
 ```
 
-
-
 ```java
 package org.ies.ejemplo;
 
@@ -65,7 +49,4 @@ public class OtraClase {
 }
 ```
 
-
-
 <figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
-

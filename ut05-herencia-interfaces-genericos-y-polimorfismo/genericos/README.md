@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/generics.jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Genéricos
@@ -156,4 +142,3 @@ public class Main{
 ```
 
 Una vez creada una instancia de Box, no podemos cambiar el tipo de valores que almacena
-

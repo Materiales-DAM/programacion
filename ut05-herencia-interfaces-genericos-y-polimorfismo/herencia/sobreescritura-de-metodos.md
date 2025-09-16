@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/image (8) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Sobreescritura de métodos
@@ -23,7 +9,7 @@ La sobreescritura de métodos en Java permite a una subclase proporcionar una im
 
 ## **Implementación de Métodos Abstractos**
 
-Como hemos visto anteriormente,  un método abstracto es un método declarado en una clase abstracta que no tiene implementación en esa clase. Las clases abstractas se utilizan para proporcionar una estructura común para las subclases, pero las subclases deben implementar los métodos abstractos.
+Como hemos visto anteriormente, un método abstracto es un método declarado en una clase abstracta que no tiene implementación en esa clase. Las clases abstractas se utilizan para proporcionar una estructura común para las subclases, pero las subclases deben implementar los métodos abstractos.
 
 ```java
 // Clase abstracta Animal
@@ -77,7 +63,7 @@ class Lion extends Animal {
 
 ## **Sobreescritura de métodos no abstractos**
 
-Además de implementar los métodos abstractos, las subclases pueden sobrescribir métodos que ya tienen una implementación en la clase base. Esto permite que las subclases proporcionen una implementación específica sin cambiar  la superclase.
+Además de implementar los métodos abstractos, las subclases pueden sobrescribir métodos que ya tienen una implementación en la clase base. Esto permite que las subclases proporcionen una implementación específica sin cambiar la superclase.
 
 ```java
 // Clase concreta Lion que extiende Animal

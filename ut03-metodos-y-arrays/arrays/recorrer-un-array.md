@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/arrays.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Recorrer un array
@@ -25,11 +11,7 @@ Por esto, para recorrer todos los valores de un array vamos a utilizar un bucle 
 
 Por ejemplo si tenemos el siguiente array
 
-
-
 <figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-
 
 ## Fori
 

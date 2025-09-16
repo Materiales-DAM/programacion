@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/image (8) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Herencia
@@ -27,7 +13,7 @@ Las clases se organizan en una estructura jerárquica. La superclase ocupa un ni
 
 <figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Jerarquía de clases de animales</p></figcaption></figure>
 
-### **Superclase (Clase Base o Padre)**&#x20;
+### **Superclase (Clase Base o Padre)**
 
 Es la clase de la cual se heredan las propiedades y comportamientos. Contiene atributos y métodos comunes que son compartidos por una o más subclases
 

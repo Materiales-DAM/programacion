@@ -1,27 +1,11 @@
 ---
 cover: ../../.gitbook/assets/arrays.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Arrays
 
 Un array Java es una estructura de datos que nos permite almacenar varios valoresde un mismo tipo. Cuando creamos un array debemos definir el número de valores que va a contener, una vez creado ya no podemos cambiar su tamaño.
-
-
 
 <figure><img src="../../.gitbook/assets/arrays.png" alt=""><figcaption><p>Array de enteros de longitud 6</p></figcaption></figure>
 
@@ -47,14 +31,14 @@ String[] stringArray;
 
 ## Creación de arrays
 
-Para poder crear un array debemos saber que tamaño (el número de valores que podrá guardar) va a tener el array.&#x20;
+Para poder crear un array debemos saber que tamaño (el número de valores que podrá guardar) va a tener el array.
 
 ```java
 // Crea un array con 4 posiciones, este array podrá almacenar 4 números enteros
 int[] numbers = new int[4];
 ```
 
-El array `numbers` se ha creado, ahora llega el momento de guardar valores dentro del mismo.&#x20;
+El array `numbers` se ha creado, ahora llega el momento de guardar valores dentro del mismo.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Array vacío de 4 posiciones</p></figcaption></figure>
 

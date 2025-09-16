@@ -1,20 +1,6 @@
 ---
 cover: ../../../.gitbook/assets/arrays.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Ejercicios de métodos y arrays
@@ -43,11 +29,11 @@ En el main se invocara el primer método pasando un array con los valores 1, 3, 
 En el main se pide un array, se calcula la media y se imprime el resultado
 
 4. Crea un programa con los siguientes métodos:
-   1. Un método que pida  un array de números y los devuelve
+   1. Un método que pida un array de números y los devuelve
    2. Un método que reciba un array de números y devuelva el array en orden inverso
    3. Un método que recibe dos arrays de números y devuelve la unión de los mismos
    4. Un método que reciba un array de números y los imprima en pantalla
-   5. El método main  realizará las siguientes invocaciones:
+   5. El método main realizará las siguientes invocaciones:
       1. Pide un array
       2. Invierte el array
       3. Imprime el array invertido

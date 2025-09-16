@@ -1,27 +1,13 @@
 ---
 cover: ../../.gitbook/assets/oop.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Clases
 
 Una clase describe un conjunto de variables relacionadas y un conjunto de operaciones que se pueden realizar sobre ellos. Podemos ver una clase como una plantilla que nos permite representar objetos que conceptualmente representan algo parecido. Las clases se componen de:
 
-* **Campos**: son cada uno de los atributos que componen los objetos de esta clase&#x20;
+* **Campos**: son cada uno de los atributos que componen los objetos de esta clase
 * **Constructores**: Son métodos que sirven para crear objetos de esta clase
 * **Métodos**: Además de los constructores, se pueden definir métodos vinculados a los objetos que realicen algún tipo de cálculo, operación o modificación sobre los datos del objeto.
 
@@ -74,11 +60,11 @@ public class StudentMain {
 
 Los campos nos permiten definir cada una de las partes de las que se que componen los objetos de este tipo. Algunas características de los campos son:
 
-* Son elementos que se comportan como una variable propia de cada instancia de la clase&#x20;
+* Son elementos que se comportan como una variable propia de cada instancia de la clase
 * Definen un atributo de la calse.
 * Para cumplir el principio de encapsulamiento deben ser privados (private).
-* En ellos se almacenan datos, sus valores pueden ser inicializados, modificados y leidos desde la propia instancia.&#x20;
-* Un campo puede ser de cualquier tipo: tipos primitivos o clases.&#x20;
+* En ellos se almacenan datos, sus valores pueden ser inicializados, modificados y leidos desde la propia instancia.
+* Un campo puede ser de cualquier tipo: tipos primitivos o clases.
 * Se suelen inicializar desde el constructor
 * Para acceder a ellos desde fuera de la clase se utilizan los métodos getter y setter.
 
@@ -125,11 +111,9 @@ public class Student {
 
 Los métodos de una clase definen las operaciones que podemos realizar con las entidades de este tipo. Hasta ahora hemos visto métodos estáticos, también conocidos como métodos de clase, esos métodos se podían invocar sin necesidad de instanciar un objeto de la clase en la que están definidos.
 
-Sin embargo, los métodos de objeto (no estáticos) solo se pueden invocar cuando existe un objeto de la clase en la que están definidos.&#x20;
+Sin embargo, los métodos de objeto (no estáticos) solo se pueden invocar cuando existe un objeto de la clase en la que están definidos.
 
 Por ejemplo, en la clase `Student` tenemos el método `sayHello`, para poder ejecutar ese método necesitamos una instancia de `Student`.
-
-
 
 ```java
 // Esta sentencia no compila

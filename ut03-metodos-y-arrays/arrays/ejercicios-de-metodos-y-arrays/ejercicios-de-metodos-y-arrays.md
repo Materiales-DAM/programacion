@@ -1,20 +1,6 @@
 ---
 cover: ../../../.gitbook/assets/arrays.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Soluciones de métodos y arrays
@@ -26,30 +12,6 @@ layout:
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
-package methods_arrays;
-
-public class Arrays1 {
-    public static void main(String[] args) {
-        int[] numbers = {1, 3, 5, 0};
-        int max = max(numbers);
-        printMax(max);
-    }
-
-    public static int max(int[] numbers) {
-        int max = numbers[0];
-        for (int number : numbers) {
-            if (number > max) {
-                max = number;
-            }
-        }
-
-        return max;
-    }
-
-    public static void printMax(int number) {
-        System.out.println("El máximo es " + number);
-    }
-}
 ```
 
 2. Crea un programa que defina los siguientes métodos:
@@ -59,27 +21,6 @@ public class Arrays1 {
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
-package methods_arrays;
-
-public class Arrays2 {
-    public static void main(String[] args) {
-        int[] numbers = {1, 3, 5, 0};
-        int sum = sum(numbers);
-        printSum(sum);
-    }
-
-    public static int sum(int[] numbers) {
-        int sum = 0;
-        for (int number : numbers) {
-            sum += number;
-        }
-        return sum;
-    }
-
-    public static void printSum(int number) {
-        System.out.println("La suma es " + number);
-    }
-}
 ```
 
 3. Crea un programa que defina los siguientes métodos:
@@ -94,58 +35,6 @@ public class Arrays2 {
 En el main se pide un array, se calcula la media y se imprime el resultado
 
 ```java
-package methods_arrays;
-
-import java.util.Scanner;
-
-public class Arrays3 {
-    private static Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        int[] numbers = createArray();
-        double average = calculateAverage(numbers);
-        printAverage(average);
-    }
-
-
-    public static int askPositve() {
-        System.out.println("Introduce un número positivo");
-        int number;
-
-        do {
-            System.out.println("Introduce un número positivo");
-            number = scanner.nextInt();
-            scanner.nextLine();
-        } while (number <= 0);
-        return number;
-    }
-
-    public static int[] createArray() {
-        int size = askPositve();
-        int[] array = new int[size];
-
-        for (int i = 0; i < size; i++) {
-            System.out.println("Introduce un número");
-            int number = scanner.nextInt();
-            scanner.nextLine();
-            array[i] = number;
-        }
-        return array;
-    }
-
-    public static double calculateAverage(int[] numbers) {
-        double add = 0;
-        for (int number : numbers) {
-            add += number;
-        }
-
-        return add / numbers.length;
-    }
-
-    public static void printAverage(double average) {
-        System.out.println("La media es: " + average);
-    }
-}
 ```
 
 4. Crea un programa con los siguientes métodos:
@@ -165,74 +54,4 @@ public class Arrays3 {
 
 
           ```java
-          package methods_arrays;
-
-          import java.util.Scanner;
-
-          public class Arrays4 {
-              private static Scanner scanner = new Scanner(System.in);
-
-              public static void main(String[] args) {
-                  int[] numbers1 = askArray();
-                  int[] invertedNumbers1 = reverseArray(numbers1);
-                  print(invertedNumbers1);
-                  int[] numbers2 = askArray();
-                  int[] invertedNumbers2 = reverseArray(numbers2);
-                  print(invertedNumbers2);
-                  int[] union = union(invertedNumbers1, invertedNumbers2);
-                  print(union);
-
-              }
-
-              public static int numberArray() {
-                  System.out.println("Introduzca el tamaño del array que desea ");
-                  int number = scanner.nextInt();
-                  scanner.nextLine();
-
-                  while (number <= 0) {
-                      System.out.println("Introduzca un numero mayor que cero");
-                      number = scanner.nextInt();
-                      scanner.nextLine();
-                  }
-                  return number;
-              }
-
-              public static int[] askArray() {
-                  int positive = numberArray();
-                  int[] numbers = new int[positive];
-                  for (int i = 0; i < numbers.length; i++) {
-                      System.out.println("Introduzca los numeros que quiere dentro del array ");
-                      numbers[i] = scanner.nextInt();
-                      scanner.nextLine();
-                  }
-                  return numbers;
-              }
-
-              public static int[] reverseArray(int[] numbers) {
-                  int[] reverted = new int[numbers.length];
-                  for (int i = 0; i < numbers.length; i++) {
-                      int newI = numbers.length - i - 1;
-                      reverted[newI] = numbers[i];
-                  }
-                  return reverted;
-              }
-
-              public static int[] union(int[] numbers1, int[] numbers2) {
-                  int[] union = new int[numbers1.length + numbers2.length];
-                  for (int i = 0; i < numbers1.length; i++) {
-                      union[i] = numbers1[i];
-                  }
-                  for (int i = 0; i < numbers2.length; i++) {
-                      int newI = numbers1.length + i;
-                      union[newI] = numbers2[i];
-                  }
-                  return union;
-              }
-
-              public static void print(int[] numbers) {
-                  for (int number : numbers) {
-                      System.out.println(number);
-                  }
-              }
-          }
           ```

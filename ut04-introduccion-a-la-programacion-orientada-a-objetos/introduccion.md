@@ -1,27 +1,13 @@
 ---
 cover: ../.gitbook/assets/oop.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Introducción
 
-La programación orientada a objetos (POO o OOP en inglés) es uno de los paradigmas de programación más utilizados en la actualidad.&#x20;
+La programación orientada a objetos (POO o OOP en inglés) es uno de los paradigmas de programación más utilizados en la actualidad.
 
-Este paradigma se enmarca dentro de la programación imperativa, en la cual los programas se expresan en secuencias de órdenes (sentencias).&#x20;
+Este paradigma se enmarca dentro de la programación imperativa, en la cual los programas se expresan en secuencias de órdenes (sentencias).
 
 Este paradigma supuso una revolución en su día al incluir novedosos conceptos que permitían generar código de mayor calidad, facilitar el desarrollo y reutilizar el código de una forma más sencilla
 
@@ -46,7 +32,7 @@ Sin embargo, en el paradigmo POO, los datos y los procedimientos se encuentran e
 
 Las clases son el elemento básico de este paradigma. Una clase describe un conjunto de variables relacionadas y un conjunto de operaciones que se pueden realizar sobre ellos. Podemos ver una clase como una plantilla que nos permite representar objetos que representan instancias de entidades de un mismo tipo. Las clases se componen de:
 
-* **Campos**: son cada uno de los atributos que componen los objetos de esta clase&#x20;
+* **Campos**: son cada uno de los atributos que componen los objetos de esta clase
 * **Constructores**: Son métodos que sirven para crear objetos de esta clase
 * **Métodos**: Además de los constructores, se pueden definir métodos vinculados a los objetos que realicen algún tipo de cálculo, operación o modificación sobre los datos del objeto.
 
@@ -66,8 +52,6 @@ En la clase Persona definimos que toda perona tiene los siguientes campos:
 * fechaNacimiento
 
 SI se deasea crear un objeto de tipo Persona, se deben proveer valores conretos para esos campos.
-
-
 
 ```java
 // La variable person1 almacena un objeto de tipo Persona

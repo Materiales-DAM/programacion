@@ -1,25 +1,11 @@
 ---
 cover: ../../.gitbook/assets/tree.png
 coverY: 94.60266666666666
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # List\<E>
 
-El ADT List define los métodos que deben implementar las colecciones que sirvan para representar una **secuencia de elementos**. En este tipo de colecciones **cada elemento tiene un índice** asociado que indica su posición en la lista.&#x20;
+El ADT List define los métodos que deben implementar las colecciones que sirvan para representar una **secuencia de elementos**. En este tipo de colecciones **cada elemento tiene un índice** asociado que indica su posición en la lista.
 
 Por tanto, las listas son estructuras de datos que permite almacenar una **secuencia de elementos** y acceder a ellos mediante su posición relativa dentro de la lista (índice).
 
@@ -84,7 +70,7 @@ Las dos implementaciones más importantes de List son **ArrayList** y **LinkedLi
 
 ### LinkedList\<E>
 
-Es una implementación basada en la estructura de datos "**Lista enlazada**". Se trata  de una estructura de datos dinámica, es decir, adapta su tamaño a la cantidad de datos que se van añadiendo o quitando.&#x20;
+Es una implementación basada en la estructura de datos "**Lista enlazada**". Se trata de una estructura de datos dinámica, es decir, adapta su tamaño a la cantidad de datos que se van añadiendo o quitando.
 
 ```java
 List<Integer> numbers = new LinkedList<>();
@@ -95,7 +81,7 @@ numbers.add(9);
 
 ```
 
-Las listas enlazadas almacenan los datos en **nodos**, cada nodo tiene un enlace al siguiente nodo de la lista.  La lista enlazada mantiene un enlace al primer nodo (head) y otro enlace al último (tail) para poder acceder a estas posiciones directamente.&#x20;
+Las listas enlazadas almacenan los datos en **nodos**, cada nodo tiene un enlace al siguiente nodo de la lista. La lista enlazada mantiene un enlace al primer nodo (head) y otro enlace al último (tail) para poder acceder a estas posiciones directamente.
 
 <figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>LIsta enlazada con los números 10, 20 y 30</p></figcaption></figure>
 
@@ -103,7 +89,7 @@ Estas estructuras están optimizadas para insertar y quitar elementos de forma d
 
 ### ArrayList\<E>
 
-Son estructuras de datos dinámicas, es decir, adaptan su tamaño a la cantidad de datos que se van añadiendo o quitando. Internamente utilizan arrays para almacenar los datos.&#x20;
+Son estructuras de datos dinámicas, es decir, adaptan su tamaño a la cantidad de datos que se van añadiendo o quitando. Internamente utilizan arrays para almacenar los datos.
 
 ```java
 List<Integer> numbers = new ArrayList<>();

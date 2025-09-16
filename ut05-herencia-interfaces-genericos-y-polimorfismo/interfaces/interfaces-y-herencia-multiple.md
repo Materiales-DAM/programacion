@@ -1,27 +1,13 @@
 ---
 cover: ../../.gitbook/assets/image (1) (1) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Interfaces y herencia múltiple
 
-En Java, aunque no existe la herencia múltiple de clases, se puede lograr cierta flexibilidad utilizando interfaces.&#x20;
+En Java, aunque no existe la herencia múltiple de clases, se puede lograr cierta flexibilidad utilizando interfaces.
 
-A continuación, vamos a ver un ejemplo&#x20;
+A continuación, vamos a ver un ejemplo
 
 ```java
 // Interface for carnivorous animals

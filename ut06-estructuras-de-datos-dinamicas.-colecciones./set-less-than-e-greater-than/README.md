@@ -1,20 +1,6 @@
 ---
 cover: ../../.gitbook/assets/tree.png
 coverY: 94.60266666666666
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Set\<E>
@@ -25,10 +11,10 @@ Las colecciones de tipo Set representan conjuntos de datos. No es posible defini
 
 Algunas de las características de los Set son:
 
-* Sirven para almacenar **datos no secuenciales**. &#x20;
-* Cada instancia de un Set define el tipo de valores que almacena a través del parámetro de tipo E.&#x20;
-* No es posible almacenar elementos repetidos.&#x20;
-* Son colecciones optimizadas para buscar datos de forma eficiente.&#x20;
+* Sirven para almacenar **datos no secuenciales**.
+* Cada instancia de un Set define el tipo de valores que almacena a través del parámetro de tipo E.
+* No es posible almacenar elementos repetidos.
+* Son colecciones optimizadas para buscar datos de forma eficiente.
 * Al no ser una secuencia, los elementos que alberga no tienen una posición (o índice) asociada.
 * La ordenación interna de los datos depende del tipo de Set
 
@@ -89,11 +75,11 @@ Si ejecutamos el código anterior veremos que el orden en el que aparecen los n�
 
 ### [HashSet\<E>](./#hashset-less-than-e-greater-than)
 
-La estructura de datos que implementa es un Hash Table. Es una estructura de datos no lineal, optimizada para almacenar **datos no ordenados**. Es más rápida que el TreeSet pero la ordenación interna no responde a una lógica comprensible para los humanos.&#x20;
+La estructura de datos que implementa es un Hash Table. Es una estructura de datos no lineal, optimizada para almacenar **datos no ordenados**. Es más rápida que el TreeSet pero la ordenación interna no responde a una lógica comprensible para los humanos.
 
 ### [TreeSet\<E>](./#treeset-less-than-e-greater-than)
 
-La estructura de datos que implementa es un Self Balanced Binary Search Tree (árbol binario de búsqueda autobalanceado). Es una estructura de datos no lineal, optimizada para almacenar **datos ordenados** según un determinado **criterio de ordenación**.&#x20;
+La estructura de datos que implementa es un Self Balanced Binary Search Tree (árbol binario de búsqueda autobalanceado). Es una estructura de datos no lineal, optimizada para almacenar **datos ordenados** según un determinado **criterio de ordenación**.
 
 ## HashSet vs TreeSet
 

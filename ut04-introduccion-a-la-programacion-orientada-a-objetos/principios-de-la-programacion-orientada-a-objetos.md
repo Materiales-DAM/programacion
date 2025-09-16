@@ -1,23 +1,9 @@
 ---
-cover: ../../.gitbook/assets/oop.png
+cover: ../.gitbook/assets/oop.png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
-# Copy of Principios de la Programación Orientada a Objetos
+# Principios de la Programación Orientada a Objetos
 
 ## Encapsulamiento
 
