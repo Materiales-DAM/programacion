@@ -49,9 +49,9 @@ Este tipo de operadores nos permiten combinar una o varias expresiones booleanas
 
 | Operador | Símbolo |
 | -------- | ------- |
-| AND      | &&      |
-| OR       | \|\|    |
-| Negación | !       |
+| AND      | `&&`    |
+| OR       | `\|\|`  |
+| Negación | `!`     |
 
 #### Conditional AND
 
