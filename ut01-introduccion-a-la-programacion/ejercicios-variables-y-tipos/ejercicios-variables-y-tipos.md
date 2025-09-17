@@ -106,4 +106,20 @@ coverY: 0
 5.  Escribe un programa AreNotEqual que:
 
     ```java
+    package org.example.variables;
+
+    import java.util.Scanner;
+
+    public class NotEquals {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Introduce un número: ");
+            int n1 = sc.nextInt();
+            sc.nextLine();
+            System.out.print("Introduce otro número: ");
+            int n2 = sc.nextInt();
+            boolean notEquals = n1 != n2;
+            System.out.println("¿Es tu número diferente? " + notEquals);
+        }
+    } 
     ```
