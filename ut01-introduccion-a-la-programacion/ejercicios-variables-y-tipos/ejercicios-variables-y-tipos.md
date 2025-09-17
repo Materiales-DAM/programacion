@@ -31,6 +31,26 @@ coverY: 0
 2.  Escribe un programa Division que:
 
     ```java
+    package org.example.variables;
+
+    import java.util.Scanner;
+
+    public class Division {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce el numerador");
+            double numerator = scanner.nextDouble();
+            scanner.nextLine();
+            System.out.println("Introduce el denominador");
+            double denominator = scanner.nextDouble();
+            scanner.nextLine();
+
+            double division = numerator / denominator;
+
+            System.out.println("El resultado es " + division);
+        }
+    }
+
     ```
 3.  Escribe un programa Multiplication que:
 
