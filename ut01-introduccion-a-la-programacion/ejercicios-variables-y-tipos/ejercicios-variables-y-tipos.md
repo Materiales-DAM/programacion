@@ -14,7 +14,7 @@ coverY: 0
 
     import java.util.Scanner;
 
-    public class Ej1 {
+    public class Increments {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Introduce un número real: ");
