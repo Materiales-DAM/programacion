@@ -67,6 +67,27 @@ public class IsEven {
 3\. Escribe un programa que:
 
 ```java
+package org.example.ifexercises;
+
+import java.util.Scanner;
+
+public class ShowSign {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Dime un numero entero: ");
+        int num1 = scanner.nextInt();
+        scanner.nextLine();
+
+        if (num1 == 0) {
+            System.out.println(num1 + " no es ni positivo ni negativo");
+        } else if (num1 > 0) {
+            System.out.println(num1 + " es un numero positivo");
+        } else {
+            System.out.println(num1 + " es un numero negativo");
+        }
+    }
+} 
 ```
 
 4\. Escribe un programa que:
