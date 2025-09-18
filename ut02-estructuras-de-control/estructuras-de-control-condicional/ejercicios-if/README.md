@@ -39,8 +39,8 @@ coverY: 0
 * Pide un número entero (a)
 * Pide un número entero (b)
 * Si a es mayor que b. Calcula la suma de a y b y muestra en pantalla el resultado
-* Si a es igual a b. Calcula la resta de a - b y muestra el resultado en pantalla
-* Si a es menor que b:
+* Si a es menor a b. Calcula la resta de a - b y muestra el resultado en pantalla
+* Si a es igual que b:
   * Pide al usuario otro numero c
   * Si c es mayor que la suma de a y b: imprime el mensaje “c es mayor que a + b”
   * Si c es menor que la suma de a y b: imprime el mensaje “c es menor que a + b”
