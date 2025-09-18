@@ -5,28 +5,28 @@ coverY: 0
 
 # Ejercicios If
 
-1\. Escribe un programa que:
+1\. Escribe un programa Compare que:
 
 * Pida dos números enteros
 * Si el primero es mayor que el segundo imprime en pantalla “Es mayor”
 * Si es menor imprime “es menor”
 * Si son iguales imprime “son iguales”
 
-2\. Escribe un programa que:
+2\. Escribe un programa IsEven que:
 
 * Pide un número entero
 * Imprime en pantalla “Es par” cuando el número es par (n % 2 == 0)
 * Si n % 2 == 1 es impar
 * Si es 0 imprime “No es ni par ni impar”
 
-3\. Escribe un programa que:
+3\. Escribe un programa ShowSign que:
 
 * Pide un número entero
 * Imprime en pantalla “Es negativo” cuando el número es menor que cero
 * Si es mayor de 0 “es positivo”
 * Si es 0 imprime “No es positivo ni negativo”
 
-4\. Escribe un programa que:
+4\. Escribe un programa StringSizeCheck que:
 
 * Pide un String de 8 caracteres
 * Imprime en pantalla “Demasiado pequeño” si el String tiene menos de 8 caracteres
@@ -34,7 +34,7 @@ coverY: 0
 * Si tiene 8 caracteres imprime “Es valido”
 * HINT: para saber el número de caracteres de un String se utiliza el método `stringVariable.length()`
 
-5\. Escribe un programa que:
+5\. Escribe un programa SumSubs que:
 
 * Pide un número entero (a)
 * Pide un número entero (b)
@@ -46,7 +46,7 @@ coverY: 0
   * Si c es menor que la suma de a y b: imprime el mensaje “c es menor que a + b”
   * c es igual que la suma de a y b: imprime el mensaje “c es igual que a + b”
 
-6\. Escribe un programa que:
+6\. Escribe un programa Calculator que:
 
 * Pide un String y lo guarda en una variable llamada operación
 * Si el valor de operación es “+” (`operacion.equals("+")`) -> operacion == “+”
