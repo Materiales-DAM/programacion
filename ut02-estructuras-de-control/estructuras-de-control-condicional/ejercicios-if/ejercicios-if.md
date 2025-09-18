@@ -93,6 +93,27 @@ public class ShowSign {
 4\. Escribe un programa que:
 
 ```java
+package org.example.ifexercises;
+
+import java.util.Scanner;
+
+public class StringSizeCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduzca una contraseña de 8 digitos");
+        String password = scanner.nextLine();
+
+        if (password.length() < 8) {
+            System.out.println("Demasiado pequeño");
+        } else if (password.length() > 8) {
+            System.out.println("Demasiado grande");
+        } else {
+            System.out.println("Es valida");
+        }
+    }
+} 
+
 ```
 
 5\. Escribe un programa que:
