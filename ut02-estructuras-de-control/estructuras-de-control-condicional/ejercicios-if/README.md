@@ -48,7 +48,8 @@ coverY: 0
 
 6\. Escribe un programa Calculator que:
 
-* Pide un String y lo guarda en una variable llamada operación
+* Muetra el mensaje "Elige una operación: + o -"
+* Guarda el valor introducido por el usuario en una variable llamada operación
 * Si el valor de operación es “+” (`operacion.equals("+")`) -> operacion == “+”
   * Pide un valor double (a)
   * Pide otro valor double (b)
