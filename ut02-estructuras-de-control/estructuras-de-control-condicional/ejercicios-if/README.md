@@ -58,3 +58,4 @@ coverY: 0
   * Pide un valor int(a)
   * Pide otro valor int (b)
   * Muestra el resultado de restarlos
+* En caso de que no sea ni + ni -, muestra el error "Operación inválida"

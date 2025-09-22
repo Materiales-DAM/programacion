@@ -119,6 +119,48 @@ public class StringSizeCheck {
 5\. Escribe un programa que:
 
 ```java
+package org.example.ifexercises;
+
+import java.util.Scanner;
+
+public class SumSubs {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduzca un primer número: ");
+        var a = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Introduzca un segundo número; ");
+        var b = scanner.nextInt();
+        scanner.nextLine();
+
+        if (b < a){
+            var sum = a+b;
+            System.out.print(sum);
+        } else if (a<b) {
+            var res = a - b;
+            System.out.print(res);
+        } else {
+            var sum = a+b;
+
+            System.out.print("Introduzca un tercer número: ");
+            var c = scanner.nextInt();
+            scanner.nextLine();
+
+            if (c < sum){
+                System.out.print("c es menor que a + b");
+            } else if (c > sum) {
+                System.out.print("c es mayor que a + b");
+
+            } else {
+                System.out.print("c es igual a a+b");
+            }
+        }
+
+    }
+}
+
 ```
 
 6\. Escribe un programa que:
