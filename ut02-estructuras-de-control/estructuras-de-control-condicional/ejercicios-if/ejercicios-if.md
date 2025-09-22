@@ -166,4 +166,36 @@ public class SumSubs {
 6\. Escribe un programa que:
 
 ```java
+package org.example.ifexercises;
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Si quieres sumar pon + y si quieres restar pon -");
+        String ope = sc.nextLine();
+        if (ope.equals("+")) {
+            System.out.println("Dime un número");
+            double n1 = sc.nextDouble();
+            sc.nextLine();
+            System.out.println("Dame otro número");
+            double n2 = sc.nextDouble();
+            sc.nextLine();
+            double sum = n1 + n2;
+            System.out.println("Su suma es " + sum);
+        } else if (ope.equals("-")) {
+            System.out.println("Dame un número");
+            int n1 = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Dame otro maás");
+            int n2 = sc.nextInt();
+            sc.nextLine();
+            int subs = n1 - n2;
+            System.out.println("El resultado es " + subs);
+        } else {
+            System.out.println("Operación inválida");
+        }
+    }
+} 
 ```
