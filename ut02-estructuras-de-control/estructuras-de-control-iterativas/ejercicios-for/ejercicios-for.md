@@ -8,16 +8,90 @@ coverY: 0
 1\. Crea un programa que en el main:
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce un mensaje");
+        String mensaje = sc.nextLine();
+
+        System.out.println("Introduce el número de veces que quieres que se repita el mensaje");
+        int num = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < num; i++) {
+            System.out.println(mensaje);
+        }
+    }
+} 
 ```
 
 2\. Escribir un programa que pida dos números enteros e imprima todos los números que hay entre el más pequeño y el más grande:
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número entero");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro número entero");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+
+        int min;
+        int max;
+        if (n1 > n2) {
+            min = n2;
+            max = n1;
+        } else {
+            min = n1;
+            max = n2;
+        }
+
+        for (int i = min; i <= max; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
 ```
 
 3\. Escribir un programa que pida un entero positivo y calcule el sumatorio de cero a ese número
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un entero positivo");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        if (num > 0) {
+            int sum = 0;
+            for (int i = 0; i <= num; i++) {
+                sum = sum + i;
+            }
+            System.out.println(sum);
+        } else {
+            System.out.println("El número introducido no es positivo");
+        }
+    }
+}
+
 ```
 
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
