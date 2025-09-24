@@ -121,11 +121,73 @@ public class Ej4 {
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce un año");
+        int y1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro año");
+        int y2 = scanner.nextInt();
+        scanner.nextLine();
+
+        if(y1 > y2) {
+            int temp = y1;
+            y1 = y2;
+            y2 = temp;
+        }
+
+        for (int i= y1; i <= y2; i++) {
+            if(i % 4 == 0 && i % 100 != 0 ) {
+                System.out.println(i + " es año bisiesto");
+            }
+        }
+    }
+}
+
 ```
 
 6\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos negativos se han introducido.
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //Preguntar cuántos números se van a introducir
+        System.out.print("¿Cuántos números vas a introducir? ");
+        int cantidad = sc.nextInt();
+        sc.nextLine();
+
+        if (cantidad >= 0) {
+            int negativos = 0;
+
+            //Pedir los números uno a uno
+            for (int i = 1; i <= cantidad; i++) {
+                System.out.print("Introduce el número " + i + ": ");
+                int num = sc.nextInt();
+                sc.nextLine();
+
+                if (num < 0) {
+                    negativos++;
+                }
+            }
+            System.out.println("Se han introducido " + negativos + " números negativos.");
+        } else {
+            System.out.print("El numero debe ser positivo");
+        }
+    }
+}
 ```
 
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
