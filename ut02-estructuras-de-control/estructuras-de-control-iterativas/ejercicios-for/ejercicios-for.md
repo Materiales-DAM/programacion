@@ -193,6 +193,41 @@ public class Ej6 {
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //Pregunta cuántos números se van a introducir
+        System.out.println("¿Cuántos números vas a introducir?");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        //La cantidad de números introducidos no puede ser negativa
+        if (num > 0) {
+            int max = Integer.MIN_VALUE;
+
+            //Pide los números
+            for (int i = 1; i <= num; i++) {
+                System.out.println("Introduce el número " + i + ": ");
+                int n = scanner.nextInt();
+                scanner.nextLine();
+
+                //Escribe cual es el número más grande
+                if (n > max) {
+                    max = n;
+                }
+            }
+            System.out.println("El número más grande es " + max);
+        } else {
+            System.out.println("El número debe ser positivo");
+        }
+    }
+}
+
 ```
 
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
