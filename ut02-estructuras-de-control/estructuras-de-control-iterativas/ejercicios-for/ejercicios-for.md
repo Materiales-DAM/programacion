@@ -97,6 +97,25 @@ public class Ej3 {
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
 
 ```java
+package org.example.forexercises;
+
+import java.util.Scanner;
+
+public class Ej4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Dime un numero: ");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("Si multiplicas todos los numeros del 1 al " + num + " da de resultado: " + factorial);
+    }
+}
 ```
 
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
