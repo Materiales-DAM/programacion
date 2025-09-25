@@ -273,4 +273,37 @@ public class Ej8 {
 ```
 
 ```java
+package org.example.forexercises;
+
+
+import java.util.Scanner;
+
+public class Ej9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduzca un número entero mayor que 1: ");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        boolean isPrime = true;
+
+        if (number > 1) {
+            for (int i = 2; i < number; i++) {
+                if (number % i != 0) {
+                    System.out.print(" [" + number + ": " + number + " % " + i + " == 0 ]; ");
+                } else {
+                    isPrime = false;
+                    System.out.print(" [" + number + ": " + number + " % " + i + " != 0]; ");
+                }
+            }
+            if (!isPrime) {
+                System.out.print("--> NO ES PRIMO");
+            } else {
+                System.out.print(" TODO FALSO-->" + " ES PRIMO");
+            }
+        } else {
+            System.out.println("Introduzca un número mayor que uno");
+        }
+    }
+}
 ```
