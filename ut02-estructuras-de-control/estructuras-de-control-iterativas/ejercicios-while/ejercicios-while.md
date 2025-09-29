@@ -75,11 +75,55 @@ coverY: 0
    *   `Introduce numero: 3`
 
        ```java
+       package org.example.whilexercices;
+
+       import java.util.Scanner;
+
+       public class Ej3 {
+           public static void main(String[] args){
+               Scanner scanner = new Scanner(System.in);
+
+               var askNumber = true;
+
+               while(askNumber){
+                   System.out.print("Introduzca un número: ");
+                   var num = scanner.nextDouble();
+                   scanner.nextLine();
+
+                   System.out.print("¿Desea continuar? ");
+                   var response = scanner.nextLine();
+
+                   askNumber = response.equalsIgnoreCase("S");
+               }
+           }
+       } 
        ```
-4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.\
+4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.\
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej4 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int numero = 0;
+            int contador = 0;
+
+            while (numero >= 0) {
+                System.out.print("Introduce un número (negativo para salir): ");
+                numero = scanner.nextInt();
+                scanner.nextLine();
+
+                if (numero >= 0) {
+                    contador++;
+                }
+            }
+            System.out.println("Has introducido " + contador + " números no negativos.");
+        }
+    }
     ```
 5. Realizar un juego para adivinar un número. Para ello se asigna a una variable n un número entero aleatorio, y luego ir pidiendo números indicando “mayor” o “menor” según sea mayor o menor con respecto a N. El proceso termina cuando el usuario acierta y se imprime el texto “exacto!”. Para generar un número aleatorio se puede usar la utilidad java.util.Random
 

@@ -11,7 +11,7 @@ coverY: 0
    * `Introduce numero: 2`
    * `¿Quieres seguir? S`
    * `Introduce numero: 3`
-4. Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.
+4. Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.
 5. Realizar un juego para adivinar un número. Para ello se asigna a una variable n un número entero aleatorio, y luego ir pidiendo números indicando “mayor” o “menor” según sea mayor o menor con respecto a N. El proceso termina cuando el usuario acierta y se imprime el texto “exacto!”. Para generar un número aleatorio se puede usar la utilidad java.util.Random
 
 ```java
