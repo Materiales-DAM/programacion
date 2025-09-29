@@ -41,6 +41,33 @@ coverY: 0
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce el primer numero");
+
+            double num1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce el segundo numero");
+
+            double num2 = scanner.nextDouble();
+            scanner.nextLine();
+
+            while (num2 >= num1) {
+                System.out.println("El segundo numero ha de ser menor que el primero");
+                num2 = scanner.nextInt();
+                scanner.nextLine();
+            }
+            System.out.println(num1 + " " + num2);
+        }
+    }
+
     ```
 3. Escriba un programa que pida números mientras el usuario indique que quiere seguir introduciendo números. Para indicar que quiere seguir escribiendo números, el usuario deberá contestar S o s a la pregunta.
    * `Introduce numero: 2`
