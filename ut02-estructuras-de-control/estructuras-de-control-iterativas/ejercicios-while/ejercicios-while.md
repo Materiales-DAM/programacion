@@ -9,6 +9,33 @@ coverY: 0
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej1 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce el primer numero");
+
+            int num1 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce el segundo numero");
+
+            int num2 = scanner.nextInt();
+            scanner.nextLine();
+
+            while (num2 <= num1) {
+                System.out.println("El segundo numero ha de ser mayor al primero");
+                num2 = scanner.nextInt();
+                scanner.nextLine();
+            }
+            System.out.println(num1 + " " + num2);
+        }
+    }
+
     ```
 2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.\
 
