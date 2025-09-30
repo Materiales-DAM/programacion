@@ -42,6 +42,7 @@
     * [Soluciones do-while](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-do-while/ejercicios-do-while.md)
   * [Bucles anidados](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucles-anidados/README.md)
     * [Soluciones Bucles anidados](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucles-anidados/bucles-anidados.md)
+  * [Ejercicios avanzados de ampliación](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucles-anidados-1.md)
 * [Estructuras de control de salto](ut02-estructuras-de-control/estructuras-de-control-de-salto/README.md)
   * [Break](ut02-estructuras-de-control/estructuras-de-control-de-salto/break.md)
   * [Continue](ut02-estructuras-de-control/estructuras-de-control-de-salto/continue.md)
