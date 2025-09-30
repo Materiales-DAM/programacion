@@ -227,4 +227,41 @@ public class Ej5 {
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej8 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            
+            int zeros = 0;
+            double sumPositives = 0;
+            int positives = 0;
+            double sumNegatives = 0;
+            int negatives = 0;
+
+            int i = 0;
+            while (i <= 10) {
+                System.out.println("Introduzca un número");
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                if (num == 0) {
+                    zeros++;
+                } else if (num < 0) {
+                    sumNegatives = sumNegatives + num;
+                    negatives++;
+                } else {
+                    sumPositives = sumPositives + num;
+                    positives++;
+                }
+                i++;
+            }
+            
+            double positivesAverage = sumPositives / positives;
+            double negativesAverage = sumNegatives / negatives;
+            
+            System.out.println("La media de los numeros positivos a sido " + positivesAverage + ", de los negativos " + negativesAverage + " y a habido " + zeros + " ceros");
+        }
+    } 
     ```
