@@ -168,6 +168,35 @@ public class Ej5 {
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej6 {
+        public static void main(String[] args) {
+            var scanner = new Scanner(System.in);
+            int amount = 0;
+            while (amount < 1) {
+                System.out.println("Introduce la cantidad de números (mayor que cero)");
+                amount = scanner.nextInt();
+                scanner.nextLine();
+            }
+
+            double sum = 0;
+            int i = 0;
+            while (i < amount) {
+                System.out.println("Introduce un número");
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                sum = sum + num;
+                i++;
+            }
+
+            double average = sum / amount;
+
+            System.out.println("La media es " + average);
+        }
+    }
     ```
 7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.\
 
