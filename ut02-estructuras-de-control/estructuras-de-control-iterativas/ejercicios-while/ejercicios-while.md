@@ -133,6 +133,35 @@ int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 10
 ```
 
 ```java
+package org.example.whilexercices;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ej5 {
+    public static void main(String[] args) {
+        Random r = new Random();
+        int secret = r.nextInt(100);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Adivina un número del 0 al 99");
+        int guess = -1;
+        while (guess != secret) {
+            System.out.println("Introduce un número");
+            guess = scanner.nextInt();
+            scanner.nextLine();
+
+            if (guess > secret) {
+                System.out.println("Es menor");
+            } else if (guess < secret) {
+                System.out.println("es mayor");
+            } else {
+                System.out.println("¡¡¡Acertaste!!!");
+            }
+        }
+    }
+}
+
 ```
 
 6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números\
