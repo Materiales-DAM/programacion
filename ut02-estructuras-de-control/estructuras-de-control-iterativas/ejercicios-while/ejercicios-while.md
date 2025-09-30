@@ -202,6 +202,26 @@ public class Ej5 {
 
 
     ```java
+    package org.example.whilexercices;
+
+    import java.util.Scanner;
+
+    public class Ej7 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int suma = 0;
+            int numero = -1;
+            while (numero != 0) {
+                System.out.print("Introduce un número (0 para terminar): ");
+                numero = scanner.nextInt();
+                scanner.nextLine();
+                suma += numero;
+            }
+            System.out.println("Suma total: " + suma);
+            scanner.close();
+        }
+    }
+
     ```
 8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.\
 
