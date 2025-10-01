@@ -60,4 +60,51 @@ coverY: 0
 
 
     ```java
+    package org.example.dowhile;
+
+    import java.util.Scanner;
+
+    public class Ej2 {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            int option;
+            do {
+                System.out.println("Calculator");
+                System.out.println("1. Suma");
+                System.out.println("2. Resta");
+                System.out.println("3. Multiplica");
+                System.out.println("4. Salir");
+                option = sc.nextInt();
+                sc.nextLine();
+                if (option == 1) {
+                    System.out.println("Introduce un numero");
+                    int n1 = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Introduce otro");
+                    int n2 = sc.nextInt();
+                    sc.nextLine();
+                    int n3 = n1 + n2;
+                    System.out.println("La suma es " + n3);
+                } else if (option == 2) {
+                    System.out.println("Introduce un numero");
+                    int n1 = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Introduce otro");
+                    int n2 = sc.nextInt();
+                    sc.nextLine();
+                    int n3 = n1 - n2;
+                    System.out.println("La resta es " + n3);
+                } else if (option == 3) {
+                    System.out.println("Introduce un numero");
+                    int n1 = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Introduce otro");
+                    int n2 = sc.nextInt();
+                    sc.nextLine();
+                    int n3 = n1 * n2;
+                    System.out.println("La multiplicacion es " + n3);
+                }
+            } while (option != 4);
+        }
+    }
     ```
