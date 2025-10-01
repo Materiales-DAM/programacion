@@ -51,9 +51,9 @@ coverY: 0
     El programa debe empezar pidiendo al usuario que seleccione la operación que desea realizar, una vez seleccionada la operación solicitará los datos necesarios para realizarla, al final mostrará el resultado en pantalla y volverá a pedir la siguiente operación.
 2.  Crea un programa que permita al usuario realizar las siguientes operaciones:
 
-    * Sumar dos números: los pide, los suma y muestra el resultado en pantalla.
-    * Restar dos números: los pide, los resta y muestra el resultado en pantalla.
-    * Multiplicar dos números: los pide, los multiplica y muestra el resultado en pantalla.
+    * Sumar dos números enteros: los pide, los suma y muestra el resultado en pantalla.
+    * Restar dos números con decimales: los pide, los resta y muestra el resultado en pantalla.
+    * Multiplicar dos números enteros: los pide, los multiplica y muestra el resultado en pantalla.
     * Salir
 
     El programa debe empezar pidiendo al usuario que seleccione la operación que desea realizar, una vez seleccionada la operación solicitará los datos necesarios para realizarla, al final mostrará el resultado en pantalla y volverá a pedir la siguiente operación.\
