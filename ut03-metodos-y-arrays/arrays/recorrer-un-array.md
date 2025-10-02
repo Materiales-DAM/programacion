@@ -42,8 +42,8 @@ Process finished with exit code 0
 ## For each
 
 * Se utiliza cuando queremos recorrer todas las posiciones de un array sin importarnos en qué posición está cada una de ellas
-* A la derecha de los : tenemos la declaración de la variable en la que se va a almacenar cada uno de los valores del array
-* A la derecha tenemos el array sobre el que vamos a iterar
+* A la izquierda de los : tenemos la declaración de la variable (`number`) en la que se va a almacenar cada uno de los valores del array
+* A la derecha tenemos el array (`numbers`) sobre el que vamos a iterar
 
 ```java
 int sum=0;
