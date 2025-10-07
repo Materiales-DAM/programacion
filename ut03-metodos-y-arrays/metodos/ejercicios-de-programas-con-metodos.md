@@ -26,6 +26,7 @@ En el main pide dos números enteros, e invoca el primer método pasando esos va
 Para implementar este programa crea los siguiente métodos:
 
 * Un método que sirva para imprimir en pantalla el menú y lee la opción elegida por el usuario, al final devuelve la opción elegida
+* Un método askName() que pide al usuario su nombre y lo devuelve
 * Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
 * Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
