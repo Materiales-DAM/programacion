@@ -85,17 +85,18 @@ public class Ej2 {
 
 3. Crea un programa que muestre un menú con las siguientes opciones:
 
-* Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
-* Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
+* Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejemplo, si introduce el nombre Bob aparecerá el texto `Hola, Bob`
+* Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejemplo, si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Salir
 
 Para implementar este programa crea los siguiente métodos:
 
 * Un método que sirva para imprimir en pantalla el menú y lee la opción elegida por el usuario, al final devuelve la opción elegida
-* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
-* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
+* Un método `askName()` que pide al usuario su nombre y lo devuelve
+* Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejemplo, si introduce el nombre Bob aparecerá el texto `Hola, Bob`
+* Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejemplo, si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
-*   En el método main se invocará al método que implementa el bucle del menú interactivo.\
+*   En el método `main` se invocará al método que implementa el bucle del menú interactivo.\
 
 
     ```java
@@ -115,7 +116,7 @@ Implementa el programa creando métodos para:.
 * Un método que ejecute la opción restar
 * Un método que ejecute la opción multiplicar
 * Un método que implemente el bucle del menú
-*   En el main invoca el método del bucle del menú.\
+*   En el `main` invoca el método del bucle del menú.\
 
 
     ```java
@@ -132,7 +133,7 @@ Implementa el programa creando métodos para:.
   * Media
   * Salir
 * Un método que imprima el menú y pida una opción al usuario, luego la devuelve
-*   En el main se creará el menú interactivo usando lo anterior\
+*   En el `main` se creará el menú interactivo usando lo anterior\
 
 
     ```java
