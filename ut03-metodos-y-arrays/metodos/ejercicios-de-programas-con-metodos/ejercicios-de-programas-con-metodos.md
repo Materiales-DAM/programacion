@@ -100,6 +100,64 @@ Para implementar este programa crea los siguiente métodos:
 
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej3 {
+        public static Scanner scanner = new Scanner(System.in);
+
+        public static int menu() {
+            int option;
+            do {
+                option = askOption();
+
+                if (option == 1) {
+                    hello();
+                } else if (option == 2) {
+                    shout();
+                } else {
+                    exit();
+                }
+
+            } while (option != 3);
+            return option;
+        }
+
+        public static String askName(Scanner scanner) {
+            System.out.println("Escribe tu nombre");
+            return scanner.nextLine();
+        }
+
+        public static void hello() {
+            String name = askName(scanner);
+            System.out.println("Hola , " + name);
+        }
+
+        public static void shout() {
+            String name = askName(scanner);
+            System.out.println("Cuidado, " + name + "!!!");
+        }
+
+        public static void exit() {
+            System.out.println("adiós");
+        }
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int askOption() {
+            System.out.println("1. Saluda");
+            System.out.println("2. Grita ");
+            System.out.println("3. Salir ");
+
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+    }
+
     ```
 
 4. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
