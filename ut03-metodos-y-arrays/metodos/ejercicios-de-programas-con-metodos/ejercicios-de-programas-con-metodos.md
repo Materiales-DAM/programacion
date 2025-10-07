@@ -13,6 +13,37 @@ coverY: 0
        En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
 
        ```java
+       package org.ies.tierno;
+
+       import java.util.Scanner;
+
+       public class Ej1 {
+           //Llamamos al scanner
+           public static Scanner scanner = new Scanner(System.in);
+
+           public static void main(String[] args) {
+               int n1 = askNumber();
+               int n2 = askNumber();
+               int res = addition(n1, n2);
+               print(res);
+           }
+
+           public static int askNumber() {
+               System.out.println("Introduce un número entero");
+               int n = scanner.nextInt();
+               scanner.nextLine();
+               return n;
+           }
+
+           public static int addition(int n1, int n2) {
+               int res = n1 + n2;
+               return res;
+           }
+
+           public static void print(int res) {
+               System.out.println("El resultado es: " + res);
+           }
+       } 
        ```
 2. Crea un programa que defina los siguientes métodos:
    1. Un método que calcule la multiplicación de sus dos parámetros enteros y devuelva el resultado
