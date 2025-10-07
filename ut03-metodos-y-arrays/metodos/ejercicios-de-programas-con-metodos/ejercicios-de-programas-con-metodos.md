@@ -18,7 +18,6 @@ coverY: 0
        import java.util.Scanner;
 
        public class Ej1 {
-           //Llamamos al scanner
            public static Scanner scanner = new Scanner(System.in);
 
            public static void main(String[] args) {
@@ -53,6 +52,35 @@ En el main pide dos números enteros, e invoca el primer método pasando esos va
 
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ej2 {
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n1 = askNumber();
+        int n2 = askNumber();
+        int res = multiply(n1, n2);
+        print(res);
+    }
+
+    public static int askNumber() {
+        System.out.println("Introduce un número entero");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+        return n;
+    }
+
+    public static int multiply(int n1, int n2) {
+        return n1 * n2;
+    }
+
+    public static void print(int res) {
+        System.out.println("El resultado es: " + res);
+    }
+} 
 ```
 
 3. Crea un programa que muestre un menú con las siguientes opciones:
