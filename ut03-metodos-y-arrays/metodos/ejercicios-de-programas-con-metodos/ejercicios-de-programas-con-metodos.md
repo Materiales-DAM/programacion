@@ -178,6 +178,85 @@ Implementa el programa creando métodos para:.
 
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej4 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void menu() {
+            int option;
+            do {
+                System.out.println("Elige una opción:");
+                System.out.println("1. Sumar");
+                System.out.println("2. Restar");
+                System.out.println("3. Multiplicar");
+                System.out.println("4. Salir");
+                option = scanner.nextInt();
+                scanner.nextLine();
+
+                if (option == 1) {
+                    sum();
+                } else if (option == 2) {
+                    substract();
+                } else if (option == 3) {
+                    multiply();
+                } else if (option == 4) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+            } while (option != 4);
+        }
+
+        public static void multiply() {
+            int n1 = askNumber();
+            int n2 = askNumber();
+
+            int res = mult(n1, n2);
+
+            System.out.println(res);
+        }
+
+        public static void substract() {
+            int n1 = askNumber();
+            int n2 = askNumber();
+
+            int res = subs(n1, n2);
+
+            System.out.println(res);
+        }
+
+        public static void sum() {
+            int n1 = askNumber();
+            int n2 = askNumber();
+
+            int res = add(n1, n2);
+
+            System.out.println(res);
+        }
+
+        public static int add(int n1, int n2) {
+            return n1 + n2;
+        }
+
+        public static int subs(int n1, int n2) {
+            return n1 - n2;
+        }
+
+        public static int mult(int n1, int n2) {
+            return n1 * n2;
+        }
+
+        public static int askNumber() {
+            System.out.println("Introduce un número:");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+            return n;
+        }
+    }
+
     ```
 
 5\. Escribe un programa con estos métodos:
