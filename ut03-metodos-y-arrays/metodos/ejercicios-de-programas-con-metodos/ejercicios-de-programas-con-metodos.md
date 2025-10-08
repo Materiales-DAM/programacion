@@ -274,4 +274,88 @@ Implementa el programa creando métodos para:.
 
 
     ```java
+    package org.ies.tierno;
+
+
+    import java.util.Scanner;
+
+    public class Ej5 {
+        public static Scanner scanner = new Scanner(
+                System.in
+        );
+
+        public static void main(String[] args) {
+            int option;
+            do {
+                option = option();
+                if (option == 1) {
+                    int sum = summation();
+                    System.out.println("=" + sum);
+                } else if (option == 2) {
+                    int factorial = factorial();
+                    System.out.println("=" + factorial);
+                } else if (option == 3) {
+                    double average = average();
+                    System.out.println("La media es " + average);
+                } else if (option == 4) {
+                    System.out.println("Saliendo.....");
+                } else {
+                    System.out.println("Opcion invalida");
+                }
+            } while (option != 4);
+        }
+
+        public static int summation() {
+            System.out.println("Dime un numero");
+            int num = scanner.nextInt();
+            scanner.nextLine();
+            int sum = 0;
+            System.out.print(0);
+            for (int i = 1; i <= num; i++) {
+                System.out.print("+" + i);
+                sum = sum + i;
+            }
+            return sum;
+        }
+
+        public static int factorial() {
+            System.out.println("Dime un numero");
+            int num = scanner.nextInt();
+            scanner.nextLine();
+            int factorial = 1;
+            System.out.print(1);
+            for (int i = 2; i <= num; i++) {
+                System.out.print("*" + i);
+                factorial = factorial * i;
+            }
+            return factorial;
+        }
+
+        public static double average() {
+            double sum = 0;
+            for (int i = 1; i <= 4; i++) {
+                System.out.println("Dime el " + i + "º numero");
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                sum = sum + num;
+            }
+            double average = sum / 4;
+            return average;
+        }
+
+        public static void menu() {
+            System.out.println("Elige una opcion: ");
+            System.out.println("1.Sumatorio");
+            System.out.println("2.Factorial");
+            System.out.println("3.Media ");
+            System.out.println("4.Salir");
+        }
+
+        public static int option() {
+            menu();
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+    } 
     ```
