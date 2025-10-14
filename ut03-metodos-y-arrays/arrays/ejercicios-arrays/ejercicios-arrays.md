@@ -80,4 +80,36 @@ coverY: 0
 
 
        ```java
+       package org.ies.tierno.arrays;
+
+       import java.util.Scanner;
+
+       public class Ej4 {
+           public static void main(String[] args) {
+               Scanner scanner = new Scanner(System.in);
+               int length;
+               do {
+                   System.out.println("¿Cuántos nombres vas a introducir?");
+                   length = scanner.nextInt();
+                   scanner.nextLine();
+                   if (length < 1) {
+                       System.out.println("Debe ser mayor que cero");
+                   }
+               } while (length < 1);
+
+
+               String[] names = new String[length];
+               for (int i = 0; i < names.length; i++) {
+                   System.out.println("Introduce un nombre: ");
+                   String name = scanner.nextLine();
+                   names[i] = name;
+               }
+
+               System.out.println("Nombres:");
+               for (String name: names) {
+                   System.out.println(name);
+               }
+           }
+       }
+
        ```
