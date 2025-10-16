@@ -30,7 +30,9 @@ public class Ej1 {
     }
 
     public static void main(String[] args) {
-        int[] numbers = {}
+        int[] numbers = {1, 3, 5, 0};
+        int max = max(numbers);
+        printMax(max);
     }
 }
 
