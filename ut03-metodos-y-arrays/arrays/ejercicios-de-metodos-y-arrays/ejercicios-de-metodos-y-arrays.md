@@ -45,6 +45,27 @@ public class Ej1 {
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
+package org.ies.tierno.mehtodsarrays;
+
+public class Ej2 {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4};
+        int sum = sum(numbers);
+        print(sum);
+    }
+
+    public static int sum(int[] numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
+
+    public static void print(int sum) {
+        System.out.println("La suma es: " + sum);
+    }
+}
 ```
 
 3. Crea un programa que defina los siguientes métodos:
