@@ -12,6 +12,28 @@ coverY: 0
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
+package org.ies.tierno.mehtodsarrays;
+
+public class Ej1 {
+    public static int max(int[] numbers) {
+        int max = numbers[0];
+        for (int number : numbers) {
+            if (number > max) {
+                max = number;
+            }
+        }
+        return max;
+    }
+
+    public static void printMax(int max) {
+        System.out.println("El máximo es " + max);
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {}
+    }
+}
+
 ```
 
 2. Crea un programa que defina los siguientes métodos:
