@@ -147,4 +147,77 @@ public class Ej3 {
 
 
           ```java
+          package org.ies.tierno.mehtodsarrays;
+
+          import java.util.Scanner;
+
+          public class Ej4 {
+              private final static Scanner scanner = new Scanner(System.in);
+
+              public static void main(String[] args) {
+                  int[] numbers1 = askNumbers();
+                  int[] numbers1Reverse = reverse(numbers1);
+                  print(numbers1Reverse);
+
+                  int[] numbers2 = askNumbers();
+                  int[] numbers2Reverse = reverse(numbers2);
+                  print(numbers2Reverse);
+
+                  int[] union = union(numbers1Reverse, numbers2Reverse);
+                  print(union);
+              }
+
+              private static int askSize() {
+                  int size;
+                  do {
+                      System.out.println("Introduce el tamaño del array");
+                      size = scanner.nextInt();
+                      scanner.nextLine();
+                      if (size < 1) {
+                          System.out.println("El tamaño debe ser mayor que cero");
+                      }
+                  } while (size < 1);
+                  return size;
+              }
+
+              private static int[] askNumbers() {
+                  int size = askSize();
+                  int[] numbers = new int[size];
+                  for (int i = 0; i < numbers.length; i++) {
+                      System.out.println("Introduce un número:");
+                      numbers[i] = scanner.nextInt();
+                      scanner.nextLine();
+                  }
+                  return numbers;
+              }
+
+              private static int[] reverse(int[] numbers) {
+                  int[] reversed = new int[numbers.length];
+                  for (int i = 0; i < numbers.length; i++) {
+                      // j = len - 1 -i
+                      int j = numbers.length - 1 - i;
+                      reversed[j] = numbers[i];
+                  }
+                  return reversed;
+              }
+
+              public static int[] union(int[] numbers1, int[] numbers2) {
+                  int[] union = new int[numbers1.length + numbers2.length];
+                  for (int i = 0; i < numbers1.length; i++) {
+                      union[i] = numbers1[i];
+                  }
+                  for (int i = 0; i < numbers2.length; i++) {
+                      union[i + numbers1.length] = numbers2[i];
+                  }
+                  return union;
+              }
+
+              private static void print(int[] numbers) {
+                  for (var number: numbers) {
+                      System.out.print(number + " ");
+                  }
+                  System.out.println();
+              }
+          }
+
           ```
