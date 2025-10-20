@@ -80,6 +80,54 @@ public class Ej2 {
 En el main se pide un array, se calcula la media y se imprime el resultado
 
 ```java
+package org.ies.tierno.mehtodsarrays;
+
+import java.util.Scanner;
+
+public class Ej3 {
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] numbers = askNumbers();
+        double average = average(numbers);
+        messageAverage(average);
+    }
+
+    public static int askSize() {
+        System.out.println("Por favor introduce el tamaño del array");
+        int size = scanner.nextInt();
+        scanner.nextLine();
+        while (size < 0) {
+            System.out.println("El numero ha de ser POSTIVO");
+            size = scanner.nextInt();
+            scanner.nextLine();
+        }
+        return size;
+    }
+
+    public static int[] askNumbers() {
+        int size = askSize();
+        int[] numbers = new int[size];
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Introduce el " + (i + 1) + "º numero");
+            numbers[i] = scanner.nextInt();
+            scanner.nextLine();
+        }
+        return numbers;
+    }
+
+    public static double average(int[] numbers) {
+        double sum = 0;
+        for (int number : numbers) {
+            sum = sum + number;
+        }
+        return sum / numbers.length;
+    }
+
+    public static void messageAverage(double average) {
+        System.out.println("La media es: " + average);
+    }
+}
 ```
 
 4. Crea un programa con los siguientes métodos:
