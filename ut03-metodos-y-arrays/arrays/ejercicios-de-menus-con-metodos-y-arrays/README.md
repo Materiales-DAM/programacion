@@ -20,7 +20,25 @@ Métodos necesarios:
 * Un método que, dado un array de números, devuelve la media
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
+  * runMax()
+    * Pide los números
+    * Calcula el máximo
+    * Muestra el máximo por pantalla
+  * runMin()
+    * Pide los números
+    * Calcula el mínimo
+    * Muestra el mínimo por pantalla
+  * runAverage()
+    * Pide los números
+    * Calcula la media
+    * Muestra la media por pantalla
 * Un método con el bucle del menú
+  * Inicia el bucle
+  * Muestra menú
+  * Lee opción
+  * Si es la opción 1, invoca runMax()
+  * Si es la opción 2, invoca runMin()
+  * Si es la opción 3, invoca runAverage()
 
 2. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
    1. Calcular la suma de una lista de números
