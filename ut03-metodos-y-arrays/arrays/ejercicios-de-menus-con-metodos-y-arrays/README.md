@@ -42,7 +42,7 @@ Métodos necesarios:
 
 2. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
    1. Calcular la suma de una lista de números
-   2. Duplicar array: pide un array de números al usuario e imprime esos números multiplicados por dos&#x20;
+   2. Duplicar array: pide un array de números al usuario, crea otro array con los números multiplicados por dos e imprime el array resultante
    3. Salir
 
 Métodos necesarios:
