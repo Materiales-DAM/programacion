@@ -13,6 +13,10 @@
         * nombre
         * apellidos
         * dirección
+    * Highschool
+      * Campos
+        * nombre
+        * estudiantes: array de estudiantes
 2.  ## Taller OOP
 
 
