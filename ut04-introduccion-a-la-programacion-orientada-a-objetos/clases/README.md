@@ -56,6 +56,13 @@ public class StudentMain {
 }
 ```
 
+## Nombre de la clase
+
+Los nombres de las clases deben seguir la convención Upper Camel Case, es decir empiezan por mayúscula y cada palabra que conforme el nombre también empieza con mayúscula. Por ejemplo:
+
+* VehicleType
+* StudentGroup
+
 ## Campos
 
 Los campos nos permiten definir cada una de las partes de las que se que componen los objetos de este tipo. Algunas características de los campos son:
