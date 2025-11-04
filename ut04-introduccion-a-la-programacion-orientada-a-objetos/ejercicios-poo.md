@@ -70,7 +70,7 @@
      * NIF
      * Nombre
      * Apellidos
-6. ## Areolínea
+6. ## Aerolínea
    * Aerolínea:
      * Nombre
      * Vuelos

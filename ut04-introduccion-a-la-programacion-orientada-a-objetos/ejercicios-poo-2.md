@@ -106,7 +106,7 @@ Tendrá un método run() que realice lo siguiente:
   * Si no existe muestra el mensaje "No se ha encontrado el apartamento"
 * Después, muestra la información de los apartamentos de la segunda planta
 
-## Areolínea
+## Aerolínea
 
 * Pasajero:
   * showInfo()

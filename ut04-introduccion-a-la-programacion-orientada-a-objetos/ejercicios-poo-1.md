@@ -17,6 +17,6 @@
 5. ## Edificio
    * Crea los reader de los POJO
    * Crea un Main que instancie los reader, lea un edificio y lo muestre en pantalla
-6. ## Areolínea
+6. ## Aerolínea
    * Crea los reader de los POJO
    * Crea un Main que instancie los reader, lea una areolínea y la muestre en pantalla

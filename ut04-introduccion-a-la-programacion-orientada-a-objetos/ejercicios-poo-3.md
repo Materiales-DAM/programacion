@@ -47,7 +47,7 @@ Debe tener un método run() que haga:
   * Muestra los datos del apartamento situado en una puerta y planta dados. Si no se encuentra muestra el mensaje "No existe el apartamento"
   * Muestra los propietarios de un apartamento situado en una planta y puerta dados. Si no se encuentra muestra el mensaje "No existe el apartamento"
 
-## Areolínea
+## Aerolínea
 
 #### AirlineAppMenu
 
