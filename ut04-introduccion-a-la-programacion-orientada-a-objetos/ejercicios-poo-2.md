@@ -19,7 +19,7 @@ Modifica el Main para que realice lo siguiente:
 
 * Crea los reader:
 * Lee una biblioteca con el LibraryReader
-* Comprueba si en la biblioteca está el libro  con ISBN "001", usando el método hasBook:
+* Comprueba si en la biblioteca está el libro  con ISBN 1001, usando el método hasBook:
   * Si existe el libro:
     * Busca el libro con el método findBook
     * Muestra la información del libro

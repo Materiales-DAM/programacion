@@ -34,7 +34,7 @@
       * Vehiculos (array de Vehicule)
 3. ## Biblioteca
    * Book:
-     * ISBN: String
+     * ISBN: Long
      * Titulo: String
      * Año: int
      * autores: Autor\[]
