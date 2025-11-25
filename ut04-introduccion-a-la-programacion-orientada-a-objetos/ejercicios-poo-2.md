@@ -57,9 +57,9 @@ Tendrá un método run() que realice lo siguiente:
 * Busca otra cuenta con IBAN "ES0002"
   * Si no existe muestra "La cuenta no existe"
   * Si existe, saca 30 euros
+* Haz una trasnferencia de 500 euros desde "ES0001" a "ES0002"
 * Muestra en pantalla la información de la cuenta "ES0001"
 * Muestra en pantalla la información de la cuenta "ES0002"
-* Haz una trasnferencia de 500 euros desde "ES0001" a "ES0002"
 
 #### BankApp2
 
