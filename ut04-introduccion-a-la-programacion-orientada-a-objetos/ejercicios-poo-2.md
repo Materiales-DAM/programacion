@@ -88,7 +88,8 @@ Tendrá un método run() que realice lo siguiente:
 
 * Edificio:
   * showInfo()
-  * findApartment(int floor, String door): Dado una planta y una puerto, devuelve el apartamento en esa planta y puerta. Si no existe dicho apartamento devuelve null.
+  * findApartment(int floor, String door): Dado una planta y una puerta, devuelve el apartamento en esa planta y puerta. Si no existe dicho apartamento devuelve null.
+  * countApartmentOwners(int floor, String door): Dado una planta y una puerta, devuelve el número de propietarios del departamento. Si no existe el departamento, devuelve null
   * showFloorApartments(int floor): Dado un número de planta, muestra los apartamentos de esa planta
   * findOwners(int floor, String door): Dado una planta y una puerta, devuelve los propietarios del apartamento de esa puerta y planta. Si no existe dicho apartamento devuelve null.
 * Apartamento:
