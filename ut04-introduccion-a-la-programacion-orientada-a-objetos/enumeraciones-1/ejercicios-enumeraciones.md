@@ -15,3 +15,4 @@ coverY: 0
   * Crea el reader
   * Pide dos usuarios
   * Comprueba cual de ellos es el mayor de los dos y muestra sus datos en pantalla
+  * Luego comprueba cuales de ellos son mayores de edad y los muestra si son mayores de 18
