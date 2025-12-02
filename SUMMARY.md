@@ -90,6 +90,7 @@
 * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
 * [Ejercicios métodos de objeto](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-2.md)
 * [Ejercicios con menú interactivo](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-3.md)
+* [Records](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-4.md)
 
 ## UT05 - Herencia, interfaces, genéricos y polimorfismo
 
