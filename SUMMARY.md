@@ -88,7 +88,7 @@
 * [Tipos primitivos y null](ut04-introduccion-a-la-programacion-orientada-a-objetos/tipos-primitivos-y-null.md)
 * [Ejercicios métodos de objeto](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-2.md)
 * [Fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/README.md)
-  * [Ejercicios fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/ejercicios-enumeraciones.md)
+  * [Ejercicio fechas](ut04-introduccion-a-la-programacion-orientada-a-objetos/enumeraciones-1/ejercicios-enumeraciones.md)
 * [Ejercicios con menú interactivo](ut04-introduccion-a-la-programacion-orientada-a-objetos/ejercicios-poo-3.md)
 
 ## UT05 - Herencia, interfaces, genéricos y polimorfismo
