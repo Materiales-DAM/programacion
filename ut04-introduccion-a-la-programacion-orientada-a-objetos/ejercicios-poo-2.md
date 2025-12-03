@@ -22,6 +22,30 @@ layout:
 
 # Ejercicios métodos de objeto
 
+## Edificio
+
+* Propietario:
+  * showInfo()
+* Apartamento:
+  * showInfo()
+* Edificio:
+  * showInfo()
+  * findApartment(int floor, String door): Dado una planta y una puerta, devuelve el apartamento en esa planta y puerta. Si no existe dicho apartamento devuelve null.
+  * countApartmentOwners(int floor, String door): Dado una planta y una puerta, devuelve el número de propietarios del departamento. Si no existe el departamento, devuelve null
+  * showFloorApartments(int floor): Dado un número de planta, muestra los apartamentos de esa planta
+  * findOwners(int floor, String door): Dado una planta y una puerta, devuelve los propietarios del apartamento de esa puerta y planta. Si no existe dicho apartamento devuelve null.
+
+#### BuildingApp1
+
+Tendrá un método run() que realice lo siguiente:
+
+* Lee un edificio&#x20;
+* Pide al usuario una planta y una puerta
+* Busca el apartamento de en el planta y puerta que ha pasado el usuario
+  * Si existe, muestra su información
+  * Si no existe muestra el mensaje "No se ha encontrado el apartamento"
+* Después, muestra la información de los apartamentos de la segunda planta
+
 ## Biblioteca
 
 Crea los siguientes métodos de objeto:
@@ -105,30 +129,6 @@ Tendrá un método run() que realice lo siguiente:
     * Muestra los datos de la cuenta
     * Haz una transferencia de todo el dinero de la cuenta ES0001 a la cuenta ES0002
     * Muestra la información del banco
-
-## Edificio
-
-* Propietario:
-  * showInfo()
-* Apartamento:
-  * showInfo()
-* Edificio:
-  * showInfo()
-  * findApartment(int floor, String door): Dado una planta y una puerta, devuelve el apartamento en esa planta y puerta. Si no existe dicho apartamento devuelve null.
-  * countApartmentOwners(int floor, String door): Dado una planta y una puerta, devuelve el número de propietarios del departamento. Si no existe el departamento, devuelve null
-  * showFloorApartments(int floor): Dado un número de planta, muestra los apartamentos de esa planta
-  * findOwners(int floor, String door): Dado una planta y una puerta, devuelve los propietarios del apartamento de esa puerta y planta. Si no existe dicho apartamento devuelve null.
-
-#### BuildingApp1
-
-Tendrá un método run() que realice lo siguiente:
-
-* Lee un edificio&#x20;
-* Pide al usuario una planta y una puerta
-* Busca el apartamento de en el planta y puerta que ha pasado el usuario
-  * Si existe, muestra su información
-  * Si no existe muestra el mensaje "No se ha encontrado el apartamento"
-* Después, muestra la información de los apartamentos de la segunda planta
 
 ## Aerolínea
 
