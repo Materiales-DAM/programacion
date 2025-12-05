@@ -68,7 +68,7 @@ System.out.println(p);        // Person[name=Alice, age=30]
 
 ```java
 public record Point(int x, int y) { 
-
+}
 // NO: p.x = 5; // error de compilación
 ```
 
@@ -131,8 +131,6 @@ public class PersonPojo {
 ```java
 public record Person(String name, int age) { }
 ```
-
-
 
 #### 3.1 Boilerplate
 
