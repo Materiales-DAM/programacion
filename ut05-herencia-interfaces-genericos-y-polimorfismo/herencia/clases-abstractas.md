@@ -197,7 +197,9 @@ public abstract class Animal {
         System.out.println(name + " está durmiendo.");
     }
 }
+```
 
+```java
 // Clase concreta Lion que extiende Animal
 public class Lion extends Animal {
     
@@ -222,7 +224,9 @@ public class Lion extends Animal {
     }
 
 }
+```
 
+```java
 // Clase concreta Dog que extiende Animal
 public class Dog extends Animal {
     private String owner;
@@ -245,7 +249,9 @@ public class Dog extends Animal {
         System.out.println("Guau, guau");
     }
 }
+```
 
+```java
 // Clase principal para probar el código
 public class Main {
     public static void main(String[] args) {
