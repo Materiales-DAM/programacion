@@ -55,7 +55,9 @@ A diferencia de con la herencia, una clase puede implementar varias interfaces, 
 public interface OtraInterfaz {
     String metodoDeOtraInterfaz(String parametro);
 }
+```
 
+```java
 class MiClase implements MiInterfaz, OtraInterfaz {
     // Implementación de métodos y constantes de ambas interfaces
     @Override

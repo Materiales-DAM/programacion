@@ -43,7 +43,9 @@ Un interface puede ser implementado de múltiples maneras, dependiendo de las ne
 public interface AccountReader {
     Account read();
 }
+```
 
+```java
 // Esta implementación de AccountReader usa el Scanner para leer los datos de una cuenta
 public class ScannerAccountReader implements AccountReader {
     private Scanner scanner;
@@ -65,7 +67,9 @@ public class ScannerAccountReader implements AccountReader {
 
     }
 }
+```
 
+```java
 // Esta implementación de AccountReader genera cuentas aleatorias
 public class RandomAccountReader implements AccountReader {
     private Random random;
@@ -110,7 +114,9 @@ public class AccountApp implements App {
 
     // ...
 }
+```
 
+```java
 public class RandomMain {
     public static void main(String[] args){
         Random random = new Random();
@@ -120,7 +126,9 @@ public class RandomMain {
         accountApp.run();
     }
 }
+```
 
+```java
 public class ScannerMain {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);

@@ -37,19 +37,21 @@ El casting y el polimorfismo están estrechamente relacionados, especialmente cu
 
 Permite asignar automáticamente una instancia de una subclase a una referencia de la superclase, facilitando la creación de código más genérico y reutilizable. En este tipo de casting no es necesario indicar nada en el código, debido a que esta conversión nunca puede fallar.
 
-<pre class="language-java"><code class="lang-java"><strong>// El objeto es de tipo Dog y la variable es de tipo Animal, se produce un casting 
-</strong><strong>// implícito de Dog a Animal
-</strong>Animal tobi = new Dog("Tobi", "Bob Esponja");
-</code></pre>
+```java
+// El objeto es de tipo Dog y la variable es de tipo Animal, se produce un casting 
+// implícito de Dog a Animal
+Animal tobi = new Dog("Tobi", "Bob Esponja");
+```
 
 La variable tobi es de tipo Animal, por lo que puedo sólo se pueden usar los métodos definidos en dicha clase, pero no los métodos específicos de Dog (a pesar de que el objeto es de ese tipo).
 
-<pre class="language-java"><code class="lang-java"><strong>tobi.talk();
-</strong><strong>System.out.println(tobi.getName());
-</strong>
-<strong>// Este código no compila porque la variable tobi es de tipo Animal
-</strong><strong>System.out.println(tobi.getOwner());
-</strong></code></pre>
+```java
+tobi.talk();
+System.out.println(tobi.getName());
+
+// Este código no compila porque la variable tobi es de tipo Animal
+System.out.println(tobi.getOwner());
+```
 
 ### Casting explícito (downcasting)
 
@@ -57,15 +59,16 @@ Permite convertir una referencia de la superclase a una referencia de la subclas
 
 Como sabemos que tobi es un perro, podemos crear una nueva variable de tipo Dog y hacer un downcasting de tipos para poder acceder los métodos definidos en Dog.
 
-<pre class="language-java"><code class="lang-java"><strong>// Esto es un casting explícito que va de Animal a Dog
-</strong><strong>Dog tobiDog = (Dog) tobi;
-</strong>
-<strong>tobiDog.talk();
-</strong><strong>System.out.println(tobiDog.getName());
-</strong>
-<strong>// Este código compila porque la variable tobiDog es de tipo Dog
-</strong><strong>System.out.println(tobiDog.getOwner());
-</strong></code></pre>
+```java
+// Esto es un casting explícito que va de Animal a Dog
+Dog tobiDog = (Dog) tobi;
+
+tobiDog.talk();
+System.out.println(tobiDog.getName());
+
+// Este código compila porque la variable tobiDog es de tipo Dog
+System.out.println(tobiDog.getOwner());
+```
 
 #### ClassCastException
 
@@ -73,19 +76,20 @@ En el ejemplo anterior estábamos seguros de que tobi era un perro, por lo que p
 
 Veamos un ejemplo en el que creamos un array de animales y luego tratamos de convertirlos todos a perros.
 
-<pre class="language-java"><code class="lang-java"><strong>// Creamos un array con tres animales, dos son perros y uno un león
-</strong><strong>Animal[] animals = {
-</strong><strong>    new Dog("Tobi", "Bob Esponja"),
-</strong><strong>    new Dog("Beethoven", "Peppa Pig"),
-</strong><strong>    new Lion("Simba", "Serengeti"),
-</strong><strong>};
-</strong>
-<strong>for(Animal animal: animals) {
-</strong><strong>    // Este casting funciona en las dos primeras iteraciones, pero provoca una excepción en la tercera
-</strong><strong>    Dog dog = (Dog) animal;
-</strong><strong>    System.out.println(dog.getOwner());
-</strong><strong>}
-</strong></code></pre>
+```java
+// Creamos un array con tres animales, dos son perros y uno un león
+Animal[] animals = {
+    new Dog("Tobi", "Bob Esponja"),
+    new Dog("Beethoven", "Peppa Pig"),
+    new Lion("Simba", "Serengeti"),
+};
+
+for(Animal animal: animals) {
+    // Este casting funciona en las dos primeras iteraciones, pero provoca una excepción en la tercera
+    Dog dog = (Dog) animal;
+    System.out.println(dog.getOwner());
+}
+```
 
 El código anterior compila, pero provoca una excepción de tipo ClassCastException cuando es ejecutado. Esta excepción no está indicando que se ha tratado de ejecutar un casting ilegal durante la ejecución del programa, en este caso porque estamos intentando convertir un objeto de tipo Lion a Dog y eso no es posible. La traza de la excepción tendrá un aspecto de este tipo
 
@@ -99,18 +103,19 @@ Exception in thread "main" java.lang.ClassCastException: class org.ies.animals.m
 
 Cuando no sepamos con seguridad de qué tipo es el objeto para el que queremos hacer casting podemos usar la construcción instanceof para estar seguros
 
-<pre class="language-java"><code class="lang-java"><strong>for(Animal animal: animals) {
-</strong><strong>    if(animal instanceof Dog) {
-</strong><strong>        // Entra en las dos primeras iteraciones
-</strong><strong>        Dog dog = (Dog) animal;
-</strong><strong>        System.out.println(dog.getOwner());
-</strong><strong>    } else if(animal instanceof Lion) {
-</strong><strong>        // Entra en la tercera iteración
-</strong><strong>        Lion lion = (Lion) animal;
-</strong><strong>        System.out.println(lion.getJungeName());
-</strong><strong>    }
-</strong><strong>}
-</strong></code></pre>
+```java
+for(Animal animal: animals) {
+    if(animal instanceof Dog) {
+        // Entra en las dos primeras iteraciones
+        Dog dog = (Dog) animal;
+        System.out.println(dog.getOwner());
+    } else if(animal instanceof Lion) {
+        // Entra en la tercera iteración
+        Lion lion = (Lion) animal;
+        System.out.println(lion.getJungeName());
+    }
+}
+```
 
 ## En resumen
 

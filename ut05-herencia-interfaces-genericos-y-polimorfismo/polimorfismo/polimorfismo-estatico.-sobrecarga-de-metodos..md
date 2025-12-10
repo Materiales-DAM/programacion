@@ -32,7 +32,9 @@ public class Calculadora {
         return a + b;
     }
 }
+```
 
+```java
 public class Main {
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
