@@ -20,7 +20,7 @@ La jerarquía de clases quedaría de la siguiente manera haciendo Animal abstrac
 
 ```java
 // Clase abstracta Animal
-abstract class Animal {
+public abstract class Animal {
     private String name;
 
     // Constructor
@@ -30,14 +30,14 @@ abstract class Animal {
 
     // Método concreto compartido por todas las clases derivadas
     public void sleep() {
-        System.out.println(nombre + " está durmiendo.");
+        System.out.println(name + " está durmiendo.");
     }
 }
 
 // Clase concreta Lion que extiende Animal
-class Lion extends Animal {
+public class Lion extends Animal {
     
-     private String jungleName;
+    private String jungleName;
 
     public Lion(String name, String jungleName) {
         super(name);
@@ -59,8 +59,8 @@ class Lion extends Animal {
 }
 
 // Clase concreta Dog que extiende Animal
-class Dog extends Animal {
-     private String owner;
+public class Dog extends Animal {
+    private String owner;
 
     public Dog(String name, String owner) {
         super(name);
@@ -107,7 +107,7 @@ Un método abstracto es un método que se declara en una clase abstracta pero no
 1.  **Declaración sin implementación:** Un método abstracto se declara en una clase abstracta utilizando la palabra clave `abstract`, pero no contiene un bloque de código que defina cómo se debe realizar la operación.
 
     ```java
-    abstract class Animal {
+    public abstract class Animal {
         private String name;
 
         // Constructor
@@ -120,16 +120,16 @@ Un método abstracto es un método que se declara en una clase abstracta pero no
 
         // Método concreto compartido por todas las clases derivadas
         public void sleep() {
-            System.out.println(nombre + " está durmiendo.");
+            System.out.println(name + " está durmiendo.");
         }
     }
     ```
 2.  **Obligación de implementación:** Las clases que heredan de una clase abstracta que tiene métodos abstractos están obligadas a proporcionar implementaciones concretas para esos métodos. Si una clase no proporciona una implementación para un método abstracto, también debe declararse como abstracta. Es muy recomendable añadir la anotación @Override antes de la definición del método en las clases hijas.
 
     ```java
-    class Lion extends Animal {
+    public class Lion extends Animal {
         
-         private String jungleName;
+        private String jungleName;
 
         public Lion(String name, String jungleName) {
             super(name);
@@ -162,7 +162,7 @@ Veamos cómo quedaría la jerarquía de clases anterior añadiendo el método ab
 
 ```java
 // Clase abstracta Animal
-abstract class Animal {
+public abstract class Animal {
     private String name;
 
     // Constructor
@@ -175,14 +175,14 @@ abstract class Animal {
 
     // Método concreto compartido por todas las clases derivadas
     public void sleep() {
-        System.out.println(nombre + " está durmiendo.");
+        System.out.println(name + " está durmiendo.");
     }
 }
 
 // Clase concreta Lion que extiende Animal
-class Lion extends Animal {
+public class Lion extends Animal {
     
-     private String jungleName;
+    private String jungleName;
 
     public Lion(String name, String jungleName) {
         super(name);
@@ -205,8 +205,8 @@ class Lion extends Animal {
 }
 
 // Clase concreta Dog que extiende Animal
-class Dog extends Animal {
-     private String owner;
+public class Dog extends Animal {
+    private String owner;
 
     public Dog(String name, String owner) {
         super(name);
@@ -257,8 +257,8 @@ Aquí hay algunas pautas generales sobre la implementación de constructores en 
     * Esto se hace en el bloque de inicialización del constructor de la clase hija, y generalmente es la primera instrucción dentro del constructor de la clase hija.
 
     ```java
-    class Dog extends Animal {
-         private String owner;
+    public class Dog extends Animal {
+        private String owner;
 
         public Dog(String name, String owner) {
             // Invocación del constructor de la clase padre
@@ -285,8 +285,8 @@ Aquí hay algunas pautas generales sobre la implementación de constructores en 
     * Después de la llamada al constructor de la clase padre, puedes incluir código adicional para inicializar miembros específicos de la clase hija.
 
     ```java
-    class Dog extends Animal {
-         private String owner;
+    public class Dog extends Animal {
+        private String owner;
 
         public Dog(String name, String owner) {
             super(name);
