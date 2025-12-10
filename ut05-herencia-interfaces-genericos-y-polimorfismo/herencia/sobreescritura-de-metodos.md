@@ -120,7 +120,9 @@ public abstract class Animal {
         System.out.println(nombre + " está durmiendo.");
     }
 }
+```
 
+```java
 public class Lion extends Animal {
     
     private String jungleName;

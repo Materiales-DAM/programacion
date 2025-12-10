@@ -19,6 +19,7 @@ Si volvemos al ejemplo anterior, veremos que la clase Animal puede ser definida 
 La jerarquía de clases quedaría de la siguiente manera haciendo Animal abstracta
 
 ```java
+package org.ies.tierno.animals.model;
 // Clase abstracta Animal
 public abstract class Animal {
     private String name;
@@ -33,6 +34,11 @@ public abstract class Animal {
         System.out.println(name + " está durmiendo.");
     }
 }
+
+```
+
+```java
+package org.ies.tierno.animals.model;
 
 // Clase concreta Lion que extiende Animal
 public class Lion extends Animal {
@@ -58,6 +64,12 @@ public class Lion extends Animal {
 
 }
 
+
+```
+
+```java
+package org.ies.tierno.animals.model;
+
 // Clase concreta Dog que extiende Animal
 public class Dog extends Animal {
     private String owner;
@@ -79,6 +91,13 @@ public class Dog extends Animal {
         System.out.println("Guau, guau");
     }
 }
+```
+
+```java
+package org.ies.tierno.animals;
+
+import org.ies.tierno.model.Dog;
+import org.ies.tierno.model.Lion;
 
 // Clase principal para probar el código
 public class Main {
