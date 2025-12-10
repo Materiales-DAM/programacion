@@ -24,7 +24,9 @@ public abstract class LivingBeing {
         this.age = age;
     }
 }
+```
 
+```java
 public abstract class Animal extends LivingBeing {
     protected String name;
 
@@ -48,7 +50,9 @@ public abstract class Animal extends LivingBeing {
         System.out.println(nombre + " está durmiendo.");
     }
 }
+```
 
+```java
 public abstract class Vegetable extends LivingBeing{
     protected int size;
 
@@ -65,8 +69,9 @@ public abstract class Vegetable extends LivingBeing{
         this.size = size;
     }
 }
+```
 
-
+```java
 public class Dog extends Animal {
     private String owner;
 
@@ -88,7 +93,9 @@ public class Dog extends Animal {
         System.out.println("Guau, guau");
     }
 }
+```
 
+```java
 public class Lion extends Animal {
     private String jungleName;
 
@@ -110,7 +117,9 @@ public class Lion extends Animal {
         System.out.println("Roar, roar!!");
     }
 }
+```
 
+```java
 public class Ficus extends Vegetable{
     private String type;
 
@@ -206,7 +215,9 @@ public abstract class Animal extends LivingBeing {
         System.out.println(name + " está creciendo.");
     }
 }
+```
 
+```java
 public class Dog extends Animal {
     private String owner;
 
@@ -234,7 +245,9 @@ public class Dog extends Animal {
         System.out.println(name + " es el perro de " + owner);
     }
 }
+```
 
+```java
 public class Lion extends Animal {
     private String jungleName;
 
