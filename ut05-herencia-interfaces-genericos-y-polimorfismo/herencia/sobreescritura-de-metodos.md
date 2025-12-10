@@ -13,7 +13,7 @@ Como hemos visto anteriormente, un método abstracto es un método declarado en 
 
 ```java
 // Clase abstracta Animal
-abstract class Animal {
+public abstract class Animal {
     private String name;
 
     // Constructor
@@ -26,7 +26,7 @@ abstract class Animal {
 
     // Método concreto compartido por todas las clases derivadas
     public void sleep() {
-        System.out.println(nombre + " está durmiendo.");
+        System.out.println(name + " está durmiendo.");
     }
 }
 ```
@@ -35,9 +35,9 @@ Cuando una subclase hereda de una superclase, debe proporcionar su propia implem
 
 ```java
 // Clase concreta Lion que extiende Animal
-class Lion extends Animal {
+public class Lion extends Animal {
     
-     private String jungleName;
+    private String jungleName;
 
     public Lion(String name, String jungleName) {
         super(name);
@@ -67,9 +67,9 @@ Además de implementar los métodos abstractos, las subclases pueden sobrescribi
 
 ```java
 // Clase concreta Lion que extiende Animal
-class Lion extends Animal {
+public class Lion extends Animal {
     
-     private String jungleName;
+    private String jungleName;
 
     public Lion(String name, String jungleName) {
         super(name);
@@ -104,7 +104,7 @@ class Lion extends Animal {
 En Java, el modificador `final` se utiliza para evitar que una clase, método o variable sea modificado o extendido. Cuando se aplica a un método, impide que las subclases lo sobrescriban.
 
 ```java
-abstract class Animal {
+public abstract class Animal {
     private String name;
 
     // Constructor
@@ -121,9 +121,9 @@ abstract class Animal {
     }
 }
 
-class Lion extends Animal {
+public class Lion extends Animal {
     
-     private String jungleName;
+    private String jungleName;
 
     public Lion(String name, String jungleName) {
         super(name);
