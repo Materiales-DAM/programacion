@@ -74,7 +74,7 @@ Añade los siguientes métodos a la clase Forma.
 
 * area: calcula el área de la forma (devuelve un double)
   * Cuadrado: area = lado \* lado
-  * Circulo: area = PI \* radio \* radio. El n'umero PI está almacenado en `Math.PI`
+  * Circulo: area = PI \* radio \* radio. Declara una constante PI en la clase círculo para usarla en esta fórmula.
   * Triángulo: area = base \* altura / 2
 * info: muestra toda la información de la figura geométrica
 
