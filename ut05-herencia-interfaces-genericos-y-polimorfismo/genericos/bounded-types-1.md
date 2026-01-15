@@ -13,23 +13,20 @@ La sintaxis es:
 public static <T> T someMethod(...) { ... }
 ```
 
-Existen varios casos en los que sería útil, por ejemplo para un constructor de arrays
+Existen varios casos en los que sería útil, por ejemplo para un constructor de listas
 
 ```java
-public static <T> T[] array(T v1, T v2) { 
-    T[] array = {v1, v2};
-    return array;
+public static <T> List<T> lista(T v1, T v2) { 
+    return List.of(v1, v2);
 }
 ```
 
 Luego podríamos usar este método de la siguiente manera
 
 ```java
-// Crea un array [2,3]
-Integer[] numbers = array<>(2, 4);
+// Crea una lista [2,3]
+List<Integer> numbers = lista<>(2, 4);
 
-// Crea un array ["Bob", "Peppa"]
-String[] names = array<>("Bob", "Peppa");
-
-
+// Crea una lista ["Bob", "Peppa"]
+List<String> names = lista<>("Bob", "Peppa");
 ```
