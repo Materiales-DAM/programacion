@@ -25,8 +25,8 @@ Luego podríamos usar este método de la siguiente manera
 
 ```java
 // Crea una lista [2,3]
-List<Integer> numbers = lista<>(2, 4);
+List<Integer> numbers = lista(2, 4);
 
 // Crea una lista ["Bob", "Peppa"]
-List<String> names = lista<>("Bob", "Peppa");
+List<String> names = lista("Bob", "Peppa");
 ```
