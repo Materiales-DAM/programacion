@@ -67,8 +67,8 @@ Los productos tienen:
 
 Componentes:
 
-* Readers: basados en random
 * MainApp:
+  * Crea un warehouse hardcodeado
   * Mostrar todos los productos de electrónica (incluyendo los que pueda haber en la planta general)
   * Mostrar todos los productos de ropa (incluyendo los que pueda haber en la planta general)
   * Mostrar todos los productos
