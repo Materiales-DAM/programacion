@@ -20,7 +20,17 @@ Los siguientes ejercicios se pueden crear como métodos una sola clase llamada L
 10. Un método sum10(List\<Integer> numbers) que dado una lista de enteros, devuelve otra lista de enteros del mismo tamaño en la que se le ha sumado 10 a cada número de la primera lista.
 11. Un método union(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade los elementos de numbers1 y después los de numbers 2.
 12. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, crea una nueva lista en la que añade aquellos números que estén tanto en numbers1 como en numbers2
-13. Un método removeAll(List\<Double> numbers , List\<Double> numbersToRemove) que dadas dos listas de números, elimina de numbers todos los números que estén en numbersToRemove
+13. Un método removeAll(List\<Double> numbers , List\<Double> numbersToRemove) que dadas dos listas de números, elimina de numbers todos los números que estén en numbersToRemove<br>
+
+    ```java
+    @Data
+    public class Student {
+        private String name;
+        private String surname;
+        private String email;
+        private int zipCod;
+    }
+    ```
 14. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
 15. Un método List\<Student> filterByZipCode(List\<Student> students, int zipCode) que dada una lista de estudiantes y un código postal, devuelva una lista con los estudiantes que vivan en ese código postal
 16. Un método que recibe una lista de números enteros (numbers) y devuelve otra lista con los números pares que había en numbers
