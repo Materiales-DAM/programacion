@@ -24,11 +24,12 @@ Los siguientes ejercicios se pueden crear como métodos una sola clase llamada L
 
     ```java
     @Data
+    @AllArgsConstructor
     public class Student {
         private String name;
         private String surname;
         private String email;
-        private int zipCod;
+        private int zipCode;
     }
     ```
 14. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
