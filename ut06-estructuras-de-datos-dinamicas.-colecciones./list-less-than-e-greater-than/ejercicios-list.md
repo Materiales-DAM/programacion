@@ -35,8 +35,7 @@ Los siguientes ejercicios se pueden crear como métodos una sola clase llamada L
 14. Un método List\<String> mapToEmails(List\<Student> students) que dada una lista de estudiantes, devuelva una lista de los emails de los estudiantes en el mismo orden
 15. Un método List\<Student> filterByZipCode(List\<Student> students, int zipCode) que dada una lista de estudiantes y un código postal, devuelva una lista con los estudiantes que vivan en ese código postal
 16. Un método que recibe una lista de números enteros (numbers) y devuelve otra lista con los números pares que había en numbers
-
-Crea tu propia implementación de una lista enlazada:
+17. Crea tu propia implementación de una lista enlazada:
 
 * Crea una clase Node que tenga como campos un valor de tipo Double y un enlace al siguiente nodo
 * Crea una clase MyList con un campo llamado head que apunte al primer nodo
@@ -44,5 +43,6 @@ Crea tu propia implementación de una lista enlazada:
   * get(int index): Devuelve el valor en la posición del índice
   * add(Double value): añade el valor al final de la lista
   * addFirst(Double value): añade el valor al principio de la lista
-  * remove(int index): elmina el valor en la posición index
+  * remove(int index): elimina el valor en la posición index
+  * last(): devuelve el último valor de la lista, si no existe devuelve null
 * Convierte MyList en genérica (también debe serlo Node)
