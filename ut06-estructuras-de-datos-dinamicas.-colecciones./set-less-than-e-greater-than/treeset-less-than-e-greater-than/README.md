@@ -88,15 +88,9 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student other) {
-        if(this.zipCode > other.getZipCode()) {
-            return -1;
-        } else if ( this.zipCode == other.getZipCode()) {
-            // Cuando los dos estudiantes tienen el mismo zipCode, usamos el email para
-            // ordenarlos
-            return this.email.compareTo(other.getEmail());
-        } else {
-            return 1;
-        }
+        // Como zipCode es primitivo, necesitamos hacer la comparacion con la 
+        // clase análoga al primitivo, en este caso Integer
+        Integer.compare(this.zipCode, other.getZipCode());
     }
 
     public String getName() {
