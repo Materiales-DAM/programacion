@@ -90,7 +90,17 @@ public class Student implements Comparable<Student> {
     public int compareTo(Student other) {
         // Como zipCode es primitivo, necesitamos hacer la comparacion con la 
         // clase análoga al primitivo, en este caso Integer
-        return Integer.compare(this.zipCode, other.getZipCode());
+        int compare = Integer.compare(this.zipCode, other.getZipCode());
+        if (compare == 0) {
+            compare = name.compareTo(other.name);
+            if (compare == 0) {
+                compare = surname.compareTo(other.surname);
+                if (compare == 0) {
+                    compare = email.compareTo(other.email);
+                }
+            }
+        }
+        return compare;
     }
 
     public String getName() {
