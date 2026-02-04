@@ -11,7 +11,7 @@ Crea tu propia implementación de un árbol binario que almacene valores Double:
   * value: Un valor de tipo Double
   * left: Nodo izquierdo
   * right: Nodo derecho
-* Crea una clase MyTree con un campo llamado root que apunte al nodo r
+* Crea una clase MyTree con un campo llamado root que apunte al nodo root (raíz)
 * Añade métodos para:
   * add(Double value): añade el valor al final de la lista
   * contains(Double value): devuelve true si el valor está en el árbol
