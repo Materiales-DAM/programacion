@@ -91,7 +91,7 @@ public class Flight {
 ```
 
 * Crea un TreeSet\<Flight> que ordene por origen y destino . Con Comparable y Comparator
-* Crea un TreeSet\<Flight> que ordene por compañia. Con Comparable y Comparator
+* Crea un TreeSet\<Flight> que ordene por compañia. Con Comparator
 
 ## Passenger
 
@@ -147,5 +147,5 @@ public class Passenger {
 }
 ```
 
-* Ordena los pasajeros por nombre y apellidos. Comparator y Comparable
-* Ordena los pasajeros por número de asiento. Comparator y Comparable.
+* Ordena los pasajeros por nombre y apellidos. Con Comparator y Comparable
+* Ordena los pasajeros por número de asiento. Con Comparator.
