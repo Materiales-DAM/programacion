@@ -38,8 +38,7 @@ prefixes.put("UK", 44);
 Comprueba si existe un elemento con la clave key. El tipo del parámetro debe ser el tipo de las claves
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong>prefixes.put("US", 1);
+prefixes.put("US", 1);
 prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
@@ -53,15 +52,17 @@ prefixes.put("ES", 34);
 Devuelve el valor asociado a la clave key, si no existe devuelve null.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong>prefixes.put("US", 1);
+
+prefixes.put("US", 1);
 prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-if(prefixes.containsKey("ES")) {
-    // El método get devuleve un Integer porque en este mapa V es Integer
-<strong>    Integer spainPrefix = prefixes.get("ES");
-</strong>    System.out.println("El prefijo de España es " + spainPrefix);
+String code = "FR";
+if (prefixes.containsKey(code)) {
+<strong>    Integer spainPrefix = prefixes.get(code);
+</strong>    System.out.println("El prefijo de " + code + " es " + spainPrefix);
+} else {
+    System.out.println("No se ha encontrado el prefijo de "+ code);
 }
 </code></pre>
 
@@ -82,7 +83,6 @@ prefixes.put("ES", 34);
 Elimina el par clave-valor que tenga la clave key. Si la clave existía se devuelve el valor asociado a la misma, en caso de no existir devuelve null.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-prefixes.put("ES", 340);
 prefixes.put("US", 1);
 prefixes.put("UK", 44);
 prefixes.put("ES", 34);
