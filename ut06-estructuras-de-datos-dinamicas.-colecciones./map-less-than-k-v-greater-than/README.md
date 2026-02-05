@@ -27,11 +27,11 @@ Almacena un nuevo par clave-valor. El primer parámetro es la clave a almacenar 
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
 <strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+</strong>prefixes.put("US", 1);
+prefixes.put("UK", 44);
 // Este par sustituye al par creado en el primer put
-prefixes.put("ES", 34);
-</code></pre>
+<strong>prefixes.put("ES", 34);
+</strong></code></pre>
 
 ### boolean containsKey(K key)
 
@@ -39,12 +39,12 @@ Comprueba si existe un elemento con la clave key. El tipo del parámetro debe se
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
 <strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+</strong>prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-if(prefixes.containsKey("ES")) {
-    System.out.println("Existe el prefijo de España");
+<strong>if(prefixes.containsKey("ES")) {
+</strong>    System.out.println("Existe el prefijo de España");
 }
 </code></pre>
 
@@ -54,14 +54,14 @@ Devuelve el valor asociado a la clave key, si no existe devuelve null.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
 <strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+</strong>prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
 if(prefixes.containsKey("ES")) {
     // El método get devuleve un Integer porque en este mapa V es Integer
-    Integer spainPrefix = prefixes.get("ES");
-    System.out.println("El prefijo de España es " + spainPrefix);
+<strong>    Integer spainPrefix = prefixes.get("ES");
+</strong>    System.out.println("El prefijo de España es " + spainPrefix);
 }
 </code></pre>
 
@@ -70,21 +70,21 @@ if(prefixes.containsKey("ES")) {
 Devuelve el tamaño del mapa
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+prefixes.put("ES", 340);
+prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
-System.out.println("Total prefijos " + prefixes.size());
-</code></pre>
+<strong>System.out.println("Total prefijos " + prefixes.size());
+</strong></code></pre>
 
 ### V remove(K key)
 
 Elimina el par clave-valor que tenga la clave key. Si la clave existía se devuelve el valor asociado a la misma, en caso de no existir devuelve null.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+prefixes.put("ES", 340);
+prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
 <strong>int deletedValue = prefixes.remove("ES");
@@ -109,13 +109,13 @@ Existen varias formas de recorrer un mapa, dependiendo a qué valores queramos a
 Es posible recorrer las claves de un mapa utilizando el método `keySet()` que devuelve un Set con las claves del mapa.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+prefixes.put("ES", 340);
+prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-for(String countryCode: prefixes.keySet()){
-    System.out.println(countryCode);
+<strong>for(String countryCode: prefixes.keySet()){
+</strong>    System.out.println(countryCode);
 }
 </code></pre>
 
@@ -124,13 +124,13 @@ for(String countryCode: prefixes.keySet()){
 También es posible recorrer las valores de un mapa utilizando el método `values()` que devuelve una Collection con las claves del mapa.
 
 <pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
-<strong>prefixes.put("ES", 340);
-</strong><strong>prefixes.put("US", 1);
-</strong>prefixes.put("UK", 44);
+prefixes.put("ES", 340);
+prefixes.put("US", 1);
+prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-for(int prefix: prefixes.values()){
-    System.out.println(prefix);
+<strong>for(int prefix: prefixes.values()){
+</strong>    System.out.println(prefix);
 }
 </code></pre>
 
@@ -138,17 +138,16 @@ for(int prefix: prefixes.values()){
 
 En algunas ocasiones, vamos a querer recorrer claves y valores al mismo tiempo. Para ello usaremos el método entrySet, dicho método devuelve un Set de Entry\<K,V>, cada objeto de tipo Entry continene una clave y un valor.
 
-```java
-Map<String, Integer> prefixes = new HashMap<>();
+<pre class="language-java"><code class="lang-java">Map&#x3C;String, Integer> prefixes = new HashMap&#x3C;>();
 prefixes.put("ES", 340);
 prefixes.put("US", 1);
 prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-for(var entry: prefixes.entrySet()){
-    System.out.println(entry.getKey() + " -> " + entry.getValue());
+<strong>for(var entry: prefixes.entrySet()){
+</strong>    System.out.println(entry.getKey() + " -> " + entry.getValue());
 }
-```
+</code></pre>
 
 ## Implementaciones
 
