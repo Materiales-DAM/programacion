@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/tree.png
 coverY: 94.60266666666666
 ---
 
-# Smart constructors
+# Factory methods
 
-Existen los llamados constructores inteligentes (smart constructors), que nos permiten crear **colecciones inmutables** con sus datos de una manera más sencilla.
+Los _factory methods_ de colecciones en Java son **métodos estáticos** (como `List.of`, `Set.of` o `Map.of`) introducidos a partir de Java 9 que permiten crear instancias de colecciones de forma concisa y segura **sin usar constructores**. Devuelven implementaciones internas de las interfaces de colección, normalmente **inmutables**, **no admiten valores `null`** y ocultan la clase concreta utilizada, lo que mejora la legibilidad del código y reduce errores. Al centralizar la creación en la propia interfaz, facilitan un estilo declarativo y evitan la exposición innecesaria de detalles de implementación.
 
 ## Listas
 
