@@ -129,7 +129,7 @@
   * [Ejercicios Set\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./set-less-than-e-greater-than/ejercicios-set-less-than-e-greater-than.md)
 * [Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than/README.md)
   * [Ejercicios Map\<K, V>](ut06-estructuras-de-datos-dinamicas.-colecciones./map-less-than-k-v-greater-than/ejercicios-map-less-than-k-v-greater-than.md)
-* [Smart constructors](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
+* [Factory methods](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones.md)
 * [Ejercicios selección de colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones-1.md)
 * [Ejercicios colecciones](ut06-estructuras-de-datos-dinamicas.-colecciones./ejercicios-colecciones-2.md)
 * [Stream\<E>](ut06-estructuras-de-datos-dinamicas.-colecciones./stream-less-than-e-greater-than.md)
