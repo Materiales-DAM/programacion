@@ -37,7 +37,8 @@ public class User {
    1. containsKey
    2. remove
 5. Crea un método que dado un mapa de usuarios indexados por nif, devuelva una lista con los nif
-   1. KeySet() foreach
+   1. keySet() foreach
 6. Crea un método que dado un mapa de usuarios indexados por nif, un nif y un teléfono, modifica el teléfono de un usuario.
    1. containsKey
    2. get
+   3. put
