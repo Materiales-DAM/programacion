@@ -11,8 +11,9 @@ Las **expresiones lambda** en Java permiten escribir código más conciso y func
 
 La sintaxis básica de una expresión lambda es la siguiente
 
-<pre class="language-java"><code class="lang-java"><strong>(parametros) -> expresion
-</strong></code></pre>
+```java
+(parametros) -> expresion
+```
 
 O, si tiene múltiples líneas:
 

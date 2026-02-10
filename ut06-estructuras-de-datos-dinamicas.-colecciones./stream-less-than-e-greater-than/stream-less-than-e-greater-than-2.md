@@ -11,16 +11,15 @@ Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, 
 
 Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
 
-```java
-List<String> names = List.of("Juan", "María", "Carlos");
+<pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 
 names
     .stream()
     // Esta lambda (String) -> Boolean, comprueba que el parámetro nombre empieza por J
-    .filter(nombre -> nombre.startsWith("J"))
-    // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
+<strong>    .filter(nombre -> nombre.startsWith("J"))
+</strong>    // Muestra todos los elementos del stream resultante usando una lambda (String) -> Void
     .forEach(nombre -> System.out.println(nombre));
-```
+</code></pre>
 
 ## Stream\<B> mmap(A->B)
 
@@ -30,14 +29,14 @@ Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del St
 
 <pre class="language-java"><code class="lang-java">// En este caso tenemos una List para el que la A es String
 List&#x3C;String> names = List.of("Juan", "María", "Carlos");
-<strong>// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
-</strong><strong>List&#x3C;Integer> nameLengths = stream
-</strong><strong>    .stream()
-</strong>    // Transformamos cada nombre en el número de caracteres que lo componen
+// El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
+List&#x3C;Integer> nameLengths = stream
+    .stream()
+    // Transformamos cada nombre en el número de caracteres que lo componen
     // La lambda que se aplica es String -> Integer
     // Este map devuelve un Stream&#x3C;Integer>
-    .map(nombre -> nombre.length())
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .map(nombre -> nombre.length())
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .collect(Collectors.toList());
 </code></pre>
 
@@ -47,54 +46,51 @@ Este método es de utilidad cuando la transformación que se va a aplicar a cada
 
 Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 
-```java
-List<Product> products = List.of(
+<pre class="language-java"><code class="lang-java">List&#x3C;Product> products = List.of(
     new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
     new Product(2, "tuerca", Set.of("Ferretería", "Tuerca")),
     new Product(3, "lápiz", Set.of("Papelería"))
 );
 
-Set<Set<String>> tags = products
-    .stream()
-    .map(p -> p.getTags())
-    .collect(Collectors.toSet());
+<strong>Set&#x3C;Set&#x3C;String>> tags = products
+</strong>    .stream()
+<strong>    .map(p -> p.getTags())
+</strong>    .collect(Collectors.toSet());
     
 System.out.println(tags);
-```
+</code></pre>
 
 Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de Sets de tags, habrá un Set independiente por cada producto en el Stream original. Sin embargo, lo que queremos obtener es un Set\<String> con los tags de todos los productos.
 
 Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
 
-```java
-List<Product> products = List.of(
+<pre class="language-java"><code class="lang-java">List&#x3C;Product> products = List.of(
     new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
     new Product(2, "tuerca", Set.of("Ferretería", "Tuerca")),
     new Product(3, "lápiz", Set.of("Papelería"))
 );
 
-Set<String> tags = products
-    .stream()
+<strong>Set&#x3C;String> tags = products
+</strong>    .stream()
     // Aquí la B es String
-    .flatMap(p -> p.getTags().stream())
-    .collect(Collectors.toSet());
+<strong>    .flatMap(p -> p.getTags().stream())
+</strong>    .collect(Collectors.toSet());
     
 System.out.println(tags);
-```
+</code></pre>
 
 ## **Stream\<A> sorted()**
 
 Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
 
-```java
-List<String> names = List.of("Juan", "María", "Carlos");
+<pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 // Ordenará los String en orden alfabético
 names
     .stream()
-    .sorted();
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .sorted();
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
-```
+</code></pre>
 
 También es posible especificar una ordenación distinta proviendo de un `Comparator<T>` al método sorted.
 
@@ -103,8 +99,8 @@ También es posible especificar una ordenación distinta proviendo de un `Compar
 names
     .stream()
     // Pasamos un comparador que ordena de alguna otra forma
-    .sorted(new ReverseStringComparator());
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .sorted(new ReverseStringComparator());
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
@@ -115,8 +111,8 @@ También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
 names
     .stream()
     // Expresamos el comparador con una Lambda (String, String) -> Integer
-    .sorted((name1, name2) -> -name1.compareTo(name2));
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .sorted((name1, name2) -> -name1.compareTo(name2));
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
@@ -124,26 +120,24 @@ names
 
 Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
-```java
-List<String> names = List.of("Juan", "María", "Carlos");
+<pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 names
     .stream()
     // Nos quedamos con los dos primeros elementos
-    .limit(2)
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .limit(2)
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
-```
+</code></pre>
 
 ## **Stream\<A> skip(int)**
 
 Este método hace que el `Stream` resultante se salte un número determinado de elementos
 
-```java
-List<String> names = List.of("Juan", "María", "Carlos");
+<pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 names
     .stream()
     // Nos saltamos los dos primeros elementos
-    .skip(2)
-    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
+<strong>    .skip(2)
+</strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
-```
+</code></pre>
