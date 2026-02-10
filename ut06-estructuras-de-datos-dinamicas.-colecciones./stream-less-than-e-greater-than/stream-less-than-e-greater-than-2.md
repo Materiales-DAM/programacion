@@ -7,9 +7,9 @@ coverY: 0
 
 Las operaciones intermedias se aplican a un `Stream` y devuelven otro `Stream`, lo que permite encadenar múltiples operaciones.
 
-## **Stream\<A> filter(A-> Boolean)**
+## **`Stream<A> filter(A-> Boolean)`**
 
-Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es filter y recibe como parámetro una función lambda (E) -> Boolean.
+Sirve para quitar elementos de un stream que no cumplan una condición determinada. El método que se utiliza es `filter` y recibe como parámetro una función lambda `(E) -> Boolean`.
 
 <pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 
@@ -21,11 +21,11 @@ names
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
-## Stream\<B> mmap(A->B)
+## `Stream<B> map(A->B)`
 
-Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del Stream resultante es el mismo que en el Stream original, ya que simplemente se aplica una transformación a cada uno de ellos.
+Se utiliza para **transformar** los elementos de un `Stream<A>` aplicando una función a cada elemento y devolviendo un nuevo `Stream<B>` con los elementos transformados. El número de elementos del `Stream` resultante es el mismo que en el `Stream` original, ya que simplemente se aplica una transformación a cada uno de ellos.
 
-Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del Stream original y `B` el del Stream resultante.
+Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del `Stream` original y `B` el del `Stream` resultante.
 
 <pre class="language-java"><code class="lang-java">// En este caso tenemos una List para el que la A es String
 List&#x3C;String> names = List.of("Juan", "María", "Carlos");
@@ -40,11 +40,11 @@ List&#x3C;Integer> nameLengths = stream
     .collect(Collectors.toList());
 </code></pre>
 
-## Stream\<B> flatMap(A -> Stream\<B>)
+## `Stream<B> flatMap(A -> Stream<B>)`
 
-Este método es de utilidad cuando la transformación que se va a aplicar a cada elemento del Stream produce una colección de valores.
+Este método es de utilidad cuando la transformación que se va a aplicar a cada elemento del `Stream` produce una colección de valores.
 
-Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
+Por ejemplo, si queremos obtener los tags de todos los productos de un `Stream`
 
 <pre class="language-java"><code class="lang-java">List&#x3C;Product> products = List.of(
     new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
@@ -60,9 +60,9 @@ Por ejemplo, si queremos obtener los tags de todos los productos de un Stream
 System.out.println(tags);
 </code></pre>
 
-Como podemos observar, si aplicamos el método map lo que obtenemos es un Set de Sets de tags, habrá un Set independiente por cada producto en el Stream original. Sin embargo, lo que queremos obtener es un Set\<String> con los tags de todos los productos.
+Como podemos observar, si aplicamos el método `map` lo que obtenemos es un `Set` de `Set` de tags, habrá un `Set` independiente por cada producto en el `Stream` original. Sin embargo, lo que queremos obtener es un `Set<String>` con los tags de todos los productos.
 
-Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A) -> Stream\<B> .
+Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda `(A) -> Stream<B>` .
 
 <pre class="language-java"><code class="lang-java">List&#x3C;Product> products = List.of(
     new Product(1, "tornillo", Set.of("Ferretería", "Tornillo")),
@@ -79,9 +79,9 @@ Para poder hacer esto necesitamos el método `flatMap` que recibe una lambda (A)
 System.out.println(tags);
 </code></pre>
 
-## **Stream\<A> sorted()**
+## **`Stream<A> sorted()`**
 
-Los elementos de un `Stream` se pueden ordenar utilizando el método sorted de la siguiente manera
+Los elementos de un `Stream` se pueden ordenar utilizando el método `sorted` de la siguiente manera
 
 <pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 // Ordenará los String en orden alfabético
@@ -104,7 +104,7 @@ names
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
-También es posible expresar el `Comparator` como una Lambda (E, E) -> Integer
+También es posible expresar el `Comparator` como una Lambda `(E, E) -> Integer`
 
 <pre class="language-java"><code class="lang-java"><strong>List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 </strong>// Ordenará los String en orden alfabético
@@ -116,7 +116,7 @@ names
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
-## **Stream\<A> limit(int)**
+## **`Stream<A> limit(int)`**
 
 Este método hace el `Stream` resultante solo se quede con un número máximo de elementos
 
@@ -129,7 +129,7 @@ names
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
 
-## **Stream\<A> skip(int)**
+## **`Stream<A> skip(int)`**
 
 Este método hace que el `Stream` resultante se salte un número determinado de elementos
 

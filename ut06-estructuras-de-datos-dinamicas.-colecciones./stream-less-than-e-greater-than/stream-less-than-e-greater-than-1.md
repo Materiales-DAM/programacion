@@ -7,10 +7,10 @@ coverY: 0
 
 `Optional` es una clase que nos permite representar si un determinado valor puede ser nulo o no, sin tener que usar el valor `null`. Es un concepto de programación funcional que evita la excepción más común en programación estructurada, `NullPointerException`.
 
-Una variable de tipo Optional\<E> puede:
+Una variable de tipo `Optional<E>` puede:
 
-* **Contener un valor de tipo E**
-* **Estar vacía**: no contiene ningún valor de tipo E, por tanto está vacía.
+* **Contener un valor de tipo `E`**
+* **Estar vacía**: no contiene ningún valor de tipo `E`, por tanto está vacía.
 
 A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
 
@@ -23,51 +23,49 @@ Optional<String> optionalWithNullable = Optional.ofNullable(null);
 Optional<String> emptyOptional = Optional.empty();
 ```
 
-## Optional en Streams
+## `Optional` en Streams
 
-Existen numerosos métodos terminales que devuelven un Optional:
+Existen numerosos métodos terminales que devuelven un `Optional`:
 
-* reduce
-* findFirst
-* max
-* min
+* `reduce`
+* `findFirst`
+* `max`
+* `min`
 
 ## Métodos
 
-### **isPresent() | isEmpty()**
+### **`isPresent()` | `isEmpty()`**
 
 Devuelve true si el `Optional` contiene un valor o no.
 
-### **ifPresent(v -> Void)**
+### **`ifPresent(v -> Void)`**
 
 &#x20;Sirve para ejecutar una lambda&#x20;
 
-```java
-Optional<String> optionalMessage = Optional.of("Hola");
+<pre class="language-java"><code class="lang-java">Optional&#x3C;String> optionalMessage = Optional.of("Hola");
 
 // Muestra el mensaje porque optionalMessage no es empty
-optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
-
-Optional<String> optionalEmptyMessage = Optional.empty();
+<strong>optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
+</strong>
+Optional&#x3C;String> optionalEmptyMessage = Optional.empty();
 // No hace nada porque optionalEmptyMessage es empty
-optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
-```
+<strong>optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
+</strong></code></pre>
 
-### orElse(E default)
+### `orElse(E default)`
 
 Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
 
-```java
-// message1 es Hola, porque optionalMessage no está vacío
-var message1 = optionalMessage.orElse("Hello");
-System.out.println(message1);
+<pre class="language-java"><code class="lang-java">// message1 es Hola, porque optionalMessage no está vacío
+<strong>var message1 = optionalMessage.orElse("Hello");
+</strong>System.out.println(message1);
         
 // message2 es Hello, porque optionalEmptyMessage está vacío
-var message2 = optionalEmptyMessage.orElse("Hello");
-System.out.println(message2);
-```
+<strong>var message2 = optionalEmptyMessage.orElse("Hello");
+</strong>System.out.println(message2);
+</code></pre>
 
-### **get()**
+### **`get()`**
 
 Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
@@ -79,32 +77,30 @@ var getMessage1 = optionalMessage.get();
 var getMessage2 = optionalEmptyMessage.get();
 ```
 
-### map(A -> B)
+### `map(A -> B)`
 
 &#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
 
-```java
-// Devuelve un Optional<Integer> que contiene el valor 4
-Optional<Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
-System.out.println(lengthOpt1);
+<pre class="language-java"><code class="lang-java">// Devuelve un Optional&#x3C;Integer> que contiene el valor 4
+<strong>Optional&#x3C;Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
+</strong>System.out.println(lengthOpt1);
 
-// Devuelve un Optional<Integer> vacío, porque optionalEmptyMessage está vacío
-Optional<Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
-System.out.println(lengthOpt2);
-```
+// Devuelve un Optional&#x3C;Integer> vacío, porque optionalEmptyMessage está vacío
+<strong>Optional&#x3C;Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
+</strong>System.out.println(lengthOpt2);
+</code></pre>
 
-### flatMap(A -> Optional\<B>)
+### `flatMap(A -> Optional<B>)`
 
-Este método es de utilidad cuando la transformación que se va a aplicar al contenido del Optional produce otro Optional.
+Este método es de utilidad cuando la transformación que se va a aplicar al contenido del `Optional` produce otro `Optional`.
 
-Por ejemplo, si queremos buscar un pedido dentro de un Optional\<Customer>
+Por ejemplo, si queremos buscar un pedido dentro de un `Optional<Customer>`
 
-```java
-// En este flatMap A es Customer y B es Order
-Optional<Order> orderOpt = customerOpt.flatMap(customer ->
-                        customer.getOrders()
+<pre class="language-java"><code class="lang-java">// En este flatMap A es Customer y B es Order
+<strong>Optional&#x3C;Order> orderOpt = customerOpt.flatMap(customer ->
+</strong>                        customer.getOrders()
                                 .stream()
                                 .filter(order -> order.getId() == orderId)
                                 .findFirst()
                 );
-```
+</code></pre>
