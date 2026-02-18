@@ -17,6 +17,7 @@ import java.util.List;
 public class Order {
     private int id;
     private LocalDate date;
+    private double price;
     private List<Item> items;
 }
 ```
