@@ -9,8 +9,7 @@ Existen dos causas para este error:
 
 ## Variable no encontrada
 
-&#x20;Se está intentando usar una variable que no existe, está mal escrita o no está en el scope\
-
+&#x20;Se está intentando usar una variable que no existe, está mal escrita o no está en el scope<br>
 
 {% code lineNumbers="true" %}
 ```java

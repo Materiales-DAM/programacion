@@ -5,8 +5,7 @@ coverY: 0
 
 # Soluciones while
 
-1.  Escriba un programa que pida dos números enteros. El programa pedirá de nuevo el segundo número hasta que sea mayor que el primero. El programa terminará escribiendo los dos números.\
-
+1.  Escriba un programa que pida dos números enteros. El programa pedirá de nuevo el segundo número hasta que sea mayor que el primero. El programa terminará escribiendo los dos números.<br>
 
     ```java
     package org.example.whilexercices;
@@ -37,8 +36,7 @@ coverY: 0
     }
 
     ```
-2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.\
-
+2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.<br>
 
     ```java
     package org.example.whilexercices;
@@ -98,8 +96,7 @@ coverY: 0
            }
        } 
        ```
-4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.\
-
+4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.<br>
 
     ```java
     package org.example.whilexercices;
@@ -164,8 +161,7 @@ public class Ej5 {
 
 ```
 
-6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números\
-
+6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números<br>
 
     ```java
     package org.example.whilexercices;
@@ -198,8 +194,7 @@ public class Ej5 {
         }
     }
     ```
-7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.\
-
+7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.<br>
 
     ```java
     package org.example.whilexercices;
@@ -223,8 +218,7 @@ public class Ej5 {
     }
 
     ```
-8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.\
-
+8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.<br>
 
     ```java
     package org.example.whilexercices;

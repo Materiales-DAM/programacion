@@ -20,8 +20,7 @@ Métodos necesarios:
 * Un método que, dado un array de números, devuelve la media
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
-*   Un método con el bucle del menú\
-
+*   Un método con el bucle del menú<br>
 
     ```java
     package org.ies.tierno.menuarrays;
@@ -147,8 +146,7 @@ Métodos necesarios:
 * Un método que, dado un array de números, devuelve otro array de números con los valores multiplicados por 2. Por ejemplo, para el array \[3 , 5] devolvería \[6, 10]
 * Un método para pedir la opción que quiere hacer el usuario
 * Un método por cada opción del menú
-*   Un método con el bucle del menú\
-
+*   Un método con el bucle del menú<br>
 
     ```java
     package org.ies.tierno.menuarrays;

@@ -9,8 +9,7 @@ coverY: 0
 
     * Saluda: Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejmplo si introduce el nombre Bob aparecerá el texto `Hola, Bob`
     * Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejmplo si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
-    *   Salir\
-
+    *   Salir<br>
 
         ```java
         package org.example.dowhile;
@@ -56,8 +55,7 @@ coverY: 0
     * Multiplicar dos números enteros: los pide, los multiplica y muestra el resultado en pantalla.
     * Salir
 
-    El programa debe empezar pidiendo al usuario que seleccione la operación que desea realizar, una vez seleccionada la operación solicitará los datos necesarios para realizarla, al final mostrará el resultado en pantalla y volverá a pedir la siguiente operación.\
-
+    El programa debe empezar pidiendo al usuario que seleccione la operación que desea realizar, una vez seleccionada la operación solicitará los datos necesarios para realizarla, al final mostrará el resultado en pantalla y volverá a pedir la siguiente operación.<br>
 
     ```java
     package org.example.dowhile;

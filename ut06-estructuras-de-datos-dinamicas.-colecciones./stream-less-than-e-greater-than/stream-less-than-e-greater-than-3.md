@@ -3,123 +3,104 @@ cover: ../../.gitbook/assets/lambda.jpeg
 coverY: 0
 ---
 
-# Operaciones terminales
+# Optional\<E>
 
-Las operaciones terminales producen un resultado final o llevan a cabo una acción final, y después de que se haya aplicado una operación terminal, el `Stream` ya no puede ser utilizado.
+`Optional` es una clase que nos permite representar si un determinado valor puede ser nulo o no, sin tener que usar el valor `null`. Es un concepto de programación funcional que evita la excepción más común en programación estructurada, `NullPointerException`.
 
-## **`collect`**
+Una variable de tipo `Optional<E>` puede:
 
-Se utiliza para recopilar los elementos de un stream en una estructura de datos específica, como una lista (`List`), un conjunto (`Set`), un mapa (`Map`), etc.
+* **Contener un valor de tipo `E`**
+* **Estar vacía**: no contiene ningún valor de tipo `E`, por tanto está vacía.
 
-La clase `Collectors` incluye métodos que permiten recopilar los elementos de un `Stream` en los diferentes ADT.
+A continuación se muestran varios ejemplos de cómo crear varios objetos de tipo `Optional<String>`
 
-<pre class="language-java"><code class="lang-java">List&#x3C;String> names = List.of("Juan", "María", "Carlos");
+```java
+// Este Optional nal contiene el valor "Hello"
+Optional<String> optionalWithValue = Optional.of("Hello");
+// Este Optional está vacío
+Optional<String> optionalWithNullable = Optional.ofNullable(null);
+// Este Optional está vacío
+Optional<String> emptyOptional = Optional.empty();
+```
 
-List&#x3C;String> namesList = 
-    names
-        .stream()
-        // Nos saltamos los dos primeros elementos
-        .skip(2)
-        // Los elementos del stream resultante se cargan en una lista
-<strong>        .collect(Collectors.toList());
-</strong>        
+## `Optional` en Streams
 
-Set&#x3C;String> namesSet = 
-    names
-        .stream()
-        // Nos saltamos los dos primeros elementos
-        .skip(2)
-        // Los elementos del stream resultante se cargan en un Set
-<strong>        .collect(Collectors.toSet());
-</strong></code></pre>
+Existen numerosos métodos terminales que devuelven un `Optional`:
 
-## **`foreach(A -> Void)`**
+* `reduce`
+* `findFirst`
+* `max`
+* `min`
 
-Esta operación terminal recibe una lambda `(A) -> Void`, es decir no devuelve nada. Se suele utilizar para mostrar datos en pantall, modificar algún objeto definido en el scope en el que se ejecuta... &#x20;
+## Métodos
 
-<pre class="language-java"><code class="lang-java">// Ejemplo de uso de forEach para mostrar datos en pantalla
-List&#x3C;String> names = List.of("Juan", "María", "Carlos");
-names
-    .stream()
-<strong>    .forEach(name -> System.out.println(name));
-</strong></code></pre>
+### **`isPresent()` | `isEmpty()`**
 
-<pre class="language-java"><code class="lang-java">// Ejemplo de uso de forEach para concatenar los nombres separados por comas
-List&#x3C;String> names = List.of("Juan", "María", "Carlos");
-// Para poder acceder a sentence desde la lambda, debe ser final
-final StringBuilder sentence = new StringBuilder();
+Devuelve true si el `Optional` contiene un valor o no.
 
-// Añadimos a sentence cada nombre, separando con un espacio
-names
-    .stream()
-<strong>    .forEach(name -> sentence.append(" " + name));
+### **`ifPresent(v -> Void)`**
+
+&#x20;Sirve para ejecutar una lambda&#x20;
+
+<pre class="language-java"><code class="lang-java">Optional&#x3C;String> optionalMessage = Optional.of("Hola");
+
+// Muestra el mensaje porque optionalMessage no es empty
+<strong>optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
 </strong>
-System.out.println(sentence.toString());
+Optional&#x3C;String> optionalEmptyMessage = Optional.empty();
+// No hace nada porque optionalEmptyMessage es empty
+<strong>optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
+</strong></code></pre>
+
+### `orElse(E default)`
+
+Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
+
+<pre class="language-java"><code class="lang-java">// message1 es Hola, porque optionalMessage no está vacío
+<strong>var message1 = optionalMessage.orElse("Hello");
+</strong>System.out.println(message1);
+        
+// message2 es Hello, porque optionalEmptyMessage está vacío
+<strong>var message2 = optionalEmptyMessage.orElse("Hello");
+</strong>System.out.println(message2);
 </code></pre>
 
-## **`findFirst()`**
+### **`get()`**
+
+Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
 ```java
-// Devuelve un Optional con el primer elemento del stream
-// Si el stream está vacío, devuelve Optional.empty
-Optional<String> firstElement = stream.findFirst();
+// message1 es Hola, porque optionalMessage no está vacío
+var getMessage1 = optionalMessage.get();
+
+// Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
+var getMessage2 = optionalEmptyMessage.get();
 ```
 
-## **`max( (A,A) -> A )`**
+### `map(A -> B)`
 
-```java
-// Devuelve un Optional con el nif más alto, ordenado alfabéticamente
-Optional<Student> maxNifStudent = stream
-    .max((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
-```
+&#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
 
-## **`min( (A,A) -> A )`**
+<pre class="language-java"><code class="lang-java">// Devuelve un Optional&#x3C;Integer> que contiene el valor 4
+<strong>Optional&#x3C;Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
+</strong>System.out.println(lengthOpt1);
 
-```java
-// Devuelve un Optional con el nif más bajo, ordenado alfabéticamente
-Optional<Student> minNifStudent = stream
-    .min((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
-```
+// Devuelve un Optional&#x3C;Integer> vacío, porque optionalEmptyMessage está vacío
+<strong>Optional&#x3C;Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
+</strong>System.out.println(lengthOpt2);
+</code></pre>
 
-## `reduce(A, (A, A) -> A)`
+### `flatMap(A -> Optional<B>)`
 
-Permite combinar los elementos del `Stream<T>` en un solo valor de tipo `Optional<T>`. Para ello, es necesario pasar una lambda `(T, T) -> T`, dicha función toma dos parámetros del tipo que contiene la colección y devuelve un único resultado del mismo tipo, esta función se aplica una y otra vez reduciendo el número de valores que contiene el `Stream` hasta obtener un único valor
+Este método es de utilidad cuando la transformación que se va a aplicar al contenido del `Optional` produce otro `Optional`.
 
-Después de hacer un reduce, obtenemos un objeto de tipo `Optional<T>`, este `Optional` indica que si el `Stream` estaba vacío no obtendremos ningún resultado.
+Por ejemplo, si queremos buscar un pedido dentro de un `Optional<Customer>`
 
-<pre class="language-java"><code class="lang-java">List&#x3C;Integer> numbers = List.of(3, 4, 2, 5);
-// Se suman todos los números en numbers hasta obtener el total
-Optional&#x3C;Integer> sum = numbers
-    .stream()
-<strong>    .reduce((s1, s2) -> s1 + s2);
-</strong></code></pre>
-
-El resultado del `reduce` devolverá un `Optional.empty` cuando no hay ningún elemento en el stream al que se le aplica el `reduce`.&#x20;
-
-```java
-List<Integer> numbers = List.of();
-// sum es Optional.empty
-Optional<Integer> sum = numbers.stream().reduce((s1, s2) -> s1 + s2);
-```
-
-Es posible pasar un parámetro adicional al método reduce que consiste en un valor inicial que se aplicará a la primera operación de reducción que se aplique. Cuando se pasa este parámetro el resultado ya no es un `Optional<T>` sino un `T,` ya que en caso de que el stream esté vacío se devolverá el elemento identidad.
-
-<pre class="language-java"><code class="lang-java">List&#x3C;Integer> numbers = List.of(3, 4, 2, 5);
-// Se suman todos los números en numbers hasta obtener el total
-//  identidad= 0, stream =(3, 4, 2, 5)
-// reduce (0,3) = 3
-// reduce (3, 4) = 7
-// reduce (7,2) = 9
-// reduce (9,5) = 14
-// sum = 14
-<strong>Integer sum = numbers
-</strong>    .stream()
-<strong>    .reduce(0, (s1, s2) -> s1 + s2);
-</strong></code></pre>
-
-El resultado del `reduce` devolverá el valor identidad cuando no hay ningún elemento en el stream al que se le aplica el reduce.&#x20;
-
-<pre class="language-java"><code class="lang-java">List&#x3C;Integer> numbers = List.of();
-// sum es 0
-<strong>Integer sum = numbers.stream().reduce(0, (s1, s2) -> s1 + s2);
-</strong></code></pre>
+<pre class="language-java"><code class="lang-java">// En este flatMap A es Customer y B es Order
+<strong>Optional&#x3C;Order> orderOpt = customerOpt.flatMap(customer ->
+</strong>                        customer.getOrders()
+                                .stream()
+                                .filter(order -> order.getId() == orderId)
+                                .findFirst()
+                );
+</code></pre>

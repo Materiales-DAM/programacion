@@ -10,8 +10,7 @@ coverY: 0
     2 3 4 5 … n + 1\
     3 4 5 6 … n + 2\
     ...\
-    n n+1 n+2 … n+n-1\
-
+    n n+1 n+2 … n+n-1<br>
 
     ```java
     package org.example.nestedloops;
@@ -43,8 +42,7 @@ coverY: 0
     2 2\
     3 3 3\
     ...\
-    n n n….. n\
-
+    n n n….. n<br>
 
     ```java
     package org.example.nestedloops;
@@ -76,8 +74,7 @@ coverY: 0
     12\
     123\
     1234\
-    12345\
-
+    12345<br>
 
     ```java
     package org.example.nestedloops;
@@ -108,8 +105,7 @@ coverY: 0
     n n n n …. n\
     …\
     2 2\
-    1\
-
+    1<br>
 
     ```java
     package org.example.nestedloops;
@@ -141,8 +137,7 @@ coverY: 0
    3. Por cada número que hay entre v1 y v2, calcula el sumatorio de 0 al número
       * Sumatorio de 1: 1 + 0
       * Sumatorio de 2: 2 + 1 + 0
-      *   Sumatorio de 3: 3 + 2 + 1 + 0\
-
+      *   Sumatorio de 3: 3 + 2 + 1 + 0<br>
 
           ```java
           package org.example.nestedloops;

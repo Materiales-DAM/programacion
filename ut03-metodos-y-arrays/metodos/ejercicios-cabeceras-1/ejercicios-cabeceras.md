@@ -33,4 +33,4 @@ Escribe las cabeceras de los siguientes métodos:
     public static void printMax(int max)
     ```
 
-\
+<br>

@@ -7,8 +7,7 @@ coverY: 0
 
 1. Crea un programa que defina los siguientes métodos:
    1. Un método que calcule la suma de sus dos parámetros enteros y devuelva el resultado
-   2.  Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada\
-
+   2.  Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada<br>
 
        En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero
 
@@ -48,8 +47,7 @@ coverY: 0
    1. Un método que calcule la multiplicación de sus dos parámetros enteros y devuelva el resultado
    2. Un método que reciba un entero por parámetro e imprima el texto “El resultado es: ” y el parámetro recibido. Este método no devolverá nada
 
-En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero\
-
+En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero<br>
 
 ```java
 package org.ies.tierno;
@@ -96,8 +94,7 @@ Para implementar este programa crea los siguiente métodos:
 * Un método que contiene todo el código de la opción "Saluda": Pide al usuario su nombre y muestra en pantalla el texto `Hola, <nombre introducido>`. Por ejemplo, si introduce el nombre Bob aparecerá el texto `Hola, Bob`
 * Un método que contiene todo el código de la opción Grita: Pide al usuario su nombre y muestra en pantalla el texto `Cuidado <nombre introducido>!`. Por ejemplo, si introduce el nombre Bob aparecerá el texto`Cuidado, Bob!`
 * Un método que implementa el bucle del menú interactivo e invoca a los métodos anteriores para realizar las distintas tareas
-*   En el método `main` se invocará al método que implementa el bucle del menú interactivo.\
-
+*   En el método `main` se invocará al método que implementa el bucle del menú interactivo.<br>
 
     ```java
     package org.ies.tierno;
@@ -174,8 +171,7 @@ Implementa el programa creando métodos para:.
 * Un método que ejecute la opción restar
 * Un método que ejecute la opción multiplicar
 * Un método que implemente el bucle del menú
-*   En el `main` invoca el método del bucle del menú.\
-
+*   En el `main` invoca el método del bucle del menú.<br>
 
     ```java
     package org.ies.tierno;
@@ -270,8 +266,7 @@ Implementa el programa creando métodos para:.
   * Media
   * Salir
 * Un método que imprima el menú y pida una opción al usuario, luego la devuelve
-*   En el `main` se creará el menú interactivo usando lo anterior\
-
+*   En el `main` se creará el menú interactivo usando lo anterior<br>
 
     ```java
     package org.ies.tierno;

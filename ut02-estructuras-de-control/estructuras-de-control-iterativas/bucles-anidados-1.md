@@ -9,8 +9,7 @@ coverY: 0
    1. 5 -> 60
    2. 6 -> 60
    3. 7 -> 420
-   4.  8 -> 840\
-
+   4.  8 -> 840<br>
 
        ```java
        package org.ies.tierno;

@@ -143,8 +143,7 @@ public class Ej3 {
       5. Invierte este nuevo array
       6. Imprime el otro array invertido
       7. Une los dos arrays invertidos
-      8.  Imprime el resultado de la unión\
-
+      8.  Imprime el resultado de la unión<br>
 
           ```java
           package org.ies.tierno.mehtodsarrays;

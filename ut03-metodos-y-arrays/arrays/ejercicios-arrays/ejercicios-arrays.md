@@ -7,8 +7,7 @@ coverY: 0
 
 1. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.
-   2.  Recorre el array y muestra cada valor en pantalla\
-
+   2.  Recorre el array y muestra cada valor en pantalla<br>
 
        ```java
        package org.ies.tierno.arrays;
@@ -51,8 +50,7 @@ coverY: 0
 3. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.
    2. Recorre el array calculando la suma de todos los números
-   3.  Al final imprime la suma\
-
+   3.  Al final imprime la suma<br>
 
        ```java
        package org.ies.tierno.arrays;
@@ -76,8 +74,7 @@ coverY: 0
    3. Recorre el array, en cada iteración
       1. Pide un nombre al usuario con el scanner
       2. Guarda en la posición i del array el nombre que acaba de pasar el usuario
-   4.  Vuelve a recorrer el array mostrando en pantalla todos los nombres almacenados en el mismo\
-
+   4.  Vuelve a recorrer el array mostrando en pantalla todos los nombres almacenados en el mismo<br>
 
        ```java
        package org.ies.tierno.arrays;
