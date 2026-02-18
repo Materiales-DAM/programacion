@@ -87,7 +87,7 @@ Los elementos de un `Stream` se pueden ordenar utilizando el método `sorted` de
 // Ordenará los String en orden alfabético
 names
     .stream()
-<strong>    .sorted();
+<strong>    .sorted()
 </strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
@@ -99,7 +99,7 @@ También es posible especificar una ordenación distinta proviendo de un `Compar
 names
     .stream()
     // Pasamos un comparador que ordena de alguna otra forma
-<strong>    .sorted(new ReverseStringComparator());
+<strong>    .sorted(new ReverseStringComparator())
 </strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
@@ -111,7 +111,7 @@ También es posible expresar el `Comparator` como una Lambda `(E, E) -> Integer`
 names
     .stream()
     // Expresamos el comparador con una Lambda (String, String) -> Integer
-<strong>    .sorted((name1, name2) -> -name1.compareTo(name2));
+<strong>    .sorted((name1, name2) -> -name1.compareTo(name2))
 </strong>    // Ahora ejecutamos una operación terminal para que muestre todos los elementos del stream resultante
     .forEach(nombre -> System.out.println(nombre));
 </code></pre>
