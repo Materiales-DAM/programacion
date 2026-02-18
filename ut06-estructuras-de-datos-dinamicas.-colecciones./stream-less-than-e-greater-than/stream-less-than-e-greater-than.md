@@ -65,7 +65,7 @@ Ejemplos:
 Las expresiones lambda se utilizan comúnmente con streams para realizar operaciones sobre colecciones de manera más concisa. Por ejemplo, para imprimir todos los elementos de una lista:
 
 ```java
-List<String> nombres = Arrays.asList("Juan", "María", "Carlos");
+List<String> nombres = List.of("Juan", "María", "Carlos");
 
 // Esta lambda es de tipo (String) -> Void
 nombres.forEach(nombre -> System.out.println(nombre));

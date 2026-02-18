@@ -30,7 +30,7 @@ Toma como parámetro una función lambda `(A) -> B`, donde `A` es el tipo del `S
 <pre class="language-java"><code class="lang-java">// En este caso tenemos una List para el que la A es String
 List&#x3C;String> names = List.of("Juan", "María", "Carlos");
 // El mapeo genera un Stream&#x3C;Integer> que luego es recolectado en una List&#x3C;Ingeger>
-List&#x3C;Integer> nameLengths = stream
+List&#x3C;Integer> nameLengths = names
     .stream()
     // Transformamos cada nombre en el número de caracteres que lo componen
     // La lambda que se aplica es String -> Integer

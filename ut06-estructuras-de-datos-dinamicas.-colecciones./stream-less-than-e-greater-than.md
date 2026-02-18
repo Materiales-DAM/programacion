@@ -20,17 +20,16 @@ Veamos un ejemplo simple para ilustrar cómo funcionan los streams en Java:
 Supongamos que tenemos una lista de números y queremos filtrar los números pares, duplicar cada número y luego imprimir los resultados:
 
 ```java
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> numeros = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         numeros.stream()
                .filter(n -> n % 2 == 0)  // Filtrar números pares
                .map(n -> n * 2)           // Duplicar cada número
-               .forEach(System.out::println);  // Imprimir los resultados
+               .forEach(n -> System.out.println(n));  // Imprimir los resultados
     }
 }
 ```
