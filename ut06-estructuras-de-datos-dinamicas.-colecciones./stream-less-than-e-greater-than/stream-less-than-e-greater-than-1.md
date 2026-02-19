@@ -56,12 +56,13 @@ Optional&#x3C;String> optionalEmptyMessage = Optional.empty();
 
 Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
 
-<pre class="language-java"><code class="lang-java">// message1 es Hola, porque optionalMessage no está vacío
-<strong>var message1 = optionalMessage.orElse("Hello");
+<pre class="language-java"><code class="lang-java">Optional&#x3C;String> optionalMessage = Optional.of("Hola");
+// message1 es Hola, porque optionalMessage no está vacío
+<strong>String message1 = optionalMessage.orElse("Hello");
 </strong>System.out.println(message1);
         
 // message2 es Hello, porque optionalEmptyMessage está vacío
-<strong>var message2 = optionalEmptyMessage.orElse("Hello");
+<strong>String message2 = optionalEmptyMessage.orElse("Hello");
 </strong>System.out.println(message2);
 </code></pre>
 
@@ -71,10 +72,10 @@ Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
 ```java
 // message1 es Hola, porque optionalMessage no está vacío
-var getMessage1 = optionalMessage.get();
+String getMessage1 = optionalMessage.get();
 
 // Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
-var getMessage2 = optionalEmptyMessage.get();
+String getMessage2 = optionalEmptyMessage.get();
 ```
 
 ### `map(A -> B)`
