@@ -42,53 +42,66 @@ Devuelve true si el `Optional` contiene un valor o no.
 
 &#x20;Sirve para ejecutar una lambda&#x20;
 
-<pre class="language-java"><code class="lang-java">Optional&#x3C;String> optionalMessage = Optional.of("Hola");
+<pre class="language-java"><code class="lang-java">
+public void showMessage(Optional&#x3C;String> optionalMessage) {
+    // Muestra el mensaje porque optionalMessage no es empty
+<strong>    optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
+</strong>}
 
-// Muestra el mensaje porque optionalMessage no es empty
-<strong>optionalMessage.ifPresent(message -> System.out.println("Msg: " + message));
-</strong>
-Optional&#x3C;String> optionalEmptyMessage = Optional.empty();
-// No hace nada porque optionalEmptyMessage es empty
-<strong>optionalEmptyMessage.ifPresent(message -> System.out.println("Msg: " + message));
-</strong></code></pre>
+// Mostrará el mensaje
+showMessage(Optional.of("Hello, world"));
+// No mostrará nada
+showMessage(Optional.empty());
+</code></pre>
 
 ### `orElse(E default)`
 
 Sirve para extraer el valor que contiene el optional, en caso de que el Optional esté vacío devolverá el valor que se pasa al método orElse
 
-<pre class="language-java"><code class="lang-java">Optional&#x3C;String> optionalMessage = Optional.of("Hola");
+<pre class="language-java"><code class="lang-java">public String extractValueOrDefault(Optional&#x3C;String> optionalMessage) {
+<strong>    return optionalMessage.orElse("Hello");
+</strong>}
+Optional&#x3C;String> optionalMessage = Optional.of("Hola");
 // message1 es Hola, porque optionalMessage no está vacío
-<strong>String message1 = optionalMessage.orElse("Hello");
-</strong>System.out.println(message1);
+String message1 = extractValueOrDefault(optionalMessage);
+System.out.println(message1);
         
 // message2 es Hello, porque optionalEmptyMessage está vacío
-<strong>String message2 = optionalEmptyMessage.orElse("Hello");
-</strong>System.out.println(message2);
+String message2 = extractValueOrDefault(Optional.empty());
+System.out.println(message2);
 </code></pre>
 
 ### **`get()`**
 
 Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
-```java
+<pre class="language-java"><code class="lang-java">public String extractValue(Optional&#x3C;String> optionalMessage) {
+    // El método get es mejor no utilizarlo nunca
+<strong>    return optionalMessage.get("Hello");
+</strong>}
+
 // message1 es Hola, porque optionalMessage no está vacío
-String getMessage1 = optionalMessage.get();
+String getMessage1 = extractValue(Optional.of("Hola"));
 
 // Lanza la excepción NoSuchElementException optionalEmptyMessage está vacío
-String getMessage2 = optionalEmptyMessage.get();
-```
+String getMessage2 = extractValue(Optional.empty());
+</code></pre>
 
 ### `map(A -> B)`
 
 &#x20;Transforma el valor si está presente, o devuelve un `Optional` vacío si no lo está.
 
-<pre class="language-java"><code class="lang-java">// Devuelve un Optional&#x3C;Integer> que contiene el valor 4
-<strong>Optional&#x3C;Integer> lengthOpt1 = optionalMessage.map(message -> message.length());
-</strong>System.out.println(lengthOpt1);
+<pre class="language-java"><code class="lang-java">public Optional&#x3C;Integer> getMessageLength(Optional&#x3C;String> optionalMessage) {
+    // El método get es mejor no utilizarlo nunca
+<strong>    return optionalMessage.map(message -> message.length());
+</strong>}
+// Devuelve un Optional&#x3C;Integer> que contiene el valor 4
+Optional&#x3C;Integer> lengthOpt1 = getMessageLength(Optional.of("Hola"));
+System.out.println(lengthOpt1);
 
 // Devuelve un Optional&#x3C;Integer> vacío, porque optionalEmptyMessage está vacío
-<strong>Optional&#x3C;Integer> lengthOpt2 = optionalEmptyMessage.map(message -> message.length());
-</strong>System.out.println(lengthOpt2);
+Optional&#x3C;Integer> lengthOpt2 = getMessageLength(Optional.empty());
+System.out.println(lengthOpt2);
 </code></pre>
 
 ### `flatMap(A -> Optional<B>)`
@@ -97,11 +110,13 @@ Este método es de utilidad cuando la transformación que se va a aplicar al con
 
 Por ejemplo, si queremos buscar un pedido dentro de un `Optional<Customer>`
 
-<pre class="language-java"><code class="lang-java">// En este flatMap A es Customer y B es Order
-<strong>Optional&#x3C;Order> orderOpt = customerOpt.flatMap(customer ->
-</strong>                        customer.getOrders()
-                                .stream()
-                                .filter(order -> order.getId() == orderId)
-                                .findFirst()
-                );
+<pre class="language-java"><code class="lang-java">    public static Optional&#x3C;Order> findOrder(Optional&#x3C;Customer> customerOpt, int orderId) {
+<strong>        return customerOpt.flatMap((customer) ->
+</strong>                customer.getOrders()
+                        .stream()
+                        .filter(order -> order.getId() == orderId)
+                        // Devuelve un Optional&#x3C;Order>
+<strong>                        .findFirst()
+</strong>        );
+    }
 </code></pre>
