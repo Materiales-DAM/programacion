@@ -21,6 +21,7 @@ List&#x3C;String> namesList =
         // Nos saltamos los dos primeros elementos
         .skip(2)
         // Los elementos del stream resultante se cargan en una lista
+        // Equivale a .toList()
 <strong>        .collect(Collectors.toList());
 </strong>        
 
@@ -67,19 +68,17 @@ Optional<String> firstElement = stream.findFirst();
 
 ## **`max( (A,A) -> A )`**
 
-```java
-// Devuelve un Optional con el nif más alto, ordenado alfabéticamente
-Optional<Student> maxNifStudent = stream
-    .max((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
-```
+<pre class="language-java"><code class="lang-java">// Devuelve un Optional con el nif más alto, ordenado alfabéticamente
+Optional&#x3C;Student> maxNifStudent = stream
+<strong>    .max((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
+</strong></code></pre>
 
 ## **`min( (A,A) -> A )`**
 
-```java
-// Devuelve un Optional con el nif más bajo, ordenado alfabéticamente
-Optional<Student> minNifStudent = stream
-    .min((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
-```
+<pre class="language-java"><code class="lang-java">// Devuelve un Optional con el nif más bajo, ordenado alfabéticamente
+Optional&#x3C;Student> minNifStudent = stream
+<strong>    .min((student1, student2) -> student1.getNif().compareTo(student2.getNif()));
+</strong></code></pre>
 
 ## `reduce(A, (A, A) -> A)`
 
