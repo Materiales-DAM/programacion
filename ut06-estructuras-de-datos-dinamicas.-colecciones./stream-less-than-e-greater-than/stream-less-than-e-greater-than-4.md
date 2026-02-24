@@ -15,3 +15,16 @@ Resuelve estos ejercicios usando Stream
 6. Un método min(List\<Double> numbers ) que busca el mínimo de los números en la lista. Como la lista puede estar vacía, el método debe devolver Optional\<Double>.
 7. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, devuelve los números que están tanto numbers1 como en numbers2
 8. Un método que dado una lista de pedidos, devuelve el precio total de todos los pedidos
+
+
+
+## bank-collections
+
+Implementa los siguientes métodos utilizando Stream:
+
+* Dado un nif, devuelve un Optional\[Customer] con ese cliente
+* Dado un nif, devolver todas las cuentas de ese cliente. Si el cliente no existe devuelve Optional.empty.
+* Dado un código postal, devuelve todas las cuentas cuyo propietario vive en ese código postal
+
+
+
