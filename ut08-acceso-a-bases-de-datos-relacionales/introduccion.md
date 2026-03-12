@@ -2,6 +2,8 @@
 
 Vamos a estudiar cómo acceder a una base de datos relacional (MySQL) desde Java. La librería que vamos a usar para ello se denomina JDBC (Java Database Connectivity) y está integrada en el JDK de Java.
 
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 ## **Configuración  Maven**
 
 Para **MySQL** (similar para PostgreSQL):
