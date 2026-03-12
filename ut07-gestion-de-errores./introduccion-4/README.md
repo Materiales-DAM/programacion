@@ -1,4 +1,5 @@
 ---
+hidden: true
 cover: ../../.gitbook/assets/quality-assurance-code-bug.jpg
 coverY: 110.50526315789473
 ---
