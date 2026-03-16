@@ -1,141 +1,51 @@
+---
+cover: ../.gitbook/assets/jdbc.jpeg
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+---
+
 # Introducción
 
 Vamos a estudiar cómo acceder a una base de datos relacional (MySQL) desde Java. La librería que vamos a usar para ello se denomina JDBC (Java Database Connectivity) y está integrada en el JDK de Java.
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-## **Configuración  Maven**
+#### Capas y roles <a href="#capas-y-roles" id="capas-y-roles"></a>
 
-Para **MySQL** (similar para PostgreSQL):
+* **Aplicación Java**: tu código llama a la API (`Connection`, `PreparedStatement`, `ResultSet`, …).
+* **API JDBC (java.sql / javax.sql)**: contratos estándar.
+  * `java.sql`: uso básico (conexión, sentencias, resultados, metadatos, transacciones).
+  * `javax.sql`: fuentes de datos, _connection pooling_, XA (transacciones distribuidas).
+* **DriverManager / DataSource**:
+  * **DriverManager**: obtiene conexiones a partir de una URL JDBC; más simple, sin _pool_.
+  * **DataSource**: fábrica de conexiones; permite **pooling** (HikariCP, etc.), JNDI y config centralizada. Es lo recomendado en producción.
+* **Driver JDBC** (normalmente **Type 4**, puro Java): implementa la **SPI** de JDBC y traduce llamadas de la API a un protocolo de red propio del motor.
+* **Base de datos**: ejecuta el SQL y devuelve filas/estados.
 
-```xml
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.33</version>
-</dependency>
-```
+#### Flujo típico de una petición <a href="#flujo-tipico-de-una-peticion" id="flujo-tipico-de-una-peticion"></a>
 
-## **Abrir una conexión**
-
-```java
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/your_database";
-    private static final String USER = "your_user";
-    private static final String PASSWORD = "your_password";
-
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
-    }
-}
-```
-
-## **Leer datos de la base de datos**
-
-```java
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
-public class SelectExample {
-    public static void main(String[] args) {
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id, name FROM users");
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                System.out.println(id + " - " + name);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-## **Insertar datos en una tabla**
-
-```java
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-public class InsertExample {
-    public static void main(String[] args) {
-        String sql = "INSERT INTO users (name, email) VALUES (?, ?)";
-
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            PreparedStatement pstmt = conn.prepareStatement(sql));
-            pstmt.setString(1, "John Doe");
-            pstmt.setString(2, "john@example.com");
-
-            int rows = pstmt.executeUpdate();
-            System.out.println("Inserted " + rows + " row(s)");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-## **Actualizar datos de una tabla**
-
-```java
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-public class UpdateExample {
-    public static void main(String[] args) {
-        String sql = "UPDATE users SET email = ? WHERE id = ?";
-
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, "newemail@example.com");
-            pstmt.setInt(2, 1);
-
-            int rows = pstmt.executeUpdate();
-            System.out.println("Updated " + rows + " row(s)");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-## **Eliminar filas de una tabla**
-
-```java
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-public class DeleteExample {
-    public static void main(String[] args) {
-        String sql = "DELETE FROM users WHERE id = ?";
-
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, 1);
-
-            int rows = pstmt.executeUpdate();
-            System.out.println("Deleted " + rows + " row(s)");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-## **Buenas Prácticas**
-
-✅ Siempre usa **PreparedStatement** (evita SQL Injection).\
-✅ Usa **try-with-resources** para cerrar conexiones.\
-✅ Considera un **pool de conexiones** (HikariCP) en aplicaciones reales.\
-✅ Para aplicaciones complejas: evalúa usar **JPA (Hibernate, Spring Data JPA)**.
+1. Tu app pide una conexión → `DataSource.getConnection()` (o `DriverManager.getConnection()`).
+2. Se crea (o saca del pool) un **`Connection`**.
+3. Preparas la consulta → **`PreparedStatement`** (parámetros, plan reusable).
+4. Ejecutas → `executeQuery()` / `executeUpdate()` / `execute()`.
+5. Lees resultados → **`ResultSet`** (cursor, tipos, _fetch size_, _streaming_).
+6. Confirmas o deshaces → **transacciones** (`commit`/`rollback`), `autoCommit` on/off.
+7. Cierras recursos (o los devuelve al pool) → `ResultSet` → `Statement` → `Connection`.

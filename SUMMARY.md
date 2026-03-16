@@ -167,4 +167,8 @@
 ## UT08 - Acceso a bases de datos relacionales
 
 * [Introducción](ut08-acceso-a-bases-de-datos-relacionales/introduccion.md)
+* [API JDBC](ut08-acceso-a-bases-de-datos-relacionales/api-jdbc.md)
 * [Ejercicios acceso a bases de datos](ut08-acceso-a-bases-de-datos-relacionales/ejercicios-acceso-a-bases-de-datos.md)
+* [Data Access Objects](ut08-acceso-a-bases-de-datos-relacionales/data-access-objects.md)
+* [Datasources](ut08-acceso-a-bases-de-datos-relacionales/datasources.md)
+* [Ejercicio JDBC](ut08-acceso-a-bases-de-datos-relacionales/ejercicio-jdbc.md)
