@@ -83,6 +83,83 @@ VALUES('2X', 2, 5);
 
 ## Library-db
 
+```sql
+CREATE DATABASE IF NOT EXISTS library;
+USE library;
+
+-- --------------------------------------------------------
+-- DDL
+-- --------------------------------------------------------
+
+CREATE TABLE author (
+    nif        VARCHAR(20)  NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name  VARCHAR(150) NOT NULL,
+    CONSTRAINT pk_author PRIMARY KEY (nif)
+);
+
+CREATE TABLE book (
+    isbn       VARCHAR(20)  NOT NULL,
+    title      VARCHAR(255) NOT NULL,
+    year       INT          NOT NULL,
+    author_nif VARCHAR(20)  NOT NULL,
+    CONSTRAINT pk_book        PRIMARY KEY (isbn),
+    CONSTRAINT fk_book_author FOREIGN KEY (author_nif) REFERENCES author(nif)
+);
+
+CREATE TABLE member (
+    nif        VARCHAR(20)  NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name  VARCHAR(150) NOT NULL,
+    CONSTRAINT pk_member PRIMARY KEY (nif)
+);
+
+CREATE TABLE book_lend (
+    member_nif VARCHAR(20) NOT NULL,
+    isbn       VARCHAR(20) NOT NULL,
+    lend_date  DATE        NOT NULL,
+    CONSTRAINT pk_book_lend        PRIMARY KEY (member_nif, isbn, lend_date),
+    CONSTRAINT fk_book_lend_member FOREIGN KEY (member_nif) REFERENCES member(nif),
+    CONSTRAINT fk_book_lend_book   FOREIGN KEY (isbn)       REFERENCES book(isbn)
+);
+
+-- --------------------------------------------------------
+-- DML
+-- --------------------------------------------------------
+
+INSERT INTO author (nif, first_name, last_name) VALUES
+    ('11111111A', 'George',    'Orwell'),
+    ('22222222B', 'J.K.',      'Rowling'),
+    ('33333333C', 'Frank',     'Herbert'),
+    ('44444444D', 'Tolkien',   'J.R.R.'),
+    ('55555555E', 'Agatha',    'Christie');
+
+INSERT INTO book (isbn, title, year, author_nif) VALUES
+    ('978-0451524935', 'Nineteen Eighty-Four',          1949, '11111111A'),
+    ('978-0452284234', 'Animal Farm',                   1945, '11111111A'),
+    ('978-0439708180', 'Harry Potter and the Sorcerer', 1997, '22222222B'),
+    ('978-0441013593', 'Dune',                          1965, '33333333C'),
+    ('978-0618640157', 'The Lord of the Rings',         1954, '44444444D'),
+    ('978-0062073488', 'Murder on the Orient Express',  1934, '55555555E');
+
+INSERT INTO member (nif, first_name, last_name) VALUES
+    ('66666666F', 'Alice',   'Smith'),
+    ('77777777G', 'Bob',     'Johnson'),
+    ('88888888H', 'Carol',   'Williams'),
+    ('99999999I', 'David',   'Brown'),
+    ('10101010J', 'Eva',     'Jones');
+
+INSERT INTO book_lend (member_nif, isbn, lend_date) VALUES
+    ('66666666F', '978-0451524935', '2024-01-10'),
+    ('66666666F', '978-0441013593', '2024-03-05'),
+    ('77777777G', '978-0439708180', '2024-02-14'),
+    ('77777777G', '978-0618640157', '2024-02-20'),
+    ('88888888H', '978-0452284234', '2024-03-01'),
+    ('99999999I', '978-0062073488', '2024-03-15'),
+    ('10101010J', '978-0451524935', '2024-04-02'),
+    ('10101010J', '978-0439708180', '2024-04-10');
+```
+
 ### POJOs
 
 #### Book
@@ -146,6 +223,45 @@ Debe implementar un bucle con las siguientes opciones:
 
 ## Airline
 
+```sql
+-- Crear la base de datos
+CREATE DATABASE airline CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE airline;
+
+-- Crear la tabla Flight
+CREATE TABLE Flight (
+    number INT PRIMARY KEY,
+    origin VARCHAR(100) NOT NULL,
+    destination VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    airline VARCHAR(100) NOT NULL
+);
+
+-- Crear la tabla Passenger
+CREATE TABLE Passenger (
+    ticketNumber VARCHAR(20) PRIMARY KEY,
+    nif VARCHAR(20) NOT NULL,
+    flightNumber INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    seatNumber INT NOT NULL,
+    CONSTRAINT fk_flight FOREIGN KEY (flightNumber) REFERENCES Flight(number)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+-- Crear la tabla Luggage
+CREATE TABLE Luggage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ticketNumber VARCHAR(20) NOT NULL,
+    description TEXT,
+    CONSTRAINT fk_passenger FOREIGN KEY (ticketNumber) REFERENCES Passenger(ticketNumber)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+```
+
 ### POJOs
 
 #### Flight
@@ -201,42 +317,3 @@ Debe implementar un bucle con las siguientes opciones:
 * Eliminar equipaje
 
 Script SQL
-
-```sql
--- Crear la base de datos
-CREATE DATABASE airline CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE airline;
-
--- Crear la tabla Flight
-CREATE TABLE Flight (
-    number INT PRIMARY KEY,
-    origin VARCHAR(100) NOT NULL,
-    destination VARCHAR(100) NOT NULL,
-    date DATE NOT NULL,
-    airline VARCHAR(100) NOT NULL
-);
-
--- Crear la tabla Passenger
-CREATE TABLE Passenger (
-    ticketNumber VARCHAR(20) PRIMARY KEY,
-    nif VARCHAR(20) NOT NULL,
-    flightNumber INT NOT NULL,
-    name VARCHAR(100) NOT NULL,
-    surname VARCHAR(100) NOT NULL,
-    seatNumber INT NOT NULL,
-    CONSTRAINT fk_flight FOREIGN KEY (flightNumber) REFERENCES Flight(number)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-);
-
--- Crear la tabla Luggage
-CREATE TABLE Luggage (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    ticketNumber VARCHAR(20) NOT NULL,
-    description TEXT,
-    CONSTRAINT fk_passenger FOREIGN KEY (ticketNumber) REFERENCES Passenger(ticketNumber)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE
-);
-
-```
