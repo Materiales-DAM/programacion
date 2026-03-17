@@ -57,10 +57,10 @@ prefixes.put("US", 1);
 prefixes.put("UK", 44);
 prefixes.put("ES", 34);
 
-String code = "FR";
+String code = "ES";
 if (prefixes.containsKey(code)) {
-<strong>    Integer spainPrefix = prefixes.get(code);
-</strong>    System.out.println("El prefijo de " + code + " es " + spainPrefix);
+<strong>    Integer prefix = prefixes.get(code);
+</strong>    System.out.println("El prefijo de " + code + " es " + prefix);
 } else {
     System.out.println("No se ha encontrado el prefijo de "+ code);
 }
