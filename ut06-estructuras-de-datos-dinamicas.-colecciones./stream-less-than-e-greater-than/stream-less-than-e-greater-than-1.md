@@ -77,7 +77,7 @@ Devuelve el valor si está presente, o lanza una excepción si no lo está.
 
 <pre class="language-java"><code class="lang-java">public String extractValue(Optional&#x3C;String> optionalMessage) {
     // El método get es mejor no utilizarlo nunca
-<strong>    return optionalMessage.get("Hello");
+<strong>    return optionalMessage.get();
 </strong>}
 
 // message1 es Hola, porque optionalMessage no está vacío
