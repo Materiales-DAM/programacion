@@ -38,7 +38,6 @@ Dos algoritmos que producen el mismo resultado final pueden ser muy distintos. A
 * **Complejidad espacial.** Cuánta memoria adicional necesita, aparte del propio array de entrada. Un algoritmo que ordena "in situ" (**in-place**) apenas usa memoria extra; otros necesitan arrays auxiliares.
 * **Estabilidad.** Un algoritmo es **estable** si, cuando dos elementos tienen la misma clave de ordenación, mantiene entre ellos el orden original. Importa cuando se ordena por varios criterios sucesivos: si ordenas una lista de alumnos por nota y luego por nombre, la estabilidad garantiza que, a igualdad de nombre, se conserve el orden por nota.
 * **Adaptabilidad.** Un algoritmo es **adaptativo** si aprovecha que los datos ya estén parcialmente ordenados para terminar antes. La inserción lo es; la selección no.
-* **Base de comparación o no.** Los algoritmos más generales comparan elementos entre sí (`a < b`). Existen otros —_counting sort_, _radix sort_— que explotan propiedades de los datos (por ejemplo, que sean enteros en un rango pequeño) y no necesitan compararlos.
 
 ## Principales algoritmos de ordenación
 

@@ -35,7 +35,7 @@ Trasladado a un array de números:
 
 El nombre viene precisamente de que los elementos grandes "burbujean" hacia el final (o, si lo miras al revés, los pequeños van subiendo hacia el principio).
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ## Ejercicios
 
@@ -49,5 +49,7 @@ El nombre viene precisamente de que los elementos grandes "burbujean" hacia el f
         private String surname
     }
     ```
-3. Implementa un método `int[] bubbleSortOpt(int[] numbers)` que dado un array de enteros lo devuelva ordenado de menor a mayor. La ordenación se debe hacer en el propio array de entrada, que es el mismo que se devuelve. La diferencia con el primero es que en cada iteración ya sabemos que los elementos del final ya están ordenados por lo que no debemos volver a comprobarlo
+3. Realiza las siguientes optimizaciones sobre el ejercicio 1:
+   1. Adaptabilidad: si el array ya está ordenado en una pasada, ya ha terminado. Si durante una pasada no se ha hecho ningún intercambio es que ya está ordenado
+   2. La primera pasada deja el número de mayor tamaño en la última posición, la segunda al siguiente en la penúltima... entonces no es necesario comprobar últimas posiciones que ya sabemos que están ordenadas
 
