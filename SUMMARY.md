@@ -176,5 +176,7 @@
 ## UT ampliación - Algoritmos
 
 * [Introducción](ut-ampliacion-algoritmos/introduccion.md)
+* [Recursión](ut-ampliacion-algoritmos/recursion.md)
 * [Algoritmos de ordenación](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/README.md)
   * [Ordenación por burbuja](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-burbuja.md)
+  * [Merge sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/merge-sort.md)
