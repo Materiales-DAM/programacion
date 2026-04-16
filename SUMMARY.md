@@ -172,3 +172,9 @@
 * [Data Access Objects](ut08-acceso-a-bases-de-datos-relacionales/data-access-objects.md)
 * [Datasources](ut08-acceso-a-bases-de-datos-relacionales/datasources.md)
 * [Ejercicio JDBC](ut08-acceso-a-bases-de-datos-relacionales/ejercicio-jdbc.md)
+
+## UT ampliación - Algoritmos
+
+* [Introducción](ut-ampliacion-algoritmos/introduccion.md)
+* [Algoritmos de ordenación](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/README.md)
+  * [Ordenación por burbuja](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-burbuja.md)
