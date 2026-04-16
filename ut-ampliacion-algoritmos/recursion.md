@@ -77,8 +77,6 @@ Vamos a traducir la definición matemática del factorial a Java, siguiendo la p
 
 **Caso recursivo:** `n! = n · (n-1)!`. Para calcular `n!`, calculo primero `(n-1)!` (una versión más pequeña del mismo problema) y lo multiplico por `n`.
 
-java
-
 ```java
 public static long factorial(int n) {
     if (n == 0) {            // caso base
@@ -115,10 +113,6 @@ sumaNaturales(5)  →  15   (1+2+3+4+5)
 sumaNaturales(10) →  55
 ```
 
-**Firma:**
-
-java
-
 ```java
 public static int sumaNaturales(int n)
 ```
@@ -140,10 +134,6 @@ potencia(5, 4)  →  625
 potencia(3, 10) →  59049
 ```
 
-**Firma:**
-
-java
-
 ```java
 public static long potencia(int x, int n)
 ```
@@ -163,10 +153,6 @@ sumaDigitos(123)   →  6    (1+2+3)
 sumaDigitos(9999)  →  36
 sumaDigitos(12345) →  15
 ```
-
-**Firma:**
-
-java
 
 ```java
 public static int sumaDigitos(int n)
@@ -188,10 +174,6 @@ invertir("a")     →  "a"
 invertir("hola")  →  "aloh"
 invertir("abcde") →  "edcba"
 ```
-
-**Firma:**
-
-java
 
 ```java
 public static String invertir(String s)
@@ -224,10 +206,6 @@ fib(10) →  55
 fib(20) →  6765
 ```
 
-**Firma:**
-
-java
-
 ```java
 public static long fib(int n)
 ```
@@ -250,10 +228,6 @@ esPalindromo("radar")   →  true
 esPalindromo("hola")    →  false
 esPalindromo("anilina") →  true
 ```
-
-**Firma:**
-
-java
 
 ```java
 public static boolean esPalindromo(String s)
@@ -286,10 +260,6 @@ Mover disco 1 de B a A
 Mover disco 2 de B a C
 Mover disco 1 de A a C
 ```
-
-**Firma:**
-
-java
 
 ```java
 public static void hanoi(int n, char origen, char destino, char auxiliar)
