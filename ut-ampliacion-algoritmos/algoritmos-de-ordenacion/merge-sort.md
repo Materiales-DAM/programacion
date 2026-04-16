@@ -54,7 +54,7 @@ Aplicado a la ordenación:
 
 La idea clave: mezclar dos arrays que **ya están ordenados** es mucho más fácil que ordenar uno desordenado. Esa es la razón por la que el algoritmo funciona y es eficiente.
 
-### 3. El corazón del algoritmo: la operación _merge_
+### El corazón del algoritmo: la operación _merge_
 
 Antes de atacar el algoritmo completo, necesitamos dominar la operación que le da nombre. La operación _merge_ toma **dos arrays que ya están ordenados** y produce un tercer array también ordenado con todos los elementos de ambos.
 
