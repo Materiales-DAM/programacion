@@ -243,8 +243,10 @@ public static boolean esPalindromo(String s)
 
 Las **Torres de Hanói** son un rompecabezas clásico: tienes tres postes (A, B, C) y `n` discos de tamaños distintos apilados en el poste A en orden decreciente (el mayor abajo, el menor arriba). Debes moverlos todos al poste C respetando dos reglas:
 
-1. Solo puedes mover **un disco cada vez**.
+1. No es posible mover más de un disco a la vez.
 2. Un disco grande **nunca** puede reposar sobre uno más pequeño.
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Implementa una función que imprima por pantalla la secuencia de movimientos necesarios para resolverlo.
 
