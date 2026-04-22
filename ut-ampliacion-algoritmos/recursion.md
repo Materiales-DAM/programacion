@@ -239,7 +239,52 @@ public static boolean esPalindromo(String s)
 
 ***
 
-#### Ejercicio 7 — Torres de Hanói _(reto)_
+#### Ejercicio 7
+
+Imagina que tienes una guía telefónica antigua: una lista de nombres ordenados alfabéticamente con miles de entradas. Si buscas un nombre, no empiezas por la primera página y vas una a una. Abres la guía por la mitad, miras si el nombre que buscas va antes o después, descartas la mitad que no te interesa, y repites. En pocos pasos encuentras el nombre o confirmas que no está.
+
+Eso es exactamente la **búsqueda binaria**.
+
+**Enunciado**
+
+Dado un array de enteros **ordenado de menor a mayor** y un valor objetivo, implementa una función **recursiva** que devuelva la **posición** (índice) del valor en el array. Si el valor no está presente, devuelve `-1`.
+
+```
+Ejemplo 1:
+  array:    [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  objetivo: 23
+  resultado: 5
+
+Ejemplo 2:
+  array:    [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  objetivo: 10
+  resultado: -1
+
+Ejemplo 3:
+  array:    [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  objetivo: 2
+  resultado: 0   (primer elemento)
+
+Ejemplo 4:
+  array:    [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  objetivo: 91
+  resultado: 9   (último elemento)
+
+Ejemplo 5:
+  array:    [7]
+  objetivo: 7
+  resultado: 0
+```
+
+**Firma**
+
+```java
+public static int busquedaBinaria(int[] arr, int ini, int fin, int objetivo)
+```
+
+***
+
+#### Ejercicio 8 — Torres de Hanói _(reto)_
 
 Las **Torres de Hanói** son un rompecabezas clásico: tienes tres postes (A, B, C) y `n` discos de tamaños distintos apilados en el poste A en orden decreciente (el mayor abajo, el menor arriba). Debes moverlos todos al poste C respetando dos reglas:
 
