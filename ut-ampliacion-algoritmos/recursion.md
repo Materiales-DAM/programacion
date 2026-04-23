@@ -239,7 +239,7 @@ public static boolean esPalindromo(String s)
 
 ***
 
-#### Ejercicio 7
+#### Ejercicio 7 - Búsqueda binaria
 
 Imagina que tienes una guía telefónica antigua: una lista de nombres ordenados alfabéticamente con miles de entradas. Si buscas un nombre, no empiezas por la primera página y vas una a una. Abres la guía por la mitad, miras si el nombre que buscas va antes o después, descartas la mitad que no te interesa, y repites. En pocos pasos encuentras el nombre o confirmas que no está.
 
