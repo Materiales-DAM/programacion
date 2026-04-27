@@ -22,7 +22,7 @@ layout:
     visible: true
 ---
 
-# Ventana desliza
+# Ventana deslizante
 
 La **ventana deslizante** es una técnica para resolver problemas sobre arrays o cadenas en los que necesitamos calcular algo sobre un **subrango contiguo** (una "ventana") que se va moviendo por la estructura.
 
