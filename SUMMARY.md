@@ -181,6 +181,8 @@
 * [Divide y vencerás (divide & conquer)](ut-ampliacion-algoritmos/divide-y-venceras-divide-and-conquer.md)
 * [Algoritmos de ordenación](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/README.md)
   * [Ordenación por burbuja](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-burbuja.md)
+  * [Ordenación por selección](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-seleccion.md)
+  * [Ordenación por inserción](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-insercion.md)
   * [Merge sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/merge-sort.md)
 * [Ventana deslizante](ut-ampliacion-algoritmos/ventana-deslizante.md)
 * [Algoritmos voraces (greedy)](ut-ampliacion-algoritmos/algoritmos-voraces-greedy.md)
