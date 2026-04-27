@@ -184,5 +184,7 @@
   * [Selection sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/selection-sort.md)
   * [Insertion sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/insertion-sort.md)
   * [Merge sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/merge-sort.md)
+  * [Quicksort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/quicksort.md)
+  * [Heapsort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/heapsort.md)
 * [Ventana deslizante](ut-ampliacion-algoritmos/ventana-deslizante.md)
 * [Algoritmos voraces (greedy)](ut-ampliacion-algoritmos/algoritmos-voraces-greedy.md)

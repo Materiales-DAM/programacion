@@ -7,7 +7,7 @@ coverY: 110.50526315789473
 
 Las distintas excepciones existentes conforman la siguiente jerarquía de clases
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Jerarquía de excepciones y errores</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Jerarquía de excepciones y errores</p></figcaption></figure>
 
 Como se puede ver,  `Exception` es la clase padre de todas las excepciones existentes. Podemos clasificar las excepciones en dos tipos:
 

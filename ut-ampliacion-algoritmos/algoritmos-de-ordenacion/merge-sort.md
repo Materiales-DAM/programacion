@@ -80,7 +80,7 @@ Usamos la **técnica de dos punteros**, uno en cada array de entrada. En cada pa
 
 **Traza visual de un&#x20;**_**merge**_
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 **Coste de un&#x20;**_**merge**_
 
