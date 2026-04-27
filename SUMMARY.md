@@ -176,6 +176,7 @@
 ## UT ampliación - Algoritmos
 
 * [Introducción](ut-ampliacion-algoritmos/introduccion.md)
+* [Algoritmos sobre cadenas](ut-ampliacion-algoritmos/algoritmos-sobre-cadenas.md)
 * [Recursión](ut-ampliacion-algoritmos/recursion.md)
 * [Divide y vencerás (divide & conquer)](ut-ampliacion-algoritmos/divide-y-venceras-divide-and-conquer.md)
 * [Algoritmos de ordenación](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/README.md)
