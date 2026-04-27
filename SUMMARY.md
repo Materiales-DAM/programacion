@@ -182,3 +182,4 @@
   * [Ordenación por burbuja](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/ordenacion-por-burbuja.md)
   * [Merge sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/merge-sort.md)
 * [Ventana deslizante](ut-ampliacion-algoritmos/ventana-deslizante.md)
+* [Algoritmos voraces (greedy)](ut-ampliacion-algoritmos/algoritmos-voraces-greedy.md)
