@@ -477,15 +477,3 @@ public static void comparativa()
 ```
 
 > _Pista:_ usa `System.nanoTime()` para medir. Importante: **copia el array** antes de pasárselo a cada algoritmo para que los tres ordenen los mismos datos. Usa `Arrays.copyOf` para esto. Los resultados te van a sorprender en algunos casos: la inserción con datos ya ordenados será instantánea, y la selección tardará exactamente lo mismo da igual cómo venga el array.
-
-***
-
-### 8. Para llevarse a casa
-
-1. La inserción coge cada elemento y lo **desliza hacia la izquierda** hasta encontrar su posición correcta en la parte ya ordenada, **desplazando** los mayores a la derecha.
-2. El **desplazamiento** (una asignación) es más eficiente que el **intercambio** (tres asignaciones). Por eso la inserción es en la práctica más rápida que la burbuja, aunque ambas sean O(n²).
-3. **Mejor caso O(n)**: si el array ya está ordenado, cada elemento se compara una vez y se queda donde está. Es la más rápida de las tres cuadráticas para datos casi ordenados.
-4. **Es estable**: la condición `>` (estrictamente mayor) garantiza que los elementos iguales conservan su orden original.
-5. **Es adaptativa**: su coste refleja fielmente el **número de inversiones** del array. Más desorden = más trabajo. Menos desorden = menos trabajo. Proporcionalmente.
-6. Se usa en producción **dentro de TimSort** (Java, Python) para ordenar fragmentos pequeños, y como algoritmo de elección para arrays de menos de 10-20 elementos.
-7. De las tres cuadráticas, la inserción es la que mejor combina propiedades: estable, adaptativa, buen mejor caso, y rápida en la práctica. Si solo pudieras quedarte con una de las tres para programar, sería esta.
