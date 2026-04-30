@@ -173,6 +173,17 @@
 * [Datasources](ut08-acceso-a-bases-de-datos-relacionales/datasources.md)
 * [Ejercicio JDBC](ut08-acceso-a-bases-de-datos-relacionales/ejercicio-jdbc.md)
 
+## UT09 - Interfaces gráficos de usuario
+
+* [Introducción](ut09-interfaces-graficos-de-usuario/introduccion.md)
+* [Primer programa en Swing](ut09-interfaces-graficos-de-usuario/primer-programa-en-swing.md)
+* [Componentes básicos](ut09-interfaces-graficos-de-usuario/componentes-basicos.md)
+* [Gestores de layout](ut09-interfaces-graficos-de-usuario/gestores-de-layout.md)
+* [Eventos y oyentes](ut09-interfaces-graficos-de-usuario/eventos-y-oyentes.md)
+* [Contenedores y paneles](ut09-interfaces-graficos-de-usuario/contenedores-y-paneles.md)
+* [Menús y diálogos](ut09-interfaces-graficos-de-usuario/menus-y-dialogos.md)
+* [Tablas y listas](ut09-interfaces-graficos-de-usuario/tablas-y-listas.md)
+
 ## UT ampliación - Algoritmos
 
 * [Introducción](ut-ampliacion-algoritmos/introduccion.md)
