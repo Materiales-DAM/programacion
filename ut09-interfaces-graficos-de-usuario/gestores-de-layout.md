@@ -39,6 +39,8 @@ p.add(new JLabel("Derecha"), BorderLayout.EAST);
 p.add(new JLabel("Contenido principal"), BorderLayout.CENTER);
 ```
 
+<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+
 Características:
 
 * Es el layout por defecto de `JFrame` (en su content pane).
