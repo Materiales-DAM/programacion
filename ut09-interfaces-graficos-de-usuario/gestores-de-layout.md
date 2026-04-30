@@ -52,6 +52,8 @@ Es el "armazón" típico de una ventana: barra de herramientas arriba, barra de 
 
 ### GridLayout — rejilla de celdas idénticas
 
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+
 ```java
 JPanel p = new JPanel(new GridLayout(3, 4, 5, 5));
 // 3 filas, 4 columnas, separaciones de 5 px
