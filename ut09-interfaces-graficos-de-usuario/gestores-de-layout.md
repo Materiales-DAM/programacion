@@ -68,6 +68,8 @@ for (int i = 1; i <= 12; i++) {
 
 ### BoxLayout — caja de componentes en una sola dimensión
 
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
 ```java
 JPanel p = new JPanel();
 p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS)); // Y_AXIS = vertical, X_AXIS = horizontal
@@ -87,6 +89,8 @@ Las "cajas vacías" útiles:
 Cada componente respeta su tamaño preferido, pero hay que vigilar `setAlignmentX(...)` y `setMaximumSize(...)` para que no haya saltos raros.
 
 ### GridBagLayout — el más potente y el más complejo
+
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 `GridBagLayout` es como `GridLayout`, pero las celdas pueden tener tamaños distintos, ocupar varias filas/columnas y crecer de forma diferenciada. Es lo que necesitas para formularios serios.
 
@@ -153,6 +157,8 @@ Las propiedades clave de `GridBagConstraints`:
 `GridBagLayout` es verboso pero predecible una vez le coges el truco. Para formularios complejos no hay alternativa estándar mejor en Swing.
 
 ### CardLayout — varias "tarjetas", una visible
+
+<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 ```java
 var cards = new JPanel(new CardLayout());
