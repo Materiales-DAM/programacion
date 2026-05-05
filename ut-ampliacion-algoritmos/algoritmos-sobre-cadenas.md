@@ -477,52 +477,7 @@ public static int primerUnico(String s)
 
 ***
 
-#### Ejercicio 6 — Subcadena más larga sin repetidos _(medio-difícil)_
-
-Dada una cadena, encuentra la **longitud** de la subcadena contigua más larga que no contenga caracteres repetidos.
-
-```
-longitudMaximaSinRepetidos("abcabcbb")  →  3   ("abc")
-longitudMaximaSinRepetidos("bbbbb")     →  1   ("b")
-longitudMaximaSinRepetidos("pwwkew")    →  3   ("wke")
-longitudMaximaSinRepetidos("abcdef")    →  6   (toda la cadena)
-longitudMaximaSinRepetidos("")          →  0
-```
-
-**Firma:**
-
-```java
-public static int longitudMaximaSinRepetidos(String s)
-```
-
-> _Pista:_ aquí entra la **ventana deslizante** que ya conocéis, combinada con un `HashSet<Character>` (o un `int[256]`) para saber qué caracteres están dentro de la ventana actual. El puntero `fin` avanza siempre; el puntero `ini` avanza (contrayendo la ventana) cuando el nuevo carácter ya está en el conjunto. El resultado es la longitud máxima de ventana observada.
->
-> Es un clásico de entrevistas técnicas (LeetCode #3). Si lo resolvéis en O(n), ya estáis a buen nivel.
-
-***
-
-#### Ejercicio 7 — Búsqueda de todas las ocurrencias _(medio-difícil)_
-
-Modifica la búsqueda de subcadena por fuerza bruta para que, en lugar de devolver solo la primera posición, devuelva una **lista con todas las posiciones** donde empieza el patrón.
-
-```
-buscarTodas("abababa", "aba")    →  [0, 2, 4]   (las apariciones se solapan)
-buscarTodas("aaaaaa", "aa")     →  [0, 1, 2, 3, 4]
-buscarTodas("hola mundo", "xyz") →  []
-buscarTodas("abc", "abc")       →  [0]
-```
-
-**Firma:**
-
-```java
-public static List<Integer> buscarTodas(String texto, String patron)
-```
-
-> _Pista:_ la estructura es la misma que la búsqueda de la sección 7, pero en lugar de devolver `i` en cuanto encuentres una coincidencia, la añades a una lista y **sigues buscando** desde `i + 1` (no desde `i + m`, porque las apariciones pueden solaparse como en `"abababa"` con patrón `"aba"`).
-
-***
-
-#### Ejercicio 8 — Cifrado César _(reto)_
+#### Ejercicio 6 — Cifrado César _(reto)_
 
 El **cifrado César** es un cifrado clásico que desplaza cada letra un número fijo de posiciones en el alfabeto. Por ejemplo, con desplazamiento 3: A→D, B→E, ..., X→A, Y→B, Z→C. Los caracteres no alfabéticos se dejan tal cual.
 
