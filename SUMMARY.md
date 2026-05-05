@@ -190,6 +190,7 @@
 * [Algoritmos sobre cadenas](ut-ampliacion-algoritmos/algoritmos-sobre-cadenas.md)
 * [Recursión](ut-ampliacion-algoritmos/recursion.md)
 * [Divide y vencerás (divide & conquer)](ut-ampliacion-algoritmos/divide-y-venceras-divide-and-conquer.md)
+* [Algoritmos voraces (greedy)](ut-ampliacion-algoritmos/algoritmos-voraces-greedy.md)
 * [Algoritmos de ordenación](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/README.md)
   * [Bubble sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/bubble-sort.md)
   * [Selection sort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/selection-sort.md)
@@ -198,4 +199,3 @@
   * [Quicksort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/quicksort.md)
   * [Heapsort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/heapsort.md)
 * [Ventana deslizante](ut-ampliacion-algoritmos/ventana-deslizante.md)
-* [Algoritmos voraces (greedy)](ut-ampliacion-algoritmos/algoritmos-voraces-greedy.md)

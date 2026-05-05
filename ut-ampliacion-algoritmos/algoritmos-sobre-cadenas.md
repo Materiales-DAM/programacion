@@ -500,5 +500,3 @@ public static String descifrarCesar(String s, int desplazamiento)
 > _Pista:_ para cada carácter que sea letra, calcula su nueva posición con aritmética modular. Si es minúscula: `char cifrado = (char) ('a' + (c - 'a' + desplazamiento) % 26)`. Análogo para mayúsculas con `'A'`. Los demás caracteres pasan sin cambiar. Descifrar es cifrar con desplazamiento `26 - desplazamiento` (o equivalentemente, con `-desplazamiento`).
 >
 > Ojo con desplazamientos negativos: en Java, el operador `%` puede devolver negativos. Para evitar problemas usa `((c - 'a' + desplazamiento) % 26 + 26) % 26`.
-
-###

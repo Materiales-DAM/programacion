@@ -323,7 +323,3 @@ public static List<Integer> buscarTodas(String texto, String patron)
 ```
 
 > _Pista:_ la estructura es la misma que la búsqueda de la sección 7, pero en lugar de devolver `i` en cuanto encuentres una coincidencia, la añades a una lista y **sigues buscando** desde `i + 1` (no desde `i + m`, porque las apariciones pueden solaparse como en `"abababa"` con patrón `"aba"`).
-
-***
-
-####
