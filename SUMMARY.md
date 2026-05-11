@@ -199,3 +199,4 @@
   * [Quicksort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/quicksort.md)
   * [Heapsort](ut-ampliacion-algoritmos/algoritmos-de-ordenacion/heapsort.md)
 * [Ventana deslizante](ut-ampliacion-algoritmos/ventana-deslizante.md)
+* [Programación dinámica](ut-ampliacion-algoritmos/programacion-dinamica.md)
