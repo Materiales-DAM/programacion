@@ -36,6 +36,8 @@ Es uno de los algoritmos más usados del mundo. La función `Arrays.sort` de Jav
 * **Divide y vencerás** entendido (la página anterior).
 * La técnica de **dos punteros** sobre arrays.
 
+{% embed url="https://youtu.be/WprjBK0p6rw" %}
+
 ### 1. La idea central: el pivote y la partición
 
 La estrategia de _quicksort_ parte de una observación muy sencilla. Imagina que tienes un array desordenado y eliges uno cualquiera de sus elementos al que llamarás **pivote**. Ahora reorganiza el array de forma que:
