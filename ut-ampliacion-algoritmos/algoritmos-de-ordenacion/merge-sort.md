@@ -42,6 +42,8 @@ Para entender este algoritmo hace falta:
 
 Si alguno de estos tres conceptos aún no está asentado, conviene repasarlo antes de seguir.
 
+{% embed url="https://youtu.be/5Z9dn2WTg9o" %}
+
 ### 1. La idea central: divide y vencerás
 
 Recordemos las tres fases de divide y vencerás:
