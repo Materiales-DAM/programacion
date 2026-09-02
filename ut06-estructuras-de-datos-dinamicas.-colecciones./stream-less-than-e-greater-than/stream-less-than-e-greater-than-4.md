@@ -1,6 +1,28 @@
 ---
 cover: ../../.gitbook/assets/lambda.jpeg
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Ejercicios Stream\<E>
@@ -15,8 +37,6 @@ Resuelve estos ejercicios usando Stream
 6. Un método min(List\<Double> numbers ) que busca el mínimo de los números en la lista. Como la lista puede estar vacía, el método debe devolver Optional\<Double>.
 7. Un método junction(List\<Double> numbers1 , List\<Double> numbers2) que dadas dos listas de números, devuelve los números que están tanto numbers1 como en numbers2
 8. Un método que dado una lista de pedidos, devuelve el precio total de todos los pedidos
-
-
 
 ## bank-collections
 
