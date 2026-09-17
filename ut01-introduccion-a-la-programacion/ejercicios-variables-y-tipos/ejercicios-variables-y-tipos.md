@@ -31,6 +31,27 @@ coverY: 0
 2.  Escribe un programa Division que:
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Division {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce el numerador: ");
+            double numerator = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce el denominador: ");
+            double denominator = scanner.nextDouble();
+            scanner.nextLine();
+
+            double result = numerator / denominator;
+
+            System.out.println("El resultado es " + result);
+        }
+    }
+
     ```
 3.  Escribe un programa Multiplication que:
 
