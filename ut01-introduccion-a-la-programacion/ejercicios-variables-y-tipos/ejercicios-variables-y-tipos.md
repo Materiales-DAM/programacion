@@ -56,6 +56,27 @@ coverY: 0
 3.  Escribe un programa Multiplication que:
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Multiplication {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número: ");
+            double numerator = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número: ");
+            double denominator = scanner.nextDouble();
+            scanner.nextLine();
+
+            double result = numerator * denominator;
+
+            System.out.println("El resultado es " + result);
+        }
+    }
+
     ```
 4.  Escribe un programa AreEqual que:
 
