@@ -10,6 +10,23 @@ coverY: 0
 
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Increments {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número:");
+            double number = scanner.nextDouble();
+            scanner.nextLine();
+
+            number++;
+            number++;
+
+            System.out.println("El resultado es " +  number);
+        }
+    }
     ```
 2.  Escribe un programa Division que:
 
