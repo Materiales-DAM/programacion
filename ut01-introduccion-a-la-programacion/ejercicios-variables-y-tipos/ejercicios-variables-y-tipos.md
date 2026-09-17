@@ -64,14 +64,14 @@ coverY: 0
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Introduce un número: ");
-            double numerator = scanner.nextDouble();
+            double num1 = scanner.nextDouble();
             scanner.nextLine();
 
             System.out.println("Introduce otro número: ");
-            double denominator = scanner.nextDouble();
+            double num2 = scanner.nextDouble();
             scanner.nextLine();
 
-            double result = numerator * denominator;
+            double result = num1 * num2;
 
             System.out.println("El resultado es " + result);
         }
@@ -81,8 +81,49 @@ coverY: 0
 4.  Escribe un programa AreEqual que:
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class AreEquals {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número: ");
+            double num1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número: ");
+            double num2 = scanner.nextDouble();
+            scanner.nextLine();
+
+            boolean result = num1 == num2;
+
+            System.out.println("El resultado es " + result);
+        }
+    }
     ```
 5.  Escribe un programa AreNotEqual que:
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class AreNotEquals {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número: ");
+            double num1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número: ");
+            double num2 = scanner.nextDouble();
+            scanner.nextLine();
+
+            boolean result = num1 != num2;
+
+            System.out.println("El resultado es " + result);
+        }
+    }
     ```
+
