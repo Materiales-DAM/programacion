@@ -38,11 +38,53 @@ public class Compare {
 2\. Escribe un programa que:
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class IsEven {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número:");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n == 0) {
+            System.out.println("no es par ni impar");
+        } else if (n % 2 == 0) {
+            System.out.println("es par");
+        } else {
+            System.out.println("es impar");
+        }
+    }
+}
+
 ```
 
 3\. Escribe un programa que:
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class ShowSign {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número:");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        if (n == 0) {
+            System.out.println("No es positivo ni negativo");
+        } else if (n > 0) {
+            System.out.println("es positivo");
+        } else {
+            System.out.println("es negativo");
+        }
+    }
+}
+
 ```
 
 4\. Escribe un programa que:
