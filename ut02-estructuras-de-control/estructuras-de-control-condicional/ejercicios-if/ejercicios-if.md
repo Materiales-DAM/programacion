@@ -97,9 +97,7 @@ import java.util.Scanner;
 public class StringSizeCheck {
     public static void main(String[] args) {
         System.out.println("dime una palabra de ocho letras");
-        Scanner scanner = new Scanner(
-System.in
-);
+        Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
         String word = scanner.nextLine();
         int length = word.length();
@@ -125,9 +123,7 @@ import java.util.Scanner;
 public class Ejercicio5 {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(
-System.in
-);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce un número: ");
         int a = scanner.nextInt();
         scanner.nextLine();
@@ -167,4 +163,41 @@ System.in
 6\. Escribe un programa que:
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Elige una operacion: + o -");
+        String operacion = scanner.nextLine();
+        if (operacion.equals("+")) {
+            System.out.println("Dime un valor doble a");
+            double number = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Dime otro valor doble b");
+            double number1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            double res = (number + number1);
+            System.out.println(res);
+        } else if (operacion.equals("-")) {
+            System.out.println("Dime un valor entero a");
+            int number3 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Dime otro valor entero b");
+            int number4 = scanner.nextInt();
+            scanner.nextLine();
+
+            int res1 = number3 - number4;
+            System.out.println(res1);
+        } else {
+            System.out.println("operacion invalida");
+        }
+    }
+} 
 ```
