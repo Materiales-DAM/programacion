@@ -8,6 +8,26 @@ coverY: 0
 1\. Crea un programa que en el main:
 
 ```java
+package org.example;
+
+import java.util.Scanner;
+
+public class ejercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce un String de 8 caracteres: ");
+        String texto = scanner.nextLine();
+        switch (texto.length()){
+            case 8: 
+                System.out.println("Es válido"); 
+                break;
+            default:
+                System.out.println("No es válido");  
+        }
+    
+    }
+} 
 ```
 
 2\. Escribir un programa que pida dos números enteros e imprima todos los números que hay entre el más pequeño y el más grande:
