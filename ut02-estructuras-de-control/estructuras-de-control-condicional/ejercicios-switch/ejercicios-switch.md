@@ -86,4 +86,23 @@ public class Ejercicio2 {
 3\. Escribe un programa que:
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class ejercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce un String de 8 caracteres: ");
+        String texto = scanner.nextLine();
+        switch (texto.length()){
+            case 8: 
+                System.out.println("Es válido"); 
+                break;
+            default:
+                System.out.println("No es válido");  
+        }
+    }
+} 
 ```
