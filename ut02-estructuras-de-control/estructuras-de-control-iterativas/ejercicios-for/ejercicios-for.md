@@ -33,6 +33,38 @@ public class ejercicio3 {
 2\. Escribir un programa que pida dos números enteros e imprima todos los números que hay entre el más pequeño y el más grande:
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class For2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce un número:");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Introduce otro número:");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+        // Si el valor de n1 es mayor que el de n2, los voy a intercambiar de variable
+        if (n1 > n2) {
+            // Intercambio los valores entre n1 y n2
+            // Necesito la variable aux para guardar el valor original de n1
+            int aux = n1;
+            // Ahora n1 toma el valor de n2
+            n1 = n2;
+            // Ahora n2 toma el valor original de n1
+            n2 = aux;
+        }
+
+        for (int i = n1; i <= n2; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
 ```
 
 3\. Escribir un programa que pida un entero positivo y calcule el sumatorio de cero a ese número
