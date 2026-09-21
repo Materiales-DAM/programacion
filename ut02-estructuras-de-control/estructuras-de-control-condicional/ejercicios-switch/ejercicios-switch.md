@@ -40,6 +40,47 @@ public class SwEj1 {
 2\. Implementa la calculadora  (ejercicio 6 de If)  usando un switch en lugar de un if else
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Elige una operación: + o -");
+        String operacion = scanner.nextLine();
+        
+        switch (operacion) {
+            case "+":
+                System.out.println("Introduce un número: ");
+                double a = scanner.nextDouble();
+                scanner.nextLine();
+
+                System.out.println("Introduce otro número: ");
+                double b = scanner.nextDouble();
+                scanner.nextLine();
+
+                double suma = a + b;
+                System.out.println("La suma es: " + suma);
+                break;
+            case "-":
+                System.out.println("Introduce un número: ");
+                int c = scanner.nextInt();
+                scanner.nextLine();
+
+                System.out.println("Introduce otro número: ");
+                int d = scanner.nextInt();
+                scanner.nextLine();
+
+                int resta = c - d;
+                System.out.println("La resta es: " + resta);
+                break;
+            default:
+                System.out.println("Operación inválida");
+        }
+    }
+} 
 ```
 
 3\. Escribe un programa que:
