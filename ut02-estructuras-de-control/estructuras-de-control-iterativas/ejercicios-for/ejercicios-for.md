@@ -83,6 +83,7 @@ public class For3 {
         int suma = 0;
 
         for (int i = 0; i <= number;i++){
+            // suma += i;
             suma = suma + i;
         }
         System.out.println(suma);
@@ -93,6 +94,32 @@ public class For3 {
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class EjFor4 {
+    public static void main(String[] args) {Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número entero");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        if (num <= 0){
+            System.out.println("Introduce un número válido");
+        } else {
+            // factorial empieza por 1 porque si no siempre da 0
+            int factorial = 1;
+
+            // i empieza por 1 porque si no siempre da 0
+            for (int i = 1; i <= num; i+º) {
+                // factorial = factorial * i;
+                factorial *= i;
+
+            }
+            System.out.println(factorial);
+        }
+    }
+} 
 ```
 
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
