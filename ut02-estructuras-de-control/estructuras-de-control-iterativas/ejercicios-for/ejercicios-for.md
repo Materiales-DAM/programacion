@@ -125,6 +125,38 @@ public class EjFor4 {
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
 
 ```java
+package buclefor;
+
+import java.util.Scanner;
+
+public class ejercicio2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa el primer año: ");
+        int year1 = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Ingresa el segundo año: ");
+        int year2 = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Años bisiestos:");
+
+        if (year1 > year2) {
+            int aux = year1;
+            year1 = year2;
+            year2 = aux; 
+        }
+
+        for (int year = year1; year <= year2; year++) {
+            if (year % 4 == 0 && year % 100 != 0) {
+                System.out.println(year);
+            }
+        }
+
+    }
+} 
 ```
 
 6\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos negativos se han introducido.
