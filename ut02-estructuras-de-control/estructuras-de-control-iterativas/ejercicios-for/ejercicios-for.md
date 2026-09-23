@@ -70,6 +70,24 @@ public class For2 {
 3\. Escribir un programa que pida un entero positivo y calcule el sumatorio de cero a ese número
 
 ```java
+package org.ies.tierno;
+import java.util.Scanner;
+
+public class For3 {
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa un numero: ");
+        int number = scanner.nextInt();
+        scanner.nextLine();
+        int suma = 0;
+
+        for (int i = 0; i <= number;i++){
+            suma = suma + i;
+        }
+        System.out.println(suma);
+    }
+} 
 ```
 
 4\. Escribir un programa que pida un entero positivo y calcule el factorial de uno a ese número
