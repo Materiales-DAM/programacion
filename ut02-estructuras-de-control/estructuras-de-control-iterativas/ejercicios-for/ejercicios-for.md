@@ -125,7 +125,7 @@ public class EjFor4 {
 5\. Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos.
 
 ```java
-package buclefor;
+package org.ies.tierno;
 
 import java.util.Scanner;
 
@@ -162,6 +162,30 @@ public class ejercicio2 {
 6\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos negativos se han introducido.
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class EjFor6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Cuántos números se van a introducir?");
+        int cantidad = scanner.nextInt();
+        scanner.nextLine();
+        int negativos = 0;
+
+        for (int i = 0; i < cantidad ; i++) {
+            System.out.println("Introduce un número " + i);
+
+            int num = scanner.nextInt();
+            scanner.nextLine();
+            if (num < 0) {
+                negativos++;
+            }
+        }
+        System.out.println("Se han introducido " + negativos + " números negativos");
+    }
+} 
 ```
 
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
