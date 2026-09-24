@@ -8,6 +8,32 @@ coverY: 0
 1.  Escriba un programa que pida dos números enteros. El programa pedirá de nuevo el segundo número hasta que sea mayor que el primero. El programa terminará escribiendo los dos números.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej1 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduce un número:");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+            
+            System.out.println("Introduce otro número:");
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+
+            while (n2 <= n1) {
+                System.out.println("El segundo número debe ser mayor que " + n1);
+                System.out.println("Vuelva a introducir el segundo número: ");
+                n2 = scanner.nextInt();
+                scanner.nextLine();
+            }
+
+            System.out.println("Los números son " + n1 + " y " + n2);
+        }
+    }
     ```
 2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.<br>
 
