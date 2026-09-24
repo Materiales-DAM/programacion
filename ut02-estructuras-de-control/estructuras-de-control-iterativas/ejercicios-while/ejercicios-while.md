@@ -54,7 +54,7 @@ coverY: 0
 
 ```java
 Random r = new Random(); 
-int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 10 
+int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 100 
 ```
 
 ```java
