@@ -191,6 +191,33 @@ public class EjFor6 {
 7\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números e imprima el máximo de entre los números introducidos
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class ForEj7 {
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa cuantos numeros quieres que se regitren: ");
+        int cantNum = scanner.nextInt();
+        scanner.nextLine();
+
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < cantNum; i++){
+            System.out.println("Ingrese los numeros: ");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+
+            if (max < number){
+                max = number;
+            }
+
+        }
+        System.out.println(max);
+    }
+} 
 ```
 
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
