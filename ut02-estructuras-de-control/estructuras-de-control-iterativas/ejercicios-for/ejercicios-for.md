@@ -258,4 +258,32 @@ public class Ej8 {
 ```
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ej9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce un número entero mayor que 1: ");
+        int num = scanner.nextInt();
+        scanner.nextLine();
+
+        boolean isPrime = true;
+
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(num + " es primo");
+        } else {
+            System.out.println(num + " NO es primo");
+        }
+    }
+} 
 ```
