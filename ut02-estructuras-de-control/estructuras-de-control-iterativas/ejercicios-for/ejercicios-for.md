@@ -223,6 +223,31 @@ public class ForEj7 {
 8\. Escribe un programa que pregunte cuántos números se van a introducir, pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ej8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("¿Cuántos números vas a introducir? ");
+        int amount = scanner.nextInt();
+        scanner.nextLine();
+        int sum = 0;
+
+        for (int i = 0; i < amount; i++) {
+            System.out.print("Introduce el número " + i + ": ");
+            int num = scanner.nextInt();
+            scanner.nextLine();
+            sum += num;
+        }
+
+        double avg = (double) sum / amount;
+
+        System.out.println("La media es: " + avg);
+    }
+} 
 ```
 
 9\. Escribe un programa que solicite un número entero mayor que 1 y compruebe si este es primo o no. Un número primo solo es divisible por sí mismo y por el 1
