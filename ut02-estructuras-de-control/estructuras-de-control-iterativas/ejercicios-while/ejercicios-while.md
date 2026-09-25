@@ -90,6 +90,30 @@ coverY: 0
 4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Introduzca un número: ");
+            int num = scanner.nextInt();
+            scanner.nextLine();
+
+            int count = 0;
+
+            while(num>0){
+                System.out.println("Introduzca otro número: ");
+                num = scanner.nextInt();
+                scanner.nextLine();
+
+                count++;
+            }
+            System.out.println("Se han introducido "+ count +" números positivos");
+        }
+    } 
     ```
 5. Realizar un juego para adivinar un número. Para ello se asigna a una variable n un número entero aleatorio, y luego ir pidiendo números indicando “mayor” o “menor” según sea mayor o menor con respecto a N. El proceso termina cuando el usuario acierta y se imprime el texto “exacto!”. Para generar un número aleatorio se puede usar la utilidad java.util.Random
 
