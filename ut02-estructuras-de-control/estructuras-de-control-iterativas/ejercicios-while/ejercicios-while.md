@@ -38,6 +38,29 @@ coverY: 0
 2.  Escriba un programa que pida dos números decimales. El programa pedirá de nuevo el segundo número hasta que sea menor que el primero. El programa terminará escribiendo los dos números.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Buclewhile2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Escribe el primer numero");
+            double num1 = scanner.nextDouble();
+            scanner.nextLine();
+
+            System.out.println("Escribe el segundo numero");
+            double num2 = scanner.nextDouble();
+            scanner.nextLine();
+
+            while (num2 > num1){
+                System.out.println("Introduce otro numero menor que le primero");
+                num2 = scanner.nextDouble();
+                scanner.nextLine();
+            }
+            System.out.println("Los numeros son " + num1 + " y " + num2);
+        }
+    } 
     ```
 3. Escriba un programa que pida números mientras el usuario indique que quiere seguir introduciendo números. Para indicar que quiere seguir escribiendo números, el usuario deberá contestar S o s a la pregunta.
    * `Introduce numero: 2`
