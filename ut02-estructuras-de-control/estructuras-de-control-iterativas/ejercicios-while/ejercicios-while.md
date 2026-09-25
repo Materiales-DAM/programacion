@@ -68,6 +68,24 @@ coverY: 0
    *   `Introduce numero: 3`
 
        ```java
+       package org.ies.tierno;
+
+       import java.util.Scanner;
+
+       public class While3 {
+           public static void main(String[] args) {
+               Scanner scanner = new Scanner(System.in);
+               String word ="S";
+               while (word.equalsIgnoreCase("S")) {
+                   System.out.println("Introduce un número");
+                   int num = scanner.nextInt();
+                   scanner.nextLine();
+                   System.out.println("Has introducido "+ num);
+                   System.out.println("Quieres seguir? ");
+                   word = scanner.nextLine();
+               }
+           }
+       } 
        ```
 4.  Pedir números hasta que se teclee uno negativo, y mostrar cuántos números positivos se han introducido.<br>
 
