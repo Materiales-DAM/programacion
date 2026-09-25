@@ -154,6 +154,38 @@ public class Ejercicio5 {
 6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números<br>
 
     ```java
+    package While;
+
+    import java.util.Scanner;
+
+    public class EJ6 {
+        public static void main(String[] args) {
+            System.out.println("¿Cuantos números se van a introducir?");
+            Scanner scanner = new Scanner(System.in);
+            int num1 = scanner.nextInt();
+            scanner.nextLine();
+
+            while (num1<1) {
+                System.out.println("Dame otro número");
+                num1 = scanner.nextInt();
+                scanner.nextLine();
+            }
+            
+            int sum= 0;
+            System.out.println("Dime los números");
+            int i = 0;
+            while (i < num1) {
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                sum += num;
+                i++;
+            }
+
+            double avg = (double) sum / num1;
+
+            System.out.println("La media es: " + avg);
+        }
+    } 
     ```
 7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.<br>
 
