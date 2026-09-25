@@ -123,6 +123,32 @@ int secret = r.nextInt(100); // Genera un numero aleatorio del 0 al 100
 ```
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random r = new Random();
+        int secret = r.nextInt(10);
+        System.out.println("Adivina el número del 1 al 10");
+        int number = -1;
+
+        while (number != secret) {
+            System.out.println("Introduce un número: ");
+            number = scanner.nextInt();
+            scanner.nextLine();
+            if (number > secret) {
+                System.out.println("Tu número es mayor");
+            } else if (number < secret) {
+                System.out.println("Tu número es menor");
+            }
+        }
+        System.out.println("exacto!");
+    }
+} 
 ```
 
 6.  Escribe un programa que pregunte cuántos números se van a introducir (si mete un valor menor que 1, debe volver a pedirlo hasta que no sea mayor o igual que 1), pida esos números y calcule la media de los mismo. La media se calcula sumando todos los números y dividiendo la suma entre la cantidad de números<br>
