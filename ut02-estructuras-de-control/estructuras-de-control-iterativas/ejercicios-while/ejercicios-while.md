@@ -190,6 +190,26 @@ public class Ejercicio5 {
 7.  Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos al finalizar.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ejercicio7 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            int n = 1;
+            int sum = 0;
+
+            while (n != 0){
+                System.out.println("Escribe un numero");
+                n = scanner.nextInt();
+                scanner.nextLine();
+                sum += n;
+            }
+            System.out.println("La suma de todos los numeros es " + sum);
+        }
+    } 
     ```
 8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.<br>
 
