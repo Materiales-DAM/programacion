@@ -56,4 +56,47 @@ coverY: 0
     El programa debe empezar pidiendo al usuario que seleccione la operación que desea realizar, una vez seleccionada la operación solicitará los datos necesarios para realizarla, al final mostrará el resultado en pantalla y volverá a pedir la siguiente operación.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Dowhile2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int option;
+            do {
+                System.out.println("1. Sumar");
+                System.out.println("2. Restar");
+                System.out.println("3. Multiplicar");
+                System.out.println("4. Salir");
+                option = scanner.nextInt();
+                scanner.nextLine();
+                if (option==1) {
+                    System.out.println("Dime dos números");
+                    int a = scanner.nextInt();
+                    scanner.nextLine();
+                    int b = scanner.nextInt();
+                    scanner.nextLine();
+                    int sum = a+b;
+                    System.out.println("El resultado es "+ sum);
+                } else if (option==2){
+                    System.out.println("Dime dos números");
+                    int a = scanner.nextInt();
+                    scanner.nextLine();
+                    int b = scanner.nextInt();
+                    scanner.nextLine();
+                    int res = a-b;
+                    System.out.println("El resultado es "+ res);
+                } else if (option==3){
+                    System.out.println("Dime dos números");
+                    int a = scanner.nextInt();
+                    scanner.nextLine();
+                    int b = scanner.nextInt();
+                    scanner.nextLine();
+                    int mul = a*b;
+                    System.out.println("El resultado es "+ mul);
+                }
+            } while (option !=4);
+        }
+    } 
     ```
