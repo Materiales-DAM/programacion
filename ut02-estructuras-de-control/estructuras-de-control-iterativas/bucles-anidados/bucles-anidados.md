@@ -13,6 +13,25 @@ coverY: 0
     n n+1 n+2 … n+n-1<br>
 
     ```java
+    package org.ies.tierno.nested;
+
+    import java.util.Scanner;
+
+    public class Ej1 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número:");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print((j + 1 + i) + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
     ```
 2.  Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
     1\
