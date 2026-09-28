@@ -41,6 +41,25 @@ coverY: 0
     n n n….. n<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ejercicio2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner (System.in);
+            System.out.println("Introduce un numero");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j <= i; j++) {
+                    System.out.print(i + 1);
+                }
+                System.out.println();
+            }
+        }
+    } 
     ```
 3.  Escribe un programa que pida un número positivo (n) e imprima la siguiente serie\
     1\
