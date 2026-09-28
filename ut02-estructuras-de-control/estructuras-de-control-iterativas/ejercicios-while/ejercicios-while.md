@@ -214,4 +214,43 @@ public class Ejercicio5 {
 8.  Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ejercicio8 {
+        public static void main(String[] args) {
+
+            Scanner scanner = new Scanner(System.in);
+            double sumPos = 0;
+            int contPos = 0;
+
+            double sumNeg = 0;
+            int contNeg = 0;
+
+            int contCero = 0;
+
+            int i = 1;
+            while (i <= 10) {
+                System.out.println("Introduce un número: ");
+                double num = scanner.nextDouble();
+                scanner.nextLine();
+
+                if (num > 0) {
+                    sumPos += num;
+                    contPos++;
+                } else if (num < 0) {
+                    sumNeg += num;
+                    contNeg++;
+                } else {
+                    contCero++;
+                }
+                i++;
+            }
+            double mediaPos = sumPos / contPos;
+            double mediaNeg = sumNeg / contNeg;
+
+            System.out.println("La media de los positivos es " + mediaPos + ", la media de los negativos es " + mediaNeg + " y la cantidad de ceros es " + contCero);
+        }
+    } 
     ```
