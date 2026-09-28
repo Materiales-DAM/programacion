@@ -81,11 +81,11 @@ coverY: 0
                     System.out.println("El resultado es "+ sum);
                 } else if (option==2){
                     System.out.println("Dime dos números");
-                    int a = scanner.nextInt();
+                    double a = scanner.nextDouble();
                     scanner.nextLine();
-                    int b = scanner.nextInt();
+                    double b = scanner.nextDouble();
                     scanner.nextLine();
-                    int res = a-b;
+                    double res = a-b;
                     System.out.println("El resultado es "+ res);
                 } else if (option==3){
                     System.out.println("Dime dos números");
