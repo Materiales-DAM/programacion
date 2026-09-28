@@ -28,6 +28,8 @@
   * [Switch](ut02-estructuras-de-control/estructuras-de-control-condicional/switch.md)
   * [Ejercicios Switch](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-switch/README.md)
     * [Soluciones Switch](ut02-estructuras-de-control/estructuras-de-control-condicional/ejercicios-switch/ejercicios-switch.md)
+  * [Operador ternario](ut02-estructuras-de-control/estructuras-de-control-condicional/switch-1/README.md)
+    * [Ejercicios operador ternario](ut02-estructuras-de-control/estructuras-de-control-condicional/switch-1/switch.md)
 * [Estructuras de control iterativas](ut02-estructuras-de-control/estructuras-de-control-iterativas/README.md)
   * [Bucle For](ut02-estructuras-de-control/estructuras-de-control-iterativas/bucle-for.md)
   * [Ejercicios for](ut02-estructuras-de-control/estructuras-de-control-iterativas/ejercicios-for/README.md)
