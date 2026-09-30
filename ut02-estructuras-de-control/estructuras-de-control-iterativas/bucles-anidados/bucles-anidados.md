@@ -126,5 +126,37 @@ coverY: 0
        * Sumatorio de 3: 3 + 2 + 1 + 0<br>
 
     ```java
+    package org.ies.tierno.nested;
+
+    import java.util.Scanner;
+
+    public class Ej5 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Introduce un número");
+            int v1 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce otro número");
+            int v2 = scanner.nextInt();
+            scanner.nextLine();
+
+            if(v2 < v1) {
+                int aux = v1;
+                v1 = v2;
+                v2 = aux;
+            }
+
+            for (int i = v1; i <= v2; i++) {
+                int sum = 0;
+                for (int j = 0; j <= i; j++) {
+                    // sum = sum + j;
+                    sum += j;
+                }
+                System.out.println(sum);
+            }
+        }
+    }
+
     ```
 
