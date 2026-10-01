@@ -89,6 +89,60 @@ Para implementar este programa crea los siguiente métodos:
 *   En el método `main` se invocará al método que implementa el bucle del menú interactivo.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej3 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int chooseOption() {
+            System.out.println("Elige una opción:");
+            System.out.println("1. Saluda");
+            System.out.println("2. Grita");
+            System.out.println("3. Salir");
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+
+        public static String askName() {
+            System.out.println("Introduce el nombre:");
+            return scanner.nextLine();
+        }
+
+        public static void hello() {
+            String name = askName();
+            System.out.println("Hola, " + name);
+        }
+
+        public static void shout() {
+            String name = askName();
+            System.out.println("Cuidado, " + name + "!");
+        }
+
+        public static void menu() {
+            int option;
+            do {
+                option = chooseOption();
+                if (option == 1) {
+                    hello();
+                } else if (option == 2) {
+                    shout();
+                } else if (option == 3) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+
+            } while (option != 3);
+        }
+    }
+
     ```
 
 4. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
