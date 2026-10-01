@@ -46,6 +46,31 @@ coverY: 0
 En el main pide dos números enteros, e invoca el primer método pasando esos valores, después se invocará el segundo método con el resultado de la invocación del primero<br>
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ej2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número");
+        int n1 = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Introduce otro número");
+        int n2 = scanner.nextInt();
+        scanner.nextLine();
+        int result = mult(n1,n2);
+        printResult(result);
+    }
+    
+    public static int mult(int n1, int n2) {
+        return n1*n2;
+    }
+    
+    public static void printResult(int result) {
+        System.out.println("El resultado es " + result);
+    }
+}
 ```
 
 3. Crea un programa que muestre un menú con las siguientes opciones:
