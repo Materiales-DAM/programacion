@@ -162,6 +162,79 @@ Implementa el programa creando métodos para:.
 *   En el `main` invoca el método del bucle del menú.<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej4 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int chooseOption() {
+            System.out.println("Escoge una opción: ");
+            System.out.println("1. Sumar: ");
+            System.out.println("2. Restar: ");
+            System.out.println("3. Multiplicar: ");
+            System.out.println("4. Salir: ");
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            return option;
+        }
+
+        public static void sum() {
+            System.out.print("Introduce el primer número: ");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Introduce otro número: ");
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+            int sum = n1 + n2;
+            System.out.println("El resultado es: " + sum);
+        }
+
+        public static void sus() {
+            System.out.print("Introduce el primer número: ");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Introduce otro número: ");
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+            int res = n1 - n2;
+            System.out.println("El resultado es: " + res);
+        }
+
+        public static void multiply() {
+            System.out.print("Introduce el primer número: ");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Introduce otro número: ");
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+            int mult = n1 * n2;
+            System.out.println("El resultado es: " + mult);
+        }
+
+        public static void menu() {
+            int option;
+            do {
+                option = chooseOption();
+                if (option == 1) {
+                    sum();
+                } else if (option == 2) {
+                    sus();
+                } else if (option == 3) {
+                    multiply();
+                } else if (option == 4) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+            } while (option != 4);
+        }
+    } 
     ```
 
 5\. Escribe un programa con estos métodos:
