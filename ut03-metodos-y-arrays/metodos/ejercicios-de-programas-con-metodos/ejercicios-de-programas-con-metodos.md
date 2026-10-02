@@ -251,4 +251,108 @@ Implementa el programa creando métodos para:.
 *   En el `main` se creará el menú interactivo usando lo anterior<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej5 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int summatory(int n) {
+            int sum = 0;
+            for (int i = 0; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        public static int factorial(int n) {
+            int fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        public static double average(int n1, int n2, int n3, int n4) {
+            return ((double) n1 + n2 + n3 + n4) / 4;
+        }
+
+
+        public static void menu() {
+            int option;
+            do {
+                option = chooseOption();
+
+                if (option == 1) {
+                    runSummatory();
+                } else if (option == 2) {
+                    runFactorial();
+                } else if (option == 3) {
+                    runAverage();
+                } else if (option == 4) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+            } while (option != 4);
+        }
+
+        private static void runAverage() {
+            System.out.println("Introduce un número:");
+            int n1 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce un número:");
+            int n2 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce un número:");
+            int n3 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Introduce un número:");
+            int n4 = scanner.nextInt();
+            scanner.nextLine();
+
+            double res = average(n1, n2, n3, n4);
+            System.out.println("La media es " + res);
+        }
+
+        private static void runFactorial() {
+            System.out.println("Introduce un número:");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+
+            int res = factorial(n);
+            System.out.println("El factorial es " + res);
+        }
+
+        private static void runSummatory() {
+            System.out.println("Introduce un número:");
+            int n = scanner.nextInt();
+            scanner.nextLine();
+
+            int res = summatory(n);
+            System.out.println("El sumatorio es " + res);
+        }
+
+        public static int chooseOption() {
+            System.out.println("Elige una opción:");
+            System.out.println("1. Sumatorio");
+            System.out.println("2. Factorial");
+            System.out.println("3. Media");
+            System.out.println("4. Salir");
+
+            int option = scanner.nextInt();
+            scanner.nextLine();
+
+            return option;
+        }
+    }
+
     ```
