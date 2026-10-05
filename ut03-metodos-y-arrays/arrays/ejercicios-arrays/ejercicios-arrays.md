@@ -71,6 +71,19 @@ layout:
    3.  Al final imprime la suma<br>
 
        ```java
+       package org.ies.tierno;
+
+       public class Ejercicio3 {
+           public static void main(String[] args) {
+               int[] numbers = {4, 8, 9, 1};
+
+               int sum = 0;
+               for (int number: numbers) {
+                   sum = sum + number;
+               }
+               System.out.println(sum);
+           }
+       } 
        ```
 4.  Haz un programa que:
 
@@ -82,4 +95,28 @@ layout:
     4. Vuelve a recorrer el array mostrando en pantalla todos los nombres almacenados en el mismo<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Ej4Array {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(
+    System.in
+    );
+
+            System.out.println("¿Cuántos nombres quieres introducir?: ");
+            int num = sc.nextInt();
+            sc.nextLine();
+            String[] names = new String[num];
+            for (int i = 0; i < names.length; i++) {
+                System.out.println("Introduce el nombre: ");
+                names[i] = sc.nextLine();
+            }
+            int sum=0;
+            for(String name: names){
+                System.out.println(name);;
+            }
+        }
+    } 
     ```
