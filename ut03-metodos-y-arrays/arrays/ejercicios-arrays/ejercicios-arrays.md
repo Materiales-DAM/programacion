@@ -53,6 +53,17 @@ layout:
    2.  Después imprime en pantalla el último valor del array
 
        ```java
+       package org.ies.tierno;
+
+       public class Ej2 {
+           public static void main(String[] args) {
+               double[] numbers = {3.4, 5.2, 4.7};
+
+               double lastNumber = numbers[numbers.length - 1];
+               System.out.println(lastNumber);
+           }
+       }
+
        ```
 3. Haz un programa que:
    1. Cree un array con los valores 4, 8, 9 y 1.
