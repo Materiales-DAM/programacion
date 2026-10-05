@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Soluciones arrays
@@ -32,6 +34,19 @@ layout:
    2.  Recorre el array y muestra cada valor en pantalla<br>
 
        ```java
+       package org.ies.tierno;
+
+       public class Ej1 {
+           public static void main(String[] args) {
+               int[] numbers = {4, 8, 9, 1};
+
+               for (int i = 0; i < numbers.length; i++) {
+                   int number = numbers[i];
+                   System.out.println(number);
+               }
+           }
+       }
+
        ```
 2. Haz un programa que:
    1. Cree un array con los valores 3.4, 5.2, 4.7
