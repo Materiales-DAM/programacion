@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Soluciones de métodos y arrays
@@ -34,6 +36,32 @@ layout:
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
+package org.ies.tierno;
+
+public class Max {
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 5, 0};
+
+        int max = findMax(numbers);
+
+        printMax(max);
+    }
+
+    public static int findMax(int[] numbers) {
+        int max = Integer.MIN_VALUE;
+        for (int number : numbers) {
+            if (number > max) {
+                max = number;
+            }
+        }
+        return max;
+    }
+
+    public static void printMax(int max) {
+        System.out.println("El máximo es " + max);
+    }
+}
 ```
 
 2. Crea un programa que defina los siguientes métodos:
