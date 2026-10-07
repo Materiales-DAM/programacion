@@ -71,6 +71,29 @@ public class Max {
 En el main se invocara el primer método pasando un array con los valores 1, 3, 5 y 0, después se invocará el segundo método con el resultado de la invocación del primero
 
 ```java
+package org.ies.tierno;
+
+public class Ej2 {
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 5, 0};
+        int sum = sum(numbers);
+        printSum(sum);
+    }
+
+    public static int sum(int[] numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum = sum + number;
+        }
+        return sum;
+    }
+
+    public static void printSum(int sum) {
+        System.out.println("La suma es " + sum);
+    }
+}
+
 ```
 
 3. Crea un programa que defina los siguientes métodos:
