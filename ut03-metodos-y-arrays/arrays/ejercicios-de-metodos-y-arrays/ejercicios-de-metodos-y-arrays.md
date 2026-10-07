@@ -97,7 +97,7 @@ public class Ej2 {
 ```
 
 3. Crea un programa que defina los siguientes métodos:
-   1. Un método que pida un al usuario un número entero positivo. Si el usuario introduce un negativo el programa volverá a pedir el número hasta que sea positivo.
+   1. Un método que pida al usuario el tamaño del array. Si el usuario introduce un tamaño menor o igual que 0, el programa volverá a pedir el número hasta que sea mayor que 0.
    2. Un método que pida un array de números:
       1. Primero pide un entero positivo (tamaño) usando el método anterior
       2. Crea un array vacío del tamaño que ha pedido el usuario
