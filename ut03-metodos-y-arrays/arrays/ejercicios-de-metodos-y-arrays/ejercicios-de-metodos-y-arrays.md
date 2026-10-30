@@ -108,6 +108,64 @@ public class Ej2 {
 En el main se pide un array, se calcula la media y se imprime el resultado
 
 ```java
+package org.ies.tierno;
+
+import java.net.SecureCacheResponse;
+import java.util.Scanner;
+
+public class Ej3 {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        var numbers = askNumbers();
+        var avg = average(numbers);
+        printAverge(avg);
+    }
+
+    public static int askSize() {
+        int size;
+        do {
+            System.out.println("Introduce el tamaño");
+            size = scanner.nextInt();
+            scanner.nextLine();
+
+            if (size < 1) {
+                System.out.println("El tamaño debe ser mayor que 0");
+            }
+        } while (size < 1);
+        return size;
+    }
+
+
+    public static int[] askNumbers() {
+        int size = askSize();
+
+        int[] numbers = new int[size];
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Introduce un número");
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            numbers[i] = number;
+        }
+
+        return numbers;
+    }
+
+    public static double average(int[] numbers) {
+        var sum = 0d;
+        for (var number : numbers) {
+            sum += number;
+        }
+        return sum / numbers.length;
+    }
+
+    public static void printAverge(double avg) {
+        System.out.println("La media es " + avg);
+    }
+
+}
+
 ```
 
 4. Crea un programa con los siguientes métodos:
