@@ -184,4 +184,88 @@ public class Ej3 {
       8. Imprime el resultado de la unión
 
 ```java
+package org.ies.tierno;
+
+import java.util.Scanner;
+
+public class Ej4 {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int[] n1 = askNumbers();
+        int[] n1Reversed = reverse(n1);
+        printArray(n1Reversed);
+
+        int[] n2 = askNumbers();
+        int[] n2Reversed = reverse(n2);
+        printArray(n2Reversed);
+        
+        int[] union = union(n1Reversed, n2Reversed);
+        printArray(union);
+    }
+
+    private static int askSize() {
+        int size;
+        do {
+            System.out.println("Introduce el tamaño del array: ");
+            size = scanner.nextInt();
+            scanner.nextLine();
+            if (size < 1) {
+                System.out.println("El tamaño debe ser mayor que cero");
+            }
+        } while (size < 1);
+        return size;
+    }
+
+    public static int[] askNumbers() {
+        int size = askSize();
+
+        int[] numbers = new int[size];
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Introduce un número: ");
+            numbers[i] = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        return numbers;
+    }
+
+    public static int[] reverse(int[] numbers) {
+        int[] result = new int[numbers.length];
+
+        for (int i = 0; i < numbers.length; i++) {
+            // Calculo en qué posición hay que escribir el número para que el array quede invertido
+            int j = numbers.length - 1 - i;
+            result[j] = numbers[i];
+        }
+
+        return result;
+    }
+
+    public static int[] union(int[] n1, int[] n2) {
+        int[] result = new int[n1.length + n2.length];
+
+        for (int i = 0; i < n1.length; i++) {
+            int j = i;
+            result[j] = n1[i];
+        }
+
+        for (int i = 0; i < n2.length; i++) {
+            int j = i + n1.length;
+            result[j] = n2[i];
+        }
+
+        return result;
+    }
+
+    public static void printArray(int[] numbers) {
+        System.out.print("[");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println("]");
+    }
+}
+
 ```
