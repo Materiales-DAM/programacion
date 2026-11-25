@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Soluciones de menús con métodos y arrays
@@ -45,6 +47,117 @@ Métodos necesarios:
 *   Un método con el bucle del menú<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Scanner;
+
+    public class Menu1 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            menu();
+        }
+
+        public static int askSize() {
+            int size;
+            do {
+                System.out.println("Introduce el tamaño del array");
+                size = scanner.nextInt();
+                scanner.nextLine();
+                if (size < 1) {
+                    System.out.println("El array debe ser de un tamaño mayor que 0");
+                }
+            } while (size < 1);
+            return size;
+        }
+
+        public static int[] askNumbers() {
+            int[] numbers = new int[askSize()];
+
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.print("Introduce un número: ");
+                numbers[i] = scanner.nextInt();
+                scanner.nextLine();
+            }
+            return numbers;
+        }
+
+        public static int max(int[] numbers) {
+            int max = Integer.MIN_VALUE;
+            for (int number : numbers) {
+                if (number > max) {
+                    max = number;
+                }
+            }
+            return max;
+        }
+
+        public static int min(int[] numbers) {
+            int min = Integer.MAX_VALUE;
+            for (int number : numbers) {
+                if (number < min) {
+                    min = number;
+                }
+            }
+            return min;
+        }
+
+        public static double avg(int[] numbers) {
+            double sum = 0;
+            for (int number : numbers) {
+                sum += number;
+            }
+
+            return sum / numbers.length;
+        }
+
+        public static int chooseOption() {
+            System.out.println("Elige una opción:");
+            System.out.println("1. Máximo");
+            System.out.println("2. Mínimo");
+            System.out.println("3. Media");
+            System.out.println("4. Salir");
+            int opt = scanner.nextInt();
+            scanner.nextLine();
+            return opt;
+        }
+
+        public static void runMax() {
+            int[] numbers = askNumbers();
+            int max = max(numbers);
+            System.out.println("El máximo es: " + max);
+        }
+
+        public static void runMin() {
+            int[] numbers = askNumbers();
+            int min = min(numbers);
+            System.out.println("El mínimo es: " + min);
+        }
+
+        public static void runAvg() {
+            int[] numbers = askNumbers();
+            double avg = avg(numbers);
+            System.out.println("La media es: " + avg);
+        }
+
+        public static void menu() {
+            int option;
+            do {
+                option = chooseOption();
+                if(option == 1) {
+                    runMax();
+                } else if(option == 2) {
+                    runMin();
+                } else if(option == 3) {
+                    runAvg();
+                } else if(option == 4) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+            }while (option != 4);
+        }
+    }
     ```
 
 2. Crea un programa de menú interactivo que permita al usuario realizar las siguientes operaciones:
