@@ -176,4 +176,95 @@ Métodos necesarios:
 *   Un método con el bucle del menú<br>
 
     ```java
+    package org.ies.tierno;
+
+    import java.util.Arrays;
+    import java.util.Scanner;
+
+    public class Menu2 {
+        private static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            int option;
+            do {
+                option = chooseOption();
+
+                if (option == 1) {
+                    runSum();
+                } else if (option == 2) {
+                    runMultArray();
+                } else if (option == 3) {
+                    System.out.println("Saliendo...");
+                } else {
+                    System.out.println("Opción inválida");
+                }
+            } while (option != 3);
+        }
+
+        public static void runSum() {
+            int[] numbers = askNumbers();
+            int sum = sum(numbers);
+            System.out.println("La suma es " + sum);
+        }
+
+        public static void runMultArray() {
+            int[] numbers = askNumbers();
+            int[] res = multArray(numbers);
+            // Esto muestra un código raro System.out.println(res);
+            // Esto muestra los elementos dentro del array
+            System.out.println(Arrays.toString(res));
+        }
+
+        public static int chooseOption() {
+            System.out.println("Elige una opción:");
+            System.out.println("1. Suma de array");
+            System.out.println("2. Multiplicar array");
+            System.out.println("3. Salir");
+            int opt = scanner.nextInt();
+            scanner.nextLine();
+            return opt;
+        }
+
+        public static int[] multArray(int[] numbers) {
+            int[] result = new int[numbers.length];
+            for (int i = 0; i < numbers.length; i++) {
+                int number = numbers[i];
+                result[i] = number * 2;
+            }
+            return result;
+        }
+
+        public static int sum(int[] numbers) {
+            int sum = 0;
+            for (int number : numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        public static int askSize() {
+            int size;
+            do {
+                System.out.println("Introduce el tamaño del array");
+                size = scanner.nextInt();
+                scanner.nextLine();
+                if (size < 1) {
+                    System.out.println("El array debe ser de un tamaño mayor que 0");
+                }
+            } while (size < 1);
+            return size;
+        }
+
+        public static int[] askNumbers() {
+            int[] numbers = new int[askSize()];
+
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.print("Introduce un número: ");
+                numbers[i] = scanner.nextInt();
+                scanner.nextLine();
+            }
+            return numbers;
+        }
+    }
+
     ```
